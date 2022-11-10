@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+ul, li {
+    list-style: none;
+}
+
+/*헤더에서 큰 틀*/
+.header_container {
+    max-width: 1140px;
+    height: 68px;
+    margin: 0 auto;
+}
+
+div.header_item {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    top: 14px;
+    vertical-align: middle;
+}
+
+/*--------------------------------*/
+/*헤더 좌측 로고~대카 부분*/
+div.header_nav {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+
+div.header_nav div.logo {
+    margin-right: 24px;
+}
+
+
+div.header_nav ul.nav_ul {
+    display: inline-flex;
+}
+
+div.header_nav ul.nav_ul li{
+    margin-right: 24px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+div.header_nav ul.nav_ul li a {
+    color: #595F63;
+}
+div.m_font {
+    color:#6EA7EB;
+    font-weight:600;
+    font-size: 10px;
+    display: inline-flex;
+    margin-left: 4px;
+}
+
+/*헤더 우측 메뉴*/
+aside {
+    display: inline-flex;
+    flex-grow: 1;
+}
+div.header_nav ul.nav_right {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+div.header_nav ul.nav_right li{
+    margin-left: 18px;
+    font-size: 14px;
+    display: inline-flex;
+    flex-direction: row;
+}
+div.header_nav ul.nav_right li a {
+    color: #949BA0;
+    padding: 4px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.header_nav ul.nav_right li a:hover {
+    background-color: #F3F4F5;
+    border-radius: 6px;
+}
+
+/*검색창*/
+div.search_form {
+    display: inline-flex;
+    flex-direction: row;
+    width: 226px;
+    height: 40px;
+}
+div.search_form input.search_keyword {
+    display: inline-block;
+    border-radius: 4px;
+    border: 0;
+    background: hsla(0,0%,98.8%,.6);
+    padding: 10px 0px 10px 14px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 200px;
+}
+div.search_form input.search_keyword::placeholder {
+    color: #c9c9d0;
+    font-size: 14px;
+}
+button.search_img {
+    display: inline-block;
+    width: 30px;
+    height: 24px;
+    border: 0;
+    padding: 2px;
+    margin: 8px 12px 0 4px;
+    vertical-align: middle;
+    background-image: url("https://o.remove.bg/downloads/3f87691c-3825-452f-a08c-5fa46a5e05d5/xmagnifyingglassgreyicon48x48icon.jpg.pagespeed.ic.ZDpD-xD_gw-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: inherit;
+}
+button.search_img:hover {
+    background-color: #f3f4f5;
+}
+
+
+
+
+
+
+
+
+
+
