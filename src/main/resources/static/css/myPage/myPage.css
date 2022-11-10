@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+body {margin: 0;}
+
+div.main {
+    min-height: calc(100vh - 324px);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.wrap {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+div.container {
+    position: relative;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+
+div.contentsWrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.menuContainer {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+aside.asideMenu {
+    position: relative;
+    padding: 12px;
+    width: 259px;
+}
+
+div.profile {
+    overflow: hidden;
+    cursor: pointer!important;
+}
+
+div.nickname {
+    color: rgb(32, 35, 37);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+div.email {
+    align-items: center;
+    cursor: pointer!important;
+    display: flex;
+    font-size: 12px;
+    font-weight: 400;
+}
+.id {
+
+    color: rgb(118, 125, 130);
+    line-height: 16px !important;
+}
+
+.id-logo{
+    height: 14px;
+    min-width: 14px;
+    background: #2b0b09;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
