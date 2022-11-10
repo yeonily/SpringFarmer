@@ -7,78 +7,173 @@
     <link rel="stylesheet" href="/css/common/font.css" />
 </head>
 <body>
-    <div class="main">
-        <div class="wrap">
-            <div class="container">
-                <div class="contentsWrap">
-                    <!--메뉴시작-->
-                    <div class="menuContainer">
-                        <aside class="asideMenu">
-                            <div class="profile">
-                                <div class="nickname">주어머거라ddddddd</div>
-                                <div class="email">
-                                    <span class="id">dyddyd310@naver.com</span>
-                                    <span class="id-logo"></span>
+<div id="main">
+    <div class="wrap">
+        <div class="container">
+            <div class="contentsWrap">
+                <!--카테고리 시작-->
+                <div id="menuContainer">
+                    <aside class="asideMenu">
+                        <div class="profile">
+                            <div class="nickname">주어머거라ddddddd</div>
+                            <div class="email">
+                                <span class="id">dyddyd310@naver.com</span>
+                                <span class="id-logo"></span>
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <a href="">
+                                <div class="menu-a">
+                                    내 프로그램
                                 </div>
-                            </div>
+                            </a>
+                        </div>
+                        <div class="menu">
+                            <a href="">
+                                <div class="menu-a">
+                                    내 아르바이트
+                                </div>
+                            </a>
+                        </div>
+                        <div class="menu ">
+                            <a href="">
+                                <div class="menu-a">
+                                    커뮤니티 활동
+                                </div>
+                            </a>
+                            <hr class="menu-category">
+                        </div>
+                        <div class="menu">
+                            <a href="">
+                                <div class="menu-a menu-select">
+                                    개인 정보 설정
+                                </div>
+                            </a>
+                        </div>
+                        <div class="menu">
+                            <a href="">
+                                <div class="menu-a">
+                                    구매 내역
+                                </div>
+                            </a>
+                        </div>
+                        <div class="menu">
+                            <a href="javascript:void(0);">
+                                <div class="menu-a more-btn">
+                                    더보기
+                                    <span class="more"></span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slide-menu">
                             <div class="menu">
                                 <a href="">
-                                    <div class="menu-a">
-                                        내 프로그램
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="menu">
-                                <a href="">
-                                    <div class="menu-a">
-                                        내 아르바이트
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="menu">
-                                <a href="">
-                                    <div class="menu-a">
-                                        커뮤니티 활동
-                                    </div>
-                                </a>
-                                <hr class="menu-category">
-                            </div>
-                            <div class="menu">
-                                <a href="">
-                                    <div class="menu-a">
-                                        개인 정보 설정
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="menu">
-                                <a href="">
-                                    <div class="menu-a">
-                                        구매 내역
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="menu">
-                                <a href="">
-                                    <div class="menu-a">
+                                    <div class="menu-a slide-m">
                                         문의 내역
                                     </div>
                                 </a>
                             </div>
                             <div class="menu">
                                 <a href="">
-                                    <div class="menu-a">
+                                    <div class="menu-a slide-m">
                                         멘토/멘티 리스트
                                     </div>
                                 </a>
                             </div>
-                        </aside>
-                    </div>
-                    <div class="content">
 
+                        </div>
+                    </aside>
+                </div>
+                <!--컨텐츠 시작-->
+                <div id="contents">
+                    <div class="c-header">
+                        <div class="c-title">
+                            <div>개인 정보 설정</div>
+                        </div>
+                        <div class="c-header-c">
+                            <div class="c-header-can">
+                                <div class="menu-tab-btn">
+                                    <div class="menu-tab">
+                                        <a href="#myInfo">
+                                            <button class="active" style="color:#040505;">프로필</button>
+                                        </a>
+                                    </div>
+                                    <!--멘토인 경우-->
+                                    <div class="menu-tab">
+                                        <a href="#mentorInfo">
+                                            <button>멘토 정보</button>
+                                        </a>
+                                    </div>
+                                    <!------>
+                                    <div class="menu-tab">
+                                        <a href="#">
+                                            <button>회원 탈퇴</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="wrapper-s">
+                                <div class="section-left">
+                                    <div class="flex">
+                                        <!--------회의---------------------------------->
+                                        <div class="member-division-img">멤버 구분?</div>
+                                        <div class="member-division">
+                                            <div>
+                                                <!--멤버 구분-->
+                                                일반인
+                                                <!------>
+                                            </div>
+                                            <div class="flex">
+                                                <div class="nickname">닉네임을 넣어주세여</div>
+                                                <!--멘토 구분-->
+                                                <div class="flex mentoring">멘토</div>
+                                                <!------>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex section-right">
+                                        <div class="qna-count">
+                                            0건
+                                            <div class="qna-title">내 질문</div>
+                                        </div>
+                                        <div class="qna-count">
+                                            0건
+                                            <div class="qna-title">내 질문</div>
+                                        </div>
+                                        <div class="qna-count">
+                                            0건
+                                            <div class="qna-title">내 질문</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+    //메뉴 슬라이드
+    $("div.more-btn").on("click", function(){
+
+        $('.slide-menu').slideToggle(200);
+        $('div.more-btn span').toggleClass('chaged')
+
+    })
+
+    // // 버튼 클릭 시 스타일 변경
+    // $('li > a').focus(function(){
+    //     $(this).addClass('selec');
+    // })
+    // $("li > a").blur(function(){
+    //     $(this).removeClass('selec');
+    // })
+
+</script>
 </html>

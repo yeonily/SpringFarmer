@@ -1,16 +1,19 @@
 @charset "UTF-8";
 
-body {
+body, button {
     margin: 0;
     vertical-align: baseline;
     font-family: "Pretendard";
+
+    word-break: keep-all;
+    word-wrap: break-word;
 }
 
 a {
     text-decoration: none;
 }
 
-div.main {
+div#main {
     min-height: calc(100vh - 324px);
     width: 100%;
     display: flex;
@@ -27,8 +30,7 @@ div.wrap {
 div.container {
     position: relative;
     width: 100%;
-    padding-right: 16px;
-    padding-left: 16px;
+    max-width: 1140px;
     margin-right: auto;
     margin-left: auto;
     box-sizing: border-box;
@@ -37,9 +39,15 @@ div.container {
 div.contentsWrap {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
 }
 
-div.menuContainer {
+/*메뉴*/
+div#menuContainer {
     flex: 0 0 25%;
     max-width: 25%;
 }
@@ -107,8 +115,6 @@ div.menu-a {
     line-height: 25px;
     font-weight: 400 !important;
     letter-spacing: .02em;
-    word-break: keep-all;
-    word-wrap: break-word;
 }
 
 hr.menu-category {
@@ -117,29 +123,244 @@ hr.menu-category {
     border-top: 1px;
     margin-top: 12px !important;
     margin-bottom: 12px !important;
+}
+
+/*선택한 메뉴*/
+div.menu-select {font-weight: 600!important;}
+
+/*더보기 > 슬라이드 메뉴*/
+div.slide-menu {
+    height: 88px;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    display: none;
+}
+
+div.more-btn {
+    position: relative;
+}
+
+div.menu-a>span:after {
+    position: absolute;
+    top: 20px;
+    left: 54px;
+    width: 17px; /* 사이즈 */
+    height: 17px; /* 사이즈 */
+    font-size: 25px;
+    font-weight: 300;
+    color: #767D82;
+    transform: rotate(90deg); /* 각도 */
+}
+
+div.menu-a>span:after {
+    content: "\203A";
+}
+div.menu-a>span.chaged:after {
+    content: "\2039";
+}
+
+div.slide-m {
+    color: #767D82;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/*컨텐츠*/
+div#contents {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+div.c-header {
+    position: relative;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+div.c-title {
+    display: flex!important;
+    align-items: center;
+    height: 29px;
+    justify-content: space-between;
+}
+
+div.c-title>div {
+    color: #3C4144;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 600;
+}
+
+div.c-header-c {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+div.c-header-ca {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.menu-tab-btn {
+    width: 100%;
+    display: flex!important;
+}
+
+div.menu-tab {
+    margin-right: 12px;
+    display: flex!important;
+    position: relative;
+    align-items: center;
+}
+
+div.menu-tab button {
+    color: #adb3b8;
+    font-weight: 500;
+    background: none!important;
+    border: 0;
+    outline: 0;
+    padding: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 20px;
+    height: 30px!important;
+}
+
+.active::after {
+    background: #595f63!important;
+    content: "";
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -1px;
+}
+
+div.content {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+div.section-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.flex {display: flex;}
+
+div.member-division-img {
+    width: 90px;
+    height: 90px;
+    margin-right: 20px;
+    background: aquamarine;
+    border-radius: 50%;
+}
+
+div.nickname {
+    color: rgb(32, 35, 37);
+    font-weight: 600!important;
+}
+
+div.mentoring {
+    justify-content: space-between;
+    color: rgb(27, 81, 146);
+    height: 18px;
+    padding: 2px;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+div.member-division {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(4, 5, 5);
+    text-align: center;
+}
+
+div.qna-title {
+    margin-top: 16px!important;
+    color: rgb(173, 179, 184);
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
 
 }
 
+div.qna-count {
+    display: flex!important;
+    justify-content: center;
+    width: 100%;
+    border-right: 1px solid #eaecee;
+}
+
+div.member-division>div {
+    color: #595F63;
+    font-weight: 300;
+    height: 20px;
+    display: flex!important;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 6px!important;
+}
+
+div.member_division hr {
+    border-color: #EAECEE;
+    border-style: solid;
+    border-left: 1px;
+    width: 0;
+    height: 12px!important;
+    margin: 0 6px;
+}
 
 @media only screen and (min-width: 768px) {
-    .my-page-container[data-v-0b8e85f7] {
+    div.wrap {
         margin-top: 72px;
         margin-bottom: 160px;
+        padding-right: 12px;
+        padding-left: 12px;
     }
-}
-
-@media only screen and (min-width: 768px) {
-    .new-col-lg-12[data-v-7b920159] {
-        -ms-flex: 0 0 100%;
+    div#contents {
+        padding: 12px 24px!important;
         -webkit-box-flex: 0;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    div.c-header {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    div.c-header-c {
+        max-width: 1140px;
+        margin: 8px 0 24px;
+    }
+
+    div.c-header-ca {
+        margin-right: -12px;
+        margin-left: -12px;
+    }
+
+    div.menu-tab button {
+        margin: 8px 0 9px;
+    }
+
+    div.content {
         flex: 0 0 100%;
         max-width: 100%;
     }
-}
 
-@media only screen and (min-width: 768px) {
-    .c-new-col[data-v-7b920159] {
-        padding-right: 12px;
-        padding-left: 12px;
+    div.section-right {
+        width: 382px;
     }
 }
