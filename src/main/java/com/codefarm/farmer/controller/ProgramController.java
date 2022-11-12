@@ -7,16 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Slf4j
-@RequestMapping("/myPage/*")
-public class MyPageController {
+@RequestMapping("/program/*")
+public class ProgramController {
 
-    @GetMapping("/setting")
-    public String mainPage(){
-        return "/myPage/setting";
-    }
+    @GetMapping("/list")
+    public void list(){
 
-    @GetMapping("/setting/quit")
-    public String quitPage(){
-        return "/myPage/quit";
     }
 }

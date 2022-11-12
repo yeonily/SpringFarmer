@@ -1,84 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>너와농부싶어</title>
+    <link rel="stylesheet" href="/css/myPage/sideMenu.css" />
     <link rel="stylesheet" href="/css/myPage/myPage.css" />
     <link rel="stylesheet" href="/css/common/font.css" />
 </head>
 <body>
-    <div class="main">
-        <div class="wrap">
-            <div class="container">
-                <div class="contentsWrap">
-                    <!--메뉴시작-->
-                    <div class="menuContainer">
-                        <aside class="asideMenu">
+<div id="main">
+    <div class="wrap">
+        <div class="container">
+            <div class="contentsWrap">
+                <!--카테고리 시작-->
+                <div id="menuContainer">
+                    <aside class="asideMenu">
+                        <div class="profile-wrap">
                             <div class="profile">
-                                <div class="nickname">주어머거라ddddddd</div>
-                                <div class="email">
-                                    <span class="id">dyddyd310@naver.com</span>
-                                    <span class="id-logo"></span>
+                                <div class="nickname">닉네임 넣는 곳</div>
+                                <div class="email-wrqp">
+                                    <span class="email">이메일 넣는 곳</span>
+                                    <span class="email-logo"></span>
                                 </div>
                             </div>
+                        </div>
+                        <div class="menu">
+                            <a href="">
+                                <div class="menu-a">
+                                    내 프로그램
+                                </div>
+                            </a>
+                        </div>
+                        <div class="menu">
+                            <a href="">
+                                <div class="menu-a">
+                                    내 아르바이트
+                                </div>
+                            </a>
+                        </div>
+                        <div class="menu ">
+                            <a href="">
+                                <div class="menu-a">
+                                    커뮤니티 활동
+                                </div>
+                            </a>
+                            <hr class="menu-category">
+                        </div>
+                        <div class="menu">
+                            <a href="">
+                                <div class="menu-a menu-select">
+                                    개인 정보 설정
+                                </div>
+                            </a>
+                        </div>
+                        <div class="menu">
+                            <a href="">
+                                <div class="menu-a">
+                                    구매 내역
+                                </div>
+                            </a>
+                        </div>
+                        <div class="menu">
+                            <a href="javascript:void(0);">
+                                <div class="menu-a more-btn">
+                                    더보기
+                                    <span class="more"></span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slide-menu">
                             <div class="menu">
                                 <a href="">
-                                    <div class="menu-a">
-                                        내 프로그램
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="menu">
-                                <a href="">
-                                    <div class="menu-a">
-                                        내 아르바이트
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="menu">
-                                <a href="">
-                                    <div class="menu-a">
-                                        커뮤니티 활동
-                                    </div>
-                                </a>
-                                <hr class="menu-category">
-                            </div>
-                            <div class="menu">
-                                <a href="">
-                                    <div class="menu-a">
-                                        개인 정보 설정
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="menu">
-                                <a href="">
-                                    <div class="menu-a">
-                                        구매 내역
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="menu">
-                                <a href="">
-                                    <div class="menu-a">
+                                    <div class="menu-a slide-m">
                                         문의 내역
                                     </div>
                                 </a>
                             </div>
                             <div class="menu">
                                 <a href="">
-                                    <div class="menu-a">
+                                    <div class="menu-a slide-m">
                                         멘토/멘티 리스트
                                     </div>
                                 </a>
                             </div>
-                        </aside>
-                    </div>
-                    <div class="content">
 
+                        </div>
+                    </aside>
+                </div>
+                <!--컨텐츠 시작-->
+                <div id="contents">
+                    <div class="c-header">
+                        <div class="c-title">
+                            <div>개인 정보 설정</div>
+                        </div>
+                        <div class="c-header-c">
+                            <div class="c-header-can">
+                                <div class="menu-tab-btn">
+                                    <div class="menu-tab">
+                                        <a th:href="@{/myPage/setting}">
+                                            <button class="active">프로필</button>
+                                        </a>
+                                    </div>
+                                    <div class="menu-tab">
+                                        <a href="#myInfo">
+                                            <button>정보 수정</button>
+                                        </a>
+                                    </div>
+                                    <!--멘토인 경우-->
+                                    <div class="menu-tab">
+                                        <a href="#mentorInfo">
+                                            <button>멘토 정보</button>
+                                        </a>
+                                    </div>
+                                    <!------>
+                                    <div class="menu-tab">
+                                        <a th:href="@{/myPage/setting/quit}">
+                                            <button>회원 탈퇴</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="wrapper-s">
+                                <div class="section-profile">
+                                    <div class="flex">
+                                        <div class="member-division-img">
+                                        </div>
+                                        <div class="member-division">
+                                            <div>
+                                                <!-- 멤버 구분 -->
+                                                일반인
+                                                <!------>
+                                            </div>
+                                            <div class="flex">
+                                                <div class="nickname">닉네임</div>
+                                                <!-- 멘토 구분 -->
+                                                <div class="flex mentoring">멘토</div>
+                                                <!------>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex section-right">
+                                        <div class="qna-count">
+                                            0건
+                                            <div class="qna-title">내 문의</div>
+                                        </div>
+                                        <div class="qna-count">
+                                            0건
+                                            <div class="qna-title">내 커뮤니티</div>
+                                        </div>
+                                        <div class="qna-count q-c-last">
+                                            0건
+                                            <div class="qna-title">내 프로그램</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section-nickname">
+                                    <div class="nickname-t">닉네임 변경</div>
+                                    <div class="nickname-c">
+                                        <form action="" name="nickForm" class="nick-c-group">
+                                            <div class="nickname-input">
+                                                <input type="text" name="nickname" value="닉네임">
+                                            </div>
+                                            <button type="button" class="nick nick-check" onclick="nickCheck()">중복확인</button>
+                                            <button type="button" class="nick nick-save saveHover" onclick="nickSave()">저장</button>
+                                        </form>
+                                        <div class="nickname-check">
+                                            <!-- 중복 체크 문구 -->
+                                            <div class="nick-c-save" style="display: /*none*/;">
+                                                <div class="nick-warning" style="background: #1e8524;">!</div>
+                                                <div style="color: #1e8524;">사용 가능한 닉네임입니다.</div>
+                                            </div>
+                                            <div class="nick-c-save" style="display: none;">
+                                                <div class="nick-warning" style="background: rgb(233, 37, 37);">!</div>
+                                                <div style="color: rgb(233, 37, 37);">>이미 사용중인 닉네임입니다.</div>
+                                            </div>
+                                            <!------------------>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="section-line marginT">
+                                <!-- 정보 수정 -->
+                                <a name="myInfo"><div class="section-title marginT">정보 수정</div></a>
+                                <div class="section-wrap">
+                                    <section>
+                                        <form action="" name="myInfoForm">
+                                            <div class="s-form-input">
+                                                <p class="form-title">이름</p>
+                                                <div class="flex f-column f-section">
+                                                    <input type="text" name="name" value="○○○" class="form-input" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="s-form-input f-m-top">
+                                                <p class="form-title">생년월일</p>
+                                                <div class="flex f-column f-section">
+                                                    <input type="text" name="birth" class="form-input" value="2000-00-00" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="s-form-input f-m-top">
+                                                <p class="form-title">휴대폰번호</p>
+                                                <div class="flex f-column f-section">
+                                                    <input type="text" name="phone" value="010-0000-0000" class="form-input" oninput="autoHyphen(this)" maxlength="13">
+                                                </div>
+                                            </div>
+                                            <div class="s-form-input f-m-top">
+                                                <p class="form-title">구분</p>
+                                                <div class="flex f-column f-section flex user-type">
+                                                    <input type="radio" name="grade" id="user" value="user"/>
+                                                    <label class="grade" for="user" style="margin-right:13px;">일반인</label>
+                                                    <input type="radio" name="grade" id="farmer" value="farmer"/>
+                                                    <label class="grade" for="farmer">농장주</label>
+                                                </div>
+                                            </div>
+                                            <div class="s-form-input f-m-top">
+                                                <p class="form-title">지역</p>
+                                                <div class="flex f-column f-section">
+                                                    <input type="text" name="address" value="서울시 강남구" class="form-input">
+                                                </div>
+                                            </div>
+                                            <div class="form-save">
+                                                <button type="button" class="s-button s-save saveHover" onclick="myInfoSave()">저장</button>
+                                            </div>
+                                        </form>
+                                    </section>
+                                </div>
+                                <!-- 농장주 일 경우 -->
+                                <hr class="section-line marginT">
+                                <a name="mentorInfo"><div class="section-title marginT">멘토 정보</div></a>
+                                <div class="section-wrap">
+                                    <section>
+                                        <!-- 멘토 소개글이 없을 경우 = 멘토가 아닐 경우 -->
+                                        <div id="mentor-none">
+                                            <div class="mentor-no">
+                                                <div class="mentor-txt">
+                                                    멘토 소개 글을 작성하면 멘토링 홍보 글을 작성하실 수 있습니다.
+                                                </div>
+                                                <button class="mentorBtn" onclick="mentorForm()">소개 글 작성하기</button>
+                                            </div>
+                                        </div>
+                                        <!-- 멘토가 아닐 경우 → 소개글 입력 폼 -->
+                                        <form action="" name="newMentorForm" class="newMentorForm">
+                                            <div class="s-form-input">
+                                                <p class="form-title">휴대폰번호</p>
+                                                <div class="flex f-column f-section">
+                                                    <input type="text" name="phone" value="010-0000-0000" class="form-input" oninput="autoHyphen(this)" maxlength="13">
+                                                </div>
+                                            </div>
+                                            <div class="s-form-input f-m-top">
+                                                <p class="form-title">지역</p>
+                                                <div class="flex f-column f-section">
+                                                    <input type="text" name="address" value="서울시 강남구" class="form-input">
+                                                </div>
+                                            </div>
+                                            <div class="form-save">
+                                                <button type="button" class="s-button s-save saveHover" onclick="mentorSave()">저장</button>
+                                                <button type="button" class="s-button s-cancel cancelHover" id="mentorCancel">취소</button>
+                                            </div>
+                                        </form>
+                                <!------------------>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/myPage/myPage.js"></script>
 </html>
