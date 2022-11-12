@@ -155,6 +155,12 @@ button {
 
 
 /*서브헤더*/
+.sub-banner{
+    width: 100%;
+    height: 200px;
+    background: #2a7de1;
+}
+
 #faq .faq-search {
     position: absolute;
     left: 50px;
