@@ -11,7 +11,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MyPageController {
 
     @GetMapping("/setting")
-    public void product(){
+    public String mainPage(){
+        return "/myPage/setting";
+    }
 
+    @GetMapping("/setting/quit")
+    public String quitPage(){
+        return "/myPage/quit";
     }
 }
