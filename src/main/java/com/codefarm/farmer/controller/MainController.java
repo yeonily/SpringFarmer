@@ -7,10 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Slf4j
-@RequestMapping("/header/*")
+@RequestMapping("/main/*")
 public class MainController {
-
-    @GetMapping("header")
+    @GetMapping("main")
     public void product(){
 
     }
