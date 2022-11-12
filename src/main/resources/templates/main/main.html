@@ -6,39 +6,80 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="/css/header/header.css"/>
+    <link rel="stylesheet" href="/css/footer/footer.css"/>
     <link rel="stylesheet" href="/css/main/main.css"/>
     <link rel="stylesheet" href="/css/common/font.css"/>
     <title>너와 농부싶어</title>
 </head>
 <body>
-    <div class="container-main">
-    <!--헤더 삽입-->
+    <div class="wrap">
+
+        <!--헤더 삽입-->
         <div th:replace="/header/header.html :: header" class="header"/>
 
         <!--메인 배너 Swiper-->
         <div class="main_banner">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide" style="background-color: rgb(0, 140, 95);">
+                        <div>
+                            <p>시작하는 사람들의</p>
+                            <p>커리어 커뮤니티</p>
+                        </div>
+                        <img src="https://blog.kakaocdn.net/dn/d1Pq4X/btqBGeB4Ivl/Miqy0FolkXSUKB0lVk8Ry0/img.gif">
+                    </div>
+                    <div class="swiper-slide" style="background-color: rgb(72, 118, 239);">
+                        <div>
+                            <p>텍스트 테스트 중입니다.</p>
+                            <p>글자 위치 확인 완료</p>
+                        </div>
+                        <img src="https://mblogthumb-phinf.pstatic.net/MjAxNzExMDFfMTMx/MDAxNTA5NTM1NTc4MDM0.4tvagAK9XZuG4zMrJsZl8gxYJk2Kv1G7XYeXaG3dWFAg.8kKUfT8sZaesersRujX_EwXry2AxVt2CK0Pp6kgZck4g.GIF.rda2448/ezgif-3-88077db59f.gif?type=w800">
+                    </div>
+                    <div class="swiper-slide" style="background-color: rgb(238, 126, 65);">
+                        <div>
+                            <p>소수정예 실무</p>
+                            <p>퍼스널 트레이닝</p>
+                        </div>
+                        <img src="https://dgfarm.kr/img/2022/main/m_mv_01.jpg">
+                    </div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
         </div>
+
+        <!--두 번째 배너-->
+        <div class="sub_banner">
+            <div class="sub_banner_innser">
+                <h1>커리어 성장은 라이브로!</h1>
+                <!--슬라이드 배너-->
+                <div class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--푸터 삽입-->
+        <div th:replace="/footer/footer.html :: footer" class="footer"/>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script src="/js/header/header.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
     /*메인 배너 슬라이드*/
     var swiper = new Swiper(".mySwiper", {
@@ -52,6 +93,21 @@
         },
         mousewheel: true,
         keyboard: true
+    });
+
+    /*두 번째 배너 슬라이드*/
+    var swiper2 = new Swiper(".mySwiper2", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     });
 </script>
 </html>

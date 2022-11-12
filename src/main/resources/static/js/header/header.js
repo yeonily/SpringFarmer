@@ -42,10 +42,13 @@ $("div.sub-menu li div").on("mouseout", function() {
 $(".noti-button-container").on("click", function (){
     $("div.mask").css("visibility", "visible");
     $("div.alarm").css("visibility", "visible");
+    $("div.swiper-wrapper").css("background", "#000");
+    $("div.swiper-wrapper").css("opacity", ".3");
 });
 
 /*다른 영역 클릭 시*/
 $(".mask, .main_banner").on("click", function (){
     $("div.mask").css("visibility", "hidden");
     $("div.alarm").css("visibility", "hidden");
+    $("div.swiper-wrapper").css("opacity", "1");
 });
