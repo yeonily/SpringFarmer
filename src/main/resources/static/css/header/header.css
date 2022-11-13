@@ -274,7 +274,7 @@ div.alarm div.top-div p {
     font-weight: bold;
 }
 div.alarm div.top-div button {
-    padding: 0 8px;
+    padding: -1px 8px;
     height: 24px;
     width: 56px;
     font-size: 10px;
