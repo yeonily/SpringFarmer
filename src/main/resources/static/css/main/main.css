@@ -141,22 +141,17 @@ div.sub_banner_innser h1 {
     height: 57px;
 }
 
-
+/*슬라이더 시작*/
 div.sub_banner_innser .mySwiper2 {
     width: 100%;
     height: 100%;
+    position: relative;
 }
-
-div.sub_banner_innser .swiper-slide {
+div.sub_banner_innser .mySwiper2 .swiper-slide {
     text-align: center;
     font-size: 18px;
     height: 416px;
-    background: pink;
 
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     -webkit-justify-content: center;
@@ -165,6 +160,74 @@ div.sub_banner_innser .swiper-slide {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+}
+div.mySwiper2 div.swiper-slide {
+    display: block;
+}
+div.mySwiper2 div.swiper-slide .imgDiv {
+    width: 100%;
+    height: 300px;
+    margin-top: 0;
+    border-radius: 10px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+div.mySwiper2 div.swiper-slide .imgDiv div{
+    top: 8px;
+    left: 8px;
+    width: 75px;
+    height: 20px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    font-size: 12px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 0;
+    background-color: #eeeeee;
+    padding: 1px;
+    vertical-align: middle;
+    color: black;
+}
+div.mySwiper2 div.swiper-slide .imgDiv div p {
+    padding: 3px 5px;
+    color: #595f63;
+    font-weight: 400;
+
+}
+div.mySwiper2 div.swiper-slide .textDiv {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    text-align: left;
+    color: black;
+    font-weight: 400;
+}
+div.mySwiper2 div.swiper-slide .textDiv p, span {
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+.textDiv span {
+    color: #ee7e41;
+}
+
+div.mySwiper2 div.swiper-slide .textDiv p.dateInfo {
+    color: #b4babe;
+}
+.textDiv p.dateInfo span {
+    content: " ";
+    display: inline-block;
+    width: 1px;
+    border-left: 1px solid #eaecee;
+    height: 10px;
+    margin: 0 10px;
+}
+
+div.mySwiper2 div.swiper-slide .textDiv h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    line-height: 1.5;
 }
 
 div.sub_banner_innser .swiper-slide img {
@@ -182,9 +245,16 @@ div.sub_banner_innser div.swiper-button-prev
     --swiper-navigation-size: 18px;
     cursor: pointer;
     color: black;
+    font-weight: bold;
 }
 
 div.sub_banner_innser div.swiper-button-next {
-
-
+    position: absolute;
+    right: 80px;
+    top: 60%;
+}
+div.sub_banner_innser div.swiper-button-prev {
+    position: absolute;
+    left: 80px;
+    top: 60%;
 }
