@@ -13,13 +13,12 @@
 </head>
 <body>
     <div class="wrap">
-
         <!--헤더 삽입-->
         <div th:replace="/header/header.html :: header" class="header"/>
 
         <!--메인 배너 Swiper-->
         <div class="main_banner">
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" style="background-color: rgb(0, 140, 95);">
                         <div>
@@ -51,7 +50,7 @@
 
         <!--두 번째 배너-->
         <div class="sub_banner">
-            <div class="sub_banner_innser">
+            <div class="sub_banner_inner">
                 <h1>커리어 성장은 라이브로!</h1>
                 <!--슬라이드 배너-->
                 <div class="swiper mySwiper2">
@@ -108,10 +107,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper2-button-next"></div>
-                <div class="swiper2-button-prev"></div>
+                <div class="swiper-button next2"></div>
+                <div class="swiper-button prev2"></div>
             </div>
         </div>
+
+        <!--광고 이미지-->
+        <div id="middleImg">
+            <img src="https://cdn.comento.kr/images/edu/matching/saramin-banner-index.jpg?s=2216x152&q=75">
+        </div>
+
+
+        <div id="communitySlide">
+            <div id="communitySlide_inner">
+                <h1>커뮤니티에서 지금 만나요</h1>
+            </div>
+        </div>
+
 
         <!--푸터 삽입-->
         <footer th:replace="/footer/footer.html :: footer" class="footer"/>
@@ -123,7 +135,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
     /*메인 배너 슬라이드*/
-    var swiper = new Swiper(".mySwiper", {
+    var swiper = new Swiper(".mySwiper1", {
         cssMode: true,
         navigation: {
             nextEl: ".swiper-button-next",
@@ -133,21 +145,23 @@
             el: ".swiper-pagination"
         },
         autoplay: {
-            delay: 3000,
+            delay: 5000,
         },
-        mousewheel: true,
-        keyboard: true
+        mousewheel: false,
+        loop: true,
+        loopAdditionalSlides : 1,
     });
 
     /*두 번째 배너 슬라이드*/
-    var swiper2 = new Swiper(".mySwiper2", {
+    var swiper = new Swiper(".mySwiper2", {
         slidesPerView: 4,
         spaceBetween: 30,
         slidesPerGroup: 3,
         navigation: {
-            nextEl: ".swiper2-button-next",
-            prevEl: ".swiper2-button-prev",
+            nextEl: ".swiper-button.next2",
+            prevEl: ".swiper-button.prev2",
         },
+        mousewheel: false,
     });
 </script>
 </html>

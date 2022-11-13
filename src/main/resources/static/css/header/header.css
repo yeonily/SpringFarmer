@@ -1,6 +1,18 @@
+/*만약 서브메뉴가 필요한 경우 아래와 같이 margin-top: 114px로 해야함 */
+/*div.wrap {
+    margin-top: 114px;
+}*/
+
+
 /*헤더에서 큰 틀*/
 div.header {
     display: block;
+    border-bottom: 1px solid #EAECEE;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #ffffff;
 }
 .header_container {
     max-width: 1140px;
@@ -285,4 +297,34 @@ div.alarm div.top-div button {
 }
 
 
+
+/*서브헤더 영역*/
+div#sub_header {
+    border-top: 1px solid #eaecee;
+    box-shadow: 0 3px 8px rgb(238 238 238);
+    height: 44px;
+    width: 100%;
+}
+div#sub_header div.menuList {
+    margin: 0 auto;
+    width: 1108px;
+}
+div#sub_header div.menuList ul li{
+    display: inline-block;
+}
+div#sub_header div.menuList ul li button {
+    width: 56px;
+    height: 44px;
+    margin-right: 12px;
+    background-color: inherit;
+    border: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Pretendard,Apple SD Gothic Neo,Helvetica Neue,Helvetica,Arial,Trebuchet MS,sans-serif;
+    color: #040505;
+}
+div#sub_header div.menuList ul li button:hover {
+    background-color: #eaeaea7d;
+    border-radius: 5px;
+}
 
