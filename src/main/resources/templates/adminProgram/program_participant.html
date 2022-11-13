@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang=''>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset='utf-8'>
@@ -23,77 +23,7 @@
 
 <div id="wrapper">
     <!-- 세로 메뉴바 -->
-    <nav>
-        <div id="team-logo"><a href="../../main/html/main.html">너와농부싶어</a></div>
-
-        <div id='side-menu'>
-            <div class="side-menu-contents">
-                <a href='#'><span>사이트 바로가기</span></a>
-            </div>
-            <div class="menu-title">사이트 관리</div>
-            <ul>
-                <li class='active sub-menu'><a href='#'><span>사용자</span><span class="toggleBtn2">+</span></a>
-                    <ul>
-                        <li><a href='../../user/html/user.html'><span>사용자 관리</span></a></li>
-                    </ul>
-                </li>
-
-                <li class='active sub-menu'><a href='#'><span>컨텐츠 관리</span><span class="toggleBtn2">+</span></a>
-                    <ul>
-                        <li class='sub-menu'><a href='#' class="toggleBtn"><span>농촌 체험 프로그램</span></a>
-                            <ul>
-                                <li><a href='../../experience/html/experience_participant.html'><span>프로그램 지원자 관리</span></a></li>
-                                <li><a href='../../experience/html/experience_addList.html'><span>체험 프로그램 글 신청 관리</span></a></li>
-                                <li><a href='../../experience/html/experience_list.html'><span>체험 프로그램 글 관리</span></a></li>
-                                <li><a href='../../experience/html/experience_list.html'><span>프로그램 결제 내역 관리</span></a></li>
-                            </ul>
-                        </li>
-                        <li class='sub-menu'><a href='#' class="toggleBtn"><span>농촌 아르바이트</span></a>
-                            <ul>
-                                <li><a href='../../part/html/part_participant.html'><span>아르바이트 지원자 관리</span></a></li>
-                                <li><a href='../../part/html/part_addList.html'><span>아르바이트 공고 글 신청 관리</span></a></li>
-                                <li><a href='../../part/html/part_list.html'><span>아르바이트 공고 글 관리</span></a></li>
-                            </ul>
-                        </li>
-                        <li class='sub-menu'><a href='#' class="toggleBtn"><span>농촌 멘토</span></a>
-                            <ul>
-                                <li><a href='../../experience/html/experience_participant.html'><span>멘토 관리</span></a></li>
-                                <li><a href='../../experience/html/experience_list.html'><span>멘토 홍보글 관리</span></a></li>
-                                <li><a href='../../experience/html/experience_list.html'><span>채팅 관리</span></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class='active sub-menu last-menu'><a href='#' class="toggleBtn"><span>게시판 관리</span></a>
-                    <ul>
-                        <li class='sub-menu'><a href='#' class="toggleBtn"><span>공지</span></a>
-                            <ul>
-                                <li><a href='../../notice/html/notice_list.html'><span>공지 관리</span></a></li>
-                                <li class='last-menu'><a href='../../notice/html/notice_write.html'><span>공지 글 작성</span></a></li>
-                            </ul>
-                        </li>
-                        <li><a href='../../board/html/board.html'><span>자유게시판</span></a></li>
-                        <li><a href='../../board/html/board.html'><span>청년정책</span></a></li>
-                        <li><a href='../../board/html/board.html'><span>농업정보</span></a></li>
-                        <li><a href='../../board/html/board.html'><span>문의하기</span></a></li>
-                    </ul>
-                </li>
-
-                <li class='active sub-menu'><a href='#'><span>댓글</span><span class="toggleBtn2">+</span></a>
-                    <ul>
-                        <li><a href='../../reply/html/reply.html'><span>댓글 관리</span></a></li>
-                    </ul>
-                </li>
-
-                <li class='active sub-menu'><a href='#'><span>배너</span><span class="toggleBtn2">+</span></a>
-                    <ul>
-                        <li><a href='../../reply/html/reply.html'><span>배너 관리</span></a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <nav th:replace="/fix/side_menu.html :: sideMenu"></nav>
 
     <!-- 헤더 ~ 밑에 메인 컨텐츠 -->
     <div id="container">
@@ -105,22 +35,22 @@
         </header>
 
         <!-- 컨텐츠 상단 통계 -->
-        <div id="contents-top">
-            <div class="content c-left">
-                <div class="title week">최근 일주일</div>
-                <div id="counts-group">
-                    <div class="counts">
-                        <!-- 오늘 추가 되는 프로그램 수 -->
-                        <div class="count-title">지원자</div>
-                        <span class="count">1</span>
-                    </div>
-                </div>
-            </div>
-            <!-- 차트 -->
-            <div class="content">
-                <div id="stickChart"></div>
-            </div>
-        </div>
+<!--        <div id="contents-top">-->
+<!--            <div class="content c-left">-->
+<!--                <div class="title week">최근 일주일</div>-->
+<!--                <div id="counts-group">-->
+<!--                    <div class="counts">-->
+<!--                        &lt;!&ndash; 오늘 추가 되는 프로그램 수 &ndash;&gt;-->
+<!--                        <div class="count-title">지원자</div>-->
+<!--                        <span class="count">1</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; 차트 &ndash;&gt;-->
+<!--            <div class="content">-->
+<!--                <div id="stickChart"></div>-->
+<!--            </div>-->
+<!--        </div>-->
 
         <!-- 컨텐츠 검색 부분 -->
         <div class="p-contents">
@@ -131,7 +61,7 @@
                         <span class="s-form">
                             <select name="searchSelect" class="val">
                                 <option value="programName">프로그램명</option>
-                                <option value="id">아이디</option>
+                                <option value="id">닉네임</option>
                                 <option value="address">위치</option>
                             </select>
                         </span>
@@ -141,7 +71,7 @@
                             </span>
                         </span>
                     <button type="button" class="">
-                        <img src="/image/adminSearch/search.png">
+                        <img src="/image/admin/search.png">
                     </button>
                 </div>
             </form>
@@ -158,7 +88,7 @@
             <table>
                 <tr class="title">
                     <th class="num">번호</th>
-                    <th class="id">아이디</th>
+                    <th class="id">닉네임</th>
                     <th class="title">프로그램명</th>
                     <th class="work-date">작업날짜</th>
                     <th class="work-time">작업시간</th>

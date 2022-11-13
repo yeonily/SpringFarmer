@@ -5,16 +5,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/adminProgram/*")
-public class AdminProgramController {
+@RequestMapping("/adminAsk/*")
+public class AdminAskController {
 
-    @GetMapping("/program_participant")
-    public void adminProgramParticipant() {
+    @GetMapping("/ask")
+    public void adminAsk() {
     }
 
-    @GetMapping("/program_list")
-    public void adminProgramList(){
-
+    @GetMapping("/ask_write")
+    public void adminAskWrite() {
     }
-
 }
