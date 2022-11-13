@@ -67,13 +67,20 @@ $("input[name='reason']").on("change", function (){
 });
 
 
+/* 모달 알람 */
+function alam() {
+    $(".overlay-l").show();
+    $(".m-al").show();
+    setTimeout(function() { $(".overlay-l").fadeOut();}, 500);
+}
+
 /*------------- 닉네임 수정 -------------*/
 function nickCheck (){ /* 중복 체크 */
     if(!nickForm.nickname.value) {
         nickForm.nickname.focus();
         return;
     }
-
+    alam();
     $("button.nick-save").attr("disabled", false);
 }
 
