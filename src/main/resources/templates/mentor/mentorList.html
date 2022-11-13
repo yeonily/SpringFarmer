@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/css/header/header.css"/>
+    <link rel="stylesheet" href="/css/footer/footer.css"/>
+    <link rel="stylesheet" href="/css/mentor/mentorList.css">
+    <link rel="stylesheet" href="/css/common/font.css"/>
+    <title>멘토 목록 페이지</title>
+</head>
+<body>
+<!--헤더 삽입-->
+<div th:replace="/header/header.html :: header" class="header"/>
+
+<!--바디-->
+<div id="main_grid">
+    <div id="main_grid_inner1">
+        <main id="grid_main">
+            <section id="section_banner">
+                <div id="banner_container">
+                    <div id="banner_container_inner1">
+                        <div id="banner_container_inner2">
+                            <div id="banner_container_inner3">
+                                <div id="banner_background1">
+                                    <div id="banner_background1_1">
+                                        <picture class="banner_picture">
+                                            <source srcset="https://cdn.comento.kr/images/vod/top-banner-kdc-prior.png?s=2216x780&amp;q=100"
+                                                    type="image/webp">
+                                            <img src="https://cdn.comento.kr/images/vod/top-banner-kdc-prior.png" alt=""
+                                                 width="1108" height="390">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div id="banner_background2">
+                                    <div id="banner_wrapper">
+                                        <div>
+                                            <div>
+                                                <div col-sm="4" col-lg="12" class="">
+                                                    <picture id="banner_image" style="display: inline-block;">
+                                                        <source srcset="https://cdn.comento.kr/images/vod/lecture/kdc-logo-black.png?s=430x44&amp;q=75"
+                                                                type="image/webp">
+                                                        <img src="https://cdn.comento.kr/images/vod/lecture/kdc-logo-black.png"
+                                                             alt="" width="215" height="22">
+                                                    </picture>
+                                                    <div id="banner_text" style="color:#040505;">
+                                                        국비지원 100% 환급 코스<br> 무료 수강 사전 모집중!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="banner_button"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section_list">
+                <article id="mentor_list_wrap">
+                    <div id="mentor_text">
+                        <div id="mentor_text_inner1">
+                            <div id="mentor_text_inner2">
+                                <div id="mentor_text_inner3">
+                                    <div id="mentor_text_flex">
+                                        <div id="mentor_text_1_1">멘토 목록</div>
+                                    </div>
+                                    <div id="mentor_text_2">
+                                        너와농부싶어에서 검증된 현직자 멘토를 만나보세요.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mentor_list">
+                        <div id="mentor_list_flex">
+                            <div id="mentor_list_flex_inner1">
+                                <div id="mentor_list_flex_inner2">
+                                    <div id="mentor_list_flex_inner3">
+                                        <div class="mentor_info">
+                                            <a href="">
+                                                <article class="mentor_info_inner1">
+                                                    <div class="mentor_info_inner2">
+                                                        <picture class="mentor_info_image" style=";">
+                                                            <source srcset="https://cdn.comento.kr/images/vod/lecture/braze.png?s=518x600&amp;q=75" type="image/webp">
+                                                            <img src="https://cdn.comento.kr/images/vod/lecture/braze.png" alt="" width="259" height="300">
+                                                        </picture>
+                                                    </div>
+                                                    <div class="mentor_info_inner3">
+                                                        <div class="mentor_info_subTitle">
+                                                            <div class="mentor_info_subTitle2">
+                                                                CRM
+                                                            </div>
+                                                        </div>
+                                                        <div class="mentor_info_title">
+                                                            <div class="mentor_info_title2">
+                                                                오늘 당장 써먹는 CRM 마케팅
+                                                            </div>
+                                                        </div>
+                                                        <div class="mentor_info_caption">
+                                                            <div class="mentor_info_caption2">
+                                                                평생수강
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </a>
+                                        </div>
+                                        <div class="mentor_info">
+                                            <a href="">
+                                                <article class="mentor_info_inner1">
+                                                    <div class="mentor_info_inner2">
+                                                        <picture class="mentor_info_image" style=";">
+                                                            <source srcset="https://cdn.comento.kr/images/vod/lecture/braze.png?s=518x600&amp;q=75" type="image/webp">
+                                                            <img src="https://cdn.comento.kr/images/vod/lecture/braze.png" alt="" width="259" height="300">
+                                                        </picture>
+                                                    </div>
+                                                    <div class="mentor_info_inner3">
+                                                        <div class="mentor_info_subTitle">
+                                                            <div class="mentor_info_subTitle2">
+                                                                CRM
+                                                            </div>
+                                                        </div>
+                                                        <div class="mentor_info_title">
+                                                            <div class="mentor_info_title2">
+                                                                오늘 당장 써먹는 CRM 마케팅
+                                                            </div>
+                                                        </div>
+                                                        <div class="mentor_info_caption">
+                                                            <div class="mentor_info_caption2">
+                                                                평생수강
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </a>
+                                        </div>
+                                        <div class="mentor_info">
+                                            <a href="">
+                                                <article class="mentor_info_inner1">
+                                                    <div class="mentor_info_inner2">
+                                                        <picture class="mentor_info_image" style=";">
+                                                            <source srcset="https://cdn.comento.kr/images/vod/lecture/braze.png?s=518x600&amp;q=75" type="image/webp">
+                                                            <img src="https://cdn.comento.kr/images/vod/lecture/braze.png" alt="" width="259" height="300">
+                                                        </picture>
+                                                    </div>
+                                                    <div class="mentor_info_inner3">
+                                                        <div class="mentor_info_subTitle">
+                                                            <div class="mentor_info_subTitle2">
+                                                                CRM
+                                                            </div>
+                                                        </div>
+                                                        <div class="mentor_info_title">
+                                                            <div class="mentor_info_title2">
+                                                                오늘 당장 써먹는 CRM 마케팅
+                                                            </div>
+                                                        </div>
+                                                        <div class="mentor_info_caption">
+                                                            <div class="mentor_info_caption2">
+                                                                평생수강
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </a>
+                                        </div>
+                                        <div class="mentor_info">
+                                            <a href="">
+                                                <article class="mentor_info_inner1">
+                                                    <div class="mentor_info_inner2">
+                                                        <picture class="mentor_info_image" style=";">
+                                                            <source srcset="https://cdn.comento.kr/images/vod/lecture/braze.png?s=518x600&amp;q=75" type="image/webp">
+                                                            <img src="https://cdn.comento.kr/images/vod/lecture/braze.png" alt="" width="259" height="300">
+                                                        </picture>
+                                                    </div>
+                                                    <div class="mentor_info_inner3">
+                                                        <div class="mentor_info_subTitle">
+                                                            <div class="mentor_info_subTitle2">
+                                                                CRM
+                                                            </div>
+                                                        </div>
+                                                        <div class="mentor_info_title">
+                                                            <div class="mentor_info_title2">
+                                                                오늘 당장 써먹는 CRM 마케팅
+                                                            </div>
+                                                        </div>
+                                                        <div class="mentor_info_caption">
+                                                            <div class="mentor_info_caption2">
+                                                                평생수강
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+</div>
+
+<!--푸터 삽입-->
+<div th:replace="/footer/footer.html :: footer" class="footer"/>
+</body>
+</html>
