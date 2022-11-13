@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang=''>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset='utf-8'>
@@ -18,77 +18,7 @@
 
 <div id="wrapper">
     <!-- 세로 메뉴바 -->
-    <nav>
-        <div id="team-logo"><a href="../../main/html/main.html">너와농부싶어</a></div>
-
-        <div id='side-menu'>
-            <div class="side-menu-contents">
-                <a href='#'><span>사이트 바로가기</span></a>
-            </div>
-            <div class="menu-title">사이트 관리</div>
-            <ul>
-                <li class='active sub-menu'><a href='#'><span>사용자</span><span class="toggleBtn2">+</span></a>
-                    <ul>
-                        <li><a href='../../user/html/user.html'><span>사용자 관리</span></a></li>
-                    </ul>
-                </li>
-
-                <li class='active sub-menu'><a href='#'><span>컨텐츠 관리</span><span class="toggleBtn2">+</span></a>
-                    <ul>
-                        <li class='sub-menu'><a href='#' class="toggleBtn"><span>농촌 체험 프로그램</span></a>
-                            <ul>
-                                <li><a href='../../experience/html/experience_participant.html'><span>프로그램 지원자 관리</span></a></li>
-                                <li><a href='../../experience/html/experience_addList.html'><span>체험 프로그램 글 신청 관리</span></a></li>
-                                <li><a href='../../experience/html/experience_list.html'><span>체험 프로그램 글 관리</span></a></li>
-                                <li><a href='../../experience/html/experience_list.html'><span>프로그램 결제 내역 관리</span></a></li>
-                            </ul>
-                        </li>
-                        <li class='sub-menu'><a href='#' class="toggleBtn"><span>농촌 아르바이트</span></a>
-                            <ul>
-                                <li><a href='../../part/html/part_participant.html'><span>아르바이트 지원자 관리</span></a></li>
-                                <li><a href='../../part/html/part_addList.html'><span>아르바이트 공고 글 신청 관리</span></a></li>
-                                <li><a href='../../part/html/part_list.html'><span>아르바이트 공고 글 관리</span></a></li>
-                            </ul>
-                        </li>
-                        <li class='sub-menu'><a href='#' class="toggleBtn"><span>농촌 멘토</span></a>
-                            <ul>
-                                <li><a href='../../experience/html/experience_participant.html'><span>멘토 관리</span></a></li>
-                                <li><a href='../../experience/html/experience_list.html'><span>멘토 홍보글 관리</span></a></li>
-                                <li><a href='../../experience/html/experience_list.html'><span>채팅 관리</span></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class='active sub-menu last-menu'><a href='#' class="toggleBtn"><span>게시판 관리</span></a>
-                    <ul>
-                        <li class='sub-menu'><a href='#' class="toggleBtn"><span>공지</span></a>
-                            <ul>
-                                <li><a href='../../notice/html/notice_list.html'><span>공지 관리</span></a></li>
-                                <li class='last-menu'><a href='../../notice/html/notice_write.html'><span>공지 글 작성</span></a></li>
-                            </ul>
-                        </li>
-                        <li><a href='../../board/html/board.html'><span>자유게시판</span></a></li>
-                        <li><a href='../../board/html/board.html'><span>청년정책</span></a></li>
-                        <li><a href='../../board/html/board.html'><span>농업정보</span></a></li>
-                        <li><a href='../../board/html/board.html'><span>문의하기</span></a></li>
-                    </ul>
-                </li>
-
-                <li class='active sub-menu'><a href='#'><span>댓글</span><span class="toggleBtn2">+</span></a>
-                    <ul>
-                        <li><a href='../../reply/html/reply.html'><span>댓글 관리</span></a></li>
-                    </ul>
-                </li>
-
-                <li class='active sub-menu'><a href='#'><span>배너</span><span class="toggleBtn2">+</span></a>
-                    <ul>
-                        <li><a href='../../reply/html/reply.html'><span>배너 관리</span></a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <nav th:replace="/fix/side_menu.html :: sideMenu"></nav>
 
     <!-- 헤더 ~ 밑에 메인 컨텐츠 -->
     <div id="container">
@@ -100,111 +30,115 @@
         </header>
 
         <!-- 메인화면 컨텐츠 -->
-        <div id="content-wrap-top" class="content-wrap">
+<!--        <div id="content-wrap-top" class="content-wrap">-->
 
-            <div class="contents">
-                <div class="content-title">
-                    <div class="title">방문자 현황</div>
-                </div>
-                <div class="c-content">
-                    <!-- 차트 -->
-                    <div id="lineChart"></div>
-                </div>
-            </div>
+<!--            <div class="contents">-->
+<!--                <div class="content-title">-->
+<!--                    <div <div id="content-wrap-top" class="content-wrap">-->
 
-            <div class="contents">
-                <div class="content-title none">
-                    <div class="title">일자별 통계</div>
-                    <div class="title2">월별</div>
-                </div>
-                <div class="c-content">
-                    <table>
-                        <tr>
-                            <th>일자</th>
-                            <th>체험 신청</th>
-                            <th>알바 신청</th>
-                            <th>가입</th>
-                            <th>방문자</th>
-                            <th>게시글</th>
-                            <th>댓글 수</th>
-                        </tr>
-                        <tr class="check">
-                            <td>2022-09-30</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>2022-09-30</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>2022-09-30</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>2022-09-30</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>2022-09-30</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>2022-09-30</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>2022-09-30</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>이번달 합계</td>
-                            <td>12건</td>
-                            <td>7건</td>
-                            <td>7명</td>
-                            <td>1명</td>
-                            <td>8</td>
-                            <td>8</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+<!--                    <div class="contents">-->
+<!--                        <div class="content-title">-->
+<!--                            <divclass="title">방문자 현황</div>-->
+<!--                </div>-->
+<!--                <div class="c-content">-->
+<!--                    &lt;!&ndash; 차트 &ndash;&gt;-->
+<!--                    <div id="lineChart"></div>-->
+<!--                </div>-->
+<!--            </div>-->
 
-        </div>
+<!--            <div class="contents">-->
+<!--                <div class="content-title none">-->
+<!--                    <div class="title">일자별 통계</div>-->
+<!--                    <div class="title2">월별</div>-->
+<!--                </div>-->
+<!--                <div class="c-content">-->
+<!--                    <table>-->
+<!--                        <tr>-->
+<!--                            <th>일자</th>-->
+<!--                            <th>체험 신청</th>-->
+<!--                            <th>알바 신청</th>-->
+<!--                            <th>가입</th>-->
+<!--                            <th>방문자</th>-->
+<!--                            <th>게시글</th>-->
+<!--                            <th>댓글 수</th>-->
+<!--                        </tr>-->
+<!--                        <tr class="check">-->
+<!--                            <td>2022-09-30</td>-->
+<!--                            <td>1</td>-->
+<!--                            <td>2</td>-->
+<!--                            <td>3</td>-->
+<!--                            <td>4</td>-->
+<!--                            <td>5</td>-->
+<!--                            <td>5</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>2022-09-30</td>-->
+<!--                            <td>1</td>-->
+<!--                            <td>2</td>-->
+<!--                            <td>3</td>-->
+<!--                            <td>3</td>-->
+<!--                            <td>4</td>-->
+<!--                            <td>5</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>2022-09-30</td>-->
+<!--                            <td>1</td>-->
+<!--                            <td>2</td>-->
+<!--                            <td>3</td>-->
+<!--                            <td>4</td>-->
+<!--                            <td>4</td>-->
+<!--                            <td>5</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>2022-09-30</td>-->
+<!--                            <td>1</td>-->
+<!--                            <td>1</td>-->
+<!--                            <td>2</td>-->
+<!--                            <td>3</td>-->
+<!--                            <td>4</td>-->
+<!--                            <td>5</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>2022-09-30</td>-->
+<!--                            <td>1</td>-->
+<!--                            <td>2</td>-->
+<!--                            <td>3</td>-->
+<!--                            <td>3</td>-->
+<!--                            <td>4</td>-->
+<!--                            <td>5</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>2022-09-30</td>-->
+<!--                            <td>1</td>-->
+<!--                            <td>2</td>-->
+<!--                            <td>3</td>-->
+<!--                            <td>4</td>-->
+<!--                            <td>5</td>-->
+<!--                            <td>5</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>2022-09-30</td>-->
+<!--                            <td>1</td>-->
+<!--                            <td>2</td>-->
+<!--                            <td>3</td>-->
+<!--                            <td>3</td>-->
+<!--                            <td>4</td>-->
+<!--                            <td>5</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>이번달 합계</td>-->
+<!--                            <td>12건</td>-->
+<!--                            <td>7건</td>-->
+<!--                            <td>7명</td>-->
+<!--                            <td>1명</td>-->
+<!--                            <td>8</td>-->
+<!--                            <td>8</td>-->
+<!--                        </tr>-->
+<!--                    </table>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </div>-->
         <div class="content-wrap">
 
             <div class="c-w-wrap">
@@ -229,36 +163,36 @@
                             <tbody>
                             <!-- 멘토홍보 게시글 최근 순 출력 (5개) -->
                             <tr>
-                                <td class="name">[홍길동]</td>
-                                <td class="email">java11@gamil.com</td>
-                                <td>010-1234-1234</td>
-                                <td>서울</td>
-                                <td class="date">2022-10-03 10:00</td>
-                            </tr>
-                            <tr>
-                                <td class="name">[이순재]</td>
-                                <td class="email">abc123@gamil.com</td>
+                                <td class="name">[김민혁]</td>
+                                <td class="grade">농장주</td>
                                 <td>010-1234-1234</td>
                                 <td>경기</td>
                                 <td class="date">2022-10-03 10:00</td>
                             </tr>
                             <tr>
-                                <td class="name">[가나다]</td>
-                                <td class="email">imnongbu123@gamil.com</td>
+                                <td class="name">[김지연]</td>
+                                <td class="grade">일반인</td>
                                 <td>010-1234-1234</td>
                                 <td>서울</td>
                                 <td class="date">2022-10-03 10:00</td>
                             </tr>
                             <tr>
-                                <td class="name">[한동석]</td>
-                                <td class="email">dongstone@gamil.com</td>
+                                <td class="name">[서승우]</td>
+                                <td class="grade">농장주</td>
                                 <td>010-1234-1234</td>
                                 <td>인천</td>
                                 <td class="date">2022-10-03 10:00</td>
                             </tr>
                             <tr>
-                                <td class="name">[김땡땡]</td>
-                                <td class="email">nongsarang@gamil.com</td>
+                                <td class="name">[박수현]</td>
+                                <td class="grade">일반인</td>
+                                <td>010-1234-1234</td>
+                                <td>경기</td>
+                                <td class="date">2022-10-03 10:00</td>
+                            </tr>
+                            <tr>
+                                <td class="name">[정호석]</td>
+                                <td class="grade">농장주</td>
                                 <td>010-1234-1234</td>
                                 <td>경기</td>
                                 <td class="date">2022-10-03 10:00</td>
@@ -360,10 +294,10 @@
                     </div>
                 </div>
 
-                <!-- 소통 공간 -->
+                <!-- 자유게시판 공간 -->
                 <div class="contents small">
                     <div class="content-title">
-                        <div class="title">소통공간</div>
+                        <div class="title">자유게시판</div>
                         <div class="title2">
                             <a href="../../board/html/board.html">더보기 →</a>
                         </div>
@@ -375,7 +309,7 @@
                                 <col width="20%;">
                             </colgroup>
                             <tbody>
-                            <!-- 소통공간 게시글 최근 순 출력 (5개) -->
+                            <!-- 자유게시판 게시글 최근 순 출력 (5개) -->
                             <tr>
                                 <td class="title" onclick="location.href='#'">요즘 관심가지고 있는 파테크 아시냐요?</td>
                                 <td class="date">2022-10-03 10:00</td>

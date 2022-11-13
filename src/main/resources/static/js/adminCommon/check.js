@@ -49,3 +49,24 @@ function deleteReplyCheck(){
     if(flag) alert('삭제 완료');
 }
 
+// 공지 수정
+
+function reviseNoticeCheck() {
+    var msg = "이 공지를 수정 하시겠습니까?";
+    var flag = confirm(msg);
+
+    // if (flag) alert('수정 완료');
+}
+
+// 공지 삭제
+
+function deleteNoticeCheck() {
+    var msg = "이 공지를 삭제 하시겠습니까?";
+    var flag = confirm(msg);
+
+    if (flag) alert('삭제 완료');
+}
+
+
+
+
