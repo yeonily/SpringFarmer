@@ -19,4 +19,9 @@ public class MyPageController {
     public String quitPage(){
         return "/myPage/quit";
     }
+
+    @GetMapping("/payment")
+    public String paymentPage(){
+        return "/myPage/payment";
+    }
 }

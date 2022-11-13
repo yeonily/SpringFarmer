@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="menuContainer" th:fragment="myPageMenu">
+        <aside class="asideMenu">
+            <div class="profile-wrap">
+                <div class="profile">
+                    <div class="nickname">닉네임 넣는 곳</div>
+                    <div class="email-wrqp">
+                        <span class="email">이메일 넣는 곳</span>
+                        <span class="email-logo">
+                            <img src="/image/myPage/naver.png">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <a href="">
+                    <div class="menu-a" id="program">
+                        내 프로그램
+                    </div>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="">
+                    <div class="menu-a" id="alba">
+                        내 아르바이트
+                    </div>
+                </a>
+            </div>
+            <div class="menu ">
+                <a href="">
+                    <div class="menu-a" id="community">
+                        커뮤니티 활동
+                    </div>
+                </a>
+                <hr class="menu-category">
+            </div>
+            <div class="menu">
+                <a th:href="@{/myPage/setting}">
+                    <div class="menu-a" id="myInfoPage">
+                        개인 정보 설정
+                    </div>
+                </a>
+            </div>
+            <div class="menu">
+                <a  th:href="@{/myPage/payment}">
+                    <div class="menu-a" id="payment">
+                        결제 내역
+                    </div>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="javascript:void(0);">
+                    <div class="menu-a more-btn">
+                        더보기
+                        <span class="more"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="slide-menu">
+                <div class="menu">
+                    <a href="">
+                        <div class="menu-a slide-m" id="ask">
+                            문의 내역
+                        </div>
+                    </a>
+                </div>
+                <div class="menu">
+                    <a href="">
+                        <div class="menu-a slide-m" id="mentoring">
+                            멘토/멘티 리스트
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
