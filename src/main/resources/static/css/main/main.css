@@ -10,11 +10,6 @@ ul, li {
 html, body {
     height: 100%;
 }
-div.wrap {
-    position: relative;
-    min-height: 100%;
-    padding-bottom: 60px;
-}
 
 /*스크롤바 설정*/
 /* width */

@@ -5,9 +5,10 @@
     <title>문의하기</title>
     <link rel="stylesheet" href="/css/inquire/inquire.css">
     <link rel="stylesheet" href="/css/footer/footer.css"/>
-    <link rel="image_src" href="https://cdn.comento.kr/images/meta/meta-landing.jpg"/>
+    <link rel="stylesheet" href="/css/header/header.css"/>
+    <!--<link rel="image_src" href="https://cdn.comento.kr/images/meta/meta-landing.jpg"/>
 
-    <!-- Win8 tile -->
+    &lt;!&ndash; Win8 tile &ndash;&gt;
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="https://cdn.comento.kr/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -22,29 +23,42 @@
 
 
     <link rel="canonical" href="https://comento.kr/help"/>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>-->
+    <style>
+        footer {
+            background-color: #ffffff;
+            position: relative;
+        }
+        div.footer-bottom-wrap {
+            margin-top: 65px;
+        }
+    </style>
 </head>
 <body>
 <div class="wrap">
-<div class="c-application c-grid main-grid-component fluid" style="min-height: 100vh;">
-    <div class="c-application c-row">
-        <div class="c-application c-new-col" id="faq" sid="guest" style="min-height: 507px">
-            <div class="faq faq-container" style="background: #eaecee;">
-                <div class="faq faq-banner">
-                    <div class="sub-banner"></div>
-<!--                      <img src="https://comento.kr/images/banner/banner_faq.jpg" class="only-pc faq-banner-img">-->
-                    <div class="faq faq-search">
-                        <h1 class="h1 faq-search-title" style="font-size: 40px">문의 하기</h1>
-                        <div class="faq-search-box">
+    <!--헤더-->
+    <div th:replace="/header/header.html :: header" class="header"/>
+
+    <div class="c-application c-grid main-grid-component fluid">
+        <div class="c-application c-row">
+            <div class="c-application c-new-col" id="faq" sid="guest" style="min-height: 507px">
+                <div class="faq faq-container" style="background: #eaecee;">
+                    <div class="faq faq-banner">
+                        <div class="sub-banner"></div>
+                        <!--                      <img src="https://comento.kr/images/banner/banner_faq.jpg" class="only-pc faq-banner-img">-->
+                        <div class="faq faq-search">
+                            <h1 class="h1 faq-search-title" style="font-size: 40px">문의 하기</h1>
+                            <div class="faq-search-box">
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
-                <div class="c-application c-new-col" style="margin: 0 auto; width: 1124px; height: 684px; padding-right: 12px; padding-left: 12px">
-                    <div id="help-wrap-col" style=" width: 1108px; height: 588px">
-                        <div class="help help-wrap" style="background: #fff;">
-                            <section class="help help-section" style="height: 588px; margin-top: 60px;">
+                    <div class="c-application c-new-col"
+                         style="margin: 0 auto; width: 1124px; height: 684px; padding-right: 12px; padding-left: 12px">
+                        <div id="help-wrap-col" style=" width: 1108px; height: 588px">
+                            <div class="help help-wrap" style="background: #fff;">
+                                <section class="help help-section" style="height: 588px; margin-top: 60px;">
                                     <div class="help help-form">
                                         <div class="clearfix">
                                             <h2 class="h2 help-form-title">1:1 문의하기</h2>
@@ -55,39 +69,41 @@
                                             </p>
                                         </div>
                                         <section class="clearfix">
-                                            <input type="text" placeholder="제목" id="title" class="inputbox inputbox-title">
-                                            <textarea type="textarea" id="content" class="textbox mb-20" cols="30" rows="5" placeholder="해결이 필요한 문제에 대해 자세히 설명해주세요." style="padding: 15px;"></textarea>
+                                            <input type="text" placeholder="제목" id="title"
+                                                   class="inputbox inputbox-title">
+                                            <textarea type="textarea" id="content" class="textbox mb-20" cols="30"
+                                                      rows="5" placeholder="해결이 필요한 문제에 대해 자세히 설명해주세요."
+                                                      style="padding: 15px;"></textarea>
 
                                             <div class="btn-wrapper" style="height: 40px;">
-                                                <button class="btn disabled" style="background: #2a7de1; color: #fff; cursor: pointer;"> 문의하기 </button>
+                                                <button class="btn disabled"
+                                                        style="background: #2a7de1; color: #fff; cursor: pointer;"> 문의하기
+                                                </button>
                                             </div>
                                         </section>
-                                        </div>
                                     </div>
-                            </section>
+                                </section>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div th:replace="/footer/footer.html :: footer" class="footer"/>
+    <footer th:replace="/footer/footer.html :: footer" class="footer"></footer>
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script>
-    $(document).ready(function(){
-        $('.btn').click(function(){
-            if($('#title').val()==''){
+    $(document).ready(function () {
+        $('.btn').click(function () {
+            if ($('#title').val() == '') {
                 alert('제목을 입력하세요');
                 $('#title').focus();
-            }
-            else if($('#content').val()==''){
+            } else if ($('#content').val() == '') {
                 alert('내용을 입력하세요');
                 $('#content').focus();
-            }
-            else{
+            } else {
                 alert('제출되었습니다');
                 $('btn').submit();
             }
