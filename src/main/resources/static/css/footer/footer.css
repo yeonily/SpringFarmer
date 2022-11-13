@@ -23,7 +23,6 @@ footer div.footer-container {
 div.footer-top-wrap {
     display: inline-flex;
     padding-bottom: 24px;
-    border-bottom: 1px solid #F3F4F5;
 }
 div.section {
     width: 257px;
@@ -112,6 +111,7 @@ div.footer-bottom-wrap {
     padding-top: 32px;
     padding-left: 10px;
     position: relative;
+    border-top: 1px solid #F3F4F5;
 }
 
 /*왼쪽 부분*/

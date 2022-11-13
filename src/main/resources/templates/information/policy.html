@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>지원정책</title>
+    <link rel="stylesheet" href="/css/information/policy.css">
+    <link rel="stylesheet" href="/css/inquire/inquire.css">
+    <link rel="stylesheet" href="/css/header/header.css"/>
+    <link rel="stylesheet" href="/css/common/font.css"/>
+    <link rel="stylesheet" href="/css/footer/footer.css"/>
+    <style>
+        footer {
+            background-color: #ffffff;
+        }
+        div.footer-bottom-wrap {
+            margin-top: 65px;
+        }
+    </style>
+</head>
 <body>
-<!--헤더-->
-<div th:replace="/header/header.html :: header" class="header"/>
-
 <div id="wrap">
+    <!--헤더-->
+    <div th:replace="/header/header.html :: header" class="header"/>
+
+
     <div class="c-application c-grid main-grid-component fluid" style="min-height: 100vh;">
         <div class="c-application c-row">
             <div class="c-application c-new-col" id="faq" sid="guest" style="min-height: 507px">
@@ -35,7 +53,7 @@
                     <div class="c-application c-new-grid container" style="background: inherit;"></div>
                     <div class="c-application c-new-row">
                         <div class="c-application c-new-col">
-                            <div class="c-application c-new-col">
+                            <div class="c-application c-new-col footerMargin">
                                 <div class="faq faq-board">
                                     <ul class="clearfix">
                                         <li class="faq-board-list">
@@ -150,21 +168,14 @@
             </div>
         </div>
     </div>
+
+    <!--푸터-->
+    <footer th:replace="/footer/footer.html :: footer"></footer>
+    <div class="test"></div>
 </div>
 <!--footer-->
-<div th:replace="/footer/footer.html :: footer" class="footer"/>
-</div>
 <!--</div>-->
 </body>
-<head>
-    <meta charset="UTF-8">
-    <title>지원정책</title>
-    <link rel="stylesheet" href="/css/information/policy.css">
-    <link rel="stylesheet" href="/css/inquire/inquire.css">
-    <link rel="stylesheet" href="/css/header/header.css"/>
-    <!--    <link rel="stylesheet" href="/css/common/font.css"/>-->
-    <link rel="stylesheet" href="/css/footer/footer.css"/>
-</head>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
     let count = 0;
