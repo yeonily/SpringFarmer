@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/common/font.css"/>
     <title>Title</title>
 </head>
 <body>
@@ -133,6 +134,20 @@
                 <p>알림</p>
                 <span></span>
                 <button type="button">모두 읽음</button>
+            </div>
+        </div>
+
+
+        <!--서브헤더 틀 영역(서브헤더 필요시 div.wrap에 margin-top:114px로 변경 필요
+            header.css 가장 상단에 있으니 참고
+        -->
+        <div id="sub_header" style="display: none">
+            <div class="menuList">
+                <ul>
+                    <li><button type="button" style="border-bottom: 3px solid #595f63!important;">테스트1</button></li>
+                    <li><button type="button" style="color: #adb3b8">테스트2</button></li>
+                    <li><button type="button" style="color: #adb3b8">테스트3</button></li>
+                </ul>
             </div>
         </div>
     </div>
