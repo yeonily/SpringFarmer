@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <title>농촌테스트</title>
     <link rel="stylesheet" href="/css/information/stepTest.css">
+    <link rel="stylesheet" href="/css/footer/footer.css"/>
+    <link rel="stylesheet" href="/css/header/header.css"/>
 </head>
 <body>
+<div th:replace="/header/header.html :: header" class="header"/>
 <!-- subheader -->
 <div class="sub_title">
     <div class="container">
@@ -324,8 +327,10 @@
     </div>
 
 </div>
+<div th:replace="/footer/footer.html :: footer" class="footer"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/information/radioChecked.js"></script>
 <script src="/js/information/stepChange.js"></script>
+<script src="/js/header/header.js"></script>
 </html>
