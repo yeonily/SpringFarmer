@@ -14,4 +14,25 @@ public class ProgramController {
     public void list(){
 
     }
+
+    @GetMapping("/detail")
+    public void detail(){
+
+    }
+
+    @GetMapping("/apply")
+    public void apply(){
+
+    }
+
+    @GetMapping("/applyOk")
+    public void applyOk(){
+
+    }
+
+    @GetMapping("/pay")
+    public void pay(){
+
+    }
+
 }
