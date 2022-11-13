@@ -3,26 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>지원정책</title>
-
-
-<!--    <link rel="image_src" href="https://cdn.comento.kr/images/meta/meta-landing.jpg"/>-->
-
-<!--    <link media="all" type="text/css" rel="stylesheet" href="https://comento.kr/css/style.css?id=36faedb2a7b738162de6">-->
-
-<!--&lt;!&ndash;    <style>&ndash;&gt;-->
-<!--&lt;!&ndash;        [v-cloak] {&ndash;&gt;-->
-<!--&lt;!&ndash;            display: none&ndash;&gt;-->
-<!--&lt;!&ndash;        }&ndash;&gt;-->
-<!--&lt;!&ndash;    </style>&ndash;&gt;-->
-
-
-<!--    <link rel="canonical" href="https://comento.kr/help"/>-->
-<!--    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>-->
     <link rel="stylesheet" href="/css/information/policy.css">
     <link rel="stylesheet" href="/css/inquire/inquire.css">
+    <link rel="stylesheet" href="/css/header/header.css"/>
+
 </head>
 <body>
 <div id="app">
+<!--헤더-->
+<div th:replace="/header/header.html :: header" class="header"/>
+
 <div class="c-application c-grid main-grid-component fluid" style="min-height: 100vh;">
     <div class="c-application c-row">
         <div class="c-application c-new-col" id="faq" sid="guest" style="min-height: 507px">
@@ -168,4 +158,5 @@
     })
 
 </script>
+<script src="/js/header/header.js"></script>
 </html>
