@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>지원정책</title>
     <link rel="stylesheet" href="/css/information/policy.css">
     <link rel="stylesheet" href="/css/inquire/inquire.css">
     <link rel="stylesheet" href="/css/header/header.css"/>
-
+<!--    <link rel="stylesheet" href="/css/common/font.css"/>-->
+    <link rel="stylesheet" href="/css/footer/footer.css"/>
 </head>
 <body>
-<div id="app">
 <!--헤더-->
 <div th:replace="/header/header.html :: header" class="header"/>
+<div id="app">
 
 <div class="c-application c-grid main-grid-component fluid" style="min-height: 100vh;">
     <div class="c-application c-row">
@@ -139,9 +140,11 @@
                     </div>
                 </div>
         </div>
-    </div>
 </div>
 </div>
+</div>
+<!--footer-->
+<div th:replace="/footer/footer.html :: footer" class="footer"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">

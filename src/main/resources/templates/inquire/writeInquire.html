@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>문의하기</title>
     <link rel="stylesheet" href="/css/inquire/inquire.css">
+    <link rel="stylesheet" href="/css/footer/footer.css"/>
     <link rel="image_src" href="https://cdn.comento.kr/images/meta/meta-landing.jpg"/>
 
     <!-- Win8 tile -->
@@ -24,6 +25,7 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
+<div class="wrap">
 <div class="c-application c-grid main-grid-component fluid" style="min-height: 100vh;">
     <div class="c-application c-row">
         <div class="c-application c-new-col" id="faq" sid="guest" style="min-height: 507px">
@@ -69,6 +71,8 @@
             </div>
         </div>
     </div>
+</div>
+<div th:replace="/footer/footer.html :: footer" class="footer"/>
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
