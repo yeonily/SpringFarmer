@@ -11,7 +11,11 @@ body, button {
 
 a {text-decoration: none;}
 div.flex {display: flex;}
-ul {list-style: none;}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 button{cursor: pointer;}
 
 .marginT {
@@ -62,6 +66,7 @@ div#menuContainer {
 }
 
 aside.asideMenu {
+    display: block;
     box-sizing: border-box;
     position: relative;
     padding: 12px;
@@ -71,6 +76,7 @@ aside.asideMenu {
 div.profile-wrap {
     display: flex;
     margin-bottom: 32px !important;
+    margin-left: 4px!important;
 }
 
 div.profile-wrap {overflow: hidden;}
@@ -84,6 +90,7 @@ div.nickname {
 }
 
 div.email-wrqp {
+    margin-bottom: 5px;
     display: flex;
     align-items: center;
     font-size: 12px;
@@ -120,13 +127,13 @@ div.menu-a {
     justify-content: space-between;
 
     color: rgb(32, 35, 37);
-    font-size: 16px;
     line-height: 25px;
     font-weight: 400 !important;
     letter-spacing: .02em;
 }
 
 hr.menu-category {
+    width: 100%;
     border-color: #EAECEE;
     border-style: solid;
     border-top: 1px;
@@ -254,10 +261,25 @@ div.content {
     box-sizing: border-box;
 }
 
-div#none-content {
+div.f-column {
     display: flex;
     flex-direction: column;
-    padding-top: 72px!important;
+}
+
+div#content-wrap {padding-top: 60px!important;}
+div#c-w-wrap {padding-top: 44px!important;}
+
+div.n-c-wrap {
+    padding: 16px 20px;
+    min-height: 250px;
+    display: flex!important;
+    flex-direction: column;
+    justify-content: center;
+
+    color: rgb(118, 125, 130);
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: .02em;
 }
 
 /* 알람 애니매이션 모달 */
@@ -276,7 +298,7 @@ div.m-al {
     height: 50px;
     margin: 0 auto;
     border-radius: 10px;
-    background: #1e8524;
+    background: #47c880;
     text-align: center;
     line-height: 50px;
     letter-spacing: 1px;

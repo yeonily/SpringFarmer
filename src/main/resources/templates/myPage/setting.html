@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>너와농부싶어</title>
+    <link rel="stylesheet" href="/css/common/font.css" />
+    <link rel="stylesheet" href="/css/header/header.css" />
+    <link rel="stylesheet" href="/css/footer/footer.css" />
     <link rel="stylesheet" href="/css/myPage/myPage.css" />
     <link rel="stylesheet" href="/css/myPage/sideMenu.css" />
-    <link rel="stylesheet" href="/css/common/font.css" />
 </head>
 <body>
+<div th:replace="/header/header.html :: header" class="header"/>
 <div id="main">
-    <div class="wrap">
+    <div class="wrap" style="padding-bottom: 0">
         <div class="container">
             <div class="contentsWrap">
                 <!--메뉴 카텍고리 시작-->
@@ -55,7 +58,7 @@
                                         <div class="member-division-img">
                                             <!-- 유저 구분에 따라 이미지 변경
                                              일반 유저 : user.png / 농장주 : farmer.png -->
-<!--                                            <img src="/image/myPage/user.png" style="width: 45px;">-->
+                                            <!--                                            <img src="/image/myPage/user.png" style="width: 45px;">-->
                                             <img src="/image/myPage/farmer.png" style="width: 60px;">
                                             <!------>
                                         </div>
@@ -120,25 +123,25 @@
                                         <form action="" name="myInfoForm">
                                             <div class="s-form-input">
                                                 <p class="form-title">이름</p>
-                                                <div class="flex f-column f-section">
+                                                <div class="f-column f-section">
                                                     <input type="text" name="name" value="○○○" class="form-input" disabled>
                                                 </div>
                                             </div>
                                             <div class="s-form-input f-m-top">
                                                 <p class="form-title">생년월일</p>
-                                                <div class="flex f-column f-section">
+                                                <div class="f-column f-section">
                                                     <input type="text" name="birth" class="form-input" value="2000-00-00" disabled>
                                                 </div>
                                             </div>
                                             <div class="s-form-input f-m-top">
                                                 <p class="form-title">휴대폰번호</p>
-                                                <div class="flex f-column f-section">
+                                                <div class="f-column f-section">
                                                     <input type="text" name="phone" value="010-0000-0000" class="form-input" oninput="autoHyphen(this)" maxlength="13">
                                                 </div>
                                             </div>
                                             <div class="s-form-input f-m-top">
                                                 <p class="form-title">구분</p>
-                                                <div class="flex f-column f-section flex user-type">
+                                                <div class="flex f-section flex user-type">
                                                     <input type="radio" name="grade" id="user" value="user"/>
                                                     <label class="grade" for="user" style="margin-right:13px;">일반인</label>
                                                     <input type="radio" name="grade" id="farmer" value="farmer"/>
@@ -190,7 +193,7 @@
                                                 <button type="button" class="s-button s-cancel cancelHover" id="mentorCancel">취소</button>
                                             </div>
                                         </form>
-                                <!------------------>
+                                        <!------------------>
                                     </section>
                                 </div>
                             </div>
@@ -201,6 +204,9 @@
         </div>
     </div>
 </div>
+<!-- 푸터 -->
+<div th:replace="/footer/footer.html :: footer" class="footer"/>
+<!-- 알람 모달창 -->
 <div class="overlay-l" style="display: none">
     <div class="m-al">저장되었습니다.</div>
 </div>

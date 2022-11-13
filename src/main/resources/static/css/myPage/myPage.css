@@ -154,7 +154,7 @@ button.nick-check:hover {background-color: #ddece4;}
 button.nick-save {
     color: #fff;
     border: none;
-    background-color: #45a16d;
+    background-color: #47c880;
 }
 
 button.nick-save:disabled {
@@ -162,7 +162,7 @@ button.nick-save:disabled {
     cursor: not-allowed!important;
 }
 
-button.saveHover:hover:not([disabled]) {background-color: #236a42;}
+button.saveHover:hover:not([disabled]) {background-color: #357e55;}
 button.cancelHover:hover:not([disabled]) {background-color: #ddece4;}
 
 div.nick-c-save {
@@ -231,8 +231,6 @@ p.form-title {
     line-height: 20px;
     font-weight: 400;
 }
-
-div.f-column {flex-direction: column;}
 
 div.f-section{
     position: relative;
@@ -306,7 +304,7 @@ button.s-button {
 
 button.s-save {
     min-width: 49px;
-    background-color: #45a16d;
+    background-color: #47c880;
 }
 
 button.s-cancel {
@@ -346,8 +344,7 @@ button.mentorBtn {
     font-weight: 400;
     margin: 24px auto 0;
     background-color: #d6e4d0;
-    color: #45a16d;
-    cursor: pointer;
+    color: #1e8524;
 }
 
 .newMentorForm{display: none;}

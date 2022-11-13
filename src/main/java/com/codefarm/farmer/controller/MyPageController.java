@@ -24,4 +24,19 @@ public class MyPageController {
     public String paymentPage(){
         return "/myPage/payment";
     }
+
+    @GetMapping("/community")
+    public String communityPage(){
+        return "/myPage/community";
+    }
+
+    @GetMapping("/program")
+    public String programPage(){
+        return "/myPage/program";
+    }
+
+    @GetMapping("/alba")
+    public String albaPage(){
+        return "/myPage/alba";
+    }
 }
