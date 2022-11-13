@@ -3,7 +3,7 @@
 body {
     margin: 0;
     background: rgba(253, 223, 223, 0.23);
-    background-color: #daf2e7;
+    background-color: #edfaf3;
 }
 
 div#wrapper {
@@ -22,7 +22,7 @@ nav {
     width: 250px;
     height: auto;
     min-height: 99.6vh;
-    background-color: #1dc078;
+    background-color: #77e0a7;
     border: 1px solid gray;
 }
 
@@ -63,7 +63,7 @@ nav div.side-menu-contents {
 }
 
 nav div.side-menu-contents:hover {
-    background: #87f5c3;
+    background: #9debc1;
 
 }
 
@@ -96,11 +96,11 @@ nav div.side-menu-contents:hover {
 }
 
 #side-menu ul li {
-    background: #1dc078;
+    background: #77e0a7;
 }
 
 #side-menu ul li:hover {
-    background: #69f5b5;
+    background: #9debc1;
 }
 
 #side-menu ul ul li a {
@@ -112,7 +112,7 @@ nav div.side-menu-contents:hover {
     padding: 16px;
     z-index: 1;
     font-size: 13px;
-    background: #abf5d4;
+    background: #bbf2d3;
 }
 
 /* 소카테고리 hover  */
@@ -127,7 +127,7 @@ nav div.side-menu-contents:hover {
 }
 
 #side-menu ul ul ul li a {
-    background: #baf5da;
+    background: #c9f2db;
     font-size: 13px;
 }
 

@@ -33,7 +33,7 @@ td.delete input[type="button"] {
     padding: 3px 1px;
     border: 1px solid rgb(184, 184, 184);
     box-shadow: 0.1px 0.1px 8px -5px #000000;
-    background: #acf2d2;
+    background: #47c880;
 
     font-family: inherit;
     font-weight: 600;
@@ -43,4 +43,4 @@ td.delete input[type="button"] {
     word-break: keep-all;
 }
 
-td.delete input[type="button"]:hover { background: #82edbc; }
+td.delete input[type="button"]:hover { background: #357e55; }

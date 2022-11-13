@@ -67,6 +67,13 @@ function deleteNoticeCheck() {
     if (flag) alert('삭제 완료');
 }
 
+function deleteBoardCheck() {
+    var msg = "이 게시글을 삭제 하시겠습니까?";
+    var flag = confirm(msg);
+
+    if (flag) alert('삭제 완료');
+}
+
 
 
 
