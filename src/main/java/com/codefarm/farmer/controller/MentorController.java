@@ -8,10 +8,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @Slf4j
 @RequestMapping("/mentor/*")
-public class MentroController {
+public class MentorController {
 
     @GetMapping("/mentorIntro")
     public void intro(){
+
+    }
+
+    @GetMapping("/mentorList")
+    public void list(){
 
     }
 }

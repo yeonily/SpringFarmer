@@ -1,14 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/css/header/header.css"/>
+    <link rel="stylesheet" href="/css/footer/footer.css"/>
     <link rel="stylesheet" href="/css/mentor/mentorIntro.css">
+    <link rel="stylesheet" href="/css/common/font.css"/>
+    <title>멘토소개 페이지</title>
 </head>
 <body>
-<!--서브 헤더-->
+<!--헤더 삽입-->
+<div th:replace="/header/header.html :: header" class="header"/>
+
+<!--body-->
 <div id="main_wrap">
     <div id="main_content">
+        <div id="intro_flex">
+            <div id="mentor_intro">
+                <div id="intro_content">
+                    <div id="content_inner1">
+                        <div id="inner1_text1" data-v-8941e5d0="">
+                            <div class="" style="color:#202325;text-align:left;">
+                                진짜 현직자와 라이브 직무경험
+                            </div>
+                        </div>
+                        <div id="inner1_text2">
+                            직무부트캠프와<br>
+                            취업 성공까지 함께해요.
+                        </div>
+                    </div>
+                    <div id="content_inner2">
+                        <button id="content_button">
+                            <div class="button_icon"></div>
+                            멘토 목록 보기
+                            <div class="button_icon"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <img src="https://cdn.comento.kr/images/edu/banner-4.jpg?s=978x780&q=100" width="489px" height="390px">
+        </div>
+        <div id="main_content0">
+            <div id="main_content0_inner">
+                <div id="main_content0_inner2">
+                    <div id="main_content0_title">
+                        추천 멘토 목록
+                    </div>
+                    <div id="main_content0_lists">
+                        <div id="main_content0_lists_flex">
+                            <div class="main_content0_list">
+                                <a href="" class="main_content0_list_a">
+                                    <article class="main_content0_list_article">
+                                        <div class="main_content0_list_image">
+                                            <img src="https://cdn.comento.kr/edu/title_LiV8PxN8s3.jpg?s=518x272&amp;q=75" alt="" class="main_content0_list_image2">
+                                        </div>
+                                        <div class="main_content0_list_text">
+                                            <div class="text_info">
+                                                <div class="text_info_1">IT/SW</div>
+                                                <div class="text_info_2">.</div>
+                                                <div class="text_info_3">20차 앵콜</div>
+                                            </div>
+                                            <div class="text_title">
+                                                <div class="text_title1">
+                                                    <div class="text_title2">
+                                                        데이터 엔지니어의 모든 실무 유형과 취업전략
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text_caption">
+                                                <span class="text_caption1"> 4개의 스케쥴 </span>
+                                                <hr class="text_caption2">
+                                                <span class="text_caption1"> 11월 21일부터 </span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="main_content0_list">
+                                <a href="" class="main_content0_list_a">
+                                    <article class="main_content0_list_article">
+                                        <div class="main_content0_list_image">
+                                            <img src="https://cdn.comento.kr/edu/title_LiV8PxN8s3.jpg?s=518x272&amp;q=75" alt="" class="main_content0_list_image2">
+                                        </div>
+                                        <div class="main_content0_list_text">
+                                            <div class="text_info">
+                                                <div class="text_info_1">IT/SW</div>
+                                                <div class="text_info_2">.</div>
+                                                <div class="text_info_3">20차 앵콜</div>
+                                            </div>
+                                            <div class="text_title">
+                                                <div class="text_title1">
+                                                    <div class="text_title2">
+                                                        데이터 엔지니어의 모든 실무 유형과 취업전략
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text_caption">
+                                                <span class="text_caption1"> 4개의 스케쥴 </span>
+                                                <hr class="text_caption2">
+                                                <span class="text_caption1"> 11월 21일부터 </span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="main_content0_list">
+                                <a href="" class="main_content0_list_a">
+                                    <article class="main_content0_list_article">
+                                        <div class="main_content0_list_image">
+                                            <img src="https://cdn.comento.kr/edu/title_LiV8PxN8s3.jpg?s=518x272&amp;q=75" alt="" class="main_content0_list_image2">
+                                        </div>
+                                        <div class="main_content0_list_text">
+                                            <div class="text_info">
+                                                <div class="text_info_1">IT/SW</div>
+                                                <div class="text_info_2">.</div>
+                                                <div class="text_info_3">20차 앵콜</div>
+                                            </div>
+                                            <div class="text_title">
+                                                <div class="text_title1">
+                                                    <div class="text_title2">
+                                                        데이터 엔지니어의 모든 실무 유형과 취업전략
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text_caption">
+                                                <span class="text_caption1"> 4개의 스케쥴 </span>
+                                                <hr class="text_caption2">
+                                                <span class="text_caption1"> 11월 21일부터 </span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="main_content0_list">
+                                <a href="" class="main_content0_list_a">
+                                    <article class="main_content0_list_article">
+                                        <div class="main_content0_list_image">
+                                            <img src="https://cdn.comento.kr/edu/title_LiV8PxN8s3.jpg?s=518x272&amp;q=75" alt="" class="main_content0_list_image2">
+                                        </div>
+                                        <div class="main_content0_list_text">
+                                            <div class="text_info">
+                                                <div class="text_info_1">IT/SW</div>
+                                                <div class="text_info_2">.</div>
+                                                <div class="text_info_3">20차 앵콜</div>
+                                            </div>
+                                            <div class="text_title">
+                                                <div class="text_title1">
+                                                    <div class="text_title2">
+                                                        데이터 엔지니어의 모든 실무 유형과 취업전략
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text_caption">
+                                                <span class="text_caption1"> 4개의 스케쥴 </span>
+                                                <hr class="text_caption2">
+                                                <span class="text_caption1"> 11월 21일부터 </span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="main_content0_list">
+                                <a href="" class="main_content0_list_a">
+                                    <article class="main_content0_list_article">
+                                        <div class="main_content0_list_image">
+                                            <img src="https://cdn.comento.kr/edu/title_LiV8PxN8s3.jpg?s=518x272&amp;q=75" alt="" class="main_content0_list_image2">
+                                        </div>
+                                        <div class="main_content0_list_text">
+                                            <div class="text_info">
+                                                <div class="text_info_1">IT/SW</div>
+                                                <div class="text_info_2">.</div>
+                                                <div class="text_info_3">20차 앵콜</div>
+                                            </div>
+                                            <div class="text_title">
+                                                <div class="text_title1">
+                                                    <div class="text_title2">
+                                                        데이터 엔지니어의 모든 실무 유형과 취업전략
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text_caption">
+                                                <span class="text_caption1"> 4개의 스케쥴 </span>
+                                                <hr class="text_caption2">
+                                                <span class="text_caption1"> 11월 21일부터 </span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="main_content0_list">
+                                <a href="" class="main_content0_list_a">
+                                    <article class="main_content0_list_article">
+                                        <div class="main_content0_list_image">
+                                            <img src="https://cdn.comento.kr/edu/title_LiV8PxN8s3.jpg?s=518x272&amp;q=75" alt="" class="main_content0_list_image2">
+                                        </div>
+                                        <div class="main_content0_list_text">
+                                            <div class="text_info">
+                                                <div class="text_info_1">IT/SW</div>
+                                                <div class="text_info_2">.</div>
+                                                <div class="text_info_3">20차 앵콜</div>
+                                            </div>
+                                            <div class="text_title">
+                                                <div class="text_title1">
+                                                    <div class="text_title2">
+                                                        데이터 엔지니어의 모든 실무 유형과 취업전략
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text_caption">
+                                                <span class="text_caption1"> 4개의 스케쥴 </span>
+                                                <hr class="text_caption2">
+                                                <span class="text_caption1"> 11월 21일부터 </span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="main_content0_list">
+                                <a href="" class="main_content0_list_a">
+                                    <article class="main_content0_list_article">
+                                        <div class="main_content0_list_image">
+                                            <img src="https://cdn.comento.kr/edu/title_LiV8PxN8s3.jpg?s=518x272&amp;q=75" alt="" class="main_content0_list_image2">
+                                        </div>
+                                        <div class="main_content0_list_text">
+                                            <div class="text_info">
+                                                <div class="text_info_1">IT/SW</div>
+                                                <div class="text_info_2">.</div>
+                                                <div class="text_info_3">20차 앵콜</div>
+                                            </div>
+                                            <div class="text_title">
+                                                <div class="text_title1">
+                                                    <div class="text_title2">
+                                                        데이터 엔지니어의 모든 실무 유형과 취업전략
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text_caption">
+                                                <span class="text_caption1"> 4개의 스케쥴 </span>
+                                                <hr class="text_caption2">
+                                                <span class="text_caption1"> 11월 21일부터 </span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="main_content0_list">
+                                <a href="" class="main_content0_list_a">
+                                    <article class="main_content0_list_article">
+                                        <div class="main_content0_list_image">
+                                            <img src="https://cdn.comento.kr/edu/title_LiV8PxN8s3.jpg?s=518x272&amp;q=75" alt="" class="main_content0_list_image2">
+                                        </div>
+                                        <div class="main_content0_list_text">
+                                            <div class="text_info">
+                                                <div class="text_info_1">IT/SW</div>
+                                                <div class="text_info_2">.</div>
+                                                <div class="text_info_3">20차 앵콜</div>
+                                            </div>
+                                            <div class="text_title">
+                                                <div class="text_title1">
+                                                    <div class="text_title2">
+                                                        데이터 엔지니어의 모든 실무 유형과 취업전략
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text_caption">
+                                                <span class="text_caption1"> 4개의 스케쥴 </span>
+                                                <hr class="text_caption2">
+                                                <span class="text_caption1"> 11월 21일부터 </span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="main_content0_button">
+                        <div id="main_content0_button_flex">
+                            <div id="main_content0_button_flex1">
+                                <button id="main_content0_button_button">
+                                    멘토 목록 보기
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="main_content1">
             <div id="content1_top">
                 <div id="content1_top_1">
@@ -107,9 +386,34 @@
                             </div>
                         </div>
                     </div>
+                    <svg data-v-bd9f2bcc="" data-v-7355d542="" width="24" height="24" viewBox="0 0 24 24" fill="black"
+                         xmlns="http://www.w3.org/2000/svg" id="prev_svg"
+                         style="fill: rgb(32, 35, 37);transform: rotate(-90deg);" tabIndex="0" role="button"
+                         aria-label="Previous slide">
+                        <path data-v-bd9f2bcc="" fill-rule="evenodd" clip-rule="evenodd"
+                              d="M11.2929 7.29289C11.6834 6.90237 12.3166 6.90237 12.7071 7.29289L19.2071 13.7929C19.5976 14.1834 19.5976 14.8166 19.2071 15.2071C18.8166 15.5976 18.1834 15.5976 17.7929 15.2071L12 9.41421L6.20711 15.2071C5.81658 15.5976 5.18342 15.5976 4.79289 15.2071C4.40237 14.8166 4.40237 14.1834 4.79289 13.7929L11.2929 7.29289Z"></path>
+                    </svg>
+                    <svg data-v-bd9f2bcc="" data-v-7355d542="" width="24" height="24" viewBox="0 0 24 24" fill="black"
+                         xmlns="http://www.w3.org/2000/svg" id="next_svg"
+                         style="fill: rgb(32, 35, 37); transform: rotate(90deg);" tabIndex="0" role="button"
+                         aria-label="Next slide">
+                        <path data-v-bd9f2bcc="" fill-rule="evenodd" clip-rule="evenodd"
+                              d="M11.2929 7.29289C11.6834 6.90237 12.3166 6.90237 12.7071 7.29289L19.2071 13.7929C19.5976 14.1834 19.5976 14.8166 19.2071 15.2071C18.8166 15.5976 18.1834 15.5976 17.7929 15.2071L12 9.41421L6.20711 15.2071C5.81658 15.5976 5.18342 15.5976 4.79289 15.2071C4.40237 14.8166 4.40237 14.1834 4.79289 13.7929L11.2929 7.29289Z"></path>
+                    </svg>
+                    <!--<div data-v-7355d542="" slot="pagination" id="swiper-pagination"
+                         class="swiper-pagination-outside swiper-indicator-dark swiper-pagination-clickable swiper-pagination-bullets">
+                        <button class="swiper-pagination-bullet" role="button" aria-label="Go to slide 1"></button>
+                        <button class="swiper-pagination-bullet" role="button" aria-label="Go to slide 2"></button>
+                        <button
+                                class="swiper-pagination-bullet" role="button" aria-label="Go to slide 3"></button>
+                        <button
+                                class="swiper-pagination-bullet" role="button" aria-label="Go to slide 4"></button>
+                    </div>-->
+
                 </div>
                 <div id="content2_bottom">
-                    <div class="c-application c-typography c-body2" style="color:#595F63;text-align:center; margin-top: 60px">
+                    <div class="c-application c-typography c-body2"
+                         style="color:#595F63;text-align:center; margin-top: 60px">
                         실제 수강생들의 생생한 동영상 후기
                         <div class="mt-12" data-v-d3bb83e4="" data-v-36133978="">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="black"
@@ -122,13 +426,178 @@
                             </svg>
                         </div>
                     </div>
-                    <div>
+                    <div id="mentor_media">
+                        <div style="position: relative">
+                            <div id="media_container">
+                                <div id="swiper_media">
+                                    <div class="swiper_slide">
+                                        <div class="swiper_slide_padding">
+                                            <iframe src="https://www.youtube.com/embed/6-uA5ZA-dDQ" frameborder="0"
+                                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen="allowfullscreen" title="실제 수강생들의 생생한 동영상 후기">
+                                            </iframe>
+                                            <div style="z-index: 2"></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper_slide">
+                                        <div class="swiper_slide_padding">
+                                            <iframe src="https://www.youtube.com/embed/6-uA5ZA-dDQ" frameborder="0"
+                                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen="allowfullscreen" title="실제 수강생들의 생생한 동영상 후기">
+                                            </iframe>
+                                            <div style="z-index: 2"></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper_slide">
+                                        <div class="swiper_slide_padding">
+                                            <iframe src="https://www.youtube.com/embed/6-uA5ZA-dDQ" frameborder="0"
+                                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen="allowfullscreen" title="실제 수강생들의 생생한 동영상 후기">
+                                            </iframe>
+                                            <div style="z-index: 2"></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper_slide">
+                                        <div class="swiper_slide_padding">
+                                            <iframe src="https://www.youtube.com/embed/6-uA5ZA-dDQ" frameborder="0"
+                                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen="allowfullscreen" title="실제 수강생들의 생생한 동영상 후기">
+                                            </iframe>
+                                            <div style="z-index: 2"></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper_slide">
+                                        <div class="swiper_slide_padding">
+                                            <iframe src="https://www.youtube.com/embed/6-uA5ZA-dDQ" frameborder="0"
+                                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen="allowfullscreen" title="실제 수강생들의 생생한 동영상 후기">
+                                            </iframe>
+                                            <div style="z-index: 2"></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper_slide">
+                                        <div class="swiper_slide_padding">
+                                            <iframe src="https://www.youtube.com/embed/6-uA5ZA-dDQ" frameborder="0"
+                                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen="allowfullscreen" title="실제 수강생들의 생생한 동영상 후기">
+                                            </iframe>
+                                            <div class="slide_size"></div>
+                                        </div>
+                                    </div>
 
+                                </div>
+                            </div>
+                            <!--배너 왼쪽 오른쪽 화살표-->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="black"
+                                 id="media_prev" class="media_button" role="button">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M11.2929 7.29289C11.6834 6.90237 12.3166 6.90237 12.7071 7.29289L19.2071 13.7929C19.5976 14.1834 19.5976 14.8166 19.2071 15.2071C18.8166 15.5976 18.1834 15.5976 17.7929 15.2071L12 9.41421L6.20711 15.2071C5.81658 15.5976 5.18342 15.5976 4.79289 15.2071C4.40237 14.8166 4.40237 14.1834 4.79289 13.7929L11.2929 7.29289Z"
+                                      data-v-bd9f2bcc=""></path>
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="black"
+                                 id="media_next" class="media_button" role="button">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M11.2929 7.29289C11.6834 6.90237 12.3166 6.90237 12.7071 7.29289L19.2071 13.7929C19.5976 14.1834 19.5976 14.8166 19.2071 15.2071C18.8166 15.5976 18.1834 15.5976 17.7929 15.2071L12 9.41421L6.20711 15.2071C5.81658 15.5976 5.18342 15.5976 4.79289 15.2071C4.40237 14.8166 4.40237 14.1834 4.79289 13.7929L11.2929 7.29289Z"
+                                      data-v-bd9f2bcc=""></path>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div id="main_content3">
+    <div id="content3_inner1">
+        <div>
+            <div id="content3_main">
+                <div id="content3_main_inner1">
+                    <div id="content3_main_inner2">
+                        <div id="content3_text">
+                            <div id="text_icon">
+                                <picture class="min-img"
+                                         style="display: inline-block; --optimized-image-width:40px; --optimized-image-aspect-ratio:40 / 40; --optimized-image-fallback-ratio:100%;">
+                                    <source srcset="https://cdn.comento.kr/images/icon/icon-writing-fill.svg?s=80x80&amp;q=75"
+                                            type="image/webp">
+                                    <img src="https://cdn.comento.kr/images/icon/icon-writing-fill.svg" alt=""
+                                         width="40" height="40" loading="lazy">
+                                </picture>
+                            </div>
+                            <div id="content3_text_inner1">
+                                현직자 직무 강의는 물론,<br>
+                                실무 과제를 수행하고 피드백을 받습니다.
+                            </div>
+                        </div>
+                        <div id="content3_images">
+                            <div id="content3_images_flex">
+                                <div class="image_flex">
+                                    <div class="image_flex_inner">
+                                        <div class="image_flex_inner1">
+                                            <picture class="inner2_image"
+                                                     style="display: inline-block; --optimized-image-width:100%; --optimized-image-aspect-ratio:305 / 202; --optimized-image-fallback-ratio:66.2295%;"
+                                                     data-v-3ade2209="" data-v-617b7ea2="" data-v-7b920159="">
+                                                <source srcset="https://cdn.comento.kr/edu/landing/edu-landing-strong-point-1.jpg?s=610x404&amp;q=75"
+                                                        type="image/webp" data-v-3ade2209="">
+                                                <img src="https://cdn.comento.kr/edu/landing/edu-landing-strong-point-1.jpg"
+                                                     alt="" width="305" height="202" loading="lazy"
+                                                     data-v-3ade2209=""></picture>
+                                            <div class="inner2_text">직무 에센스 강의 수강</div>
+                                            <p data-v-d3bb83e4="" data-v-617b7ea2=""
+                                               class="inner2_text2" data-v-7b920159=""
+                                               style="color: rgb(60, 65, 68); text-align: center;">현직자 멘토의 직무 소개 및
+                                                경험 공유를 통해<br>직무에 대한 기초 지식을 교육합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="image_flex">
+                                    <div class="image_flex_inner">
+                                        <div class="image_flex_inner1">
+                                            <picture class="inner2_image"
+                                                     style="display: inline-block; --optimized-image-width:100%; --optimized-image-aspect-ratio:305 / 202; --optimized-image-fallback-ratio:66.2295%;"
+                                                     data-v-3ade2209="" data-v-617b7ea2="" data-v-7b920159="">
+                                                <source srcset="https://cdn.comento.kr/edu/landing/edu-landing-strong-point-1.jpg?s=610x404&amp;q=75"
+                                                        type="image/webp" data-v-3ade2209="">
+                                                <img src="https://cdn.comento.kr/edu/landing/edu-landing-strong-point-1.jpg"
+                                                     alt="" width="305" height="202" loading="lazy"
+                                                     data-v-3ade2209=""></picture>
+                                            <div class="inner2_text">직무 에센스 강의 수강</div>
+                                            <p data-v-d3bb83e4="" data-v-617b7ea2=""
+                                               class="inner2_text2" data-v-7b920159=""
+                                               style="color: rgb(60, 65, 68); text-align: center;">현직자 멘토의 직무 소개 및
+                                                경험 공유를 통해<br>직무에 대한 기초 지식을 교육합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="image_flex">
+                                    <div class="image_flex_inner">
+                                        <div class="image_flex_inner1">
+                                            <picture class="inner2_image"
+                                                     style="display: inline-block; --optimized-image-width:100%; --optimized-image-aspect-ratio:305 / 202; --optimized-image-fallback-ratio:66.2295%;"
+                                                     data-v-3ade2209="" data-v-617b7ea2="" data-v-7b920159="">
+                                                <source srcset="https://cdn.comento.kr/edu/landing/edu-landing-strong-point-1.jpg?s=610x404&amp;q=75"
+                                                        type="image/webp" data-v-3ade2209="">
+                                                <img src="https://cdn.comento.kr/edu/landing/edu-landing-strong-point-1.jpg"
+                                                     alt="" width="305" height="202" loading="lazy"
+                                                     data-v-3ade2209=""></picture>
+                                            <div class="inner2_text">직무 에센스 강의 수강</div>
+                                            <p data-v-d3bb83e4="" data-v-617b7ea2=""
+                                               class="inner2_text2" data-v-7b920159=""
+                                               style="color: rgb(60, 65, 68); text-align: center;">현직자 멘토의 직무 소개 및
+                                                경험 공유를 통해<br>직무에 대한 기초 지식을 교육합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--푸터 삽입-->
+<div th:replace="/footer/footer.html :: footer" class="footer"/>
+
+
 </body>
 </html>
