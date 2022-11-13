@@ -38,7 +38,7 @@ div#counts-group .counts{
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    border: 3px solid #acf2d2;;
+    border: 3px solid #47c880;
 
     text-align: center;
 }
@@ -96,7 +96,7 @@ td input[type="button"] {
 }
 
 td.answer input[type="button"] {
-    background: #acf2d2;
+    background: #47c880;
 }
 
 @media screen and (max-width: 1030px) and (min-width: 990px) {

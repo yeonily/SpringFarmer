@@ -20,8 +20,8 @@ th.revise, th.delete { width: 6%; }
 td.revise, td.delete { padding: 0 0.3vw; }
 
 td.revise input[type="button"]:hover { background: #e1e2e4;}
-td.delete input[type="button"] { background: #acf2d2; }
-td.delete input[type="button"]:hover { background: #82edbc; }
+td.delete input[type="button"] { background: #47c880; }
+td.delete input[type="button"]:hover { background: #357e55; }
 
 div#write {
     position: absolute;

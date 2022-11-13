@@ -99,10 +99,10 @@ div.btns-group .list { margin-right: 5px; }
 div.btns-group .list:hover { background: #e7e7e7; }
 
 div.btns-group .submit {
-    background: #acf2d2;
+    background: #47c880;
     letter-spacing: 2px;
 }
-div.btns-group .submit:hover { background: #82edbc; }
+div.btns-group .submit:hover { background: #357e55; }
 
 textarea.summernote{
     width: 100%;
