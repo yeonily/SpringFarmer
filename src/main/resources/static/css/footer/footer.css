@@ -5,7 +5,6 @@ div.wrap {
 }
 
 footer {
-    position: absolute;
     bottom: 0;
     width: 100%;
     height: 403px;
@@ -22,7 +21,9 @@ footer div.footer-container {
 /*푸터 상단 영역*/
 div.footer-top-wrap {
     display: inline-flex;
+    width: 100%;
     padding-bottom: 24px;
+    justify-content: space-around;
 }
 div.section {
     width: 257px;
@@ -68,6 +69,7 @@ div.infoCenter {
     display: inline-block;
     width: 252px;
     height: 106px;
+    margin-top: -6px;
 }
 div.infoCenter h2, span {
     display: inline-block;
