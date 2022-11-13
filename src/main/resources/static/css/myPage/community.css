@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+button.sendPage-btn {
+    height: 36px;
+    padding: 0 12px;
+    min-width: 49px;
+    font-size: 14px;
+    line-height: 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 400;
+    margin: 24px auto 0;
+    background-color: #d6e4d0;
+    color: #45a16d;
+    cursor: pointer;
+}
+
+div.commu {
+    display: flex!important;
+    flex-direction: column;
+    padding: 0 0 5px;
+    margin-bottom: 4px;
+    position: relative;
+    border-bottom: 1px solid #eaecee;
+}
+
+div.commu a {
+    padding: 0 15px;
+    color: rgb(32, 35, 37);
+}
+div.commu a:hover {
+    background: #f6f6f6;
+    border-radius: 8px;
+}
+
+div.c-date {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: rgb(118, 125, 130);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+div.c-title {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    letter-spacing: .02em;
+    cursor: pointer;
+}
+
+div.c-group {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 8px;
+    color: rgb(60, 65, 68);
+    font-size: 16px;
+    text-align: right;
+    line-height: 25px;
+    font-weight: 400;
+    letter-spacing: .02em;
+}
+
+span.c-count {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+
+span.c-count svg {
+    margin-right: 4px!important;
+}
+span.c-text {
+    color: rgb(148, 155, 160);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}

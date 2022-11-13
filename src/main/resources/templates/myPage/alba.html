@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>너와농부싶어</title>
+    <link rel="stylesheet" href="/css/common/font.css" />
+    <link rel="stylesheet" href="/css/header/header.css" />
+    <link rel="stylesheet" href="/css/footer/footer.css" />
+    <link rel="stylesheet" href="/css/myPage/sideMenu.css" />
+    <link rel="stylesheet" href="/css/myPage/community.css" />
+    <link rel="stylesheet" href="/css/myPage/list.css" />
+</head>
+<body>
+<div th:replace="/header/header.html :: header" class="header"/>
+<div id="main">
+    <div class="wrap" style="padding-bottom: 0">
+        <div class="container">
+            <div class="contentsWrap">
+                <!--메뉴 카텍고리 시작-->
+                <div th:replace="/myPage/myPageMenu.html :: myPageMenu"></div>
+                <!--컨텐츠 시작-->
+                <div id="contents">
+                    <div class="c-header">
+                        <div class="c-title">
+                            <div>내 프로그램</div>
+                        </div>
+                        <div class="content">
+                            <!-- 일반인 : 커뮤니티 활동이 없을 경우 -->
+                            <!--                            <div id="content-wrap">-->
+                            <!--                                <div class="n-c-wrap">-->
+                            <!--                                    너와농부싶어와 함께하는 프로그램을 확인해보세요!-->
+                            <!--                                    <button class="sendPage-btn">프로그램 보러 가기</button>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
+                            <!------------------------>
+                            <!-- 일반인 : 커뮤니티 활동이 있을 경우 -->
+                            <div id="c-w-wrap">
+                                <div id="ls-wrap" class="f-column">
+                                    <div class="f-wrap">
+
+                                        <!-- 프로그램 컨텐츠 -->
+                                        <div class="list-wrap">
+                                            <div class="myProgram f-column select-l">
+                                                <div class="list-img">
+                                                    <img src="https://cdn.comento.kr/images/pt/tmp/prefix_4gTSmjheRr.png" class="program-img">
+                                                    <div class="applied-cancel"><div class="a-c-btn">삭제하기</div></div>
+                                                    <img src="/image/myPage/menu.png" class="l-menuBtn">
+                                                </div>
+                                                <div class="list-text">
+                                                    <div class="l-text starting l-d-ing">수강예정</div>
+                                                    <div class="l-m-c">∙</div>
+                                                    <div class="l-text l-address">지역</div>
+                                                </div>
+                                                <div class="list-title">백엔드 개발자도 서버 · 인프라 관리를 할 수 있는 DevOps 실무 특강</div>
+                                            </div>
+                                            <div class="start-day">2022.11.17 20:00 시작</div>
+                                        </div>
+                                        <div class="list-wrap">
+                                            <div class="myProgram f-column select-l">
+                                                <div class="list-img">
+                                                    <img src="https://cdn.comento.kr/images/pt/tmp/prefix_4gTSmjheRr.png" class="program-img">
+                                                    <div class="applied-cancel"><div class="a-c-btn">삭제하기</div></div>
+                                                    <img src="/image/myPage/menu.png" class="l-menuBtn">
+                                                </div>
+                                                <div class="list-text">
+                                                    <div class="l-text starting l-d-ing">수강예정</div>
+                                                    <div class="l-m-c">∙</div>
+                                                    <div class="l-text l-address">지역</div>
+                                                </div>
+                                                <div class="list-title">백엔드 개발자도 서버 · 인프라 관리를 할 수 있는 DevOps 실무 특강</div>
+                                            </div>
+                                            <div class="start-day">2022.11.17 20:00 시작</div>
+                                        </div>
+                                        <div class="list-wrap">
+                                            <div class="myProgram f-column select-l">
+                                                <div class="list-img">
+                                                    <img src="https://cdn.comento.kr/images/pt/tmp/prefix_4gTSmjheRr.png" class="program-img">
+                                                    <div class="applied-cancel"><div class="a-c-btn">삭제하기</div></div>
+                                                    <img src="/image/myPage/menu.png" class="l-menuBtn">
+                                                </div>
+                                                <div class="list-text">
+                                                    <div class="l-text starting l-d-ing">수강예정</div>
+                                                    <div class="l-m-c">∙</div>
+                                                    <div class="l-text l-address">지역</div>
+                                                </div>
+                                                <div class="list-title">백엔드 개발자도 서버 · 인프라 관리를 할 수 있는 DevOps 실무 특강</div>
+                                            </div>
+                                            <div class="start-day">2022.11.17 20:00 시작</div>
+                                        </div>
+                                        <!------------------->
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!------------------------>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 푸터 -->
+<div th:replace="/footer/footer.html :: footer" class="footer"/>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/myPage/myPage.js"></script>
+<script src="/js/myPage/list.js"></script>
+<script>
+    $("div.menu-a").removeClass('menu-select');
+    $("#alba").addClass('menu-select');
+</script>
+</html>

@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>너와농부싶어</title>
+    <link rel="stylesheet" href="/css/common/font.css" />
+    <link rel="stylesheet" href="/css/header/header.css" />
+    <link rel="stylesheet" href="/css/footer/footer.css" />
     <link rel="stylesheet" href="/css/myPage/sideMenu.css" />
     <link rel="stylesheet" href="/css/myPage/quit.css" />
-    <link rel="stylesheet" href="/css/common/font.css" />
 </head>
 <body>
+<div th:replace="/header/header.html :: header" class="header"/>
 <div id="main">
-    <div class="wrap">
+    <div class="wrap" style="padding-bottom: 0">
         <div class="container">
             <div class="contentsWrap">
                 <!--메뉴 카텍고리 시작-->
@@ -115,6 +118,8 @@
         </div>
     </div>
 </div>
+<!-- 푸터 -->
+<div th:replace="/footer/footer.html :: footer" class="footer"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/myPage/myPage.js"></script>

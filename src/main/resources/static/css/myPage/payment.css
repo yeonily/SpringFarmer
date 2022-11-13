@@ -13,21 +13,40 @@ div.n-c-wrap {
     letter-spacing: .02em;
 }
 
-div#pay-wrap {
-    min-width: 515px;
-    margin-top: 55px;
-    padding: 10px;
-    border: 1px solid red;
+div.payment {
+    display: flex!important;
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    border-bottom: 1px solid #eaecee;
+
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
+div.p-date {
+    margin-bottom: 8px;
+    color: rgb(118, 125, 130);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
 }
 
-table td {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+div.program-name {
+    color: rgb(32, 35, 37);
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    letter-spacing: .02em;
+}
+
+div.p-price {
+    color: rgb(60, 65, 68);
+    text-align: right;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    letter-spacing: .02em;
 }
