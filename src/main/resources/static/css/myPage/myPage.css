@@ -11,12 +11,10 @@ div.section-profile {
 div.member-division-img {
     width: 90px;
     height: 90px;
-    margin-right: 20px;
-    background: aquamarine;
-    border-radius: 50%;
-    object-fit: cover;
-}
-img.mem-user {
+    /*margin-right: 10px;*/
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 div.nickname {
