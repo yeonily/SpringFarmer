@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>program list</title>
     <link rel="stylesheet" href="/css/program/list.css"/>
     <link rel="stylesheet" href="/css/common/font.css"/>
+    <link rel="stylesheet" href="/css/footer/footer.css"/>
+    <link rel="stylesheet" href="/css/header/header.css"/>
 </head>
 <body>
+<!--<div th:replace="/header/header.html :: header" class="header"/>-->
 <div id="main-grid">
+    <div class="p-application-row">
+    <div class="p-application-col">
     <div class="program-application">
+    <div class="program-application-row">
+    <div class="program-application-col">
         <section class="filter">
             <div class="filter-name">
                 <div class="filter-list">
@@ -27,35 +34,116 @@
             </div>
         </section>
         <div class="program-container">
-            <div clas="program-list-container">
+            <div class="program-list-container">
                 <div class="list-container">
                     <a>
                         <article class="list-article">
-                        <div class="list-image-container">
-                            <div class="list-point">
-                            <div><span class="list-point-m">멘티전용</span></div>
+                            <div class="list-image-container">
+                                <div class="list-point">
+                                    <div><span class="list-point-m">멘티전용</span></div>
+                                </div>
+                                <img class="pg-image" src="/image/program/pgimage.gif">
                             </div>
-                            <img class="pg-image" src="/image/program/pgimage.gif">
-                        </div>
-                        <div class="list-info">
-                            <div class="pg-subtitle">
-                                <div class="pg-location">경기도</div>
-                                <div class="pg-dot"> · </div>
-                                <div class="pg-price">무료</div>
+                            <div class="list-info">
+                                <div class="pg-subtitle">
+                                    <div class="pg-location">경기도</div>
+                                    <div class="pg-dot"> · </div>
+                                    <div class="pg-price">무료</div>
+                                </div>
+                                <div class="pg-title">
+                                    <div class="pg-title-name">일일 무 뽑기 프로그램</div>
+                                </div>
+                                <div class="pg-caption">
+                                    <span class="pg-date">11월 28일 시작</span>
+                                </div>
                             </div>
-                            <div class="pg-title">
-                                <div class="pg-title-name">일일 무 뽑기 프로그램</div>
+                        </article>
+                    </a>
+                </div>
+                <div class="list-container">
+                    <a>
+                        <article class="list-article">
+                            <div class="list-image-container">
+                                <div class="list-point">
+                                    <div><span class="list-point-m">멘티전용</span></div>
+                                </div>
+                                <img class="pg-image" src="/image/program/pgimage.gif">
                             </div>
-                            <div class="pg-caption">
-                                <span class="pg-date">11월 28일 시작</span>
+                            <div class="list-info">
+                                <div class="pg-subtitle">
+                                    <div class="pg-location">경기도</div>
+                                    <div class="pg-dot"> · </div>
+                                    <div class="pg-price">무료</div>
+                                </div>
+                                <div class="pg-title">
+                                    <div class="pg-title-name">일일 무 뽑기 프로그램</div>
+                                </div>
+                                <div class="pg-caption">
+                                    <span class="pg-date">11월 28일 시작</span>
+                                </div>
                             </div>
-                        </div>
+                        </article>
+                    </a>
+                </div>
+                <div class="list-container">
+                    <a>
+                        <article class="list-article">
+                            <div class="list-image-container">
+                                <div class="list-point">
+                                    <div><span class="list-point-m">멘티전용</span></div>
+                                </div>
+                                <img class="pg-image" src="/image/program/pgimage.gif">
+                            </div>
+                            <div class="list-info">
+                                <div class="pg-subtitle">
+                                    <div class="pg-location">경기도</div>
+                                    <div class="pg-dot"> · </div>
+                                    <div class="pg-price">무료</div>
+                                </div>
+                                <div class="pg-title">
+                                    <div class="pg-title-name">일일 무 뽑기 프로그램</div>
+                                </div>
+                                <div class="pg-caption">
+                                    <span class="pg-date">11월 28일 시작</span>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+                <div class="list-container">
+                    <a>
+                        <article class="list-article">
+                            <div class="list-image-container">
+                                <div class="list-point">
+                                    <div><span class="list-point-m">멘티전용</span></div>
+                                </div>
+                                <img class="pg-image" src="/image/program/pgimage.gif">
+                            </div>
+                            <div class="list-info">
+                                <div class="pg-subtitle">
+                                    <div class="pg-location">경기도</div>
+                                    <div class="pg-dot"> · </div>
+                                    <div class="pg-price">무료</div>
+                                </div>
+                                <div class="pg-title">
+                                    <div class="pg-title-name">일일 무 뽑기 프로그램</div>
+                                </div>
+                                <div class="pg-caption">
+                                    <span class="pg-date">11월 28일 시작</span>
+                                </div>
+                            </div>
                         </article>
                     </a>
                 </div>
             </div>
         </div>
     </div>
+    </div>
+    </div>
+    </div>
+    </div>
 </div>
+<!--<div th:replace="/footer/footer.html :: footer" class="footer"/>-->
 </body>
+<script src="/js/header/header.js"></script>
 </html>
