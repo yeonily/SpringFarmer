@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>준비도 테스트</title>
     <link rel="stylesheet" href="/css/information/readyTest.css">
+    <link rel="stylesheet" href="/css/footer/footer.css"/>
+    <link rel="stylesheet" href="/css/header/header.css"/>
 </head>
 <body>
-<div class="sub_title" style="bottom: 5.353rem; top: -102px;">
+<div th:replace="/header/header.html :: header" class="header"/>
+<div class="sub_title" style="bottom: 5.353rem; top: 1px;">
     <div class="container">
         <div class="inner">
             <div class="title_left_box">
@@ -540,12 +543,12 @@
         <div class="re-test-div">
             <a href="#" class="re-test">다시하기</a>
         </div>
-
     </div>
-
 </div>
+<div th:replace="/footer/footer.html :: footer" class="footer"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/information/radioChecked.js"></script>
 <script src="/js/information/stepChange.js"></script>
+<script src="/js/header/header.js"></script>
 </html>

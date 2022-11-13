@@ -169,7 +169,7 @@ div.checklist-wrap ul li.test-text {
 }
 
 ul li button.test-start {
-    background: url('https://www.returnfarm.com:444/css/wvtex/img/sub/advi5_btnicon_01.png') 23px 8px no-repeat #ff7800;
+    background: url('https://www.returnfarm.com:444/css/wvtex/img/sub/advi5_btnicon_01.png') 23px 8px no-repeat #47c880;
     padding: 9px 33px 12px 63px;
     border: 0;
     font-size: 20px;
@@ -177,6 +177,10 @@ ul li button.test-start {
     font-weight: 400;
     text-align: center;
     cursor: pointer;
+}
+
+.test-start:hover{
+    background-color: #357e55;
 }
 /*=================================================================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
@@ -301,7 +305,7 @@ div.next-step button.next-arrow {
     min-width: 145px;
     height: 41px;
     padding: 0 30px;
-    background-color: #FF7800;
+    background-color: #47c880;
     border: none;
 
     font-size: 16px;
@@ -312,6 +316,11 @@ div.next-step button.next-arrow {
     z-index: 1;
     cursor: pointer;
 }
+
+div.next-step button.next-arrow:hover{
+    background-color: #357e55;
+}
+
 
 div.next-step button.next-arrow:before {
     position: absolute;
