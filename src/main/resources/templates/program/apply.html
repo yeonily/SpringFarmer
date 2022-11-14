@@ -52,13 +52,16 @@
             </div>
             <div class="user-line">신청자 정보</div>
             <span class="user-info">
-                <form action="" id="pg-apply-form">
+                <form action="" id="pg-apply-form" name="applyForm">
                     <div class="pg-apply-form-input">
                         <div class="apply-form-body">이름</div>
                         <span class="body-span">
                             <div class="body-text-field">
                                 <div class="text-field-input-wrapper">
-                                    <input type="text" class="text-field-name">
+                                    <input type="text" class="text-field-name" name="name" id="username">
+                                </div>
+                                <div class="c-hint"><!--유효성검사 결과 부분(js)-->
+                                    <p class="caption1" ></p>
                                 </div>
                             </div>
                         </span>
@@ -68,7 +71,10 @@
                         <span class="body-span">
                             <div class="body-text-field">
                                 <div class="text-field-input-wrapper">
-                                    <input type="text" class="text-field-name">
+                                    <input type="text" class="text-field-name" name="phone" id="userphone">
+                                </div>
+                                <div class="c-hint"><!--유효성검사 결과 부분(js)-->
+                                    <p class="caption2" ></p>
                                 </div>
                             </div>
                         </span>
@@ -78,7 +84,10 @@
                         <span class="body-span">
                             <div class="body-text-field">
                                 <div class="text-field-input-wrapper">
-                                    <input type="text" class="text-field-name">
+                                    <input type="text" class="text-field-name" name="email" id="useremail">
+                                </div>
+                                <div class="c-hint"><!--유효성검사 결과 부분(js)-->
+                                    <p class="caption3" ></p>
                                 </div>
                             </div>
                         </span>
@@ -88,7 +97,10 @@
                         <span class="body-span">
                             <div class="body-text-field">
                                 <div class="text-field-input-wrapper">
-                                    <input type="text" class="text-field-name">
+                                    <input type="text" class="text-field-name" name="home" id="userhome">
+                                </div>
+                                <div class="c-hint"><!--유효성검사 결과 부분(js)-->
+                                    <p class="caption4" ></p>
                                 </div>
                             </div>
                         </span>
@@ -98,13 +110,26 @@
                         <span class="body-span">
                             <div class="body-text-field">
                                 <div class="text-field-input-wrapper">
-                                    <input type="text" class="text-field-name">
+                                    <input type="text" class="text-field-name" name="birth" id="userbirth">
+                                </div>
+                                <div class="c-hint"><!--유효성검사 결과 부분(js)-->
+                                    <p class="caption5" ></p>
                                 </div>
                             </div>
                         </span>
                     </div>
-                    <button type="button" class="apply-button">
-                        <div class="button-icon">다음</div></button>
+                    <div class="pg-apply-form-input">
+                        <div class="apply-form-body">신청인원</div>
+                        <span class="body-span">
+                            <div class="body-text-field">
+                                <button type="button" class="down" disabled></button>
+                                <div class="apply-count">1</div>
+                                <button type="button" class="up"></button>
+                            </div>
+                        </span>
+                    </div>
+                    <button type="button" class="apply-button" onclick="applyCheck()" id="apply" disabled="disabled">
+                        <div class="button-icon" >다음</div></button>
                 </form>
             </span>
         </div>
@@ -116,4 +141,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/header/header.js"></script>
+<script src="/js/program/apply.js"></script>
 </html>
