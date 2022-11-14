@@ -3,6 +3,25 @@
     margin-top: 114px;
 }*/
 
+/*기본 세팅*/
+body, button {
+    margin: 0;
+    vertical-align: baseline;
+    font-family: "Pretendard";
+
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+a {text-decoration: none;}
+div.flex {display: flex;}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+button{cursor: pointer;}
+
 
 /*헤더에서 큰 틀*/
 div.header {
@@ -76,7 +95,7 @@ div.m_font {
 
 /*--------------------------------*/
 /*헤더 우측 메뉴(로그인 전)*/
-aside {
+div.header_nav aside {
     display: inline-flex;
     flex-grow: 1;
 }
@@ -184,13 +203,13 @@ div.sub-menu ul li span {
     background-size: 16px 16px;
 }
 div.sub-menu ul li span.writeImg {
-    background-image: url("../../image/header/write.png");
+    background-image: url("/static/image/header/write.png");
 }
 div.sub-menu ul li span.talkImg {
-    background-image: url("../../image/header/talk.png");
+    background-image: url("/static/image/header/talk.png");
 }
 div.sub-menu ul li span.exitImg {
-    background-image: url("../../image/header/exit.png");
+    background-image: url("/static/image/header/exit.png");
 }
 
 
