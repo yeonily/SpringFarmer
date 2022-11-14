@@ -290,7 +290,8 @@ div#communitySlide #communitySlide_inner h1 {
 
 
 
-div.sub_banner_inner div.swiper-button {
+div.sub_banner_inner div.swiper-button,
+div.communitySlide_inner div.swiper-button{
     position: absolute;
     margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
     z-index: 10;
@@ -329,6 +330,25 @@ div.sub_banner_inner div.swiper-button {
     content: 'prev';
 }
 
+
+/*커뮤니티 슬라이드 배너*/
+div#communitySlide {
+    width: 100%;
+    height: 100%;
+}
+div#communitySlide_inner div.mySwiper3 {
+    margin-bottom: 200px;
+}
+
+div.mySwiper3 div.swiper-wrapper div.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: pink;
+    height: 349px;
+    border-radius: 10px;
+
+    align-items: center;
+}
 
 
 
