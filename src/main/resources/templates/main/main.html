@@ -20,7 +20,7 @@
         <div class="main_banner">
             <div class="swiper mySwiper1">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-color: rgb(0, 140, 95);">
+                    <div class="swiper-slide" style="background-color: #47c880;;">
                         <div>
                             <p>시작하는 사람들의</p>
                             <p>커리어 커뮤니티</p>
@@ -400,6 +400,7 @@
             delay: 5000,
         },*/
         mousewheel: false,
+        allowTouchMove : false,
         loop: true,
         loopAdditionalSlides : 1,
     });
@@ -413,11 +414,13 @@
             nextEl: ".swiper-button.next2",
             prevEl: ".swiper-button.prev2",
         },
+        allowTouchMove : false,
         mousewheel: false,
     });
 
     /*세 번째(커뮤니티) 슬라이드*/
     var swiper3 = new Swiper(".mySwiper3", {
+        freeMode: true,
         slidesPerView: 2,
         spaceBetween: 30,
         navigation: {
@@ -425,6 +428,7 @@
             prevEl: ".swiper-button.prev3",
         },
         mousewheel: false,
+        allowTouchMove : false,
     });
 
     /*네 번째(프로그램) 슬라이드*/
@@ -435,6 +439,7 @@
             nextEl: ".swiper-button.next4",
             prevEl: ".swiper-button.prev4",
         },
+        allowTouchMove : false,
         mousewheel: false,
     });
 
@@ -446,6 +451,7 @@
             nextEl: ".swiper-button.next5",
             prevEl: ".swiper-button.prev5",
         },
+        allowTouchMove : false,
         mousewheel: false,
     });
 </script>

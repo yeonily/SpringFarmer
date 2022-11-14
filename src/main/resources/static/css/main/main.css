@@ -368,6 +368,7 @@ div.mySwiper3 div.swiper-slide-inner{
 div.mySwiper3 div.swiper-wrapper div.swiper-slide {
     font-size: 18px;
     height: 349px;
+    cursor: auto;
 }
 div.slideContent {
     padding: 10px 20px;
