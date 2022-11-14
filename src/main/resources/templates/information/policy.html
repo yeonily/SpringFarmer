@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>지원정책</title>
     <link rel="stylesheet" href="/css/information/policy.css">
-    <link rel="stylesheet" href="/css/inquire/inquire.css">
+<!--    <link rel="stylesheet" href="/css/inquire/inquire.css">-->
     <link rel="stylesheet" href="/css/header/header.css"/>
     <link rel="stylesheet" href="/css/common/font.css"/>
     <link rel="stylesheet" href="/css/footer/footer.css"/>
+    <link rel="stylesheet" href="/css/adminCommon/page.css"/>
     <style>
         footer {
             background-color: #ffffff;
@@ -23,34 +24,41 @@
     <div th:replace="/header/header.html :: header" class="header"/>
 
 
-    <div class="c-application c-grid main-grid-component fluid" style="min-height: 100vh;">
-        <div class="c-application c-row">
-            <div class="c-application c-new-col" id="faq" sid="guest" style="min-height: 507px">
-                <div class="faq faq-container" style="background: #fafafa;">
-                    <div class="faq faq-banner">
-                        <img src="https://comento.kr/images/banner/banner_faq.jpg" alt=""
-                             class="only-pc faq-banner-img">
-                        <div class="faq faq-search">
-                            <h2 class="h2 faq-search-title">무엇을 도와드릴까요?</h2>
-                            <div class="faq-search-box">
-                                <input type="text" placeholder="검색어를 입력하세요" class="faq-search-box-input">
-                                <button class="faq-search-box-button"
-                                        style="width: 45px; height: 60px; left: 525px; margin-top: 68px;">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="black"
-                                         xmlns="http://www.w3.org/2000/svg" class="c-application c-icon mt-6"
-                                         data-v-7b920159="" style="fill: rgb(27, 81, 146);">
-                                        <path data-v-bd9f2bcc="" fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M11 16C14.3137 16 17 13.3137 17 10C17 6.68629 14.3137 4 11 4C7.68629 4 5 6.68629 5 10C5 13.3137 7.68629 16 11 16ZM11 18C15.4183 18 19 14.4183 19 10C19 5.58172 15.4183 2 11 2C6.58172 2 3 5.58172 3 10C3 14.4183 6.58172 18 11 18Z"></path>
-                                        <path data-v-bd9f2bcc="" fill-rule="evenodd" clip-rule="evenodd"
-                                              d="M15.2929 15.2929C15.6834 14.9024 16.3166 14.9024 16.7071 15.2929L20.7071 19.2929C21.0976 19.6834 21.0976 20.3166 20.7071 20.7071C20.3166 21.0976 19.6834 21.0976 19.2929 20.7071L15.2929 16.7071C14.9024 16.3166 14.9024 15.6834 15.2929 15.2929Z"></path>
-                                    </svg>
-                                </button>
+
+
+
+
+
+
+                    <div class="grid-fluid">
+                        <div class="grid-fluid-row">
+                            <div class="banner-background"></div>
+                            <div class="grid-container">
+                                <div class="grid-container-row">
+                                    <div class="grid-container-col">
+                                        <section class="pg-detail-banner">
+                                            <div class="banner-title-container">
+                                                <span class="pg-detail-banner-chip">FAQ</span>
+                                                <div class="pg-detail-banner-title">지원정책</div>
+                                                <div class="pg-detail-banner-headline">귀농귀촌 지원정책에 대해서 궁금한 점</div>
+                                            </div>
+                                            <div class="banner-image-container">
+                                                <img class="pg-detail-banner-image" src="/image/program/pgimage.gif">
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
 
-                    <div class="c-application c-new-grid container" style="background: inherit;"></div>
+
+
+
+    <div class="c-application c-new-col" id="faq" sid="guest" style="background: #fafafa;">
+    <div class="faq faq-container">
+        <div class="c-application c-new-grid container" style="background: inherit;"></div>
                     <div class="c-application c-new-row">
                         <div class="c-application c-new-col" style="margin-bottom: -415px">
                             <div class="c-application c-new-col footerMargin">
@@ -61,7 +69,7 @@
                                                 <span class="text-primary">[직무부트캠프(현직자수업)]</span>
                                                 직무부트캠프 환불은 어떻게 신청하나요?
                                             </p>
-                                            <p class="faq-board-list-cont faq-board-list-answer active active active"
+                                            <p class="faq-board-list-cont faq-board-list-answer active1"
                                                style="display:""; white-space: pre-line;">환불은 고객센터를 통해 문의주시면 확인 후 처리해드리고
                                             있습니다.
                                             기본적으로 카드취소로 진행이 되며, 카드취소가 어려운 경우에는 계좌이체로 진행되고 있습니다.
@@ -74,7 +82,7 @@
                                                 <span class="text-primary">[직무부트캠프(현직자수업)]</span>
                                                 직무부트캠프 환불은 어떻게 신청하나요?
                                             </p>
-                                            <p class="faq-board-list-cont faq-board-list-answer active active"
+                                            <p class="faq-board-list-cont faq-board-list-answer active1"
                                                style="white-space: pre-line;">환불은 고객센터를 통해 문의주시면 확인 후 처리해드리고 있습니다.
                                                 기본적으로 카드취소로 진행이 되며, 카드취소가 어려운 경우에는 계좌이체로 진행되고 있습니다.
                                                 정부지원금카드로 결제하시고, 카드취소로 환불이 어려우신 경우에는 따로 말씀 부탁드리겠습니다.
@@ -86,7 +94,7 @@
                                                 <span class="text-primary">[직무부트캠프(현직자수업)]</span>
                                                 직무부트캠프 환불은 어떻게 신청하나요?
                                             </p>
-                                            <p class="faq-board-list-cont faq-board-list-answer active"
+                                            <p class="faq-board-list-cont faq-board-list-answer active1"
                                                style="white-space: pre-line;">환불은 고객센터를 통해 문의주시면 확인 후 처리해드리고 있습니다.
                                                 기본적으로 카드취소로 진행이 되며, 카드취소가 어려운 경우에는 계좌이체로 진행되고 있습니다.
                                                 정부지원금카드로 결제하시고, 카드취소로 환불이 어려우신 경우에는 따로 말씀 부탁드리겠습니다.
@@ -98,7 +106,7 @@
                                                 <span class="text-primary">[직무부트캠프(현직자수업)]</span>
                                                 직무부트캠프 환불은 어떻게 신청하나요?
                                             </p>
-                                            <p class="faq-board-list-cont faq-board-list-answer active"
+                                            <p class="faq-board-list-cont faq-board-list-answer active1"
                                                style="white-space: pre-line;">환불은 고객센터를 통해 문의주시면 확인 후 처리해드리고 있습니다.
                                                 기본적으로 카드취소로 진행이 되며, 카드취소가 어려운 경우에는 계좌이체로 진행되고 있습니다.
                                                 정부지원금카드로 결제하시고, 카드취소로 환불이 어려우신 경우에는 따로 말씀 부탁드리겠습니다.
@@ -110,7 +118,7 @@
                                                 <span class="text-primary">[직무부트캠프(현직자수업)]</span>
                                                 직무부트캠프 환불은 어떻게 신청하나요?
                                             </p>
-                                            <p class="faq-board-list-cont faq-board-list-answer active"
+                                            <p class="faq-board-list-cont faq-board-list-answer active1"
                                                style="white-space: pre-line;">환불은 고객센터를 통해 문의주시면 확인 후 처리해드리고 있습니다.
                                                 기본적으로 카드취소로 진행이 되며, 카드취소가 어려운 경우에는 계좌이체로 진행되고 있습니다.
                                                 정부지원금카드로 결제하시고, 카드취소로 환불이 어려우신 경우에는 따로 말씀 부탁드리겠습니다.
@@ -122,7 +130,7 @@
                                                 <span class="text-primary">[직무부트캠프(현직자수업)]</span>
                                                 직무부트캠프 환불은 어떻게 신청하나요?
                                             </p>
-                                            <p class="faq-board-list-cont faq-board-list-answer active"
+                                            <p class="faq-board-list-cont faq-board-list-answer active1"
                                                style="white-space: pre-line;">환불은 고객센터를 통해 문의주시면 확인 후 처리해드리고 있습니다.
                                                 기본적으로 카드취소로 진행이 되며, 카드취소가 어려운 경우에는 계좌이체로 진행되고 있습니다.
                                                 정부지원금카드로 결제하시고, 카드취소로 환불이 어려우신 경우에는 따로 말씀 부탁드리겠습니다.
@@ -134,7 +142,7 @@
                                                 <span class="text-primary">[직무부트캠프(현직자수업)]</span>
                                                 직무부트캠프 환불은 어떻게 신청하나요?
                                             </p>
-                                            <p class="faq-board-list-cont faq-board-list-answer active"
+                                            <p class="faq-board-list-cont faq-board-list-answer active1"
                                                style="white-space: pre-line;">환불은 고객센터를 통해 문의주시면 확인 후 처리해드리고 있습니다.
                                                 기본적으로 카드취소로 진행이 되며, 카드취소가 어려운 경우에는 계좌이체로 진행되고 있습니다.
                                                 정부지원금카드로 결제하시고, 카드취소로 환불이 어려우신 경우에는 따로 말씀 부탁드리겠습니다.
@@ -146,7 +154,7 @@
                                                 <span class="text-primary">[직무부트캠프(현직자수업)]</span>
                                                 직무부트캠프 환불은 어떻게 신청하나요?
                                             </p>
-                                            <p class="faq-board-list-cont faq-board-list-answer active"
+                                            <p class="faq-board-list-cont faq-board-list-answer active1"
                                                style="white-space: pre-line;">환불은 고객센터를 통해 문의주시면 확인 후 처리해드리고 있습니다.
                                                 기본적으로 카드취소로 진행이 되며, 카드취소가 어려운 경우에는 계좌이체로 진행되고 있습니다.
                                                 정부지원금카드로 결제하시고, 카드취소로 환불이 어려우신 경우에는 따로 말씀 부탁드리겠습니다.
@@ -154,27 +162,39 @@
                                             </p>
                                         </li>
                                     </ul>
-                                    <div class="flex justify-center w-full paging">
-                                        <div class="VuePagination">
-                                            <ul></ul>
-                                        </div>
+<!--                                    <div class="flex justify-center w-full paging">-->
+<!--                                        <div class="VuePagination">-->
+<!--                                            <ul></ul>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+                                </div>
+                                <div id="page" style="margin:30px auto">
+                                    <div class="page_nation">
+                                        <a class="arrow pprev" href="#"></a>
+                                        <a class="arrow prev" href="#"></a>
+                                        <a href="#" class="active">1</a>
+                                        <a href="#">2</a>
+                                        <a href="#">3</a>
+                                        <a href="#">4</a>
+                                        <a href="#">5</a>
+                                        <a href="#">6</a>
+                                        <a href="#">7</a>
+                                        <a href="#">8</a>
+                                        <a href="#">9</a>
+                                        <a href="#">10</a>
+                                        <a class="arrow next" href="#"></a>
+                                        <a class="arrow nnext" href="#"></a>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+
 
     <!--푸터-->
     <footer th:replace="/footer/footer.html :: footer"></footer>
-    <div class="test"></div>
-</div>
-<!--footer-->
-<!--</div>-->
+
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
