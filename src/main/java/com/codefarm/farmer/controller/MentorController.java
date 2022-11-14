@@ -19,4 +19,8 @@ public class MentorController {
     public void list(){
 
     }
+    @GetMapping("/mentorDetail")
+    public void detail(){
+
+    }
 }
