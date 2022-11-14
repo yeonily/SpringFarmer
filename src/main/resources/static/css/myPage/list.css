@@ -1,5 +1,17 @@
 @charset "UTF-8";
 
+button.l-writeBtn {
+    display: flex;
+    align-items: center;
+    min-width: 49px;
+}
+
+button.l-writeBtn svg {
+    display: flex!important;
+    margin-right: 2px!important;
+    overflow: hidden;
+}
+
 div#ls-wrap {
     position: relative;
     width: 100%;
@@ -41,28 +53,36 @@ div.list-img img {
 
 div.list-img img.l-menuBtn {
     position: absolute;
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
+    padding: 2px 2px;
     top: 4px;
     right: 4px;
+    transform: rotate(90deg);
+    border-radius: 2px;
+}
+
+img.l-m-btn {
+    background: rgba(255, 255, 255, 0.41);
 }
 
 div.list-img img.l-menuBtn:hover {
     background: rgba(255, 255, 255, 0.68);
-    border-radius: 2px;
 }
 
 div.applied-cancel {
     position: absolute;
     top: 4px;
     right: 4px;
-    padding-right: 26px;
-    background: rgba(255, 255, 255, 0.68);
+    padding-right: 23px;
+    background: rgb(255 255 255 / 70%);
     border-radius: 2px;
     font-size: 14px;
     font-weight: 600;
     display: none;
 }
+
+div.applied-cancel a {color: #2b2b2b;}
 
 div.a-c-btn {
     padding: 3px 7px;
@@ -70,7 +90,7 @@ div.a-c-btn {
 }
 
 div.a-c-btn:hover {
-    background: rgba(146, 146, 146, 0.68);
+    background: rgba(255, 255, 255, 0.68);
 }
 
 div.list-text {
@@ -82,11 +102,14 @@ div.list-text {
 div.l-text {
     font-size: 12px;
     line-height: 15px;
-    font-weight: 600!important;
+    font-weight: 400;
+    color: rgb(60, 65, 68);
 }
-
-div.l-d-ing {color: rgb(60, 65, 68);}
-div.l-address {color: rgb(238, 126, 65);}
+div.l-ing {
+    font-size: 13px;
+    font-weight: 600;
+}
+div.l-price {color: rgb(238, 126, 65);}
 
 div.l-m-c {
     color: rgb(207, 212, 215);
@@ -117,9 +140,32 @@ div.start-day {
     font-weight: 400;
 }
 
+div.only-mentor {
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    left: 8px;
+}
 
+span.only-mentor {
+    font-size: 12px;
+    height: 24px;
+    padding: 4.5px 8px;
+    border-radius: 6px;
+    color: #595f63;
+    border: 1px solid #f3f4f5;
+    background-color: #f3f4f5;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+}
 
 @media only screen and (min-width: 768px) {
+    div.minus-p {
+        padding-right: 12px;
+    }
+
     div#ls-wrap {
         flex: 0 0 100%;
         max-width: 100%;
@@ -128,6 +174,6 @@ div.start-day {
 
     div.list-wrap {
         width: calc(33.33333% - 16px)!important;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
 }

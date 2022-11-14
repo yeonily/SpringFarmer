@@ -42,6 +42,7 @@ $("div.modal-close").on("click", function(){
     $("#modal").hide();
     $(".quit-reason").hide();
     $("input[name='reason']").prop("checked", false);
+    $("button.quitBtn").attr("disabled", true);
     $("input.q-r-input").val("");
 });
 
@@ -50,12 +51,12 @@ $("div.modal-close").on("click", function(){
 $("button.quitBtn").attr("disabled", true);
 
 $("input[name='reason']").on("change", function (){
+    $("button.quitBtn").attr("disabled", true);
     if($(this).val() == "reason-etc"){
         $(".quit-reason").show();
         $("input.q-r-input").keyup(function (){
             if($(this).val()=="") {
                 $("button.quitBtn").attr("disabled", true);
-                return;
             } else {
                 $("button.quitBtn").attr("disabled", false);
             }

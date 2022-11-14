@@ -17,15 +17,21 @@
         <div class="container">
             <div class="contentsWrap">
                 <!--메뉴 카텍고리 시작-->
-                <div th:replace="/myPage/myPageMenu.html :: myPageMenu"></div>
+                <div th:replace="/myPage/sidemenu.html :: myPageMenu"></div>
                 <!--컨텐츠 시작-->
-                <div id="contents">
+                <div class="contents">
                     <div class="c-header">
                         <div class="c-title">
                             <div>내 프로그램</div>
+                            <!-- 농장주 일 때-->
+                            <button class="s-button l-writeBtn">
+                                <svg data-v-bd9f2bcc="" data-v-79e0399f="" width="16" height="16" viewBox="0 0 16 16" fill="black" xmlns="http://www.w3.org/2000/svg" class="c-application c-icon" data-v-ace7c8aa="" style="fill: rgb(255, 255, 255);"><path data-v-bd9f2bcc="" fill-rule="evenodd" clip-rule="evenodd" d="M8 2C8.27614 2 8.5 2.22386 8.5 2.5V13.5C8.5 13.7761 8.27614 14 8 14C7.72386 14 7.5 13.7761 7.5 13.5V2.5C7.5 2.22386 7.72386 2 8 2Z"></path><path data-v-bd9f2bcc="" fill-rule="evenodd" clip-rule="evenodd" d="M14 8C14 8.27614 13.7761 8.5 13.5 8.5L2.5 8.5C2.22386 8.5 2 8.27614 2 8C2 7.72386 2.22386 7.5 2.5 7.5L13.5 7.5C13.7761 7.5 14 7.72386 14 8Z"></path></svg>
+                                프로그램 만들기
+                            </button>
+                            <!---------------->
                         </div>
                         <div class="content">
-                            <!-- 일반인 : 커뮤니티 활동이 없을 경우 -->
+                            <!-- 일반인 : 프로그램 내역이 없을 경우 -->
 <!--                            <div id="content-wrap">-->
 <!--                                <div class="n-c-wrap">-->
 <!--                                    너와농부싶어와 함께하는 프로그램을 확인해보세요!-->
@@ -33,7 +39,7 @@
 <!--                                </div>-->
 <!--                            </div>-->
                             <!------------------------>
-                            <!-- 농장주 : 커뮤니티 활동이 없을 경우 -->
+                            <!-- 농장주 : 프로그램 내역이 없을 경우 -->
 <!--                            <div id="content-wrap">-->
 <!--                                <div class="n-c-wrap" style="line-height: 25px;">-->
 <!--                                    프로그램 목록이 없어요.<br>-->
@@ -41,34 +47,23 @@
 <!--                                </div>-->
 <!--                            </div>-->
                             <!------------------------>
-                            <!-- 일반인 : 커뮤니티 활동이 있을 경우 -->
+
                             <div id="c-w-wrap">
                                 <div id="ls-wrap" class="f-column">
                                     <div class="f-wrap">
 
-                                        <!-- 프로그램 컨텐츠 -->
-                                        <div class="list-wrap">
-                                            <div class="myProgram f-column select-l">
-                                                <div class="list-img">
-                                                    <img src="https://cdn.comento.kr/images/pt/tmp/prefix_4gTSmjheRr.png" class="program-img">
-                                                    <div class="applied-cancel"><div class="a-c-btn">삭제하기</div></div>
-                                                    <img src="/image/myPage/menu.png" class="l-menuBtn">
-                                                </div>
-                                                <div class="list-text">
-                                                    <div class="l-text starting l-d-ing">수강예정</div>
-                                                    <div class="l-m-c">∙</div>
-                                                    <div class="l-text l-address">지역</div>
-                                                </div>
-                                                <div class="list-title">백엔드 개발자도 서버 · 인프라 관리를 할 수 있는 DevOps 실무 특강</div>
-                                            </div>
-                                            <div class="start-day">2022.11.17 20:00 시작</div>
-                                        </div>
+                                        <!-- 일반 유저 - 내가 신청한 프로그램 -->
+<!--                                        <div th:replace="/myPage/programContent.html :: userPrograms"/>-->
+                                        <!------------------->
+
+                                        <!-- 농장주 - 내가 만든 프로그렘 -->
+                                        <div th:replace="/myPage/programContent.html :: farmerPrograms"/>
                                         <!------------------->
 
                                     </div>
                                 </div>
                             </div>
-                            <!------------------------>
+
                         </div>
                     </div>
                 </div>

@@ -42,7 +42,10 @@ div.c-date {
     font-weight: 400;
 }
 
-div.c-title {
+div.c-group {
+    display: flex;
+
+    width: 100%;
     margin-bottom: 8px;
     font-size: 16px;
     line-height: 25px;
@@ -51,7 +54,13 @@ div.c-title {
     cursor: pointer;
 }
 
-div.c-group {
+div.c-g-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.commu-group {
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: 8px;

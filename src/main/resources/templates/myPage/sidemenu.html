@@ -2,7 +2,6 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
 </head>
 <body>
     <div id="menuContainer" th:fragment="myPageMenu">
@@ -32,6 +31,7 @@
                     </div>
                 </a>
             </div>
+            <!-- 농장주 일 때 -->
             <div class="menu ">
                 <a th:href="@{/myPage/community}">
                     <div class="menu-a" id="community">
@@ -40,6 +40,7 @@
                 </a>
                 <hr class="menu-category">
             </div>
+            <!---------------->
             <div class="menu">
                 <a th:href="@{/myPage/setting}">
                     <div class="menu-a" id="myInfoPage">

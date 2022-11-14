@@ -171,7 +171,7 @@ button.quitBtn {
 }
 
 button.quitBtn:disabled {
-    background-color: #d6e4d0;
+    background-color: #ecf2e9;
     cursor: not-allowed!important;
 }
 
