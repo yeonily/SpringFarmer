@@ -39,7 +39,6 @@ div.wrap {
 div.container {
     position: relative;
     width: 100%;
-    max-width: 1140px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 16px;
@@ -51,7 +50,6 @@ div.contentsWrap {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    width: 100%;
     margin-right: auto;
     margin-left: auto;
     box-sizing: border-box;
@@ -177,7 +175,7 @@ div.slide-m {
 }
 
 /*컨텐츠*/
-div#contents {
+div.contents {
     position: relative;
     width: 100%;
     box-sizing: border-box;
@@ -315,6 +313,20 @@ div.m-al {
     animation-direction:alternate;
 }
 
+button.s-button {
+    height: 36px;
+    padding: 0 12px;
+    background: #47c880;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+button.s-button:hover {background-color: #357e55;}
+
 @keyframes motion {
     from {margin-top: 0px;}
     to {margin-top: 25px;}
@@ -338,7 +350,7 @@ div.m-al {
         max-width: 25%;
     }
 
-    div#contents {
+    div.contents {
         padding: 12px 24px!important;
         -webkit-box-flex: 0;
         flex: 0 0 75%;

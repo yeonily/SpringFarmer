@@ -145,8 +145,8 @@ button.nick {
 
 button.nick-check {
     background-color: transparent;
-    border: 1px solid #1e8524;
-    color: #1e8524;
+    border: 1px solid #47c880;
+    color: #47c880;
 }
 
 button.nick-check:hover {background-color: #ddece4;}
@@ -158,12 +158,12 @@ button.nick-save {
 }
 
 button.nick-save:disabled {
-    background-color: #d6e4d0;
+    background-color: #ecf2e9;
     cursor: not-allowed!important;
 }
 
 button.saveHover:hover:not([disabled]) {background-color: #357e55;}
-button.cancelHover:hover:not([disabled]) {background-color: #ddece4;}
+button.cancelHover:hover:not([disabled]) {background-color: #bfd5c9;}
 
 div.nick-c-save {
     position: relative;
@@ -269,7 +269,8 @@ div.user-type {
     display: inline-block;
     height: 28px;
     width: 100px;
-    border: 1px solid #1e8524;
+    border: 1px solid #47c880;
+    border-radius: 6px;
     line-height: 28px;
     text-align: center;
     font-weight:500;
@@ -278,10 +279,10 @@ div.user-type {
 }
 .user-type input[type=radio]+label{
     background-color: #fff;
-    color: #1e8524;
+    color: #47c880;
 }
 .user-type input[type=radio]:checked+label{
-    background-color: #1e8524;
+    background-color: #47c880;
     color: #fff;
 }
 
@@ -290,29 +291,17 @@ div.form-save{
     flex-direction: row;
 }
 
-button.s-button {
-    height: 36px;
-    padding: 0 12px;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-}
-
 button.s-save {
     min-width: 49px;
     background-color: #47c880;
 }
 
-button.s-cancel {
+button.s-button.s-cancel {
     min-width: 49px;
     margin-left: 5px;
-    background-color: #fff;
-    border: 1px solid #1e8524;
-    color: #1e8524;
+    background-color: #d6e4d0;
+    /*border: 1px solid #1e8524;*/
+    color: #45a16d;
 }
 
 div.mentor-no {
@@ -341,11 +330,13 @@ button.mentorBtn {
     line-height: 20px;
     border: none;
     border-radius: 6px;
-    font-weight: 400;
+    font-weight: 600;
     margin: 24px auto 0;
     background-color: #d6e4d0;
-    color: #1e8524;
+    color: #45a16d;
 }
+
+button.mentorBtn:hover {background-color: #bfd5c9;}
 
 .newMentorForm{display: none;}
 
