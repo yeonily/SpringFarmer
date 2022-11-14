@@ -5,16 +5,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/adminReply/*")
-public class AdminReplyController {
+@RequestMapping("/adminPolicy/*")
+public class AdminPolicyController {
 
-    @GetMapping("/mentor_reply")
-    public void adminMentorReply() {
+    @GetMapping("/policy")
+    public void adminPolicy() {
     }
 
-    @GetMapping("/board_reply")
-    public void adminBoardReply() {
+    @GetMapping("/policy_write")
+    public void adminPolicyWrite() {
     }
-
-
 }
