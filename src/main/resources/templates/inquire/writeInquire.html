@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>문의하기</title>
@@ -17,45 +17,55 @@
     </style>
 </head>
 <body>
-<div class="wrap">
     <!--헤더-->
+    <div class="wrap">
     <div th:replace="/header/header.html :: header" class="header"/>
 
-    <div class="c-application c-grid main-grid-component fluid">
-        <div class="c-application c-row">
-            <div class="c-application c-new-col" id="faq" sid="guest" style="min-height: 507px">
-                <div class="faq faq-container" style="background: #eaecee;">
-                    <div class="faq faq-banner">
-                        <div class="sub-banner"></div>
-                        <!--                      <img src="https://comento.kr/images/banner/banner_faq.jpg" class="only-pc faq-banner-img">-->
-                        <div class="faq faq-search">
-                            <h1 class="h1 faq-search-title" style="font-size: 40px">문의 하기</h1>
-                            <div class="faq-search-box">
+
+    <div class="grid-fluid">
+        <div class="grid-fluid-row">
+            <div class="banner-background"></div>
+            <div class="grid-container">
+                <div class="grid-container-row">
+                    <div class="grid-container-col">
+                        <section class="pg-detail-banner">
+                            <div class="banner-title-container">
+                                <span class="pg-detail-banner-chip">문의</span>
+                                <div class="pg-detail-banner-title">문의하기</div>
+                                <div class="pg-detail-banner-headline">친절하게 답변드리겠습니다.</div>
                             </div>
-                        </div>
+                            <div class="banner-image-container">
+                                <img class="pg-detail-banner-image" src="/image/program/pgimage.gif">
+                            </div>
+                        </section>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
                     <div class="c-application c-new-col"
-                         style="margin: 0 auto; width: 1124px; height: 684px; padding-right: 12px; padding-left: 12px">
+                         style="margin: 100px auto; width: 1124px; height: 400px; padding-right: 12px; padding-left: 12px">
                         <div id="help-wrap-col" style=" width: 1108px; height: 588px">
                             <div class="help help-wrap" style="background: #fff;">
-                                <section class="help help-section" style="height: 588px; margin-top: 60px;">
+                                <section class="help help-section" style="height: 388px;">
                                     <div class="help help-form">
                                         <div class="clearfix">
                                             <h2 class="h2 help-form-title">1:1 문의하기</h2>
-                                            <p class="h7 text-caption m-0">
+                                            <p class="h7 text-caption m-0" style="font-family: Pretendard,Apple SD Gothic Neo,Helvetica Neue,Helvetica,Arial,Trebuchet MS,sans-serif; font-size: 12px !important; font-weight: 500 !important;">
                                                 문제가 해결되지 않으셨다면 1:1 로 문의하세요.
                                                 <br>
                                                 문의 주신 내용은 48시간 내로 최대한 빠르게 답변드리도록 하겠습니다. 마이페이지를 확인해주세요.
                                             </p>
                                         </div>
                                         <section class="clearfix">
-                                            <input type="text" placeholder="제목" id="title"
-                                                   class="inputbox inputbox-title">
+                                            <input type="text" placeholder="제목" id="title" class="inputbox inputbox-title" style="margin-bottom: 10px; width: 100%; margin-top: 16px; border-radius: 3px;">
                                             <textarea type="textarea" id="content" class="textbox mb-20" cols="30"
                                                       rows="5" placeholder="해결이 필요한 문제에 대해 자세히 설명해주세요."
-                                                      style="padding: 15px;"></textarea>
+                                                      style="padding: 15px; border-radius: 3px;"></textarea>
 
                                             <div class="btn-wrapper" style="height: 40px;">
                                                 <button class="btn disabled"> 문의하기
