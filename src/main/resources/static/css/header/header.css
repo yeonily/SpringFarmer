@@ -203,13 +203,13 @@ div.sub-menu ul li span {
     background-size: 16px 16px;
 }
 div.sub-menu ul li span.writeImg {
-    background-image: url("/static/image/header/write.png");
+    background-image: url("/image/header/write.png");
 }
 div.sub-menu ul li span.talkImg {
-    background-image: url("/static/image/header/talk.png");
+    background-image: url("/image/header/talk.png");
 }
 div.sub-menu ul li span.exitImg {
-    background-image: url("/static/image/header/exit.png");
+    background-image: url("/image/header/exit.png");
 }
 
 
