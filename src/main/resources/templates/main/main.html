@@ -12,7 +12,7 @@
     <title>너와 농부싶어</title>
 </head>
 <body>
-    <div class="wrap">
+    <div id="wrap">
         <!--헤더 삽입-->
         <div th:replace="/header/header.html :: header" class="header"/>
 
@@ -188,10 +188,6 @@
         slidesPerGroup: 2,
         loop: true,
         loopFillGroupWithBlank: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
         navigation: {
             nextEl: ".swiper-button-next3",
             prevEl: ".swiper-button-prev3",
