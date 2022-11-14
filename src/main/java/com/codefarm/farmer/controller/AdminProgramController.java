@@ -17,4 +17,9 @@ public class AdminProgramController {
 
     }
 
+    @GetMapping("/program_pay")
+    public void adminPay(){
+
+    }
+
 }
