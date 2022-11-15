@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>농촌테스트</title>
@@ -9,35 +9,32 @@
 </head>
 <body>
 <div th:replace="/header/header.html :: header" class="header"/>
-<!-- subheader -->
-<div class="sub_title">
-    <div class="container">
-        <div class="inner">
-            <div class="title_left_box">
-                <div class="snb_wrap">
-                    <nav class="snb">
-                        <div class="top" style="display: inline-block">귀농 단계별 체크리스트</div>
-                        <div class="lgr_snb" style="display: inline-block; margin-left: 20px;">
-<!--                            <ul class="lgr_ul" data-level="1">-->
-<!--                                <li><a href="/information/readyTest" class="active">-->
-<!--                                    <span>귀농 준비도 테스트</span>-->
-<!--                                </a>-->
-<!--                                </li>-->
-<!--                                <li class="nowMenu"><a href="/information/stepTest" class="active">-->
-<!--                                    <span>귀농 단계별 체크리스트</span>-->
-<!--                                </a>-->
-<!--                                </li>-->
-<!--                            </ul>-->
+
+
+<!--서브헤더-->
+<div class="grid-fluid">
+    <div class="grid-fluid-row">
+        <div class="banner-background"></div>
+        <div class="grid-container">
+            <div class="grid-container-row">
+                <div class="grid-container-col">
+                    <section class="pg-detail-banner">
+                        <div class="banner-title-container">
+                            <span class="pg-detail-banner-chip">TEST</span>
+                            <div class="pg-detail-banner-title">단계별 테스트</div>
+                            <div class="pg-detail-banner-headline">자신의 부족한 점을 단계별로 체크해 보아요!</div>
                         </div>
-                    </nav>
+                        <div class="banner-image-container">
+                            <img class="pg-detail-banner-image" src="/image/information/stepTest.png" style="margin-top: 68px">
+                        </div>
+                    </section>
                 </div>
-            </div>
-            <div class="title_right_box">
-                <img src="/image/information/right-img.png" style="height: 220px;">
             </div>
         </div>
     </div>
 </div>
+
+
 
 <!-- 헤더 밑 컨텐츠 시작 -->
 <div id="container">

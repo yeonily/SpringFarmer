@@ -294,7 +294,8 @@ div.footerMargin {
 }
 
 .banner-background {
-    background: rgb(0, 161, 71);
+    /*background: rgb(0, 161, 71);*/
+    background: rgb(26 201 30);
     position: absolute;
     top: 0;
     left: 0;
@@ -561,5 +562,5 @@ div.footer-bottom-wrap {
 }
 
 div#wrap{
-    margin-top: 44px !important;
+    margin-top: 69px !important;
 }
