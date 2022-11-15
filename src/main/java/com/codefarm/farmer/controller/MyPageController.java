@@ -39,4 +39,9 @@ public class MyPageController {
     public String albaPage(){
         return "/myPage/alba";
     }
+
+    @GetMapping("/ex")
+    public String exPage(){
+        return "/myPage/ex";
+    }
 }

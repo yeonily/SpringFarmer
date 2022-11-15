@@ -18,6 +18,11 @@ ul {
 }
 button{cursor: pointer;}
 
+div.fake-header {
+    position: relative;
+    height: 69px;
+}
+
 .marginT {
     margin-top: 32px!important;
     margin-bottom: 32px!important;
@@ -30,7 +35,7 @@ div#main {
     flex-wrap: wrap;
 }
 
-div.wrap {
+div.wrap-w {
     position: relative;
     width: 100%;
     box-sizing: border-box;
@@ -333,7 +338,7 @@ button.s-button:hover {background-color: #357e55;}
 }
 
 @media only screen and (min-width: 768px) {
-    div.wrap {
+    div.wrap-w {
         margin-top: 72px;
         margin-bottom: 160px;
     }

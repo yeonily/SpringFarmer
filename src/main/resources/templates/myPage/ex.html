@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /** CSS **/
+        /* 기본적으로 보이는 달력 아이콘 제거 */
+        input[type="date"]::-webkit-calendar-picker-indicator { display: none; -webkit-appearance: none; appearance: none; }
+    </style>
+</head>
+<body>
+<input type="date" id="start-date" min="" max="">
+</body>
+<script>
+    /** javascript **/
+    /* 가는 날 선택 */
+    //// 최소 선택 일자 설정
+    let today = new Date();
+    let day = today.getDate();
+    let month = today.getMonth() + 1; // 1월이 0부터 시작하여 1을 더해준다.
+    let year = today.getFullYear();
+    if (day < 10) day = '0' + day;
+    if (month < 10) month = '0' + month;
+    today = year + '-' + month + '-' + day;
+
+    // 최소 선택 일자는 오늘이다.
+    document.getElementById("start-date").setAttribute("value", today);
+    document.getElementById("start-date").setAttribute("min", today);
+
+    //// 최대 선택 일자 설정
+    let maxday = new Date();
+    maxday = new Date(maxday.setMonth(maxday.getMonth() + 2))
+    day = maxday.getDate();
+    month = maxday.getMonth() + 1;
+    year = maxday.getFullYear();
+    if (day < 10) day = '0' + day;
+    if (month < 10) month = '0' + month;
+    today = year + '-' + month + '-' + day;
+    document.getElementById("start-date").setAttribute("max", today);
+    document.getElementById("return-date").setAttribute("max", today);
+
+    /* 오는 날 선택 */
+    function changeReturn() {
+        // 가는 날 선택에 따라 오는 날 초기 날짜 변경
+        let start = document.getElementById("start-date").value;
+        document.getElementById("return-date").setAttribute("value", start);
+        document.getElementById("return-date").setAttribute("min", start);
+    }
+    document.getElementById("start-date").onchange = () => {
+        changeReturn();
+    }
+    changeReturn();
+
+</script>
+</html>
