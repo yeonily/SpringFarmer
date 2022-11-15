@@ -530,6 +530,7 @@ div#socaMenu-inner div.menuList div.menuList-menu img {
 }
 div#socaMenu-inner div.menuList div.menuList-menu span {
     font-size: 18px;
+    font-weight: 500;
     color: rgb(60, 65, 68);
 }
 
@@ -688,6 +689,7 @@ div#socaMenu2-inner div.menuList div.menuList-menu img {
 }
 div#socaMenu2-inner div.menuList div.menuList-menu span {
     font-size: 18px;
+    font-weight: 500;
     color: rgb(60, 65, 68);
 }
 
