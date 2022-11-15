@@ -228,7 +228,8 @@ button {
 }
 
 .banner-background {
-    background: rgb(0, 161, 71);
+    /*background: rgb(0, 161, 71);*/
+    background: rgb(90 171 202);
     position: absolute;
     top: 0;
     left: 0;
@@ -602,7 +603,8 @@ body ::selection {
     min-width: 143px;
     height: 40px;
     line-height: 38px;
-    background-color: #47c880;
+    /*background-color: #47c880;*/
+    background-color: rgb(90 171 202);
     border: 1px solid #47c880;
     border-radius: 3px;
     color: #fff;
@@ -617,5 +619,6 @@ body ::selection {
 }
 
 .btn:hover{
-    background-color: #357e55;
+    /*background-color: #357e55;*/
+    background-color: rgb(62 124 148);
 }
