@@ -6,12 +6,61 @@
     <link rel="stylesheet" href="/css/common/font.css" />
     <link rel="stylesheet" href="/css/header/header.css" />
     <link rel="stylesheet" href="/css/login/join.css" />
+
 </head>
 <body>
-<div th:replace="/header/header.html :: header" class="header"/>
+<!--<div th:replace="/header/header.html :: header" class="header"/>-->
+
 <div id="joinForm-wrap">
-    회원가입 폼 입력
+    <form action="" name="joinForm">
+        <section class="j-t-group">
+            <div id="join-title">
+                <div>
+                    <span id="name"></span>님, <span class="welcome-txt">환영합니다!</span>
+                </div>
+                <div>회원가입을 위해 <span class="welcome-txt">양식</span>을 채워주세요.</div>
+            </div>
+            <div id="join-sub-title">전문적인 강사 경험이 없어도 실무 과정을 만들 수 있도록 도와드릴게요.</div>
+        </section>
+        <section class="join-form">
+            <div class="j-title">이름</div>
+            <input type="text" class="join-input" name="name" placeholder="이름을 입력하세요">
+        </section>
+        <section class="join-form">
+            <div class="j-title">닉네임</div>
+            <div class="nick-group">
+                <input type="text" class="join-input" name="nickname" placeholder=" 닉네임을 입력하세요">
+                <button type="button" class="nick nick-check" onclick="joinNickCheck()">중복확인</button>
+            </div>
+        </section>
+        <div class="nickname-check">
+            <!-- 중복 체크 문구 -->
+            <div class="nick-c-save" style="display: /*none*/;">
+                <div class="nick-warning" style="background: #47c880;">!</div>
+                <div style="color: #47c880;">사용 가능한 닉네임입니다.</div>
+            </div>
+            <div class="nick-c-save" style="display: none;">
+                <div class="nick-warning" style="background: rgb(233, 37, 37);">!</div>
+                <div style="color: rgb(233, 37, 37);">>이미 사용중인 닉네임입니다.</div>
+            </div>
+            <!------------------>
+        </div>
+        <section class="join-form">
+            <div class="j-title">생년월일</div>
+            <input type="text" class="join-input" name="birth" placeholder="생년월일">
+        </section>
+        <section class="join-form">
+            <div class="j-title">휴대폰 번호</div>
+            <input type="text" class="join-input" name="phone" oninput="autoHyphen(this)" maxlength="13" placeholder="휴대폰 번호를 입력하세요">
+        </section>
+        <section class="join-form">
+            <div class="j-title">지역</div>
+            <input type="text" class="join-input" name="address" placeholder="지역을 입력하세요">
+        </section>
+    </form>
 </div>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/myPage/join.js"></script>
 </html>

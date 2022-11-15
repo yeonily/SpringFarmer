@@ -19,4 +19,9 @@ public class JoinController {
     public String joinFormPage(){
         return "/join/joinForm";
     }
+
+    @GetMapping("/agreement")
+    public String agreementPage(){
+        return "/join/agreement";
+    }
 }
