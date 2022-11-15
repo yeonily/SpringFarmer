@@ -35,4 +35,9 @@ public class ProgramController {
 
     }
 
+    @GetMapping("/register")
+    public void register(){
+
+    }
+
 }

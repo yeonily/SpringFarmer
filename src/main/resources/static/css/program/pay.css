@@ -349,11 +349,13 @@ button {
     overflow: hidden;
 }
 
+.pay-button:hover{
+    background-color: #357e55;
+}
 
 .button-icon{
     display: flex!important;
 }
-
 
 .text-field-name{
     text-align: left;
@@ -409,24 +411,6 @@ button {
     margin: 0;
 }
 
-.caption4{
-    font-size: 10px;
-    line-height: 13px;
-    font-weight: 400;
-    word-break: keep-all;
-    word-wrap: break-word;
-    margin: 0;
-}
-
-.caption5{
-    font-size: 10px;
-    line-height: 13px;
-    font-weight: 400;
-    word-break: keep-all;
-    word-wrap: break-word;
-    margin: 0;
-}
-
 
 .apply-count{
     font-weight: 400;
@@ -447,7 +431,241 @@ button {
     display: flex!important;
 }
 
+.payment-price{
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
 
+.payment-info{
+    color: rgb(148, 155, 160);
+    font-weight: 400!important;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: .02em;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+.price-number{
+    color: rgb(60, 65, 68);
+    font-weight: 500!important;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: .02em;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+.dash{
+    border-color: rgb(234, 236, 238);
+    border-style: dashed;
+    border-top: 1px;
+    width: inherit;
+    height: 0;
+    margin: 12.5px 0;
+    overflow: visible;
+}
+
+.total-price{
+    background: #fcfcfc;
+    padding: 12px 0;
+    margin-top: 12px;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.total-payment-info{
+    color: rgb(4, 5, 5);
+    font-weight: 600!important;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: .02em;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+.payment-type-group{
+    display: flex;
+}
+
+.payment-type-list{
+    z-index: 1;
+}
+
+input.payment-radio{
+    display: none;
+    box-sizing: border-box;
+    padding: 0;
+    appearance: none;
+    -webkit-border-radius: 0;
+    overflow: visible;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    outline: none!important;
+    cursor: default;
+}
+
+.clearfix{
+    opacity: 1;
+    height: 78px;
+    border: 1px solid #949ba0;
+    border-radius: 8px;
+    margin-right: 0;
+    zoom: 1;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.clearfix:after{
+    clear: both;
+    content: " ";
+    display: table;
+}
+
+input.payment-radio:checked+label.clearfix{
+    border: 1px solid #47c880;
+    background: #f7fef7;
+}
+
+.payment-type-item-wrapper{
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.payment-type-item{
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.logo-pg{
+    width: auto;
+    height: 20px;
+    margin-right: 4px;
+    border-style: none;
+    max-width: 100%;
+}
+
+.payment-type-item-typo{
+    color: rgb(118, 125, 130);
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 600;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+.nofix{
+    height: 78px;
+    border: 1px solid #949ba0;
+    border-radius: 8px;
+    margin-right: 0;
+    opacity: .4;
+    zoom: 1;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.rules{
+    padding: 8px 4px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.rules-title{
+    color: rgb(148, 155, 160);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+.rule-button{
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex!important;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-appearance: button;
+    overflow: visible;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+   /*클릭시 transform: rotate(180deg);*/
+}
+
+hr.divider{
+    border-color: rgb(234, 236, 238);
+    border-style: solid;
+    border-top: 1px;
+    width: inherit;
+    height: 0;
+    overflow: visible;
+}
+
+.slide-fade{
+    padding: 0px 4px;
+    opacity: 0;
+    transition: all .2s linear;
+    overflow: hidden;
+    max-height: 135px;
+    display: block;
+}
+
+.rule-detail{
+    color: rgb(173, 179, 184);
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+.pay-agree{
+    color: rgb(118, 125, 130);
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-top: 16px;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
 @media only screen and (min-width: 768px){
     .c-row{
         margin-right: -24px;
@@ -522,6 +740,8 @@ button {
 
     .apply-box{
         padding: 40px;
+        background: #fff;
+        margin-bottom: 200px;
     }
 
     .callout-box{
@@ -541,6 +761,25 @@ button {
         bottom: auto;
         margin-top: 40px;
         width: 100%!important;
+    }
+
+    .payment-type-group{
+        flex-wrap: wrap;
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        flex-direction: row;
+    }
+
+    .payment-type-list{
+        margin-bottom: 0;
+        width: calc(50% - 8px);
+        margin-right: 16px;
+    }
+
+    .payment-type-list:nth-child(2n){
+        margin-right: 0;
+        margin-bottom: 0;
+        width: calc(50% - 8px);
     }
 
 
