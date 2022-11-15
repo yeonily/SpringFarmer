@@ -1,14 +1,14 @@
-package com.codefarm.farmer.controller;
+package com.codefarm.farmer.controller.admin;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/adminJob/*")
-public class AdminJobController {
+@RequestMapping("/adminMain/*")
+public class AdminMainController {
 
-    @GetMapping("/job")
-    public void adminJob() {
+    @GetMapping("/main")
+    public void adminMain() {
     }
 }
