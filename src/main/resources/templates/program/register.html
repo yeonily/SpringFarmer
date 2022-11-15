@@ -5,14 +5,60 @@
     <title>program register</title>
     <link rel="stylesheet" href="/css/program/register.css"/>
     <link rel="stylesheet" href="/css/common/font.css"/>
-    <link rel="stylesheet" href="/css/footer/footer.css"/>
-    <link rel="stylesheet" href="/css/header/header.css"/>
 </head>
 <body>
-<div th:replace="/header/header.html :: header" class="header"/>
+<div class="__nuxt">
+    <div id="__layout">
+        <div id="main-grid">
+            <div class="c-new-row">
+            <div class="c-new-col">
+            <span>
+            <!--헤더-->
+            <div>
+                <div class="pg-opening-header-container">
+                <div class="c-new-row">
+                <div class="c-new-col new-col-log-12">
+                    <div class="opening-header">
+                        <div class="opening-header-left">
+                            <div class="left-title">새 프로그램</div>
+                        </div>
+                        <div class="opening-header-right flex">
+                            <button class="header-button1"><div class="flex"/>저장하기<div class="flex"/></button>
+                            <button class="header-button2"><div class="flex"/>나가기<div class="flex"/></button>
+                        </div>
+                    </div>
+                    <div class="opening-progress-bar-background">
+                        <div class="opening-progress-bar"></div>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            <!--글 본문-->
+            <div>
 
-<div th:replace="/footer/footer.html :: footer" class="footer"/>
+            </div>
+            <!--왼쪽 사이드바 -->
+            <div>
+
+            </div>
+            <!--하단 사이드바 -->
+            <div class="opening-footer-container">
+            <div class="c-new-row">
+            <div class="c-new-col new-col-log-12">
+            <div class="opening-footer">
+                <button class="footer-prev"><div class="flex"><img class="footer-img-prev" src="/image/program/prev_register.gif"></div>이전<div class="flex"/></button>
+                <button class="footer-next"><div class="flex"/>다음<div class="flex"><img class="footer-img-next" src="/image/program/next_register.gif"></div></button>
+            </div>
+            </div>
+            </div>
+            </div>
+            </span>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script src="/js/header/header.js"></script>
 </html>
