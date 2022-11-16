@@ -23,4 +23,8 @@ public class MentorController {
     public void detail(){
 
     }
+    @GetMapping("/mentorWrite")
+    public void write(){
+
+    }
 }

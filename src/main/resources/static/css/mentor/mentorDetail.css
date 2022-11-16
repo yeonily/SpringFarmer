@@ -309,16 +309,204 @@
     box-sizing: border-box;
     outline: none;
 }
+#main_intro{
+    padding: 60px 0;
+    background-color: #fff;
+}
+#main_intro_inner1{
+    background-color: inherit;
+    max-width: 1140px;
+    position: relative;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+#main_intro_inner2{
+    margin-right: -12px;
+    margin-left: -12px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.main_intro_flex_percent{
 
-
-
-
-
-
-
-
-
-
-
-
-
+    -webkit-box-flex: 0;
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+    padding-right: 12px;
+    padding-left: 12px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+#main_intro_inner4{
+    color: rgb(4, 5, 5);
+    margin-bottom: 40px;
+    margin-top: 8px;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 600;
+}
+#main_intro_inner5{
+    color: #202325;
+    text-align: left;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    letter-spacing: .02em;
+    margin-bottom: 40px!important;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+#main_intro_inner6{
+    background-color: rgb(252, 252, 252);
+    padding: 0;
+    position: relative;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+.main_intro_inner7{
+    margin-right: -12px;
+    margin-left: -12px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#main_intro_inner8{
+    background-color: inherit;
+    max-width: 1140px;
+    position: relative;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+#main_intro_inner9{
+    flex-direction: row;
+    padding: 32px 0;
+    display: flex!important;
+}
+#main_intro_inner10{
+    width: 130px;
+    text-align: left;
+    display: flex!important;
+    flex-direction: column;
+}
+#main_intro_image1{
+    margin: 0 0 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    display: inline-block;
+    border-style: none;
+    max-width: 100%;
+}
+#main_intro_text1{
+    color: rgb(60, 65, 68);
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+#main_intro_text2{
+    color: rgb(32, 35, 37);
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+#main_intro_strong{
+    color: rgb(237, 118, 111);
+    font-weight: 600;
+}
+#main_intro_dd_inner1{
+    background-color: rgb(255, 255, 255);
+    padding: 24px;
+    min-height: 118px;
+}
+#main_intro_dd_inner2{
+    color: rgb(32, 35, 37);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+.dd_strong{
+    font-weight: 600;
+}
+#main_point{
+    padding: 60px 0;
+    background-color: #fff;
+}
+#main_point_inner1{
+    background-color: inherit;
+    max-width: 1140px;
+    position: relative;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+#main_point_inner2{
+    margin-right: -12px;
+    margin-left: -12px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#main_point_h5 {
+    color: rgb(4, 5, 5);
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 600 !important;
+    margin-bottom: 24px !important;
+}
+#main_point_inner3{
+    flex-direction: row;
+    margin: 0 -8px;
+    display: flex!important;
+}
+.main_point_images{
+    background-color: rgb(252, 252, 252);
+    padding: 24px 16px;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+    margin: 0 8px;
+    display: flex!important;
+    align-items: center;
+}
+.main_point_img{
+    margin-bottom: 12px;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 24px;
+    float: inherit;
+    display: block;
+}
+.main_point_text1{
+    color: rgb(4, 5, 5);
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+.main_point_text2{
+    color: rgb(60, 65, 68);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    word-break: keep-all;
+    word-wrap: break-word;
+    margin-top: 4px!important;
+}
