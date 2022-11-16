@@ -88,7 +88,7 @@ function nickCheck (){ /* 중복 체크 */
         nickForm.nickname.focus();
         return;
     }
-    alam();
+
     $("button.nick-save").attr("disabled", false);
 }
 

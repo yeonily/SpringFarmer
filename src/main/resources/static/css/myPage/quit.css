@@ -126,9 +126,9 @@ input.m-r-reason+label.m-reason {
     position: relative;
 }
 
-input.m-r-reason+label.m-reason:hover:before {border-color: #45a16d;}
-input.m-r-reason:checked:not(:disabled)+label.m-reason:before {border-color: #45a16d;}
-input.m-r-reason:checked:not(:disabled)+label.m-reason:after {background-color: #45a16d;}
+input.m-r-reason+label.m-reason:hover:before {border-color: #47c880;}
+input.m-r-reason:checked:not(:disabled)+label.m-reason:before {border-color: #47c880;}
+input.m-r-reason:checked:not(:disabled)+label.m-reason:after {background-color: #47c880;}
 
 input.m-r-reason+label.m-reason:before {
     width: 20px;
@@ -160,7 +160,7 @@ button.quitBtn {
     height: 48px;
     padding: 0 14px;
     min-width: 56px;
-    background-color: #45a16d;
+    background-color: #47c880;
     border: 0;
     border-radius: 8px;
     color: #fff;
@@ -171,11 +171,11 @@ button.quitBtn {
 }
 
 button.quitBtn:disabled {
-    background-color: #ecf2e9;
+    background-color: #47c88052;
     cursor: not-allowed!important;
 }
 
-button.quitBtn:hover:not([disabled]) {background-color: #236a42;}
+button.quitBtn:hover:not([disabled]) {background-color: #357e55;}
 
 div.quit-reason {
     display: none;

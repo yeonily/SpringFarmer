@@ -144,9 +144,6 @@ hr.menu-category {
     margin-bottom: 12px !important;
 }
 
-/*선택한 메뉴*/
-div.menu-select {font-weight: 600!important;}
-
 /*더보기 > 슬라이드 메뉴*/
 div.slide-menu {
     height: 88px;
@@ -177,6 +174,12 @@ div.slide-m {
     color: #767D82;
     font-size: 14px;
     line-height: 20px;
+}
+
+/*선택한 메뉴*/
+div.menu-select {
+    font-weight: 600!important;
+    color: rgb(32, 35, 37);
 }
 
 /*컨텐츠*/
@@ -284,6 +287,10 @@ div.n-c-wrap {
     font-size: 16px;
     letter-spacing: .02em;
 }
+
+input[type='text'] {outline: none;}
+input[type='text']:not([disabled]):hover {border: 1px solid #aaa8a8;}
+input[type='text']:focus {border: 1px solid #aaa8a8;}
 
 /* 알람 애니매이션 모달 */
 div.overlay-l {
