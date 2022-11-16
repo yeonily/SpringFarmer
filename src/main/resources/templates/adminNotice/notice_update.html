@@ -19,7 +19,7 @@
     <script src="/js/admin/adminCommon/side_menu.js"></script>
     <!-- 버튼 클릭 시 확인 알림창 -->
     <script src="/js/admin/adminCommon/check.js"></script>
-    <title>관리자-농업정보 글 작성</title>
+    <title>관리자-공지사항 글 수정</title>
 </head>
 
 <body style="background-color: #daf2e7;">
@@ -31,7 +31,7 @@
     <div id="container">
         <!-- 헤더 -->
         <header>
-            <span id="admin-header-title">농업정보 글 작성</span>
+            <span id="admin-header-title">공지사항 글 수정</span>
             <span id="admin-mode">관리자 모드</span>
             <span id="userCount">가입된 회원 수 총 <strong> 21343 </strong>명</span>
         </header>
@@ -46,10 +46,18 @@
                     </colgroup>
                     <tbody>
                     <tr>
+                        <th>공지번호</th>
+                        <td>
+                            <div class="noticeNumber">
+                                <input type="text" name="notice" class="notice_title" autocomplete="off" readonly>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
                         <th>제목</th>
                         <td>
                             <div class="title">
-                                <input type="text" name="notice" class="notice_title" placeholder="제목을 입력하세요" autocomplete="off">
+                                <input type="text" name="notice" class="notice_title" autocomplete="off">
                             </div>
                         </td>
                     </tr>
@@ -68,7 +76,7 @@
                                 <textarea class="summernote" name="editorForm"></textarea>
                                 <div id="letter-count">
                                     <br>
-                                    <p id="letter-length" style="display: inline;">0</p> / 100
+                                    <p id="letter-length" style="display: inline;">0</p> / 2000
                                 </div>
                             </div>
                         </td>
@@ -86,8 +94,8 @@
                     </tbody>
                 </table>
                 <div class="btns-group">
-                    <input type="button" onclick="location.href='#'" class="g-btn list" value="농업정보 목록">
-                    <input type="submit" onclick="saveCheck()" class="g-btn submit" value="저장">
+                    <input type="button" onclick="location.href='#'" class="g-btn list" value="수정 완료">
+                    <input type="submit" onclick="saveCheck()" class="g-btn submit" value="삭제">
                 </div>
             </form>
         </div>

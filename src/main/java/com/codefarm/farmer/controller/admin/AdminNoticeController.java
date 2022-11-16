@@ -15,4 +15,10 @@ public class AdminNoticeController {
     @GetMapping("/notice_write")
     public void adminNoticeWrite() {
     }
+
+    @GetMapping("/notice_update")
+    public void adminNoticeDetail() {
+    }
+
+
 }
