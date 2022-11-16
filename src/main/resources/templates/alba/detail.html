@@ -2,18 +2,75 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>아르바이트 상세페이지</title>
     <link rel="stylesheet" href="/css/header/header.css"/>
     <link rel="stylesheet" href="/css/footer/footer.css"/>
     <link rel="stylesheet" href="/css/common/font.css"/>
+    <link rel="stylesheet" href="/css/alba/detail.css"/>
 </head>
 <body>
-    <div class="wrap">
-        <div th:replace="/header/header.html :: header" class="header"/>
+    <div th:replace="/header/header.html :: header" class="header"/>
+    <div id="wrap">
+        <!--상단 서브배너-->
+        <div class="sub-banner">
+            <div class="sub-banner-inner">
+                <div class="left-div">
+                    <span>모집중</span>
+                    <div class="left-div-title">논산 딸기재배 아르바이트</div>
+                    <div class="left-div-content">몸이 힘들지 않은 간단 아르바이트</div>
+                </div>
+                <div class="right-div-image">
+                    <img src="https://hooaah-images.s3.ap-northeast-2.amazonaws.com/image/1645663296012-KakaoTalk_20220211_122937318.jpg">
+                </div>
+            </div>
+        </div>
 
-
-
-        <footer th:replace="/footer/footer.html :: footer" class="footer"/>
+        <!--우측 고정 aside-->
+        <div id="main_banner_inner3">
+            <div id="main_banner_inner4">
+                <div id="main_banner_flex_1"></div>
+                <div id="main_banner_flex_2">
+                    <section id="main_fixed">
+                        <aside>
+                            <div>
+                                <article id="main_fixed_inner1">
+                                    <div id="main_fixed_inner2">
+                                        <div id="main_fixed_category">모집중</div>
+                                        <div id="main_fixed_title">논산 딸기재배 아르바이트</div>
+                                        <div>
+                                            <dl>
+                                                <div class="main_fixed_dl">
+                                                    <dt class="main_fixed_dl_dt">모집기간</dt>
+                                                    <dd class="main_fixed_dl_dd">~ 2022년 11월 31일</dd>
+                                                </div>
+                                                <div class="main_fixed_dl">
+                                                    <dt class="main_fixed_dl_dt">작업날짜</dt>
+                                                    <dd class="main_fixed_dl_dd">2022년 12월 31일</dd>
+                                                </div>
+                                                <div class="main_fixed_dl">
+                                                    <dt class="main_fixed_dl_dt">모집인원</dt>
+                                                    <dd class="main_fixed_dl_dd">1/5명</dd>
+                                                </div>
+                                                <div class="main_fixed_dl">
+                                                    <dt class="main_fixed_dl_dt">시급</dt>
+                                                    <dd class="main_fixed_dl_dd">10,200원</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                        <button id="main_fixed_button">
+                                            <div style="display: flex!important;"></div>
+                                                지원하기
+                                            <div style="display: flex!important;"></div>
+                                        </button>
+                                    </div>
+                                </article>
+                            </div>
+                        </aside>
+                    </section>
+                </div>
+            </div>
+        </div>
     </div>
+    <footer th:replace="/footer/footer.html :: footer" class="footer"/>
 </body>
 </html>

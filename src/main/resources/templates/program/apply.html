@@ -17,7 +17,7 @@
         <div class="telling-avatar-quote">
             <div class="telling-wrapper">
                 <div class="telling-title">
-                    <div class="telling-title-content">닉네임님, 만나서 반가워요</div>
+                    <div class="telling-title-content"><span id="name"></span>님, 만나서 반가워요</div>
                 </div>
                 <div class="telling-body">
                     <div class="telling-body-content">
@@ -122,9 +122,9 @@
                         <div class="apply-form-body">신청인원</div>
                         <span class="body-span">
                             <div class="body-text-field">
-                                <button type="button" class="down" disabled></button>
-                                <div class="apply-count">1</div>
-                                <button type="button" class="up"></button>
+                                <button type="button" class="down" disabled onclick='count("minus")'></button>
+                                <div id="apply-count">1</div>
+                                <button type="button" class="up" onclick='count("plus")'></button>
                             </div>
                         </span>
                     </div>

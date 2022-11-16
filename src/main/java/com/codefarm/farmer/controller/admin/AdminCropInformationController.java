@@ -15,4 +15,8 @@ public class AdminCropInformationController {
     @GetMapping("/cropInformation_write")
     public void adminCropInformationWrite() {
     }
+
+    @GetMapping("/cropInformation_update")
+    public void adminCropInformationUpdate() {
+    }
 }

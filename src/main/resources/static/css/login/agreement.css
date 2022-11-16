@@ -91,7 +91,7 @@ div#s-t-wrap>ul li {
     cursor: pointer;
 }
 
-.tab-active {color: #2a7de1;}
+.tab-active {color: #47c880;}
 
 /* 약관 동의 */
 div#side-contents-wrap {
@@ -120,7 +120,7 @@ h4 {
     margin: 0;
     margin-bottom: 30px!important;
 }
-.text-primary {color: #2a7de1!important;}
+.text-primary {color: #47c880!important;}
 
 ol li {margin-bottom: 20px;}
 

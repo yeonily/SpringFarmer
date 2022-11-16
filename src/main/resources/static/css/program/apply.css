@@ -429,7 +429,7 @@ button.down{
     vertical-align: top;
 }
 
-.apply-count{
+#apply-count{
     font-weight: 400;
     display: inline-flex;
     overflow: hidden;

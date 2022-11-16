@@ -15,4 +15,8 @@ public class AdminPolicyController {
     @GetMapping("/policy_write")
     public void adminPolicyWrite() {
     }
+
+    @GetMapping("/policy_update")
+    public void adminPolicyUpdate() {
+    }
 }
