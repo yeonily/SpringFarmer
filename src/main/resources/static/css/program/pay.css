@@ -626,8 +626,9 @@ input.payment-radio:checked+label.clearfix{
     font-size: 100%;
     line-height: 1.15;
     margin: 0;
-   /*클릭시 transform: rotate(180deg);*/
+   /*클릭시 transform: rotate(90deg);*/
 }
+
 
 hr.divider{
     border-color: rgb(234, 236, 238);
@@ -639,12 +640,11 @@ hr.divider{
 }
 
 .slide-fade{
-    padding: 0px 4px;
-    opacity: 0;
+    padding: 16px 4px 8px;
     transition: all .2s linear;
     overflow: hidden;
     max-height: 135px;
-    display: block;
+    display: none;
 }
 
 .rule-detail{
@@ -666,6 +666,8 @@ hr.divider{
     word-break: keep-all;
     word-wrap: break-word;
 }
+
+
 @media only screen and (min-width: 768px){
     .c-row{
         margin-right: -24px;

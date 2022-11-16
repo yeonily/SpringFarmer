@@ -2,6 +2,35 @@
 * program/apply.html
 * */
 
+//버튼 클릭 시 숫자 증가,감소
+function count(type)  {
+    // 결과를 표시할 element
+    const resultElement = document.getElementById('apply-count');
+
+    // 현재 화면에 표시된 값
+    let number = resultElement.innerText;
+
+    // 더하기/빼기
+    if (type === 'plus') {
+        number = parseInt(number) + 1;
+    } else if (type === 'minus' && number > 1) {
+        number = parseInt(number) - 1;
+    }
+
+    // 1 이상일 때 빼기 활성화
+    if(number > 1){
+        $("button.down").attr("disabled", false);
+        $("button.down").css({"background":"url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0yMCAxNHYySDEwdi0yeiIgZmlsbD0iIzMzMyIgZmlsbC1ydWxlPSJub256ZXJvIi8+Cjwvc3ZnPgo=)"});
+    }else{
+        $("button.down").attr("disabled", true);
+        $("button.down").css({"background":"url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0yMCAxNHYySDEwdi0yeiIgZmlsbD0iI0RERCIgZmlsbC1ydWxlPSJub256ZXJvIi8+Cjwvc3ZnPgo=)"});
+
+    }
+
+    // 결과 출력
+    resultElement.innerText = number;
+}
+
 //유효성 검사
 $(document).ready(function () {
 
@@ -173,6 +202,9 @@ $(document).ready(function () {
 
 })
 
-
+// input에 이름 입력 시 실시간으로 출력
+$("input[name='name']").keyup(function(){
+    $("span#name").html($(this).val());
+});
 
 
