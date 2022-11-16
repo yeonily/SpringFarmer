@@ -17,7 +17,7 @@
                     <div class="telling-avatar-quote">
                         <div class="telling-wrapper">
                             <div class="telling-title">
-                                <div class="telling-title-content">닉네임님, 참여를 결정해주셔서 감사드려요!</div>
+                                <div class="telling-title-content"><span id="name"></span>님, 참여를 결정해주셔서 감사드려요!</div>
                             </div>
                             <div class="telling-body">
                                 <div class="telling-body-content">
@@ -152,11 +152,11 @@
                     <div>
                         <div class="rules">
                             <div class="rules-title">이용약관 및 유의사항</div>
-                            <button type="button" class="rule-button"><img class="rule-button" src="/image/program/updown.gif"></button>
+                            <button type="button" class="rule-button" id="ruleB" onclick="doDisplay()" ><img class="rule-button" src="/image/program/updown.gif"></button>
                         </div>
                         <hr class="divider">
-                        <div class="slide-fade">
-                            <div class="rule-detail" style="display: none">
+                        <div class="slide-fade" id="ruleD" >
+                            <div class="rule-detail" >
                                 - 강의 시작 24시간 전까지 취소 시, 결제 금액 전액 환불<br>
                                 - 그 이후 취소 신청 시, 환불 불가<br>
                                 - 취소하면 결제에 사용된 할인 쿠폰은 소멸되며 재사용할 수 없습니다.<br>
@@ -180,4 +180,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/header/header.js"></script>
+<script src="/js/program/pay.js"></script>
 </html>
