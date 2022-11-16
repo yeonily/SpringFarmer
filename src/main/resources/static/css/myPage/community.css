@@ -87,3 +87,12 @@ span.c-text {
     line-height: 20px;
     font-weight: 400;
 }
+
+div.c-status>span {
+    padding: 0 5px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.i-finish {color: #47c880;}
+.i-ing {color: rgb(118, 125, 130);}

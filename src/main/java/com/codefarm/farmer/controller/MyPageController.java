@@ -40,8 +40,13 @@ public class MyPageController {
         return "/myPage/alba";
     }
 
-    @GetMapping("/ex")
-    public String exPage(){
-        return "/myPage/ex";
+    @GetMapping("/inquire")
+    public String inquirePage(){
+        return "/myPage/inquire";
+    }
+
+    @GetMapping("/myInquire")
+    public String myInquirePage(){
+        return "/myPage/myInquire";
     }
 }

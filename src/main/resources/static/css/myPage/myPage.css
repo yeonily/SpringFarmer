@@ -158,7 +158,7 @@ button.nick-save {
 }
 
 button.nick-save:disabled {
-    background-color: #ecf2e9;
+    background-color: #47c88052;
     cursor: not-allowed!important;
 }
 
