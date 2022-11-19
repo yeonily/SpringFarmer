@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>너와농부싶어</title>
+    <link rel="icon" href="/image/header/favicon.png" />
+    <link rel="shortcut icon" href="/image/header/favicon.png" />
+    <link rel="stylesheet" href="/css/common/font.css" />
+    <link rel="stylesheet" href="/css/header/header.css" />
+    <link rel="stylesheet" href="/css/footer/footer.css" />
+    <link rel="stylesheet" href="/css/myPage/sideMenu.css" />
+    <link rel="stylesheet" href="/css/myPage/mentoring.css" />
+</head>
+<body>
+<div th:replace="/header/header.html :: header" class="header"/>
+<div class="fake-header"></div>
+<div id="main">
+    <div id="main-tab" class="wrap-w" style="padding-bottom: 0">
+        <div class="container">
+            <div class="contentsWrap">
+                <!--메뉴 카텍고리 시작-->
+                <div th:replace="/myPage/sidemenu.html :: myPageMenu"></div>
+                <!--컨텐츠 시작-->
+                <div class="contents">
+                    <div class="c-header">
+                        <div class="c-title">
+                            <!--if(멘토)-->
+                            <div>멘티 관리</div>
+                            <!--if(멘티)-->
+<!--                            <div>멘토 목록</div>-->
+                            <!----------->
+                        </div>
+
+                        <!--멘토일 때-->
+                        <div>
+                            <div class="c-header-c">
+                                <div class="c-header-can">
+                                    <div class="menu-tab-btn">
+                                        <div class="menu-tab">
+                                            <button id="list" class="active main-tab">멘티 목록</button>
+                                        </div>
+                                        <div class="menu-tab">
+                                            <button id="apply" class="main-tab">멘티 신청</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <div class="wrapper-s">
+                                    <div id="mentoring-wrap">
+                                        <!-- 멘토 신청 -->
+                                        <div class="m-l-wrap">
+                                            <div class="m-l">
+                                                <div class="name">박수현</div>
+                                                <button class="infoBtn">한 줄 소개</button>
+                                                <div class="m-b-group">
+                                                    <button class="refuse">거절</button>
+                                                    <button class="accept">수락</button>
+                                                </div>
+                                            </div>
+                                        </div>
+<!--                                        <div class="myInfo">이 편지는 영국에서 최초로 시작되어 일년에 한바퀴 돌면서 받는 사람에게 행운을 주었고 지금은 당신에게로 옮겨진 이 편지는 4일 안에 당신 곁을 떠나야 합니다. 이 편지를 포함해서 7통을 행운이 필요한 사람에게 보내 주셔야 합니다. </div>-->
+                                        <!------------->
+                                    </div>
+                                    <!---->
+<!--                                    <div id="m-a-wrap" class="section-nickname">-->
+<!--                                        멘티 목록-->
+<!--                                    </div>-->
+                                    <!---->
+                                </div>
+                            </div>
+
+                        </div>
+                        <!---------------->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 푸터 -->
+<div th:replace="/footer/footer.html :: footer" class="footer"/>
+<!-- 알람 모달창 -->
+<div class="overlay-l" style="display: none">
+    <div class="m-al">삭제되었습니다.</div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/myPage/myPage.js"></script>
+<script>
+    $("div.menu-a").removeClass('menu-select');
+    $("#mentoring").addClass('menu-select');
+</script>
+</html>

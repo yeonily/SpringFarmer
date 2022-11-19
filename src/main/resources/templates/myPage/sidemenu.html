@@ -18,14 +18,14 @@
                 </div>
             </div>
             <div class="menu">
-                <a th:href="@{/myPage/program}">
+                <a th:href="@{/mypage/program}">
                     <div class="menu-a" id="program">
                         내 프로그램
                     </div>
                 </a>
             </div>
             <div class="menu">
-                <a th:href="@{/myPage/alba}">
+                <a th:href="@{/mypage/alba}">
                     <div class="menu-a" id="alba">
                         내 아르바이트
                     </div>
@@ -33,7 +33,7 @@
             </div>
             <!-- 농장주 일 때 -->
             <div class="menu ">
-                <a th:href="@{/myPage/community}">
+                <a th:href="@{/mypage/community}">
                     <div class="menu-a" id="community">
                         커뮤니티 활동
                     </div>
@@ -42,14 +42,14 @@
             </div>
             <!---------------->
             <div class="menu">
-                <a th:href="@{/myPage/setting}">
+                <a th:href="@{/mypage/setting}">
                     <div class="menu-a" id="myInfoPage">
                         개인 정보 설정
                     </div>
                 </a>
             </div>
             <div class="menu">
-                <a  th:href="@{/myPage/payment}">
+                <a  th:href="@{/mypage/payment}">
                     <div class="menu-a" id="payment">
                         결제 내역
                     </div>
@@ -65,16 +65,20 @@
             </div>
             <div class="slide-menu">
                 <div class="menu">
-                    <a th:href="@{/myPage/inquire}">
+                    <a th:href="@{/mypage/inquire}">
                         <div class="menu-a slide-m" id="inquire">
                             문의 내역
                         </div>
                     </a>
                 </div>
                 <div class="menu">
-                    <a href="">
+                    <a th:href="@{/mypage/mentoring}">
                         <div class="menu-a slide-m" id="mentoring">
-                            멘토/멘티 리스트
+                            <!-- if (멘티) -->
+                            멘토 리스트
+                            <!-- if (멘토) -->
+                            멘티 리스트
+                            <!-------------->
                         </div>
                     </a>
                 </div>

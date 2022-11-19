@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Slf4j
-@RequestMapping("/myPage/*")
+@RequestMapping("/mypage/*")
 public class MyPageController {
 
     @GetMapping("/setting")
@@ -45,8 +45,13 @@ public class MyPageController {
         return "/myPage/inquire";
     }
 
-    @GetMapping("/myInquire")
+    @GetMapping("/inquire/qustion")
     public String myInquirePage(){
         return "/myPage/myInquire";
+    }
+
+    @GetMapping("/mentoring")
+    public String mentoringPage(){
+        return "/myPage/mentoring";
     }
 }

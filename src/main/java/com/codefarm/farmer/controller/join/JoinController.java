@@ -15,7 +15,7 @@ public class JoinController {
         return "/join/join";
     }
 
-    @GetMapping("/registerForm")
+    @GetMapping("/form")
     public String joinFormPage(){
         return "/join/joinForm";
     }

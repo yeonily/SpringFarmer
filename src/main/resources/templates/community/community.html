@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>너와농부싶어</title>
+    <link rel="icon" href="/image/header/favicon.png" />
+    <link rel="shortcut icon" href="/image/header/favicon.png" />
+    <link rel="stylesheet" href="/css/common/font.css" />
+    <link rel="stylesheet" href="/css/header/header.css" />
+    <link rel="stylesheet" href="/css/footer/footer.css" />
+    <link rel="stylesheet" href="/css/community/community.css" />
+</head>
+<body>
+<div th:replace="/header/header.html :: header" class="header"/>
+<div id="main">
+    <div id="community-wrap">
+        <div id="c-wrap">
+            <section class="c-contents c-padding">
+                컨텐트
+            </section>
+            <section class="c-side-profile c-padding">
+                <aside>
+                    <div id="profile-wrap">
+                        <div id="profile-img">
+                            <img src="/image/myPage/user.png">
+<!--                            <img src="/image/myPage/farmer.png">-->
+                        </div>
+                        <div id="profile-group">
+                            <div id="nickname" class="text-option">닉네임 넣는 곳</div>
+                            <div class="p-text text-option">농장주</div>
+                            <div id="mentor" class="p-text text-option">멘토</div>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- 푸터 -->
+<div th:replace="/footer/footer.html :: footer" class="footer"/>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</html>

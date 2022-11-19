@@ -11,11 +11,12 @@ div.section-profile {
 div.member-division-img {
     width: 90px;
     height: 90px;
-    /*margin-right: 10px;*/
     display:flex;
-    justify-content:center;
+    padding-left: 10px;
     align-items:center;
 }
+
+div.member-division-img>img {width: 60px;}
 
 div.nickname {
     color: rgb(32, 35, 37);
@@ -149,7 +150,7 @@ button.nick-check {
     color: #47c880;
 }
 
-button.nick-check:hover {background-color: #ddece4;}
+button.nick-check:hover {background-color: #ebfbef;}
 
 button.nick-save {
     color: #fff;
@@ -163,7 +164,7 @@ button.nick-save:disabled {
 }
 
 button.saveHover:hover:not([disabled]) {background-color: #357e55;}
-button.cancelHover:hover:not([disabled]) {background-color: #bfd5c9;}
+button.cancelHover:hover:not([disabled]) {background-color: #ebfbef;}
 
 div.nick-c-save {
     position: relative;
@@ -237,7 +238,7 @@ div.f-section{
     box-sizing: border-box;
 }
 
-input.form-input {
+input.form-input, select {
     padding: 0 16px;
     border: 1px solid #e1e4e6;
     border-radius: 4px;
@@ -267,19 +268,18 @@ div.user-type {
 }
 .user-type input[type=radio]+label{
     display: inline-block;
-    height: 28px;
+    height: 33px;
     width: 100px;
-    border: 1px solid #47c880;
     border-radius: 6px;
-    line-height: 28px;
+    line-height: 33px;
     text-align: center;
     font-weight:500;
     font-size: 16px;
     cursor: pointer;
 }
 .user-type input[type=radio]+label{
-    background-color: #fff;
-    color: #47c880;
+    background-color: #ecf4e9;
+    color: #45a16d;
 }
 .user-type input[type=radio]:checked+label{
     background-color: #47c880;
@@ -299,9 +299,9 @@ button.s-save {
 button.s-button.s-cancel {
     min-width: 49px;
     margin-left: 5px;
-    background-color: #d6e4d0;
-    /*border: 1px solid #1e8524;*/
-    color: #45a16d;
+    background-color: #fff;
+    border: 1px solid #47c880;
+    color: #47c880;
 }
 
 div.mentor-no {
@@ -329,16 +329,25 @@ button.mentorBtn {
     font-size: 14px;
     line-height: 20px;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: 600;
     margin: 24px auto 0;
-    background-color: #d6e4d0;
+    background-color: #e9f2e6;
     color: #45a16d;
 }
 
-button.mentorBtn:hover {background-color: #bfd5c9;}
+/*.newMentorForm{display: none;}*/
 
-.newMentorForm{display: none;}
+button.mentorBtn:hover {background-color: #cfe3d9;}
+select.years-select {
+    width: 300px;
+    outline: none;
+
+    -webkit-appearance: none; /* 화살표 없애기 for chrome*/
+    -moz-appearance: none; /* 화살표 없애기 for firefox*/
+    appearance: none; /* 화살표 없애기 공통*/
+}
+select.years-select:hover {border: 1px solid #aaa8a8;}
 
 @media only screen and (min-width: 768px) {
     div.section-right {width: 382px;}
