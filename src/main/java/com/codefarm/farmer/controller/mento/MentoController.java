@@ -1,4 +1,4 @@
-package com.codefarm.farmer.controller;
+package com.codefarm.farmer.controller.mento;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -7,24 +7,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Slf4j
-@RequestMapping("/mentor/*")
-public class MentorController {
+@RequestMapping("/mento/*")
+public class MentoController {
 
-    @GetMapping("/mentorIntro")
-    public void intro(){
+    @GetMapping("/intro")
+    public void mentoIntro(){
 
     }
 
-    @GetMapping("/mentorList")
+    @GetMapping("/list")
     public void list(){
 
     }
-    @GetMapping("/mentorDetail")
+    @GetMapping("/detail")
     public void detail(){
 
     }
-    @GetMapping("/mentorWrite")
+    @GetMapping("/write")
     public void write(){
+
+    }
+    @GetMapping("/chatting")
+    public void chatting(){
 
     }
 }

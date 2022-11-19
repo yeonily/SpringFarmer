@@ -291,3 +291,32 @@
     line-height: 15px;
     font-weight: 400;
 }
+.mentor_star{
+    display: flex!important;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.mentor_star_inner1{
+    fill: rgb(255, 215, 0);
+    cursor: auto;
+    background: transparent!important;
+    overflow: hidden;
+    margin-right: 2px!important;
+    box-sizing: border-box;
+    outline: none;
+    width: 12px;
+    height: 12px;
+}
+.mentor_star_span{
+    color: rgb(89, 95, 99);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
+.mentor_star_avg{
+    color: rgb(89, 95, 99);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 13px;
+    margin-left: 2px!important;
+}

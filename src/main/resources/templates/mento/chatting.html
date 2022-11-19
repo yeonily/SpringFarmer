@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/header/header.css"/>
+    <link rel="stylesheet" href="/css/footer/footer.css"/>
+    <link rel="stylesheet" href="/css/common/font.css"/>
+    <link rel="icon" href="/image/header/favicon.png" />
+    <link rel="shortcut icon" href="/image/header/favicon.png" />
+    <title>멘토 채팅 페이지</title>
+</head>
+<body>
+<!--헤더 삽입-->
+<div th:replace="/header/header.html :: header" class="header"/>
+
+
+<!--푸터 삽입-->
+<div th:replace="/footer/footer.html :: footer" class="footer"/>
+</body>
+</html>
