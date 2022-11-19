@@ -46,3 +46,7 @@ a.backList {
 a.backList:hover {
     background-color: #357e55;
 }
+
+a.backList>span {
+    margin-right: 5px;
+}
