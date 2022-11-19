@@ -33,6 +33,4 @@ td input[type="button"] {
     word-break: keep-all;
 }
 
-td.delete input[type="button"] { background: #47c880; }
-
-td.delete input[type="button"]:hover { background: #357e55; }
+td.delete input[type="button"] { background: red; color: white; }

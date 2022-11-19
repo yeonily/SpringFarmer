@@ -15,8 +15,7 @@ th.delete { width: 6%; }
 
 td.delete { padding: 0 0.3vw; }
 
-td.delete input[type="button"] { background: #47c880; }
-td.delete input[type="button"]:hover { background: #357e55; }
+td.delete input[type="button"] { background: red; color: white;}
 
 div#write {
     position: absolute;
@@ -34,9 +33,4 @@ div#write input[type="button"] {
     color: #ffffff;
     font-size: 17px;
     font-weight: 600;
-}
-
-div#write input[type="button"]:hover {
-    background: #5e5e5e;
-
 }

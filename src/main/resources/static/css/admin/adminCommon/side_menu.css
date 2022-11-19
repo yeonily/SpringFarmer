@@ -3,7 +3,7 @@
 body {
     margin: 0;
     background: rgba(253, 223, 223, 0.23);
-    background-color: #edfaf3;
+    background-color: #eee;
 }
 
 div#wrapper {
@@ -22,21 +22,23 @@ nav {
     width: 250px;
     height: auto;
     min-height: 99.6vh;
-    background-color: #77e0a7;
+    background-color: #353535;
     border: 1px solid gray;
 }
 
 nav a {
     text-decoration: none;
-    color: #333333;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 600;
     word-break: keep-all;
+    color: #ffffff
 }
 
 nav a:hover {
     text-decoration: none;
-    color: #333333;
+    background: #262626;
+    color: #ffffff
+
 }
 
 nav div#team-logo {
@@ -48,7 +50,7 @@ nav div#team-logo {
 
 div.menu-title {
     margin: 35px 0 5px 11px;
-    color: #33333381;
+    color: #888888;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 600;
     font-size: 12px;
@@ -63,7 +65,8 @@ nav div.side-menu-contents {
 }
 
 nav div.side-menu-contents:hover {
-    background: #9debc1;
+    background: #262626;
+    color: #ffffff
 
 }
 
@@ -96,11 +99,12 @@ nav div.side-menu-contents:hover {
 }
 
 #side-menu ul li {
-    background: #77e0a7;
+    background: #353535;
 }
 
 #side-menu ul li:hover {
-    background: #9debc1;
+    background: #262626;
+    color: #ffffff
 }
 
 #side-menu ul ul li a {
@@ -112,14 +116,15 @@ nav div.side-menu-contents:hover {
     padding: 16px;
     z-index: 1;
     font-size: 13px;
-    background: #bbf2d3;
+    background: #454444;
 }
 
 /* 소카테고리 hover  */
 #side-menu ul ul li:hover>a,
 #side-menu ul ul li.open>a,
 #side-menu ul ul li.active>a {
-    background: #87f5c3;
+    background: #262626;
+    color: #ffffff
 }
 
 #side-menu ul ul li:first-child>a {
@@ -127,12 +132,13 @@ nav div.side-menu-contents:hover {
 }
 
 #side-menu ul ul ul li a {
-    background: #c9f2db;
+    background: #575656;
     font-size: 13px;
 }
 
 #side-menu ul ul ul li a:hover {
-    background: #69f5b5;
+    background: #262626;
+    color: #ffffff
 }
 
 #side-menu ul ul ul li a {
@@ -150,13 +156,13 @@ nav div.side-menu-contents:hover {
     content: '+';
     font-weight: bold;
     float: right;
-    color: #333333;
+    color: #ffffff;
 }
 
 .toggleBtn2 {
     float: right;
     font-weight: bold;
-    color: #333333;
+    color: #ffffff;
 }
 
 :root {

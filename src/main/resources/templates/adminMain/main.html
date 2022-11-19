@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/css/common/font.css"/>
     <link rel="stylesheet" href="/css/admin/adminCommon/side_menu.css"> <!-- 사이드 메뉴 & 해더 -->
     <link rel="stylesheet" href="/css/admin/adminMain/main_contents.css"> <!-- 메인 컨텐츠 -->
+    <link rel="icon" href="/image/header/favicon.png" />
+    <link rel="shortcut icon" href="/image/header/favicon.png" />
     <!-- 사이드 메뉴 -->
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="/js/admin/adminCommon/side_menu.js"></script>
@@ -29,116 +31,6 @@
             <span id="userCount">가입된 회원 수 총 <strong> 21343 </strong>명</span>
         </header>
 
-        <!-- 메인화면 컨텐츠 -->
-<!--        <div id="content-wrap-top" class="content-wrap">-->
-
-<!--            <div class="contents">-->
-<!--                <div class="content-title">-->
-<!--                    <div <div id="content-wrap-top" class="content-wrap">-->
-
-<!--                    <div class="contents">-->
-<!--                        <div class="content-title">-->
-<!--                            <divclass="title">방문자 현황</div>-->
-<!--                </div>-->
-<!--                <div class="c-content">-->
-<!--                    &lt;!&ndash; 차트 &ndash;&gt;-->
-<!--                    <div id="lineChart"></div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="contents">-->
-<!--                <div class="content-title none">-->
-<!--                    <div class="title">일자별 통계</div>-->
-<!--                    <div class="title2">월별</div>-->
-<!--                </div>-->
-<!--                <div class="c-content">-->
-<!--                    <table>-->
-<!--                        <tr>-->
-<!--                            <th>일자</th>-->
-<!--                            <th>체험 신청</th>-->
-<!--                            <th>알바 신청</th>-->
-<!--                            <th>가입</th>-->
-<!--                            <th>방문자</th>-->
-<!--                            <th>게시글</th>-->
-<!--                            <th>댓글 수</th>-->
-<!--                        </tr>-->
-<!--                        <tr class="check">-->
-<!--                            <td>2022-09-30</td>-->
-<!--                            <td>1</td>-->
-<!--                            <td>2</td>-->
-<!--                            <td>3</td>-->
-<!--                            <td>4</td>-->
-<!--                            <td>5</td>-->
-<!--                            <td>5</td>-->
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                            <td>2022-09-30</td>-->
-<!--                            <td>1</td>-->
-<!--                            <td>2</td>-->
-<!--                            <td>3</td>-->
-<!--                            <td>3</td>-->
-<!--                            <td>4</td>-->
-<!--                            <td>5</td>-->
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                            <td>2022-09-30</td>-->
-<!--                            <td>1</td>-->
-<!--                            <td>2</td>-->
-<!--                            <td>3</td>-->
-<!--                            <td>4</td>-->
-<!--                            <td>4</td>-->
-<!--                            <td>5</td>-->
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                            <td>2022-09-30</td>-->
-<!--                            <td>1</td>-->
-<!--                            <td>1</td>-->
-<!--                            <td>2</td>-->
-<!--                            <td>3</td>-->
-<!--                            <td>4</td>-->
-<!--                            <td>5</td>-->
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                            <td>2022-09-30</td>-->
-<!--                            <td>1</td>-->
-<!--                            <td>2</td>-->
-<!--                            <td>3</td>-->
-<!--                            <td>3</td>-->
-<!--                            <td>4</td>-->
-<!--                            <td>5</td>-->
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                            <td>2022-09-30</td>-->
-<!--                            <td>1</td>-->
-<!--                            <td>2</td>-->
-<!--                            <td>3</td>-->
-<!--                            <td>4</td>-->
-<!--                            <td>5</td>-->
-<!--                            <td>5</td>-->
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                            <td>2022-09-30</td>-->
-<!--                            <td>1</td>-->
-<!--                            <td>2</td>-->
-<!--                            <td>3</td>-->
-<!--                            <td>3</td>-->
-<!--                            <td>4</td>-->
-<!--                            <td>5</td>-->
-<!--                        </tr>-->
-<!--                        <tr>-->
-<!--                            <td>이번달 합계</td>-->
-<!--                            <td>12건</td>-->
-<!--                            <td>7건</td>-->
-<!--                            <td>7명</td>-->
-<!--                            <td>1명</td>-->
-<!--                            <td>8</td>-->
-<!--                            <td>8</td>-->
-<!--                        </tr>-->
-<!--                    </table>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--        </div>-->
         <div class="content-wrap">
 
             <div class="c-w-wrap">
@@ -161,7 +53,7 @@
                                 <col width="20%;">
                             </colgroup>
                             <tbody>
-                            <!-- 멘토홍보 게시글 최근 순 출력 (5개) -->
+                            <!-- 최근 가입한 사용자 -->
                             <tr>
                                 <td class="name">[김민혁]</td>
                                 <td class="grade">농장주</td>
@@ -202,6 +94,52 @@
                     </div>
                 </div>
 
+                <div class="contents small">
+                    <div class="content-title">
+                        <div class="title">아르바이트 관리</div>
+                        <div class="title2">
+                            <a href="../../reply/html/reply.html">더보기 →</a>
+                        </div>
+                    </div>
+                    <div class="c-content">
+                        <table>
+                            <colgroup>
+                                <col width="20%;">
+                                <col width="55%;">
+                                <col width="20%;">
+                            </colgroup>
+                            <tbody class="reply">
+                            <!-- 아르바이트 글 최근 순 출력 (5개) -->
+                            <tr>
+                                <td class="title">[벼 알바 하실분 구합니다.]</td>
+                                <td class="content">벼알바 시급 15000원16000원17000원18000원19000원20000원21000원22000원15000원</td>
+                                <td class="date">2022-10-03 10:00</td>
+                            </tr>
+                            <tr>
+                                <td class="title">[벼 알바]</td>
+                                <td class="content">벼알바 시급 15000원</td>
+                                <td class="date">2022-10-03 10:00</td>
+                            </tr>
+                            <tr>
+                                <td class="title">[밭 농사 하실분 구합니다.]</td>
+                                <td class="content">벼알바 시급 15000원16000원</td>
+                                <td class="date">2022-10-03 10:00</td>
+                            </tr>
+                            <tr>
+                                <td class="title">[밭 농사]</td>
+                                <td class="content">농업에 관심 있는 분 지원해주세요.</td>
+                                <td class="date">2022-10-03 10:00</td>
+                            </tr>
+                            <tr>
+                                <td class="title">[꿀 알바 하실분]</td>
+                                <td class="content">꿀 알바 시급 3만원. 책임감 있는분 모십니다.</td>
+                                <td class="date">2022-10-03 10:00</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
                 <!-- 댓글 -->
                 <div class="contents small">
                     <div class="content-title">
@@ -218,7 +156,7 @@
                                 <col width="18%;">
                             </colgroup>
                             <tbody class="reply">
-                            <!-- 소통공간 게시글 최근 순 출력 (5개) -->
+                            <!-- 댓글 최근 순 출력 (5개) -->
                             <tr>
                                 <td class="name">[김지연]</td>
                                 <td class="content">안녕하세요~</td>
@@ -252,6 +190,51 @@
             </div>
 
             <div class="c-w-wrap">
+                <div class="contents small">
+                    <div class="content-title">
+                        <div class="title">프로그램 관리</div>
+                        <div class="title2">
+                            <a href="../../reply/html/reply.html">더보기 →</a>
+                        </div>
+                    </div>
+                    <div class="c-content">
+                        <table>
+                            <colgroup>
+                                <col width="20%;">
+                                <col width="55%;">
+                                <col width="20%;">
+                            </colgroup>
+                            <tbody class="reply">
+                            <!-- 프로그램 게시글 최근 순 출력 (5개) -->
+                            <tr>
+                                <td class="title">[드론으로 배우는 농업기술]</td>
+                                <td class="content">모두가 쉽게 배울 수 있는 드론기술과 농업기술!</td>
+                                <td class="date">2022-10-03 10:00</td>
+                            </tr>
+                            <tr>
+                                <td class="name">[프로그램 제목을 지어주세요]</td>
+                                <td class="content">프로그램 제목을 뭐로 할까요?</td>
+                                <td class="date">2022-10-03 10:00</td>
+                            </tr>
+                            <tr>
+                                <td class="name">[재미있는 농업스킬 배우기]</td>
+                                <td class="content">혹시 농업스킬을 배우는게 두렵나요??</td>
+                                <td class="date">2022-10-03 10:00</td>
+                            </tr>
+                            <tr>
+                                <td class="name">[모두가 도전할 수 있습니다. 귀농귀촌.]</td>
+                                <td class="content">귀농귀촌이 궁금하신분들은 이 프로그램을 신청하세요!!</td>
+                                <td class="date">2022-10-03 10:00</td>
+                            </tr>
+                            <tr>
+                                <td class="name">[깨끗한 공기를 느낄 수 있어요]</td>
+                                <td class="content">귀농귀촌 어렵지 않아요~</td>
+                                <td class="date">2022-10-03 10:00</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
                 <!-- 멘토 홍보 -->
                 <div class="contents small">
