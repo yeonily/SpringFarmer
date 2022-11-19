@@ -338,6 +338,11 @@ button {
     text-transform: none;
 }
 
+.apply-button:hover{
+    background-color: #357e55;
+}
+
+
 
 .text-field-name{
     text-align: left;
@@ -413,6 +418,10 @@ button {
 
 button[disabled]{
     cursor: no-drop;
+    background-color: #47c88052;
+}
+
+button[disabled]:hover{
     background-color: #47c88052;
 }
 

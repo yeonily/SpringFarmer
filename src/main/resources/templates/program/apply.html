@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="/css/program/apply.css"/>
     <link rel="stylesheet" href="/css/common/font.css"/>
     <link rel="stylesheet" href="/css/header/header.css"/>
+    <link rel="icon" href="/image/header/favicon.png" />
+    <link rel="shortcut icon" href="/image/header/favicon.png" />
 </head>
 <body>
 <div th:replace="/header/header.html :: header" class="header"/>
@@ -128,7 +130,7 @@
                             </div>
                         </span>
                     </div>
-                    <button type="button" class="apply-button" onclick="applyCheck()" id="apply" disabled="disabled">
+                    <button type="button" class="apply-button" th:onclick="|location.href='@{/program/pay}'|" id="apply" disabled="disabled">
                         <div class="button-icon" >다음</div></button>
                 </form>
             </span>

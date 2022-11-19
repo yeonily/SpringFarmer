@@ -54,6 +54,13 @@ $(document).ready(function () {
         }
     })
 
+
+        // $("input.username").keyup(function(){
+        //     $("p.caption1").html("<img width='10px' height='10px' src='/image/program/fullmark.gif'> 실명을 입력해주세요.");
+        //     $("p.caption1").css("color", "gray");
+        //     $("p.caption1").parent().siblings().children('input').css("border-color", "#e1e4e6");
+        // });
+
     partname.addEventListener('blur', () => {
         //이름 작성 완료 시 js 사라지기
         if(applyForm.name.value){
@@ -176,30 +183,6 @@ $(document).ready(function () {
         }
     })
 
-
-    //버튼 활성화
-    $('button#apply').attr('disabled', 'disabled');
-
-    $('input[type=text]').on('input', function() {
-        if ($(this).val() !== '') {
-            console.log($(this));
-            console.log($(this).val());
-            //활성화
-            $('button#apply').removeAttr("disabled");
-            $('button#apply').hover(function(){
-                $(this).css("background-color", "#357e55");
-            }, function () {
-                $(this).css("background-color", "#47c880");
-            });
-
-        }else {
-            //비활성화
-            $('button#apply').attr('disabled', 'disabled');
-
-        }
-    });
-
-
 })
 
 // input에 이름 입력 시 실시간으로 출력
@@ -207,4 +190,19 @@ $("input[name='name']").keyup(function(){
     $("span#name").html($(this).val());
 });
 
+
+// input 값 모두 입력했을 때 회원 가입하기 버튼 활성화
+applyForm.name.addEventListener("keyup", inputfin)
+applyForm.phone.addEventListener("keyup", inputfin)
+applyForm.email.addEventListener("keyup", inputfin)
+applyForm.home.addEventListener("keyup", inputfin)
+applyForm.birth.addEventListener("keyup", inputfin)
+
+function inputfin() {
+    if (!(applyForm.name.value && applyForm.phone.value && applyForm.email.value && applyForm.home.value && applyForm.birth.value)) {
+        $(".apply-button").prop("disabled", true);
+    } else {
+        $(".apply-button").prop("disabled", false);
+    }
+}
 
