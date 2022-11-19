@@ -29,3 +29,13 @@ $("#ruleB").on("click",function () {
 //         con.style.display = 'none';
 //     }
 // }
+
+//결제방법 선택
+$("li.a").on("click", function(){
+    $("#inicis").prop("checked", true);
+    $("#kakaopay").prop("checked", false);
+});
+$("li.b").on("click", function(){
+    $("#inicis").prop("checked", false);
+    $("#kakaopay").prop("checked", true);
+});

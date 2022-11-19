@@ -516,12 +516,12 @@ input.payment-radio{
     cursor: default;
 }
 
-.clearfix{
-    opacity: 1;
+.commoncss{
     height: 78px;
     border: 1px solid #949ba0;
     border-radius: 8px;
     margin-right: 0;
+    opacity: .4;
     zoom: 1;
     cursor: pointer;
     position: relative;
@@ -536,9 +536,10 @@ input.payment-radio{
     display: table;
 }
 
-input.payment-radio:checked+label.clearfix{
+input.payment-radio:checked+label{
     border: 1px solid #47c880;
     background: #f7fef7;
+    opacity: 1;
 }
 
 .payment-type-item-wrapper{
@@ -575,19 +576,6 @@ input.payment-radio:checked+label.clearfix{
     word-wrap: break-word;
 }
 
-.nofix{
-    height: 78px;
-    border: 1px solid #949ba0;
-    border-radius: 8px;
-    margin-right: 0;
-    opacity: .4;
-    zoom: 1;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-}
 
 .rules{
     padding: 8px 4px;

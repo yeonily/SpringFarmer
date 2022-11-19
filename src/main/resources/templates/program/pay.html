@@ -2,10 +2,12 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>program apply</title>
+    <title>program pay</title>
     <link rel="stylesheet" href="/css/program/pay.css"/>
     <link rel="stylesheet" href="/css/common/font.css"/>
     <link rel="stylesheet" href="/css/header/header.css"/>
+    <link rel="icon" href="/image/header/favicon.png" />
+    <link rel="shortcut icon" href="/image/header/favicon.png" />
 </head>
 <body>
 <div th:replace="/header/header.html :: header" class="header"/>
@@ -124,9 +126,9 @@
                     <div class="card-item-wrapper">
                         <div class="user-line">결제 수단</div>
                         <ul class="payment-type-group">
-                            <li class="payment-type-list">
-                                <input id="inicis" checked="checked" value="inicis" type="radio" class="payment-radio">
-                                <label class="clearfix">
+                            <li class="payment-type-list a">
+                                <input id="inicis" name="pay" value="inicis" checked="checked" type="radio" class="payment-radio">
+                                <label class="clearfix commoncss">
                                     <div class="payment-type-item-wrapper">
                                         <div class="payment-type-item">
                                             <img class="logo-pg" src="https://comento.kr/images/logo/logo_kginicis.svg">
@@ -135,9 +137,9 @@
                                     </div>
                                 </label>
                             </li>
-                            <li class="payment-type-list">
-                                <input id="kakaopay" value="kakaopay" type="radio" class="payment-radio">
-                                <label class="nofix">
+                            <li class="payment-type-list b">
+                                <input id="kakaopay" name="pay" value="kakaopay" type="radio" class="payment-radio">
+                                <label class="nofix commoncss">
                                     <div class="payment-type-item-wrapper">
                                         <div class="payment-type-item">
                                             <img class="logo-pg" src="https://cdn.comento.kr/images/logo/logo-kakaopay.png">
