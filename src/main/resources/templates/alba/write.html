@@ -3,21 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="/css/header/header.css"/>
     <link rel="stylesheet" href="/css/footer/footer.css"/>
+    <link rel="stylesheet" href="/css/alba/write.css"/>
     <link rel="stylesheet" href="/css/common/font.css"/>
     <link rel="icon" href="/image/header/favicon.png" />
     <link rel="shortcut icon" href="/image/header/favicon.png" />
 </head>
 <body>
-    <div class="wrap">
-        <div th:replace="/header/header.html :: header" class="header"/>
+    <div id="wrap">
+        <!--헤더 영역-->
+        <div id="header">
+            <div class="header-inner">
+                <div class="header-left">새 아르바이트</div>
+                <div class="header-btn">
+                    <button type="button" class="saveBtn">저장하기</button>
+                    <button type="button" onclick='history.back()'>나가기</button>
+                </div>
+            </div>
+        </div>
+        <div class="middleBar"></div>
 
+        <div id="alba-register">
+            <!--왼쪽 메뉴 영역-->
+            <div id="left-menu">
+                <ul>
+                    <li style="color: #202325">아르바이트 메인소개</li>
+                    <li>서브메뉴 등록</li>
+                    <li>대표내용 등록</li>
+                    <li>프로필 등록</li>
+                    <li>프로필 등록</li>
+                </ul>
+            </div>
 
-
-        <footer th:replace="/footer/footer.html :: footer" class="footer"/>
+            <!--본격적인 등록 컨텐츠-->
+            <div id="content">
+                <!--첫 번재 메뉴 : 아르바이트 메인소개-->
+                <div id="main-intro">
+                    <div class="top-content">
+                        <h1><span>어떤 아르바이트</span>를 열까요?</h1>
+                        <p>아르바이트의 제목과 간단한 한 줄 소개를 해주세요.</p>
+                    </div>
+                    <div class="main-intro-div">
+                        <span>글 제목</span>
+                        <p>모집하고 싶은 아르바이트의 제목을 입력해주세요.</p>
+                        <input type="text" class="main-intro-title-input" placeholder="예시) 딸기재배 아르바이트 모집">
+                    </div>
+                    <div class="main-intro-div">
+                        <span>한줄 소개</span>
+                        <p>아르바이트를 간단하게 한 줄로 소개해주세요.</p>
+                        <input type="text" class="main-intro-intro-input" placeholder="예시) 몸이 힘들지 않은 간단 아르바이트">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="btn-group">
+        <div class="btn-group-inner">
+            <button type="button" class="prev"><img class="footer-img-prev" src="/image/program/prev_register.gif">이전</button>
+            <button type="button" class="next">다음<img class="footer-img-next" src="/image/program/next_register.gif"></button>
+        </div>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/header/header.js"></script>
+<script>
+    /*왼쪽 메뉴 선택 시 검정글자로 표시*/
+    $("#left-menu ul li").on("click", function() {
+        console.log("확인");
+        $(this).css("color", "#202325");
+        $("#left-menu ul li").not(this).css({color: '#ADB3B8'});
+    });
+
+    /*첫 번째 메뉴(아르바이트 메인소개)에서는 이전 버튼 비활성화*/
+    if($("#left-menu ul li:first-child").css("color") == "rgb(32, 35, 37)") {
+        $("button.prev").attr("disabled", "false");
+        $("button.prev").css({color:"#eaecee", background: "#fcfcfc", cursor: "not-allowed"});
+    } else {
+        $("button.prev").attr("disabled", "true")
+        $("button.prev").css({color:"#767d82", background: "#f3f4f5", cursor: "pointer"});
+    }
+</script>
 </html>

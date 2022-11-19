@@ -1,0 +1,252 @@
+/**************************************************************/
+                            /*기본설정*/
+/**************************************************************/
+body, button {
+    margin: 0;
+    vertical-align: baseline;
+    font-family: "Pretendard";
+
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+a {text-decoration: none;}
+div.flex {display: flex;}
+ul, div#wrap {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+button{cursor: pointer;}
+footer {
+    margin-top: 200px;
+}
+
+
+/**************************************************************/
+                        /*헤더*/
+/**************************************************************/
+div#header {
+    width: 100%;
+    height: 69px;
+}
+div.header-inner {
+    display: flex;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+div.header-inner .header-left {
+    margin: 18px 24px 0 40px;
+    font-size: 24px;
+    width: 135px;
+    font-weight: 600;
+    color: rgb(60, 65, 68);
+    line-height: 31px;
+}
+div.header-inner .header-btn {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    height: 36px;
+}
+.header-btn button {
+    height: 36px;
+    padding: 0 12px;
+    margin-left: 12px;
+    border: 0;
+    border-radius: 5px;
+    color: #767D82;
+    font-weight: 600;
+    font-size: 14px;
+}
+.header-btn button:hover {
+    background-color: #e1e4e6;
+}
+.header-btn button.saveBtn {
+    color: #47c880;
+    background-color: #47c88052;
+}
+.header-btn button.saveBtn:hover {
+    background-color: #357e55;
+}
+
+div.middleBar {
+    height: 3px;
+    background-color: #eaecee;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+/**************************************************************/
+                    /*아르바이트 등록 페이지 틀*/
+/**************************************************************/
+div#alba-register {
+    display: inline-block;
+    position: relative;
+    border-top: 1px solid #eaecee;
+}
+div#btn-group {
+    position: absolute;
+    width: 100%;
+    height: 36px;
+    bottom: 0;
+    padding: 16px 0;
+    border-top: 1px solid #eaecee;
+}
+div#btn-group div.btn-group-inner{
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+}
+div#btn-group button {
+    height: 36px;
+    width: 58px;
+    padding: 0 12px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 0;
+    font-weight: 600;
+}
+div#btn-group .prev {
+    background-color: #f3f4f5;
+    color: #767d82;
+    margin-right: 7px;
+}
+div#btn-group .next {
+    color: #fff;
+    background-color: #47c880;
+    margin-right: 3px;
+}
+.footer-img-next{
+    width: 8px;
+    height: 10px;
+    margin-left: 1px;
+}
+.footer-img-prev{
+    width: 8px;
+    height: 10px;
+    margin-right: 1px;
+}
+
+
+/**************************************************************/
+                        /*왼쪽메뉴*/
+/**************************************************************/
+div#left-menu {
+    height: 1000px;
+    width: 240px;
+    display: inline-block;
+}
+div#left-menu ul {
+    padding: 15px 0 0 40px;
+}
+div#left-menu ul li {
+    padding: 8px 4px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #ADB3B8;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+/**************************************************************/
+                        /*중앙 컨텐츠 세팅*/
+/**************************************************************/
+div#content {
+    width: 730px;
+    padding: 0 12px;
+    display: inline-block;
+    height: 1000px;
+    position: absolute;
+    top: 35px;
+    margin-left: 55px;
+}
+
+
+/**************************************************************/
+                /*첫 번째 : 아르바이트 메인소개*/
+/**************************************************************/
+/*가장 상단메뉴*/
+div#main-intro div.top-content h1{
+    font-size: 22px;
+    margin: 0;
+}
+div#main-intro div.top-content h1 span {
+    color: #47c880;
+}
+div#main-intro div.top-content p{
+    font-size: 14px;
+    color: #949BA0;
+    margin: 6px 0 0 0;
+}
+
+/*input이 있는 메뉴*/
+div.main-intro-div {
+    margin-top: 40px;
+}
+div.main-intro-div span {
+    font-size: 14px;
+    color: #595F63;
+}
+div.main-intro-div p {
+    font-size: 12px;
+    color : #949BA0;
+    margin-top: 4px;
+}
+div.main-intro-div input {
+    width: 226px;
+    height: 38px;
+    padding: 0 16px;
+    color: #3c4144;
+    font-size: 16px;
+    border: 1px solid #e1e4e6;
+    border-radius: 5px;
+}
+div.main-intro-div input:focus {
+    outline: none;
+    border: 1px solid #3c4144;
+}
+div.main-intro-div input::placeholder {
+    color: #adb3b8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

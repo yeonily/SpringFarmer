@@ -226,7 +226,7 @@ div.sub-menu ul li span.exitImg {
 div.search_form {
     display: inline-flex;
     flex-direction: row;
-    width: 226px;
+    width: 242px;
     height: 40px;
 }
 div.search_form input.search_keyword {
