@@ -9,7 +9,7 @@ div.content-wrap {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 16%;
+    margin-top: 6%;
 }
 
 div.content-wrap .contents {
