@@ -12,11 +12,11 @@ public class AdminCropInformationController {
     public void adminCropInformation() {
     }
 
-    @GetMapping("/cropInformation_write")
+    @GetMapping("/cropInformation-write")
     public void adminCropInformationWrite() {
     }
 
-    @GetMapping("/cropInformation_update")
+    @GetMapping("/cropInformation-update")
     public void adminCropInformationUpdate() {
     }
 }

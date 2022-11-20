@@ -12,11 +12,11 @@ public class AdminPolicyController {
     public void adminPolicy() {
     }
 
-    @GetMapping("/policy_write")
+    @GetMapping("/policy-write")
     public void adminPolicyWrite() {
     }
 
-    @GetMapping("/policy_update")
+    @GetMapping("/policy-update")
     public void adminPolicyUpdate() {
     }
 }

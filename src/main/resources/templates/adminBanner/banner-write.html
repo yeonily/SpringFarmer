@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/common/font.css"> <!-- 폰트 -->
     <link rel="stylesheet" href="/css/admin/adminCommon/side_menu.css"> <!-- 사이드 메뉴 & 해더 -->
     <!-- 글 작성 폼 -->
-    <link rel="stylesheet" href="/css/admin/adminNotice/noticeWrite.css">
+    <link rel="stylesheet" href="/css/admin/adminCommon/bannerWrite.css">
     <link rel="icon" href="/image/header/favicon.png" />
     <link rel="shortcut icon" href="/image/header/favicon.png" />
 
@@ -21,7 +21,7 @@
     <script src="/js/admin/adminCommon/side_menu.js"></script>
     <!-- 버튼 클릭 시 확인 알림창 -->
     <script src="/js/admin/adminCommon/check.js"></script>
-    <title>관리자-공지사항 글 작성</title>
+    <title>관리자-배너 등록</title>
 </head>
 
 <body style="background-color: #eee;">
@@ -33,7 +33,7 @@
     <div id="container">
         <!-- 헤더 -->
         <header>
-            <span id="admin-header-title">공지사항 글 작성</span>
+            <span id="admin-header-title">배너 등록</span>
             <span id="admin-mode">관리자 모드</span>
             <span id="userCount">가입된 회원 수 총 <strong> 21343 </strong>명</span>
         </header>
@@ -48,48 +48,46 @@
                     </colgroup>
                     <tbody>
                     <tr>
-                        <th>제목</th>
+                        <th>배너명</th>
                         <td>
                             <div class="title">
-                                <input type="text" name="notice" class="notice_title" placeholder="제목을 입력하세요" autocomplete="off">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>작성자</th>
-                        <td>
-                            <div class="writer">
-                                <input type="text" name="notice" class="notice_title" autocomplete="off" readonly>
+                                <input type="text" name="notice" class="notice_title" placeholder="배너명을 입력하세요" autocomplete="off">
                             </div>
                         </td>
                     </tr>
                     <tr style="background: #ffffff;">
-                        <th>내용</th>
+                        <th>배너설명</th>
                         <td>
-                            <div id="editor">
-                                <textarea class="summernote" name="editorForm"></textarea>
-                                <div id="letter-count">
-                                    <br>
-                                    <p id="letter-length" style="display: inline;">0</p> / 100
-                                </div>
+                            <div class="title">
+                                <input type="text" name="bannerExplain" class="bannerExplain" placeholder="배너설명을 입력하세요." autocomplete="off">
                             </div>
                         </td>
                     </tr>
-                    <tr style="background: #ffffff;">
-                        <th>첨부파일</th>
+                    <tr style="background: #ffffff; border-color: white; ">
+                        <th>배너기간</th>
+                        <td>
+                            <div id="date" class="title">
+                                <span class="dateSpan">
+                                <input type="date" name="bannerDate" class="dateLeft" placeholder="배너기간을 입력하세요." autocomplete="off">
+                                    <span class="wave">~</span>
+                                <input type="date" name="bannerDate" class="dateRight" placeholder="배너기간을 입력하세요." autocomplete="off">
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="background: #ffffff; height: 250px;">
+                        <th>배너 이미지</th>
                         <td style="border: 1px solid #e6e6e6;">
-                            <div class="file">
-                                <input type="file" name="file">
+                            <div id="bannerImage" class="title">
+                                <input type="file">
                             </div>
-                            <div id="file-content"></div>
-<!--                            <span class="file-limit"> 첨부파일은 총 1개까지 가능합니다.</span>-->
                         </td>
                     </tr>
                     </tbody>
                 </table>
                 <div class="btns-group">
-                    <input type="button" onclick="location.href='#'" class="g-btn list" value="공지 목록">
-                    <input type="submit" onclick="saveCheck()" class="g-btn submit" value="저장">
+                    <input type="button" onclick="location.href='#'" class="g-btn list" value="배너 목록">
+                    <input type="submit" onclick="saveCheck()" class="g-btn submit" value="등록">
                 </div>
             </form>
         </div>
@@ -100,7 +98,6 @@
 
 </body>
 <!-- 썸머노트 -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-<script src="/js/admin/adminCommon/summerNote.js"></script>
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>-->
 <html>

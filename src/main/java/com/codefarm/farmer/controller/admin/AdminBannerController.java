@@ -12,7 +12,7 @@ public class AdminBannerController {
     public void adminBanner() {
     }
 
-    @GetMapping("/banner_write")
+    @GetMapping("/banner-write")
     public void adminAskWrite() {
     }
 }
