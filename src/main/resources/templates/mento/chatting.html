@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="/css/header/header.css"/>
     <link rel="stylesheet" href="/css/footer/footer.css"/>
     <link rel="stylesheet" href="/css/common/font.css"/>
+    <link rel="stylesheet" href="/css/mento/chatting.css"/>
     <link rel="icon" href="/image/header/favicon.png" />
     <link rel="shortcut icon" href="/image/header/favicon.png" />
     <title>멘토 채팅 페이지</title>
@@ -13,6 +14,75 @@
 <!--헤더 삽입-->
 <div th:replace="/header/header.html :: header" class="header"/>
 
+<!--바디-->
+<section id="section_main" style="height: 760px;">
+    <div id="section_wrap">
+        <div id="section_contents">
+            <div id="content_left">
+                <div>
+                    <ul id="content_left_list";>
+                        <li class="left_lists">
+                            <a href="" class="left_lists_a">
+                                <div class="list_thumbnail">
+                                    <img src="https://api.2awesomementor.com/files/user/2022/10/1668795064008.jpg" alt="" class="thumb_image">
+                                </div>
+                                <div>
+                                    <div class="list_name"><p class="list_name_p1">호식쌤</p><p class="list_name_p2"></p></div>
+                                    <div>
+                                        <p class="list_text_p1"></p><p class="list_text_p2"> IT 및 아트앤디자인 분야의 취업, 진로, 커리큘럼 멘토링</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="content_right">
+                <div class="content_right_name">
+                    <div class="right_profile">
+                        <p class="right_thumb">
+                            <img src="https://api.2awesomementor.com/files/user/2022/10/1668795064008.jpg" alt="" class="thumb_image">
+                        </p>
+                        <div class="right_text">
+                            <p class="list_text_p1">호식쌤</p>
+                            <p class="list_text_p2"> IT 및 아트앤디자인 분야의 취업, 진로, 커리큘럼 멘토링</p>
+                        </div>
+                        <div style="margin-top: 10px; float: right">
+                            <input type="button" id="apply_button" value="멘토 신청하기">
+                        </div>
+                    </div>
+                </div>
+                <div class="content_right_chatting">
+                    <div class="chatting_inner">
+                        <div class="chatting_inner_right">
+                            <p class="chatting_date_right">11월 20일</p>
+                            <ul class="chatting_ul">
+                                <li class="chatting_text">안녕하세요~</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chatting_inner">
+                        <div class="chatting_inner_left">
+                            <ul class="chatting_ul">
+                                <li class="chatting_text">안녕하세요~!!</li>
+                                <li class="chatting_text">어떤 부분이 궁금하신가요?</li>
+                            </ul>
+                            <p class="chatting_date_left">11월 20일</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatting_write">
+                    <div class="chatting_write_border">
+                        <input type="text" placeholder="메세지를 입력하세요." class="chatting_write_input">
+                        <a href="" class="chatting_send">
+                            <img src="https://www.2awesomementor.com/img/ico-24-send.99437830.svg" alt="" class="thumb_image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!--푸터 삽입-->
 <div th:replace="/footer/footer.html :: footer" class="footer"/>
