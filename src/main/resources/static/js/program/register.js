@@ -67,16 +67,52 @@ $("#pg-4").on("click", function() {
 });
 
 //예시 선택하기
-$(".first").click(function () {
-    $(".first").addClass("active");
-    $(".second").removeClass("active");
+$(".ex-1").click(function () {
+    $(".ex-1").addClass("active");
+    $(".ex-2").removeClass("active");
     $(".example1").attr("src", "https://cdn.comento.kr/images/class/pt/open/class-opening-guide-class-target-example-marketing-1.png")
 })
 
-$(".second").click(function () {
-    $(".first").removeClass("active");
-    $(".second").addClass("active");
+$(".ex-2").click(function () {
+    $(".ex-1").removeClass("active");
+    $(".ex-2").addClass("active");
     $(".example1").attr("src", "https://cdn.comento.kr/images/class/pt/open/class-opening-guide-class-target-example-programming-1.png")
+})
+
+$(".ex-3").click(function () {
+    $(".ex-3").addClass("active");
+    $(".ex-4").removeClass("active");
+    $(".example2").attr("src", "https://cdn.comento.kr/images/class/pt/open/class-opening-guide-class-objective-example-marketing-1.png")
+})
+
+$(".ex-4").click(function () {
+    $(".ex-3").removeClass("active");
+    $(".ex-4").addClass("active");
+    $(".example2").attr("src", "https://cdn.comento.kr/images/class/pt/open/class-opening-guide-class-objective-example-programming-1.png")
+})
+
+$(".ex-5").click(function () {
+    $(".ex-5").addClass("active");
+    $(".ex-6").removeClass("active");
+    $(".example3").attr("src", "https://cdn.comento.kr/images/class/pt/open/class-opening-guide-class-objective-example-marketing-2.png")
+})
+
+$(".ex-6").click(function () {
+    $(".ex-5").removeClass("active");
+    $(".ex-6").addClass("active");
+    $(".example3").attr("src", "https://cdn.comento.kr/images/class/pt/open/class-opening-guide-class-objective-example-programming-2.png")
+})
+
+$(".ex-7").click(function () {
+    $(".ex-7").addClass("active");
+    $(".ex-8").removeClass("active");
+    $(".example4").attr("src", "https://cdn.comento.kr/images/class/pt/open/class-opening-guide-class-description-example-marketing-1.png")
+})
+
+$(".ex-8").click(function () {
+    $(".ex-7").removeClass("active");
+    $(".ex-8").addClass("active");
+    $(".example4").attr("src", "https://cdn.comento.kr/images/class/pt/open/class-opening-guide-class-description-example-programming-1.png")
 })
 
 //예시 보여주기
@@ -121,6 +157,30 @@ $(".e-chip3").on("click", function () {
     }
 })
 
+$(".e-chip4").on("click", function () {
+    if($(".g-content4").css("display")=="none"){
+        $(".g-content4").show();
+        $(".a-icon4").css({'transform':'rotate('+180+'deg)'});
+    }else{
+        $(".op-o-g4").css("background-color", "#47c88040");
+        setTimeout(fadeout, 200);
+    }
+})
+
 function fadeout(){
     $(".pg-opening-guide").css("background-color", "#fff");
 }
+
+//모달창
+const btnModal = document.getElementById("btn-modal");
+const modal = document.getElementById("c-overlay");
+const closeModal = modal.querySelector(".button-2");
+
+btnModal.addEventListener("click", ev => {
+    modal.style.display = "flex"
+})
+
+closeModal.addEventListener("click", evt => {
+    modal.style.display = "none"
+})
+

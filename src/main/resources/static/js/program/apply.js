@@ -54,12 +54,12 @@ $(document).ready(function () {
         }
     })
 
-
-        // $("input.username").keyup(function(){
-        //     $("p.caption1").html("<img width='10px' height='10px' src='/image/program/fullmark.gif'> 실명을 입력해주세요.");
-        //     $("p.caption1").css("color", "gray");
-        //     $("p.caption1").parent().siblings().children('input').css("border-color", "#e1e4e6");
-        // });
+    //작성하면 실명작성 안내로 바뀜.
+    partname.addEventListener('keyup', function () {
+        $("p.caption1").html("<img width='10px' height='10px' src='/image/program/fullmark.gif'> 실명을 입력해주세요.");
+        $("p.caption1").css("color", "gray");
+        $("p.caption1").parent().siblings().children('input').css("border-color", "#e1e4e6");
+    })
 
     partname.addEventListener('blur', () => {
         //이름 작성 완료 시 js 사라지기
@@ -88,6 +88,11 @@ $(document).ready(function () {
             $("p.caption2").css("color", "red");
             return;
         }
+    })
+    //작성하면 올바른 번호 작성 안내로 바뀜.
+    partphone.addEventListener('keyup', function () {
+        $("p.caption2").html("<img width='10px' height='10px' src='/image/program/fullredmark.gif'> 올바른 휴대폰 번호를 입력해주세요.");
+        $("p.caption2").css("color", "red");
     })
 
     partphone.addEventListener('blur', () => {
@@ -118,6 +123,12 @@ $(document).ready(function () {
         }
     })
 
+    //작성하면 올바른 이메일 작성 안내로 바뀜.
+    partemail.addEventListener('keyup', function () {
+        $("p.caption3").html("<img width='10px' height='10px' src='/image/program/fullredmark.gif'> 올바른 이메일 주소를 입력해주세요.");
+        $("p.caption3").css("color", "red");
+    })
+
     partemail.addEventListener('blur', () => {
         //이메일 작성 완료 시 js 사라지기
         if(applyForm.email.value){
@@ -146,6 +157,12 @@ $(document).ready(function () {
         }
     })
 
+    //작성하면 올바른 거주지 작성 안내로 바뀜.
+    parthome.addEventListener('keyup', function () {
+        $("p.caption4").html("<img width='10px' height='10px' src='/image/program/fullredmark.gif'> 올바른 시군구를 입력해주세요.");
+        $("p.caption4").css("color", "red");
+    })
+
     parthome.addEventListener('blur', () => {
         //거주지 작성 완료 시 js 사라지기
         if(applyForm.home.value){
@@ -172,6 +189,12 @@ $(document).ready(function () {
             $("p.caption5").css("color", "red");
             return;
         }
+    })
+
+    //작성하면 올바른 거주지 작성 안내로 바뀜.
+    partbirth.addEventListener('keyup', function () {
+        $("p.caption5").html("<img width='10px' height='10px' src='/image/program/fullredmark.gif'> 올바른 생년월일을 입력해주세요.");
+        $("p.caption5").css("color", "red");
     })
 
     partbirth.addEventListener('blur', () => {

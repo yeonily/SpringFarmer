@@ -172,11 +172,14 @@ button {
     position: absolute;
     top: auto;
     bottom: auto;
-/*    position: fixed;
-    top: 64px;
-    bottom: auto;*/
     width: 353px;
     z-index: 10;
+}
+
+.fixed{
+    position: fixed;
+    top: 64px;
+    bottom: auto;
 }
 
 .pg-detail-sidebox{
@@ -470,6 +473,196 @@ strong.s{
     height: 14px;
 }
 
+.grid-fluid-third{
+    background-color: inherit;
+    position: relative;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+.c-new-row{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.c-new-col{
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pg-detail-target-user-title{
+    color: rgb(4, 5, 5);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+    word-break: keep-all;
+    word-wrap: break-word;
+    margin: 0;
+}
+
+.pg-detail-target-user-background{
+    margin: 24px 0;
+}
+
+.target-user-background{
+    background-color: rgb(252 252 252);
+    width: 730px;
+    height: 50px;
+}
+
+.target-user-body{
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.target-user-background+.target-user-background{
+    margin-top: 15px;
+}
+
+.pg-detail-result-background{
+    margin: 24px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.target-result-background{
+    background-color: rgb(252 252 252);
+    width: 49%;
+    height: 100px;
+    display: inline-flex;
+}
+
+.target-result-body{
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    width: 60%;
+}
+
+.mb-15{
+    margin-bottom: 15px;
+}
+
+.result-img{
+    width: 85px;
+    padding: 11px;
+}
+
+.mentor-img{
+    height: 13px;
+    width: 18px;
+}
+
+.pg-mentor-body{
+    color: rgb(32, 35, 37);
+    text-align: left;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    letter-spacing: .02em;
+}
+
+.pg-info-background{
+    background-color: rgb(252 252 252);
+    width: 730px;
+    height: auto;
+}
+
+.pg-info-title-number{
+    color: #00a147;
+    padding: 16px 16px 3px 16px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.pg-info-title{
+    color: #00a147;
+    padding: 3px 16px 16px 16px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.pg-info-content{
+    padding: 0 16px 16px 16px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.pg-detail-info-background{
+    background-color: rgb(252 252 252);
+    width: 730px;
+    height: auto;
+    display: inline-flex;
+}
+
+.pg-detail-info-title{
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.pg-detail-info-content{
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.mb-24{
+    margin-bottom: 24px;
+}
+
+.pg-detail-refund-title{
+    color: rgb(4, 5, 5);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+    margin: 0;
+}
+
+.refund-script-1{
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: .02em;
+    margin: 0;
+}
+
+.refund-script-2{
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: .02em;
+    margin: 0;
+}
+
+.grid-fluid-notice{
+    background: #EAECEE;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+    z-index: 9;
+}
+
+.refund-script-3{
+    color: rgb(60, 65, 68);
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    letter-spacing: .02em;
+    margin: 0;
+}
 @media only screen and (min-width: 768px){
     .d-application-row{
         margin-right: -12px;
@@ -588,5 +781,30 @@ strong.s{
         width: 16px;
         height: 16px;
         margin-right: 4px;
+    }
+
+    .grid-fluid-third{
+        max-width: 1140px;
+    }
+
+    .c-new-row{
+        margin-right: -12px;
+        margin-left: -12px;
+    }
+
+    .c-new-col{
+        -webkit-box-flex: 0;
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .pg-detail-target-user{
+        padding: 60px 0;
+    }
+
+    .pg-detail-refund-title{
+        margin-bottom: 24px;
     }
 }
