@@ -67,6 +67,7 @@ div.alba_list_list div.alba_div {
     height: 218px;
     margin: 32px 0 0 0;
     padding: 0 12px;
+    cursor: pointer;
 }
 div.alba_list_list div.alba_div img {
     width: 259px;

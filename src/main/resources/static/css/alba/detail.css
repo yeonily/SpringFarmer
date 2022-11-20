@@ -215,7 +215,9 @@ dd#fixed_dd_2 {
     pointer-events: none;
     cursor: default;
 }
-button#main_fixed_button {
+button#main_fixed_button,
+button.list_go_button,
+button#cancel {
     width: 100%;
     height: 48px;
     padding: 0 14px;
@@ -228,7 +230,7 @@ button#main_fixed_button {
     background-color: #47c880;
     color: #fff;
     border: none;
-    display: flex !important;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -236,12 +238,49 @@ button#main_fixed_button {
     overflow: hidden;
     margin-top: 32px !important;
 }
-button#main_fixed_button:hover {
+
+button#update_button,
+button#remove_button {
+    width: 49%;
+    height: 48px;
+    padding: 0 14px;
+    min-width: 56px;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: .02em;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 32px !important;
+}
+
+button#update_button {
+    background-color: #47c880;
+}
+button#remove_button {
+    background-color: #007042;
+}
+
+button#main_fixed_button:hover,
+button#cancel:hover {
     background-color: #357e55;
+}
+button.list_go_button {
+    background-color: #c7c7c7;
+    margin-top: 16px !important;
+}
+button.list_go_button:hover {
+    background-color: #818181;
 }
 
 
-/**************************************************************/
+    /**************************************************************/
                         /*아르바이트 모집내용*/
 /**************************************************************/
 .grid-fluid-second-col {
@@ -519,7 +558,10 @@ button.applyBtn:disabled {
     background-color: #47c88052;
     cursor: not-allowed!important;
 }
-button.applyBtn:hover:not([disabled]) {background-color: #357e55;}
+button.applyBtn:hover:not([disabled]),
+button.cancel:hover{
+    background-color: #357e55;
+}
 
 
 
