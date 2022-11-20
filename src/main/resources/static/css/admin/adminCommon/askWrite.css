@@ -4,7 +4,6 @@
     width: 100%;
     margin: 0 auto;
     margin-top: 95px;
-    border: 1px solid #E6E6E6;
 }
 
 #write form table {
@@ -156,5 +155,10 @@ textarea.summernote_ask{
 }
 
 table.ask_all_reply{
-    margin-top: 140px;
+    margin-top: 250px;
 }
+
+/*form.askForm{*/
+/*    width: 70%;*/
+/*    margin-left: 15%;*/
+/*}*/

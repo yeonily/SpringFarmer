@@ -6,6 +6,10 @@ body {
     background-color: #eee;
 }
 
+div img.ourLogo{
+    width: 100px;
+}
+
 div#wrapper {
     width: 100%;
 }

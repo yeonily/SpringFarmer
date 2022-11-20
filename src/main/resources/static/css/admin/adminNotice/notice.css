@@ -38,7 +38,7 @@ div#write input[type="button"] {
     background: #747474;
     border: 0;
     cursor: pointer;
-
+    line-height: 1px;
     color: #ffffff;
     font-size: 17px;
     font-weight: 600;
