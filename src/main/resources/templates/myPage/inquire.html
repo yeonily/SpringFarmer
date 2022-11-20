@@ -36,39 +36,23 @@
                             <div id="c-w-wrap" class="f-column">
 
                                 <!---->
-                                <div class="commu">
-                                    <a th:href="@{/mypage/inquire/qustion}">
+                                <div class="commu c-link" th:onclick="'location.href=\''+ @{/mypage/inquire/qustion} + '\''">
+                                    <div class="c-top-wrap">
                                         <div class="c-date">
                                             2022.11.13 15:00
                                         </div>
-                                        <div class="c-group">
-                                            <div class="c-g-title">환불받고 싶은데 어떻게 해야 되나요?</div>
+<!--                                        <a href='javascript:void(0);' onclick="removeCheck();" class="c-delete">삭제</a>-->
+                                    </div>
+                                    <div class="c-group">
+                                        <div class="c-g-title">환불받고 싶은데 어떻게 해야 되나요?</div>
+                                    </div>
+                                    <div class="commu-group">
+                                        <div class="c-status">
+<!--                                            <span class="i-ing">대기 중</span>-->
+                                            <span class="i-finish">답변완료</span>
                                         </div>
-                                        <div class="commu-group">
-                                            <div class="c-status">
-                                                <span class="i-ing">대기 중</span>
-<!--                                                <span class="i-finish">답변완료</span>-->
-                                            </div>
-                                        </div>
-                                    </a>
+                                    </div>
                                 </div>
-                                <div class="commu">
-                                    <a href="#">
-                                        <div class="c-date">
-                                            2022.11.13 15:00
-                                        </div>
-                                        <div class="c-group">
-                                            <div class="c-g-title">프로그램 생성은 어떻게 하나요</div>
-                                        </div>
-                                        <div class="commu-group">
-                                            <div class="c-status">
-<!--                                                <span class="i-ing">대기 중</span>-->
-                                                <span class="i-finish">답변완료</span>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!---->
 
                             </div>
                             <!------------------------>

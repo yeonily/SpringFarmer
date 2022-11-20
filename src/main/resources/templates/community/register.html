@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>너와농부싶어</title>
+    <link rel="icon" href="/image/header/favicon.png" />
+    <link rel="shortcut icon" href="/image/header/favicon.png" />
+    <link rel="stylesheet" href="/css/common/font.css" />
+    <link rel="stylesheet" href="/css/header/header.css" />
+    <link rel="stylesheet" href="/css/footer/footer.css" />
+    <link rel="stylesheet" href="/css/community/register.css" />
+</head>
+<body>
+<div th:replace="/header/header.html :: header" class="header"/>
+<div id="main">
+    <div id="community-wrap">
+        <h1 class="c-top-title">
+            커뮤니티 게시글 작성
+            <p>다양한 사람들과 <strong>자유롭게</strong> 이야기를 나눠보세요.</p>
+        </h1>
+        <div>
+            <form action="" name="boardForm">
+                <div class="r-title">
+                    <input type="text" name="title" id="r-title" class="r-input" placeholder="제목을 입력하세요.">
+                    <label for="r-title" class="r-label">글 제목</label>
+                </div>
+                <div>
+                    <div class="r-content">
+                        <textarea type="text" name="content" id="r-content" class="r-input" placeholder="내용을 입력하세요."></textarea>
+                        <label for="r-content" class="r-label">글 내용</label>
+                    </div>
+                    <div id="count-wrap">
+                        글자수 :
+                        <span id="count-txt">0</span>
+                        / 1000
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/community/register.js"></script>
+</html>

@@ -19,4 +19,9 @@ public class CommunityController {
     public String detailPage(){
         return "/community/detail";
     }
+
+    @GetMapping("/register")
+    public String writePage(){
+        return "/community/register";
+    }
 }

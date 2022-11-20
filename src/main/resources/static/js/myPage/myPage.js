@@ -82,6 +82,16 @@ function alam() {
     setTimeout(function() { $(".overlay-l").fadeOut();}, 500);
 }
 
+
+/* 모달 알람 */
+function removeCheck(){
+    $(".overlay-l").show();
+};
+
+$(".a-no").on("click", function(){
+    $(".overlay-l").hide();
+});
+
 /*------------- 닉네임 수정 -------------*/
 function nickCheck (){ /* 중복 체크 */
     if(!nickForm.nickname.value) {
