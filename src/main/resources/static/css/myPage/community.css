@@ -18,28 +18,32 @@ button.sendPage-btn {
 div.commu {
     display: flex!important;
     flex-direction: column;
-    padding: 0 0 5px;
+    padding: 0 7px;
     margin-bottom: 4px;
     position: relative;
     border-bottom: 1px solid #eaecee;
 }
 
-div.commu a {
-    padding: 0 15px;
-    color: rgb(32, 35, 37);
-}
-div.commu a:hover {
+div.c-link:hover {
     background: #f6f6f6;
     border-radius: 8px;
 }
 
-div.c-date {
-    margin-top: 8px;
-    margin-bottom: 8px;
-    color: rgb(118, 125, 130);
-    font-size: 14px;
+div.c-top-wrap {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(148, 155, 160);
     line-height: 20px;
+    font-size: 14px;
     font-weight: 400;
+    margin: 8px 0;
+}
+
+a.c-delete {color: rgb(118, 125, 130);}
+
+a.c-delete:hover {
+    color: rgb(76, 76, 76);
+    font-weight: 600;
 }
 
 div.c-group {
@@ -96,3 +100,47 @@ div.c-status>span {
 
 .i-finish {color: #47c880;}
 .i-ing {color: rgb(118, 125, 130);}
+
+/* 삭제 모달 */
+#alam {
+    width: 350px;
+    height: 140px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 10px;
+    background: #fff;
+    letter-spacing: 1px;
+    position: fixed;
+    top: 33%;
+    left: 0;
+    right: 0;
+}
+#alam>p {
+    margin: 10px 0;
+    color: rgb(60, 65, 68);
+}
+
+#alam-btn-group {
+    margin-top: 26px;
+    text-align: center;
+}
+
+#alam-btn-group>button {
+    width: 135px;
+    height: 48px;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: .02em;
+    font-weight: 500;
+}
+
+.a-ok {
+    border: 0;
+    background: #47c880;
+    color: #fff;
+}
+
+.a-no {
+    background: #fff;
+    border: 1px solid #d5d5d5;
+}
