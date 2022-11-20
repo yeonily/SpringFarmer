@@ -131,16 +131,80 @@
                         </div>
                         <!--농장주의 간단한 프로파일-->
                         <div class="farmer-profile">
+                            <!--프로필 아이콘(간단설명)-->
                             <div class="img-icon">
                                 <img src="/image/alba/profile.png">
-                                <p>10년차</p>
+                                <p>8~10년차</p>
                                 <p>현직자</p>
                                 <h1>김민혁</h1>
+                                <span><img src="/image/alba/mentoIcon.png">인증 멘토</span>
+                            </div>
+                            <!--프로필 상세설명-->
+                            <div class="profile-content">
+                                <p>
+                                    <strong>현 논산시 딸기농장, 딸기농장체험프로그램 운영중</strong><br>
+                                    - 연매출 10억 기록한 딸기농장<br>
+                                    - 논산에서 인정한 대표 딸기<br>
+                                    - 알바생 및 체험프로그램 높은 만족도 보유<br><br>
 
+                                    <strong>농장주의 간단 자기소개</strong><br>
+                                    - 다양한 경험과 노하우가 있는 베테랑 농부<br>
+                                    - 고리타분하지 않은 성격, 개방적인 마인드 보유<br>
+                                    - 유쾌함과 즐거움이 함께 공존을 희망하며 노력중
+                                </p>
                             </div>
                         </div>
                     </div>
+                    <!--신청방법(고정)-->
+                    <div class="last-comment">
+                        <div class="last-comment-inner">
+                            <h2><span>아르바이트 지원 방법을 알려드릴게요!</span></h2>
+                            <p>1. 해당 아르바이트를 신청하기 위해서는 우측에 있는 지원하기 버튼을 클릭합니다.<br>
+                                2. 클릭 후, 농장주의 이메일을 확인 후 아르바이트 지원서를 해당 이메일로 전송합니다.<br>
+                                3. 전송 후 확인 버튼을 누르게 되면 아르바이트 지원이 정상적으로 처리됩니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!--지원하기 모달창-->
+    <div id="modal" style="display: none;">
+        <div id="modal-overlay">
+            <div class="c-modal">
+                <div class="m-wrap">
+                    <div class="m-title">아르바이트 지원하기</div>
+                    <form action="">
+                        <div class="m-c-wrap">
+                            <div class="m-c-title">화면에 출력된 이메일에 지원서를 전송한 후 "메일전송 완료" 버튼을 눌러주세요</div>
+                            <p>mesudal@naver.com</p>
+                        </div>
+                        <div class="applyBtnWrap">
+                            <button type="button" class="applyBtn">메일전송 완료</button>
+                            <button type="button" class="cancel">취소</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--지원 완료-->
+    <div id="modalSuccess" style="display: none;">
+        <div id="modalSuccess-overlay">
+            <div class="c-modal">
+                <div class="m-wrap">
+                    <div class="m-title">아르바이트에 지원해주셔서 감사합니다!</div>
+                    <form action="">
+                        <div class="m-c-wrap">
+                            <div class="m-c-title">빠른 시일 내에 지원결과를 알려드리도록 하겠습니다.</div>
+                        </div>
+                        <div class="applyBtnWrap">
+                            <button type="button" class="listBtn" onclick="location.href='/alba/list'">목록으로</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -149,4 +213,30 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/header/header.js"></script>
+<script>
+    var $status = $("#main_fixed_category"); // 모집 상태를 저장
+
+    /*모집마감일 경우*/
+    if($("#main_fixed_category").text() == "모집마감" || $(".left-div span").text() == "모집마감") {
+        $("#main_fixed_category").text("모집마감");
+        $(".left-div span").text("모집마감");
+        $("#main_fixed_button").attr("disabled", "false");
+        $("#main_fixed_button").html("모집마감");
+        $("#main_fixed_button").css({background : "#357e55", cursor : "default"});
+    }
+
+    /*지원하기 버튼 클릭 시 모달*/
+    $("button#main_fixed_button").on("click", function(){
+        $("#modal").show();
+    });
+    $("button.cancel").on("click", function(){
+        $("#modal").hide();
+    });
+
+    /*메일전송 완료 버튼 클릭 시*/
+    $("button.applyBtn").on("click", function(){
+        $("#modal").hide();
+        $("#modalSuccess").show();
+    });
+</script>
 </html>

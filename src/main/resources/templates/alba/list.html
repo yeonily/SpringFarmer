@@ -103,7 +103,7 @@
                 <!--아래부터 리스트 쭉 출력해야함-->
                 <div class="list_td">
                     <div class="location"><p>서울 강서구</p></div>
-                    <div class="title">농산물(양파)가공 현장사원 및 납품사원 모집</div>
+                    <div class="title"><a href="/alba/detail">논산 딸기재배 아르바이트 (<span>모집중</span>)</a></div>
                     <div class="workHours">09:00~18:00</div>
                     <div class="pay">
                         <p class="miniText">시급</p>
@@ -112,53 +112,83 @@
                     <div class="registerDay">3분 전</div>
                 </div>
                 <div class="list_td">
-                    <div class="location"><p>서울 강서구</p></div>
-                    <div class="title">농산물(양파)가공 현장사원 및 납품사원 모집</div>
+                    <div class="location"><p>경남 진주시</p></div>
+                    <div class="title"><a href="#">딸기 선별하실 알바님 구합니다. (<span>모집중</span>)</a></div>
                     <div class="workHours">09:00~18:00</div>
                     <div class="pay">
                         <p class="miniText">시급</p>
-                        12,000
+                        9,720
                     </div>
-                    <div class="registerDay">3분 전</div>
+                    <div class="registerDay">1시간 전</div>
+                </div>
+                <div class="list_td">
+                    <div class="location"><p>대구 북구</p></div>
+                    <div class="title"><a href="#">농산 소포장하실 분 모집합니다. (<span>모집마감</span>)</a></div>
+                    <div class="workHours">09:00~18:00</div>
+                    <div class="pay">
+                        <p class="miniText">시급</p>
+                        9,160
+                    </div>
+                    <div class="registerDay">1일 전</div>
                 </div>
                 <div class="list_td">
                     <div class="location"><p>서울 강서구</p></div>
-                    <div class="title">농산물(양파)가공 현장사원 및 납품사원 모집</div>
-                    <div class="workHours">09:00~18:00</div>
+                    <div class="title"><a href="#">농산물(양파)가공 현장사원 및 납품사원 모집 (<span>모집마감</span>)</a></div>
+                    <div class="workHours">시간협의</div>
                     <div class="pay">
                         <p class="miniText">시급</p>
-                        12,000
+                        협의 후 진행
                     </div>
-                    <div class="registerDay">3분 전</div>
-                </div>
-                <div class="list_td">
-                    <div class="location"><p>서울 강서구</p></div>
-                    <div class="title">농산물(양파)가공 현장사원 및 납품사원 모집</div>
-                    <div class="workHours">09:00~18:00</div>
-                    <div class="pay">
-                        <p class="miniText">시급</p>
-                        12,000
-                    </div>
-                    <div class="registerDay">3분 전</div>
+                    <div class="registerDay">1년 전</div>
                 </div>
             </div>
+            <div id="writeBtn">
+                <button type="button" onclick="location.href = `/alba/write`">글쓰기</button>
+            </div>
 
-            <div id="paging">
-                <p>이 부분은 나중에 풀 받으면 페이징 작업 필요</p>
+            <!--페이징 처리-->
+            <div id="page">
+                <div class="page_nation">
+                    <a class="arrow pprev" href="#"></a>
+                    <a class="arrow prev" href="#"></a>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">10</a>
+                    <a class="arrow next" href="#"></a>
+                    <a class="arrow nnext" href="#"></a>
+                </div>
             </div>
         </div>
-
-
-        <footer th:replace="/footer/footer.html :: footer" class="footer"/>
     </div>
+    <footer th:replace="/footer/footer.html :: footer" class="footer"/>
+
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/header/header.js"></script>
 <script>
-    /*필터 선택에 따른 변화*/
+    var $status = $(".list_td .title span"); // 모집 상태를 저장
+
+    /*모집마감일 경우 글씨 어둡게*/
+    for(var i = 0; i < $status.length; i++) {
+        if($status.eq(i).text() == "모집마감") {
+            $status.eq(i).parent().parent().parent().css("color", "#dbdbdb");
+            $status.eq(i).parent().css("color", "#dbdbdb");
+        }
+    }
+
+    /*필터 선택 시 검정글자로 표시*/
     $(".top-div-filter span").on("click", function() {
         $(this).css("color", "#000000");
         $(".top-div-filter span").not(this).css({color: '#959595'});
     });
+
+
 </script>
 </html>
