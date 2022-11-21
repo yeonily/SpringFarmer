@@ -170,7 +170,22 @@
     font-size: 18px;
     line-height: 25px;
     font-weight: 400;
-    margin-top: 4px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#mentor_write_button{
+    border-color: #47c880;
+    background-color: #47c880;
+    color: #fff;
+    width: 130px;
+    height: 44px;
+    border-radius: 6px;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
 }
 
 #mentor_list {

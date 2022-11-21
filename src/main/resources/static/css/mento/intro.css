@@ -66,9 +66,7 @@
     background-color: #47c880;
     border: none;
     color: #FFF;
-}
-.button_icon{
-    display: flex!important;
+    cursor: pointer;
 }
 
 #main_wrap{
@@ -108,7 +106,7 @@
 
 #main_content0_title{
     color: inherit;
-    text-align: center;
+    /*text-align: center;*/
     font-size: 24px;
     line-height: 31px;
     font-weight: 600;
@@ -491,14 +489,18 @@
     display: flex;
     box-sizing: content-box;
 }
-#swiper_inner1{
+.swiper-slide{
+    width: 542px;
+    margin-right: 24px;
+}
+.swiper_inner1{
     color: rgb(32, 35, 37);
     font-size: 18px;
     line-height: 25px;
     font-weight: 400;
     margin-bottom: 16px!important;
 }
-#swiper_inner2{
+.swiper_inner2{
     color: rgb(60, 65, 68);
     font-size: 16px;
     line-height: 25px;
