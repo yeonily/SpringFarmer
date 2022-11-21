@@ -173,8 +173,8 @@
     width: 100%;
     box-sizing: border-box;
 }
-#main_fixed{
-    position: fixed;
+.main_fixed{
+    position: absolute;
     top: auto;
     bottom: auto;
     max-width: 353px;
@@ -308,9 +308,14 @@
     box-sizing: border-box;
     outline: none;
 }
-#main_intro{
+.main_intro{
     padding: 60px 0;
     background-color: #fff;
+}
+.fixed {
+    position: fixed;
+    top: 64px;
+    bottom: auto;
 }
 #main_intro_inner1{
     background-color: inherit;
@@ -777,13 +782,15 @@
     font-weight: 400;
     line-height: 1;
     display: inline-block;
+    cursor: pointer;
+    fill: rgb(255, 215, 0);
 }
 .star_check::after{
     content: "★";
     font-size: 24px;
 }
-.start_uncheck{
-    margin-left: 3px;
+.star_uncheck{
+    fill: rgb(234, 236, 238);
     color: #e4e4e4;
     vertical-align: top;
     transition: background-color .2s,color .2s,border-color .2s,box-shadow .2s;
