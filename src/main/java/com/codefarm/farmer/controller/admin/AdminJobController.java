@@ -9,6 +9,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminJobController {
 
     @GetMapping("/job")
-    public void adminJob() {
-    }
+    public String adminJob() {return "/adminJob/job";}
 }

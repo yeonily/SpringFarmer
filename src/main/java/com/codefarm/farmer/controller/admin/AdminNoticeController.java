@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminNoticeController {
 
     @GetMapping("/notice")
-    public void adminNotice() {
+    public String adminNotice() {return "/adminNotice/notice";
     }
 
     @GetMapping("/notice-write")
-    public void adminNoticeWrite() {
+    public String adminNoticeWrite() {return "/adminNotice/notice-write";
     }
 
     @GetMapping("/notice-update")
-    public void adminNoticeDetail() {
+    public String adminNoticeDetail() {return "/adminNotice/notice-update";
     }
 
 

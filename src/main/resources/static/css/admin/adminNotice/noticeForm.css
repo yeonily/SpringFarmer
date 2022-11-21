@@ -110,7 +110,6 @@ table th {
     border-right: 1px solid #e8e6e6;
     padding: 12px 0;
     vertical-align: middle;
-
     font-size: 14px;
     color: #262525;
     font-weight: 500;
@@ -162,13 +161,21 @@ td.title:hover {
         min-height: 250px;
     }
 
-    div.content div.title { margin-bottom: 6%; }
+    div.content div.title {
+        margin-bottom: 6%;
+    }
 
-    div#lineChart { padding-top: 5%; }
+    div#lineChart {
+        padding-top: 5%;
+    }
 
-    div.contents-bottom { margin-top: 10px; }
+    div.contents-bottom {
+        margin-top: 10px;
+    }
 
-    div.contents-bottom span.caption {  font-size: 12px; }
+    div.contents-bottom span.caption {
+        font-size: 12px;
+    }
 
     div.contents-bottom input[type="button"] {
         top: 15px;
@@ -176,12 +183,15 @@ td.title:hover {
         font-size: 11px;
     }
 
-    table { border-spacing: 0 3px; }
+    table {
+        border-spacing: 0 3px;
+    }
 
     table tr.title th {
         font-size: 11px;
         line-height: 18px;
     }
+
     table tr td {
         font-size: 12px;
     }

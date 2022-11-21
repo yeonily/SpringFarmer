@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/common/font.css"> <!-- 폰트 -->
     <link rel="stylesheet" href="/css/admin/adminCommon/side_menu.css"> <!-- 사이드 메뉴 & 해더 -->
     <!-- 글 작성 폼 -->
-    <link rel="stylesheet" href="/css/admin/adminNotice/noticeWrite.css">
+    <link rel="stylesheet" href="/css/admin/adminCommon/askWrite.css">
     <link rel="icon" href="/image/header/favicon.png" />
     <link rel="shortcut icon" href="/image/header/favicon.png" />
     <!-- 사이드 메뉴 -->
@@ -111,8 +111,8 @@
                     </tbody>
                 </table>
                 <div class="btns-group">
-                    <input type="button" onclick="location.href='#'" class="g-btn list" value="문의 목록">
-                    <input type="submit" onclick="saveCheck()" class="g-btn submit" value="답변 하기">
+                    <input type="button" onclick="location.href='/adminAsk/ask'" class="g-btn list" value="문의 목록">
+                    <input type="submit" onclick="doreplyCheck()" class="g-btn submit" value="답변 등록">
                 </div>
             </form>
         </div>

@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminCropInformationController {
 
     @GetMapping("/cropInformation")
-    public void adminCropInformation() {
+    public String adminCropInformation() {return "/adminCropInformation/cropInformation";
     }
 
     @GetMapping("/cropInformation-write")
-    public void adminCropInformationWrite() {
+    public String adminCropInformationWrite() {return "/adminCropInformation/cropInformation-write";
     }
 
     @GetMapping("/cropInformation-update")
-    public void adminCropInformationUpdate() {
+    public String adminCropInformationUpdate() {return "/adminCropInformation/cropInformation-update";
     }
 }

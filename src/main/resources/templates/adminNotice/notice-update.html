@@ -76,10 +76,6 @@
                         <td>
                             <div id="editor">
                                 <textarea class="summernote" name="editorForm"></textarea>
-                                <div id="letter-count">
-                                    <br>
-                                    <p id="letter-length" style="display: inline;">0</p> / 2000
-                                </div>
                             </div>
                         </td>
                     </tr>
@@ -90,14 +86,13 @@
                                 <input type="file" name="file">
                             </div>
                             <div id="file-content"></div>
-                            <!--                            <span class="file-limit"> 첨부파일은 총 1개까지 가능합니다.</span>-->
                         </td>
                     </tr>
                     </tbody>
                 </table>
                 <div class="btns-group">
-                    <input type="button" onclick="location.href='#'" class="g-btn list" value="수정 완료">
-                    <input type="submit" onclick="saveCheck()" class="g-btn submit" value="삭제">
+                    <input type="button" onclick="location.href='/adminNotice/notice'" class="g-btn list" value="공지 목록">
+                    <input type="submit" onclick="reviseNoticeCheck()" class="g-btn submit" value="수정 완료">
                 </div>
             </form>
         </div>

@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminReplyController {
 
     @GetMapping("/mentor-reply")
-    public void adminMentorReply() {
+    public String adminMentorReply() {return "/adminReply/mentor-reply";
     }
 
     @GetMapping("/board-reply")
-    public void adminBoardReply() {
+    public String adminBoardReply() {return "/adminReply/board-reply";
     }
 
 

@@ -9,10 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminAskController {
 
     @GetMapping("/ask")
-    public void adminAsk() {
-    }
+    public String adminAsk() {return "/adminAsk/ask";}
 
     @GetMapping("/ask-detail")
-    public void adminAskDetail() {
-    }
+    public String adminAskDetail() {return "/adminAsk/ask-detail";}
 }

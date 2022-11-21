@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 #write {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 95px;
 }
@@ -26,6 +26,17 @@
 }
 
 div.title input {
+    width: 100%;
+    height: 38px;
+    padding-left: 12px;
+    vertical-align: middle;
+    border-radius: 0;
+    border: 1px solid #d9d9d9;
+    outline: none;
+    color: #4e4e4e;
+}
+
+div.categori input{
     width: 100%;
     height: 38px;
     padding-left: 12px;
@@ -155,10 +166,5 @@ textarea.summernote_ask{
 }
 
 table.ask_all_reply{
-    margin-top: 250px;
+    margin-top: 140px;
 }
-
-/*form.askForm{*/
-/*    width: 70%;*/
-/*    margin-left: 15%;*/
-/*}*/

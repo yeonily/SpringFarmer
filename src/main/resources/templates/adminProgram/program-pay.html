@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/common/font.css"> <!-- 폰트 -->
-    <link rel="stylesheet" href="/css/admin/adminCommon/side_menu.css"> <!-- 사이드 메뉴 & 해더 -->
+    <link rel="stylesheet" href="/css/admin/adminCommon/sideMenuList.css"> <!-- 사이드 메뉴 & 해더 -->
     <link rel="stylesheet" href="/css/admin/adminCommon/contents.css"> <!-- 컨텐츠 공통 스타일 -->
     <link rel="stylesheet" href="/css/admin/adminCommon/page.css"> <!-- 페이징 -->
     <link rel="stylesheet" href="/css/admin/adminNotice/noticeForm.css"> <!-- 검색 폼 & 테이블 공통 스타일 -->
@@ -39,7 +39,7 @@
             <span id="admin-mode">관리자 모드</span>
             <span id="userCount">가입된 회원 수 총 <strong> 21343 </strong>명</span>
         </header>
-
+        <div id="wrapContents">
         <!-- 컨텐츠 검색 부분 -->
         <div class="p-contents chart-no">
 
@@ -89,7 +89,7 @@
                     <td class="nickName">herd</td>
                     <td class="payCost">140,000</td>
                     <td class="payDate">2022-11-30 10:00</td>
-                    <td class="payStatus">취소완료</td>
+                    <td class="payStatusCancel">취소완료</td>
                 </tr>
                 <tr>
                     <td class="payNumber">2022111502</td>
@@ -97,7 +97,7 @@
                     <td class="nickName">xogwan</td>
                     <td class="payCost">100,000</td>
                     <td class="payDate">2022-11-30 11:00</td>
-                    <td class="payStatus">결제완료</td>
+                    <td class="payStatusOk">결제완료</td>
                 </tr>
                 <tr>
                     <td class="payNumber">2022111503</td>
@@ -105,7 +105,7 @@
                     <td class="nickName">dusxorhks</td>
                     <td class="payCost">40,000</td>
                     <td class="payDate">2022-11-30 12:00</td>
-                    <td class="payStatus">취소완료</td>
+                    <td class="payStatusCancel">취소완료</td>
                 </tr>
             </table>
 
@@ -128,6 +128,7 @@
                     <a class="arrow nnext" href="#"></a>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 </div>
