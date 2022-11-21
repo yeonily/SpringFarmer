@@ -28,7 +28,6 @@
     margin-left: 15px;
 }
 #content_left_list{
-    padding-top: 15px;
     list-style: none;
 }
 .left_lists{
@@ -40,7 +39,7 @@
     position: relative;
     padding: 20px;
     border: 1px solid #357e55;
-    border-radius: 8px;
+    border-radius: 16px;
     overflow: hidden;
 }
 .list_thumbnail{
