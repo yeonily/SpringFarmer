@@ -87,8 +87,8 @@
                     <td class="nickName">관리자</td>
                     <td class="statusOk">사용중</td>
                     <td class="registrationDate">2022-10-03 10:00</td>
-                    <td class="revise"><input type="button" value="수정" onclick="reviseNoticeCheck()"></td>
-                    <td class="delete"><input type="button" value="삭제" onclick="deleteNoticeCheck()"></td>
+                    <td class="revise"><input type="button" value="수정" onclick="location.href='/adminBanner/banner-update'"></td>
+                    <td class="delete"><input type="button" value="삭제" onclick="deleteBannerCheck()"></td>
                 </tr>
                 <tr>
                     <td class="num">1</td>
@@ -97,8 +97,8 @@
                     <td class="nickName">관리자</td>
                     <td class="statusNo">사용안함</td>
                     <td class="registrationDate">2022-11-14 10:00</td>
-                    <td class="revise"><input type="button" value="수정" onclick="reviseNoticeCheck()"></td>
-                    <td class="delete"><input type="button" value="삭제" onclick="deleteNoticeCheck()"></td>
+                    <td class="revise"><input type="button" value="수정" onclick="location.href='/adminBanner/banner-update'"></td>
+                    <td class="delete"><input type="button" value="삭제" onclick="deleteBannerCheck()"></td>
                 </tr>
                 <tr>
                     <td class="num">1</td>
@@ -107,10 +107,13 @@
                     <td class="nickName">관리자</td>
                     <td class="statusOk">사용중</td>
                     <td class="registrationDate">2022-11-17 10:00</td>
-                    <td class="revise"><input type="button" value="수정" onclick="reviseNoticeCheck()"></td>
-                    <td class="delete"><input type="button" value="삭제" onclick="deleteNoticeCheck()"></td>
+                    <td class="revise"><input type="button" value="수정" onclick="location.href='/adminBanner/banner-update'"></td>
+                    <td class="delete"><input type="button" value="삭제" onclick="deleteBannerCheck()"></td>
                 </tr>
             </table>
+            <div id="write" style="float: right;">
+                <input type="button" onclick="location.href='/adminBanner/banner-write'" value="배너 등록">
+            </div>
 
             <!-- 페이징 -->
             <div id="page">
@@ -130,9 +133,6 @@
                     <a class="arrow next" href="#"></a>
                     <a class="arrow nnext" href="#"></a>
                 </div>
-            </div>
-            <div id="write">
-                <input type="button" onclick="location.href='notice_write.html'" value="배너 등록">
             </div>
         </div>
         </div>

@@ -51,7 +51,7 @@
                         <th>배너명</th>
                         <td>
                             <div class="title">
-                                <input type="text" name="notice" class="notice_title" placeholder="배너명을 입력하세요" autocomplete="off">
+                                <input type="text" name="bannerTitle" class="bannerTitle" placeholder="배너명을 입력하세요" autocomplete="off">
                             </div>
                         </td>
                     </tr>
@@ -59,7 +59,7 @@
                         <th>배너설명</th>
                         <td>
                             <div class="title">
-                                <input type="text" name="bannerExplain" class="bannerExplain" placeholder="배너설명을 입력하세요." autocomplete="off">
+                                <input type="text" name="bannerContent" class="bannerContent" placeholder="배너설명을 입력하세요." autocomplete="off">
                             </div>
                         </td>
                     </tr>
@@ -86,7 +86,7 @@
                     </tbody>
                 </table>
                 <div class="btns-group">
-                    <input type="button" onclick="location.href='#'" class="g-btn list" value="배너 목록">
+                    <input type="button" onclick="location.href='/adminBanner/banner'" class="g-btn list" value="배너 목록">
                     <input type="submit" onclick="saveCheck()" class="g-btn submit" value="등록">
                 </div>
             </form>

@@ -17,4 +17,9 @@ public class AdminBannerController {
     public String adminBannerWrite() {
         return "/adminBanner/banner-write";
     }
+
+    @GetMapping("/banner-update")
+    public String adminBannerUpdate() {
+        return "/adminBanner/banner-update";
+    }
 }
