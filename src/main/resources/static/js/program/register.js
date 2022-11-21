@@ -70,49 +70,49 @@ $("#pg-4").on("click", function() {
 $(".ex-1").click(function () {
     $(".ex-1").addClass("active");
     $(".ex-2").removeClass("active");
-    $(".example1").attr("src", "https://cdn.comento.kr/images/class/pt/open/class-opening-guide-class-target-example-marketing-1.png")
+    $(".example1").attr("src", "/image/program/ex1.gif")
 })
 
 $(".ex-2").click(function () {
     $(".ex-1").removeClass("active");
     $(".ex-2").addClass("active");
-    $(".example1").attr("src", "https://cdn.comento.kr/images/class/pt/open/class-opening-guide-class-target-example-programming-1.png")
+    $(".example1").attr("src", "/image/program/ex2.gif")
 })
 
 $(".ex-3").click(function () {
     $(".ex-3").addClass("active");
     $(".ex-4").removeClass("active");
-    $(".example2").attr("src", "https://cdn.comento.kr/images/class/pt/open/class-opening-guide-class-objective-example-marketing-1.png")
+    $(".example2").attr("src", "/image/program/ex3.gif")
 })
 
 $(".ex-4").click(function () {
     $(".ex-3").removeClass("active");
     $(".ex-4").addClass("active");
-    $(".example2").attr("src", "https://cdn.comento.kr/images/class/pt/open/class-opening-guide-class-objective-example-programming-1.png")
+    $(".example2").attr("src", "/image/program/ex4.gif")
 })
 
 $(".ex-5").click(function () {
     $(".ex-5").addClass("active");
     $(".ex-6").removeClass("active");
-    $(".example3").attr("src", "https://cdn.comento.kr/images/class/pt/open/class-opening-guide-class-objective-example-marketing-2.png")
+    $(".example3").attr("src", "/image/program/ex5.gif")
 })
 
 $(".ex-6").click(function () {
     $(".ex-5").removeClass("active");
     $(".ex-6").addClass("active");
-    $(".example3").attr("src", "https://cdn.comento.kr/images/class/pt/open/class-opening-guide-class-objective-example-programming-2.png")
+    $(".example3").attr("src", "/image/program/ex6.gif")
 })
 
 $(".ex-7").click(function () {
     $(".ex-7").addClass("active");
     $(".ex-8").removeClass("active");
-    $(".example4").attr("src", "https://cdn.comento.kr/images/class/pt/open/class-opening-guide-class-description-example-marketing-1.png")
+    $(".example4").attr("src", "/image/program/ex7.gif")
 })
 
 $(".ex-8").click(function () {
     $(".ex-7").removeClass("active");
     $(".ex-8").addClass("active");
-    $(".example4").attr("src", "https://cdn.comento.kr/images/class/pt/open/class-opening-guide-class-description-example-programming-1.png")
+    $(".example4").attr("src", "/image/program/ex8.gif")
 })
 
 //예시 보여주기
