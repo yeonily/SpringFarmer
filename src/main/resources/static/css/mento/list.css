@@ -9,6 +9,7 @@
 
 #main_grid {
     padding-top: 0 !important;
+    overflow-x: hidden;
 }
 
 #main_grid_inner1 {
