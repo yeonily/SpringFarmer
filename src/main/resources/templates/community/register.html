@@ -13,29 +13,42 @@
 <body>
 <div th:replace="/header/header.html :: header" class="header"/>
 <div id="main">
-    <div id="community-wrap">
-        <h1 class="c-top-title">
-            커뮤니티 게시글 작성
-            <p>다양한 사람들과 <strong>자유롭게</strong> 이야기를 나눠보세요.</p>
-        </h1>
-        <div>
-            <form action="" name="boardForm">
-                <div class="r-title">
-                    <input type="text" name="title" id="r-title" class="r-input" placeholder="제목을 입력하세요.">
-                    <label for="r-title" class="r-label">글 제목</label>
-                </div>
-                <div>
-                    <div class="r-content">
-                        <textarea type="text" name="content" id="r-content" class="r-input" placeholder="내용을 입력하세요."></textarea>
-                        <label for="r-content" class="r-label">글 내용</label>
+    <div id="c-wrap">
+        <div id="community-wrap">
+            <h1 class="c-top-title">
+                커뮤니티 게시글 작성
+                <p>다양한 사람들과 <strong>자유롭게</strong> 이야기를 나눠보세요.</p>
+            </h1>
+            <div>
+                <form action="" name="boardForm" enctype="multipart/form-data">
+                    <div class="r-title">
+                        <input type="text" name="title" id="r-title" class="r-input" placeholder="제목을 입력하세요.">
+                        <label for="r-title" class="r-label">글 제목</label>
                     </div>
-                    <div id="count-wrap">
-                        글자수 :
-                        <span id="count-txt">0</span>
-                        / 1000
+                    <div>
+                        <div class="r-content">
+                            <textarea type="text" name="content" id="r-content" class="r-input" placeholder="내용을 입력하세요."></textarea>
+                            <label for="r-content" class="r-label">글 내용</label>
+                        </div>
+                        <div id="count-wrap">
+                            글자수 :
+                            <span id="count-txt">0</span>
+                            / 1000
+                        </div>
                     </div>
-                </div>
-            </form>
+                    <div id="r-files">
+                        <div id="file-btn">
+                            <input type="file" name="upload" multiple>
+                        </div>
+                        <div id="r-field">
+                            <ul></ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 40px;">
+                        <button class="writeBtn">등록하기</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
