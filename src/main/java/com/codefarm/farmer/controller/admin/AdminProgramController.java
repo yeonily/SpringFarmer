@@ -8,16 +8,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/adminProgram/*")
 public class AdminProgramController {
 
-    @GetMapping("/program_participant")
+    @GetMapping("/program-participant")
     public void adminProgramParticipant() {
     }
 
-    @GetMapping("/program_list")
+    @GetMapping("/program-list")
     public void adminProgramList(){
 
     }
 
-    @GetMapping("/program_pay")
+    @GetMapping("/program-pay")
     public void adminPay(){
 
     }

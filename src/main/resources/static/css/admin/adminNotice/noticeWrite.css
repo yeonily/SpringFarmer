@@ -5,7 +5,6 @@
     margin: 0 auto;
     margin-top: 95px;
     border: 1px solid #E6E6E6;
-    background-color: #ffffff9f;
 }
 
 #write form table {
@@ -72,6 +71,12 @@ input.bannerExplain{
 }
 
 div#editor { margin-top: 5px; }
+
+div#ask_editor input{
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
 
 div#editor #letter-count{
     position: relative;
@@ -141,4 +146,15 @@ textarea.summernote{
     width: 100%;
     height: 150px;
     resize: none;
+}
+
+textarea.summernote_ask{
+    width: 100%;
+    resize: none;
+    border: white;
+    margin-top: 5px;
+}
+
+table.ask_all_reply{
+    margin-top: 140px;
 }

@@ -9,6 +9,9 @@ body, button {
     word-wrap: break-word;
 }
 
+input::placeholder {color: #a8a8a8;}
+textarea::placeholder {color: #a8a8a8;}
+
 a {text-decoration: none;}
 div.flex {display: flex;}
 ul {

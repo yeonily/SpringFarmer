@@ -12,7 +12,7 @@ public class AdminAskController {
     public void adminAsk() {
     }
 
-    @GetMapping("/ask_write")
-    public void adminAskWrite() {
+    @GetMapping("/ask-detail")
+    public void adminAskDetail() {
     }
 }

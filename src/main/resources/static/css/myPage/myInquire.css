@@ -31,6 +31,15 @@ div#answer {
     margin-bottom: 40px;
 }
 
+div#none-answer {
+    display: flex!important;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 240px;
+    text-align: center;
+    color: rgb(118, 125, 130);
+}
+
 a.backList {
     padding: 10px 12px;
     background: #47c880;

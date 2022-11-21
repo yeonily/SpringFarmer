@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/adminReply/*")
 public class AdminReplyController {
 
-    @GetMapping("/mentor_reply")
+    @GetMapping("/mentor-reply")
     public void adminMentorReply() {
     }
 
-    @GetMapping("/board_reply")
+    @GetMapping("/board-reply")
     public void adminBoardReply() {
     }
 

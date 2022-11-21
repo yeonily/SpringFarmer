@@ -5,6 +5,9 @@
     text-decoration: none;
     font-family: Pretendard;
 }
+:root {
+    --swiper-theme-color: #47c880;
+}
 
 #mentor_intro{
     max-width: 1140px;
@@ -60,7 +63,7 @@
     font-size: 18px;
     line-height: 25px;
     font-weight: 400;
-    background-color: #2a7de1;
+    background-color: #47c880;
     border: none;
     color: #FFF;
 }
@@ -290,7 +293,7 @@
     font-size: 18px;
     line-height: 25px;
     font-weight: 400;
-    background-color: #2a7de1;
+    background-color: #47c880;
     color: #fff;
     border: none;
     display: flex!important;
@@ -765,4 +768,99 @@
 }
 .inner2_image{
     padding: 0 24px;
+}
+
+/*멘토 목록 수정 부분 list에서 가져옴*/
+.mentor_info{
+    -webkit-box-flex: 0;
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-bottom: 32px;
+    box-sizing: border-box;
+}
+.mentor_info_inner1{
+    --card-width: 100%;
+    --background-color: white;
+    --title-height: 50px;
+    --border-radius: 10px;
+    padding-bottom: 12px;
+    background-color: var(--background-color);
+    border-radius: 4px;
+    width: var(--card-width);
+    min-width: 152px;
+    cursor: pointer;
+}
+.mentor_info_inner2{
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    width: 100%;
+}
+.mentor_info_image{
+    width: var(--optimized-image-width);
+    max-width: 100%;
+    display: inline-block;
+    --optimized-image-width: 100%;
+    --optimized-image-aspect-ratio: 259 / 300;
+    --optimized-image-fallback-ratio: 115.83%;
+}
+.mentor_info_inner3{
+    margin-top: 12px;
+    width: 100%;
+}
+.mentor_info_subTitle{
+    display: flex!important;
+    align-items: center;
+}
+.mentor_info_subTitle2{
+    color: #3C4144;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
+.mentor_info_title{
+    margin-top: 4px!important;
+}
+.mentor_info_title2{
+    color: #040505;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: .02em;
+}
+.mentor_info_caption{
+    display: flex!important;
+    align-items: center;
+    margin-top: 8px!important;
+}
+.mentor_star{
+    display: flex!important;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.mentor_star_inner1{
+    fill: rgb(255, 215, 0);
+    cursor: auto;
+    background: transparent!important;
+    overflow: hidden;
+    margin-right: 2px!important;
+    box-sizing: border-box;
+    outline: none;
+    width: 12px;
+    height: 12px;
+}
+.mentor_star_span{
+    color: rgb(89, 95, 99);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
+.mentor_star_avg{
+    color: rgb(89, 95, 99);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 13px;
+    margin-left: 2px!important;
 }

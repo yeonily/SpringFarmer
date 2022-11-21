@@ -12,11 +12,11 @@ public class AdminNoticeController {
     public void adminNotice() {
     }
 
-    @GetMapping("/notice_write")
+    @GetMapping("/notice-write")
     public void adminNoticeWrite() {
     }
 
-    @GetMapping("/notice_update")
+    @GetMapping("/notice-update")
     public void adminNoticeDetail() {
     }
 

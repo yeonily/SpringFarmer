@@ -378,25 +378,41 @@ div.footerMargin {
     line-height: 25px;
 }
 
-#faq .faq-board-list-question:before {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 32px;
-    margin: auto;
-    content: "";
-    width: 15px;
-    height: 15px;
-    border-bottom: 2px solid #adb5bd;
-    border-left: 2px solid #adb5bd;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -webkit-transition: all .2s ease;
-    /* transition: all .2s ease; */
+/*#faq .faq-board-list-question:before {*/
+/*    display: inline-block;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*    right: 32px;*/
+/*    margin: auto;*/
+/*    content: "";*/
+/*    width: 15px;*/
+/*    height: 15px;*/
+/*    border-bottom: 2px solid #adb5bd;*/
+/*    border-left: 2px solid #adb5bd;*/
+/*    -webkit-transform: rotate(-45deg);*/
+/*    transform: rotate(-45deg);*/
+/*    -webkit-transition: all .2s ease;*/
+/*     transition: all .2s ease;*/
+/*}*/
+
+.rotate{
+    -moz-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
 }
 
-#faq .faq-board-list.active1 .faq-board-list-question:before {
+.rotate.down{
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+
+
+#faq .faq-board-list.active1 .faq-board-list-question:before{
     top: 15px;
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
