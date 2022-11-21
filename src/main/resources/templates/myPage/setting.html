@@ -29,23 +29,18 @@
                             <div class="c-header-can">
                                 <div class="menu-tab-btn">
                                     <div class="menu-tab">
-                                        <button class="active main-tab" onclick="tabMove('main-tab')">프로필</button>
+                                        <button class="active main-tab" onclick="tabMove('/mypage/setting')">프로필</button>
                                     </div>
                                     <div class="menu-tab">
-                                        <a href="#myinfo">
-                                            <button class="myInfo" onclick="tabMove('myInfo')">정보 수정</button>
-                                        </a>
+                                        <button class="myInfo" onclick="tabMove('myInfo')">정보 수정</button>
                                     </div>
                                     <!--멘토인 경우-->
                                     <div class="menu-tab">
-                                        <a href="#mentorInfo">
-                                            <button class="mentorInfo" onclick="tabMove('mentorInfo')">멘토 정보</button>
-                                        </a>
+                                        <button class="mentorInfo" onclick="tabMove('mentorInfo')">멘토 정보</button>
                                     </div>
                                     <!------>
                                     <div class="menu-tab">
-                                        <a th:href="@{/mypage/setting/quit}">
-                                            <button>회원 탈퇴</button>
+                                            <button onclick="tabMoveQuit();">회원 탈퇴</button>
                                         </a>
                                     </div>
                                 </div>
@@ -166,7 +161,7 @@
                                 <div class="section-wrap">
                                     <section>
                                         <!-- 멘토 소개글이 없을 경우 = 멘토가 아닐 경우 -->
-                                        <div id="mentor-none" style="display: none;">
+                                        <div id="mentor-none">
                                             <div class="mentor-no">
                                                 <div class="mentor-txt">
                                                     멘토 소개 글을 작성하면 멘토링 홍보 글을 작성하실 수 있습니다.
@@ -174,32 +169,27 @@
                                                 <button class="mentorBtn" onclick="mentorForm()">소개 글 작성하기</button>
                                             </div>
                                         </div>
+                                        <!---->
 
                                         <!-- 멘토가 아닐 경우 → 소개글 입력 폼 -->
-                                        <form action="" name="newMentorForm" class="newMentorForm">
+                                        <form action="" name="newMentorForm" class="newMentorForm" style="display: none;">
                                             <div class="s-form-input">
                                                 <p class="form-title">주요 작물</p>
                                                 <div class="flex f-column f-section">
-                                                    <input type="text" name="mainCrops" class="form-input" placeholder="주요 작물을 입력하세요.">
+                                                    <input type="text" name="newMainCrops" class="form-input" placeholder="주요 작물을 입력하세요.">
                                                 </div>
                                             </div>
                                             <div class="s-form-input f-m-top">
                                                 <p class="form-title">연차</p>
                                                 <div class="flex f-column f-section">
-                                                    <select name="years" class="years-select">
+                                                    <select name="newYears" class="years-select">
                                                         <option selected>선택해주세요.</option>
-                                                        <option value="">1~3년차</option>
-                                                        <option value="">3~5년차</option>
-                                                        <option value="">5~7년차</option>
-                                                        <option value="">7~10년차</option>
-                                                        <option value="">10 년차 이상</option>
+                                                        <option value="1~3년차">1~3년차</option>
+                                                        <option value="3~5년차">3~5년차</option>
+                                                        <option value="5~7년차">5~7년차</option>
+                                                        <option value="7~10년차">7~10년차</option>
+                                                        <option value="10 년차 이상">10 년차 이상</option>
                                                     </select>
-                                                </div>
-                                            </div>
-                                            <div class="s-form-input f-m-top">
-                                                <p class="form-title">경력</p>
-                                                <div class="flex f-column f-section">
-                                                    <input type="text" name="career" class="form-input" placeholder="경력을 입력하세요.">
                                                 </div>
                                             </div>
                                             <div class="form-save">
@@ -207,6 +197,34 @@
                                                 <button type="button" class="s-button s-cancel cancelHover" id="mentorCancel">취소</button>
                                             </div>
                                         </form>
+                                        <!------------------>
+
+                                        <!-- 멘토 수정 폼 -->
+<!--                                        <form action="" name="mentorForm">-->
+<!--                                            <div class="s-form-input">-->
+<!--                                                <p class="form-title">주요 작물</p>-->
+<!--                                                <div class="flex f-column f-section">-->
+<!--                                                    <input type="text" name="mainCrops" class="form-input" placeholder="주요 작물을 입력하세요.">-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="s-form-input f-m-top">-->
+<!--                                                <p class="form-title">연차</p>-->
+<!--                                                <div class="flex f-column f-section">-->
+<!--                                                    <select name="years" class="years-select">-->
+<!--                                                        <option selected>선택해주세요.</option>-->
+<!--                                                        <option value="1~3년차">1~3년차</option>-->
+<!--                                                        <option value="3~5년차">3~5년차</option>-->
+<!--                                                        <option value="5~7년차">5~7년차</option>-->
+<!--                                                        <option value="7~10년차">7~10년차</option>-->
+<!--                                                        <option value="10 년차 이상">10 년차 이상</option>-->
+<!--                                                    </select>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-save">-->
+<!--                                                <button type="button" class="s-button s-save saveHover" onclick="mentorSave()">저장</button>-->
+<!--                                                <button type="button" class="s-button s-cancel cancelHover" id="mentorCancel">취소</button>-->
+<!--                                            </div>-->
+<!--                                        </form>-->
                                         <!------------------>
                                     </section>
                                 </div>
@@ -228,8 +246,26 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/myPage/myPage.js"></script>
-<script>
+<script th:inline="javascript">
     $("div.menu-a").removeClass('menu-select');
     $("#myInfoPage").addClass('menu-select');
+
+    /* 새로고침 없이 회원 탈퇴 창 이동*/
+    function tabMoveQuit() {
+        $.ajax({
+            success : function() {
+                window.location.replace('/mypage/setting/quit');
+            },
+        })
+    }
+
+    if (nav != "") {
+        $.ajax({
+            content: nav,
+            success : function(nav) {
+                console.log(nav);
+            },
+        });
+    }
 </script>
 </html>

@@ -58,10 +58,6 @@
                             </div>
                         </article>
                     </a>
-                    <!---->
-                    <a href="" class="ad-banner">
-                        <img src="">
-                    </a>
                 </aside>
             </section>
             <section class="c-side-profile c-padding">
@@ -81,6 +77,27 @@
                             <!------------>
                         </div>
                     </div>
+                    <div id="my-commu">
+                        내 커뮤니티 활동 내역
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="black" xmlns="http://www.w3.org/2000/svg" class="c-application c-icon" style="fill: rgb(207, 212, 215); transform: rotate(180deg);" data-v-bd9f2bcc="" data-v-3f88ef76="" data-v-1d8d6f66=""><path fill-rule="evenodd" clip-rule="evenodd" d="M7.64645 4.64645C7.84171 4.45118 8.15829 4.45118 8.35355 4.64645L12.8536 9.14645C13.0488 9.34171 13.0488 9.65829 12.8536 9.85355C12.6583 10.0488 12.3417 10.0488 12.1464 9.85355L8 5.70711L3.85355 9.85355C3.65829 10.0488 3.34171 10.0488 3.14645 9.85355C2.95118 9.65829 2.95118 9.34171 3.14645 9.14645L7.64645 4.64645Z" data-v-bd9f2bcc=""></path></svg>
+                    </div>
+                    <div id="my-commu-wrap">
+                        <hr>
+                        <div id="c-l-wrap">
+                            <ul style="width: 100%;">
+                                <li>
+                                    <!-- 내가 작성한 글 -->
+                                    <div class="li-txt">내가 작성한 게시글</div>
+                                    <div class="li-txt">촐 0개</div>
+                                </li>
+                                <li>
+                                    <!-- 내가 작성한 댓글 -->
+                                    <div class="li-txt">내가 남긴 댓글</div>
+                                    <div class="li-txt">촐 0개</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </aside>
             </section>
         </div>
@@ -93,5 +110,20 @@
 </div>
 <!-- 푸터 -->
 <div th:replace="/footer/footer.html :: footer" class="footer"/>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+    $("#my-commu").on("click", function(){
+        if($(this).next().css("max-height") == "0px"){
+            $(this).next().css("max-height", "70px");
+            $("#my-commu>svg").css("transform", "rotate(0)");
+        } else {
+            $(this).next().css("max-height", "0px");
+            $("#my-commu>svg").css("transform", "rotate(180deg)");
+        }
+
+        // $(this).next().css("max-height", 0);
+    });
+</script>
 </body>
 </html>

@@ -24,8 +24,6 @@ button{cursor: pointer;}
     position: relative;
     width: 100%;
     box-sizing: border-box;
-
-    margin-top: 69px;
 }
 
 div.notice-wrap {
