@@ -44,6 +44,16 @@
                         <p>아르바이트의 제목과 간단한 한 줄 소개를 해주세요.</p>
                     </div>
                     <div class="input-div">
+                        <span>대표 이미지</span>
+                        <p>게시글의 대표 이미지로 사용할 사진을 첨부해주세요.(259 x 136px)</p>
+                        <img style="width: 259px; height: 136px; border: 1px solid #e1e4e6" id="preview-image" src="/image/alba/file.png">
+                        <label class="input-file-button" for="input-image">
+                            업로드
+                        </label>
+                        <input type="file" class="input-div-input" id="input-image" style="display: none">
+                    </div>
+
+                    <div class="input-div">
                         <span>글 제목</span>
                         <p>모집하고 싶은 아르바이트의 제목을 입력해주세요.</p>
                         <input type="text" class="input-div-input" placeholder="예시) 딸기재배 아르바이트 모집">
@@ -64,17 +74,25 @@
                     <div class="input-div">
                         <span>모집기간</span>
                         <p>모집하는 기간을 입력해주세요.</p>
-                        <input type="text" class="input-div-input" placeholder="예시) 22년1월1일~22년12월31일">
+                        <input type="date" class="input-div-input" id="startDate"> ~ <input type="date" class="input-div-input" id="endDate">
                     </div>
                     <div class="input-div">
                         <span>작업날짜</span>
                         <p>실제로 작업이 진행되는 날짜를 입력해주세요.</p>
-                        <input type="date" class="input-div-input" placeholder="예시) 11월27일" >
+                        <input type="date" id="workDay" class="input-div-input">
                     </div>
                     <div class="input-div">
                         <span>모집인원</span>
                         <p>모집하고 싶은 인원을 입력해주세요.</p>
                         <input type="number" class="input-div-input" placeholder="예시) 5">
+                    </div>
+                    <div class="input-div">
+                        <span>장소</span>
+                        <p>아르바이트 장소를 입력해주세요.</p>
+                        <!--이후에 백엔드에서 주소 검색 api 연동 필요-->
+                        <div id="map" style="width:490px; height:200px; margin-bottom: 20px"></div>
+                        <input type="text" id="locationInput" class="input-div-input" placeholder="지번, 도로명 주소를 입력해주세요.">
+                        <input type="button" value="장소 검색" class="locationBtn" onclick="mapSearch();">
                     </div>
                     <div class="input-div">
                         <span>시급</span>
@@ -161,7 +179,6 @@
                             <!--프로필 아이콘(간단설명)-->
                             <div class="img-icon">
                                 <img src="/image/alba/profile.png">
-                                <p><input type="text" placeholder="ex)10년차"></p>
                                 <p>농장주</p>
                                 <h1><input type="text" placeholder="ex)김00"></h1>
                                 <span><img src="/image/alba/mentoIcon.png">인증 멘토</span>
@@ -309,5 +326,6 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/header/header.js"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f55e971f1bb222a365c9e75eb0175b7e&libraries=services"></script>
 <script src="/js/alba/write.js"></script>
 </html>
