@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/common/font.css"> <!-- 폰트 -->
-    <link rel="stylesheet" href="/css/admin/adminCommon/side_menu.css"> <!-- 사이드 메뉴 & 해더 -->
+    <link rel="stylesheet" href="/css/admin/adminCommon/sideMenuList.css"> <!-- 사이드 메뉴 & 해더 -->
     <link rel="stylesheet" href="/css/admin/adminCommon/contents.css"> <!-- 컨텐츠 공통 스타일 -->
     <link rel="stylesheet" href="/css/admin/adminProgram/program_participant.css"> <!-- 테이블 개별 스타일 -->
     <link rel="stylesheet" href="/css/admin/adminCommon/form.css"> <!-- 검색 폼 & 테이블 공통 스타일 -->
@@ -35,7 +35,7 @@
             <span id="admin-mode">관리자 모드</span>
             <span id="userCount">가입된 회원 수 총 <strong> 21343 </strong>명</span>
         </header>
-
+        <div id="wrapContents">
         <!-- 컨텐츠 검색 부분 -->
         <div class="p-contents">
 
@@ -45,7 +45,7 @@
                         <span class="s-form">
                             <select name="searchSelect" class="val">
                                 <option value="programName">프로그램명</option>
-                                <option value="id">작성자</option>
+                                <option value="id">지원자</option>
                                 <option value="address">위치</option>
                             </select>
                         </span>
@@ -72,14 +72,13 @@
             <table>
                 <tr class="title">
                     <th class="num">번호</th>
-                    <th class="id">작성자</th>
+                    <th class="id">지원자</th>
                     <th class="title">프로그램명</th>
-                    <th class="work-date">작업날짜</th>
-                    <th class="work-time">작업시간</th>
+                    <th class="work-date">진행날짜</th>
+                    <th class="work-time">진행시간</th>
                     <th class="crop">작물</th>
                     <th class="address">위치</th>
                     <th class="date">지원날짜</th>
-                    <th class="delete"></th>
                 </tr>
                 <!-- ↓ 데이터 출력 -->
                 <tr>
@@ -91,7 +90,26 @@
                     <td>잡초</td>
                     <td>서울</td>
                     <td>2022-10-01</td>
-                    <td class="delete"><input type="button" value="거절" onclick="noCheck2()"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>herd</td>
+                    <td class="title" onclick="location.href='#'">잡초 뽑기</td>
+                    <td>2022-11-11</td>
+                    <td>4h</td>
+                    <td>벼</td>
+                    <td>경기</td>
+                    <td>2022-11-01</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>태관</td>
+                    <td class="title" onclick="location.href='#'">잡초 뽑기</td>
+                    <td>2022-12-11</td>
+                    <td>7h</td>
+                    <td>사과 재배</td>
+                    <td>강원</td>
+                    <td>2022-11-01</td>
                 </tr>
             </table>
 
@@ -116,7 +134,7 @@
             </div>
 
         </div>
-
+        </div>
     </div>
 
 </div>

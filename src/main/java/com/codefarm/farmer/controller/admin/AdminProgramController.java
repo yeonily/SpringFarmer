@@ -9,17 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminProgramController {
 
     @GetMapping("/program-participant")
-    public void adminProgramParticipant() {
-    }
+    public String adminProgramParticipant() {return "/adminProgram/program-participant";}
 
     @GetMapping("/program-list")
-    public void adminProgramList(){
-
-    }
+    public String adminProgramList(){ return "/adminProgram/program-list";}
 
     @GetMapping("/program-pay")
-    public void adminPay(){
-
-    }
+    public String adminPay(){return "/adminProgram/program-pay";}
 
 }

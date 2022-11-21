@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/common/font.css"/>
-    <link rel="stylesheet" href="/css/admin/adminCommon/side_menu.css"> <!-- 사이드 메뉴 & 해더 -->
+    <link rel="stylesheet" href="/css/admin/adminCommon/sideMenuList.css"> <!-- 사이드 메뉴 & 해더 -->
     <link rel="stylesheet" href="/css/admin/adminMain/main_contents.css"> <!-- 메인 컨텐츠 -->
     <link rel="icon" href="/image/header/favicon.png" />
     <link rel="shortcut icon" href="/image/header/favicon.png" />
@@ -40,7 +40,7 @@
                     <div class="content-title">
                         <div class="title">최근 가입한 사용자</div>
                         <div class="title2">
-                            <a href="../../user/html/user.html">더보기 →</a>
+                            <a th:href="@{/adminUser/user}">더보기 →</a>
                         </div>
                     </div>
                     <div class="c-content">
@@ -98,7 +98,7 @@
                     <div class="content-title">
                         <div class="title">아르바이트 관리</div>
                         <div class="title2">
-                            <a href="../../reply/html/reply.html">더보기 →</a>
+                            <a th:href="@{/adminJob/job}">더보기 →</a>
                         </div>
                     </div>
                     <div class="c-content">
@@ -145,7 +145,7 @@
                     <div class="content-title">
                         <div class="title">댓글 관리</div>
                         <div class="title2">
-                            <a href="../../reply/html/reply.html">더보기 →</a>
+                            <a th:href="@{/adminReply/board-reply}">더보기 →</a>
                         </div>
                     </div>
                     <div class="c-content">
@@ -194,7 +194,7 @@
                     <div class="content-title">
                         <div class="title">프로그램 관리</div>
                         <div class="title2">
-                            <a href="../../reply/html/reply.html">더보기 →</a>
+                            <a th:href="@{/adminProgram/program-list}">더보기 →</a>
                         </div>
                     </div>
                     <div class="c-content">
@@ -241,7 +241,7 @@
                     <div class="content-title">
                         <div class="title">멘토홍보</div>
                         <div class="title2">
-                            <a href="../../board/html/mentor.html">더보기 →</a>
+                            <a th:href="@{/adminMentor/promotion}">더보기 →</a>
                         </div>
                     </div>
                     <div class="c-content">
@@ -282,7 +282,7 @@
                     <div class="content-title">
                         <div class="title">자유게시판</div>
                         <div class="title2">
-                            <a href="../../board/html/board.html">더보기 →</a>
+                            <a th:href="@{/adminBoard/board}">더보기 →</a>
                         </div>
                     </div>
                     <div class="c-content">

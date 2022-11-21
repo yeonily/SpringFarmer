@@ -25,6 +25,9 @@ td.askStatusWait{color:red;}
 td.askStatusOk{color: green;}
 td.statusOk{color: green;}
 td.statusNo{color: red;}
+td.payStatusCancel {color: red;}
+td.payStatusOk {color: green;}
+td.
 
 div#write {
     position: absolute;

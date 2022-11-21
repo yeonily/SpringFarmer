@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/common/font.css"> <!-- 폰트 -->
-    <link rel="stylesheet" href="/css/admin/adminCommon/side_menu.css"> <!-- 사이드 메뉴 & 해더 -->
+    <link rel="stylesheet" href="/css/admin/adminCommon/sideMenuList.css"> <!-- 사이드 메뉴 & 해더 -->
     <link rel="stylesheet" href="/css/admin/adminCommon/contents.css"> <!-- 컨텐츠 공통 스타일 -->
     <link rel="stylesheet" href="/css/admin/adminCommon/page.css"> <!-- 페이징 -->
     <link rel="stylesheet" href="/css/admin/adminNotice/noticeForm.css"> <!-- 검색 폼 & 테이블 공통 스타일 -->
@@ -34,7 +34,7 @@
             <span id="admin-mode">관리자 모드</span>
             <span id="userCount">가입된 회원 수 총 <strong> 21343 </strong>명</span>
         </header>
-
+        <div id="wrapContents">
         <!-- 컨텐츠 검색 부분 -->
         <div class="p-contents chart-no">
 
@@ -88,7 +88,7 @@
                     <td><img src="/image/admin/fileImage.png"></td>
                     <td>2022-10-03 10:00</td>
                     <td>86</td>
-                    <td class="revise"><input type="button" value="수정" onclick="reviseNoticeCheck()"></td>
+                    <td class="revise"><input type="button" value="수정" onclick="location.href='/adminNotice/notice-update'"></td>
                     <td class="delete"><input type="button" value="삭제" onclick="deleteNoticeCheck()"></td>
                 </tr>
                 <tr>
@@ -99,7 +99,7 @@
                     <td><img src="/image/admin/fileImage.png"></td>
                     <td>2022-10-03 10:00</td>
                     <td>86</td>
-                    <td class="revise"><input type="button" value="수정" onclick="reviseNoticeCheck()"></td>
+                    <td class="revise"><input type="button" value="수정" onclick="location.href='/adminNotice/notice-update'"></td>
                     <td class="delete"><input type="button" value="삭제" onclick="deleteNoticeCheck()"></td>
                 </tr>
                 <tr>
@@ -110,7 +110,7 @@
                     <td><img src="/image/admin/fileImage.png"></td>
                     <td>2022-10-03 10:00</td>
                     <td>86</td>
-                    <td class="revise"><input type="button" value="수정" onclick="reviseNoticeCheck()"></td>
+                    <td class="revise"><input type="button" value="수정" onclick="location.href='/adminNotice/notice-update'"></td>
                     <td class="delete"><input type="button" value="삭제" onclick="deleteNoticeCheck()"></td>
                 </tr>
             </table>
@@ -137,6 +137,7 @@
             <div id="write">
                 <input type="button" onclick="location.href='notice_write.html'" value="작성">
             </div>
+        </div>
         </div>
     </div>
 </div>

@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminPolicyController {
 
     @GetMapping("/policy")
-    public void adminPolicy() {
+    public String adminPolicy() {return "/adminPolicy/policy";
     }
 
     @GetMapping("/policy-write")
-    public void adminPolicyWrite() {
+    public String adminPolicyWrite() {return "/adminPolicy/policy-write";
     }
 
     @GetMapping("/policy-update")
-    public void adminPolicyUpdate() {
+    public String adminPolicyUpdate() {return "/adminPolicy/policy-update";
     }
 }

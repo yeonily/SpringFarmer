@@ -55,7 +55,7 @@ function reviseNoticeCheck() {
     var msg = "이 공지를 수정 하시겠습니까?";
     var flag = confirm(msg);
 
-    // if (flag) alert('수정 완료');
+    if (flag) alert('수정 완료');
 }
 
 // 공지 삭제
@@ -73,6 +73,37 @@ function deleteBoardCheck() {
 
     if (flag) alert('삭제 완료');
 }
+
+function deleteListCheck() {
+    var msg = "이 게시글을 삭제 하시겠습니까?";
+    var flag = confirm(msg);
+
+    if (flag) alert('삭제 완료');
+}
+
+function doreplyCheck() {
+    var msg = "답변을 등록하시겠습니까?";
+    var flag = confirm(msg);
+
+    if (flag) alert('답변 완료');
+}
+
+function deleteWriteCheck() {
+    var msg = "이 게시글을 삭제 하시겠습니까?";
+    var flag = confirm(msg);
+
+    if (flag) alert('삭제 완료');
+}
+
+function savePolicyCheck() {
+    var msg = "글을 등록하시겠습니까?";
+    var flag = confirm(msg);
+
+    if (flag) alert('등록 완료');
+}
+
+
+
 
 
 

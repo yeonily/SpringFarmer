@@ -9,12 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminMentorController {
 
     @GetMapping("/mentor")
-    public void adminMentorMentor() {
-    }
+    public String adminMentorMentor() {return "/adminMentor/mentor";}
 
     @GetMapping("/promotion")
-    public void adminMentorPromotion(){
-
-    }
+    public String adminMentorPromotion(){return "/adminMentor/promotion";}
 
 }

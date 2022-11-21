@@ -9,10 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminBannerController {
 
     @GetMapping("/banner")
-    public void adminBanner() {
+    public String adminBanner() {
+        return "/adminBanner/banner";
     }
 
     @GetMapping("/banner-write")
-    public void adminAskWrite() {
+    public String adminBannerWrite() {
+        return "/adminBanner/banner-write";
     }
 }
