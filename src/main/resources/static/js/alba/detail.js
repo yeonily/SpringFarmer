@@ -64,7 +64,7 @@ function mapSearch() {
     var geocoder = new kakao.maps.services.Geocoder();
 
     // 주소로 좌표를 검색합니다
-    geocoder.addressSearch("공항대로2길 52", function(result, status) {
+    geocoder.addressSearch("충청남도 논산시 부적면 신교리 677-2 아침애딸기", function(result, status) {
         // 정상적으로 검색이 완료됐으면
         if (status === kakao.maps.services.Status.OK) {
             $("div#map").show();

@@ -33,6 +33,9 @@ html, body {
     cursor: pointer;
 }
 
+.fake-header {
+    height: 0 !important;
+}
 
 /*메인 슬라이드 배너*/
 div.main_banner div.buttonTest {
