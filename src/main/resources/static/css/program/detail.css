@@ -28,6 +28,11 @@ button {
     cursor: pointer;
 }
 
+.fake-header{
+    height: 69px;
+    position: relative;
+}
+
 #main-grid{
     /*min-height: calc(100vh - 324px);*/
     min-height: 1200px;
