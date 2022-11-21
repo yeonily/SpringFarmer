@@ -26,8 +26,6 @@ button{cursor: pointer;}
     width: 100%;
     min-height: calc(100vh - 324px);
     box-sizing: border-box;
-
-    margin-top: 69px;
 }
 
 div#community-wrap {
@@ -241,6 +239,59 @@ div.p-text {
     font-size: 12px;
     line-height: 15px;
     font-weight: 400;
+}
+
+div#my-commu {
+    display: flex!important;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
+    background-color: #FCFCFC;
+    padding: 8px 12px 8px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #3C4144;
+}
+
+div#my-commu-wrap {
+    transition: all .2s linear;
+    overflow: hidden;
+    max-height: 70px;
+    /*max-height: 135px;*/
+}
+
+div#my-commu-wrap>hr {
+    margin: 0;
+    border: 0;
+    border-color: #EAECEE;
+    border-style: dashed;
+    border-top: 1px;
+    width: inherit;
+    height: 0;
+}
+
+div#c-l-wrap {
+    display: flex!important;
+    flex-direction: row;
+    border-radius: 0 0 4px 4px;
+    background-color: #FCFCFC;
+    padding: 12px 12px 12px 12px;
+}
+
+div#c-l-wrap>ul>li {
+    display: flex!important;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+div.li-txt {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+    color: #767D82;
 }
 
 div#write-wrap {

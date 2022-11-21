@@ -307,7 +307,7 @@ button.s-button.s-cancel {
 div.mentor-no {
     background-color: rgb(252, 252, 252);
     padding: 16px 20px;
-    min-height: 300px;
+    min-height: 250px;
     display: flex!important;
     flex-direction: column;
     justify-content: center;
@@ -335,8 +335,6 @@ button.mentorBtn {
     background-color: #e9f2e6;
     color: #45a16d;
 }
-
-/*.newMentorForm{display: none;}*/
 
 button.mentorBtn:hover {background-color: #cfe3d9;}
 select.years-select {

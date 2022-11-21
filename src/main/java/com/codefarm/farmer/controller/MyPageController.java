@@ -2,8 +2,12 @@ package com.codefarm.farmer.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Optional;
 
 @Controller
 @Slf4j
@@ -11,8 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MyPageController {
 
     @GetMapping("/setting")
-    public String mainPage(){
-        return "/myPage/setting";
+//    tab : 마이페이지 메인 화면에서 탭 이동 때 사용
+    public Model mainPage(@RequestParam(value = "nav", required = false)String nav, Model model){
+        log.info(nav);
+        return model.addAttribute(Optional.ofNullable("/myPage/setting").orElse("/myPage/setting" + ("?nav=" + nav)), nav);
+//        return Optional.ofNullable("/myPage/setting").orElse("/myPage/setting?nav" + nav);
     }
 
     @GetMapping("/setting/quit")

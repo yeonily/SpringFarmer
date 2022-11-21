@@ -195,6 +195,45 @@ p.commu-content {
     letter-spacing: .02em;
 }
 
+#files {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+div.file {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    padding: 5px 10px 5px;
+    /*background: #ebebeb69;*/
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: rgb(32, 35, 37);
+    overflow: hidden;
+    cursor: pointer;
+}
+div.file:hover {background: #ebebeb69;}
+
+span.f-img>img {
+    height: 13px;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+span.f-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+span.f-size {
+    margin-left: 4px;
+    font-size: 11px;
+    line-height: 15px;
+}
+
 p.commu-date {
     position: relative;
     margin-bottom: 8px;

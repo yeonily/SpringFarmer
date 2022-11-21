@@ -2,6 +2,7 @@
 * community/register.html
 * */
 
+
 // 글자수 세는 이벤트
 $('#r-content').keyup(function () {
     let $content = $(this).val();
@@ -53,5 +54,21 @@ $('.r-input').on("keyup", function() {
     } else {
         $(".writeBtn").prop("disabled", true);
     }
+});
+
+// 이미지 삭제 버튼
+// $("div.uploadFile").mouseenter(function(){
+//     $(this).next().show();
+// });
+// $("div.uploadFile").mouseleave(function(){
+//     $(this).next().hide();
+// });
+
+$('div.uploadFile').hover(function() {
+    $(this).next().show();
+    $(this).css("filter", "grayscale(80%)");
+}, function(){
+    $(this).next().hide();
+    $(this).css("filter", "grayscale(0)");
 });
 

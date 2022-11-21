@@ -21,11 +21,6 @@ ul {
 }
 button{cursor: pointer;}
 
-div.fake-header {
-    position: relative;
-    height: 69px;
-}
-
 .marginT {
     margin-top: 32px!important;
     margin-bottom: 32px!important;
