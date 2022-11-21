@@ -59,7 +59,6 @@ button {
 .c-grid-container{
     background-color: inherit;
     min-height: 100vh;
-    margin-top: 60px;
     position: relative;
     padding-right: 16px;
     padding-left: 16px;
@@ -472,6 +471,11 @@ button.up{
     background-color: transparent;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0xNiAxMHY0aDR2MmgtNHY0aC0ydi00aC00di0yaDR2LTRoMnoiIGZpbGw9IiMzMzMiIGZpbGwtcnVsZT0ibm9uemVybyIvPgo8L3N2Zz4K);
     vertical-align: top;
+}
+
+.selected-header{
+    color: #040505!important;
+    font-weight: 600!important;
 }
 
 

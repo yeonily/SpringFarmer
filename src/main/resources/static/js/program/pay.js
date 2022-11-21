@@ -2,6 +2,11 @@
 * program/pay.html
 * */
 
+//헤더 대카 표시
+$(document).ready(function () {
+    $("ul.nav_ul li:nth-child(2)").children("a").addClass("selected-header");
+})
+
 
 
 // input에 이름 입력 시 실시간으로 출력

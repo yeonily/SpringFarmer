@@ -89,6 +89,7 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    flex-direction: column;
 }
 
 .filter-list {
@@ -313,6 +314,11 @@ button {
     word-wrap: break-word;
 }
 
+.selected-header{
+    color: #040505!important;
+    font-weight: 600!important;
+}
+
 @media only screen and (min-width: 768px) {
     .p-application-row {
         margin-right: -12px;
@@ -344,6 +350,7 @@ button {
 
     .filter {
         flex-direction: row;
+
     }
 
     .program-list-container {
@@ -384,6 +391,10 @@ button {
         -webkit-box-flex: 0;
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    .p-application-col {
+        margin-bottom: 0;
     }
 
 

@@ -668,6 +668,12 @@ strong.s{
     letter-spacing: .02em;
     margin: 0;
 }
+
+.selected-header{
+    color: #040505!important;
+    font-weight: 600!important;
+}
+
 @media only screen and (min-width: 768px){
     .d-application-row{
         margin-right: -12px;

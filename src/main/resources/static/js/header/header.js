@@ -52,3 +52,4 @@ $(".mask, .main_banner, .sub_banner").on("click", function (){
     $("div.swiper-wrapper").css("background", "inherit");
     $("div.swiper-wrapper").css("opacity", "1");
 });
+

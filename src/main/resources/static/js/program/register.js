@@ -2,8 +2,11 @@
 * program/register.html
 * */
 
-$(window).on("load", function () {
-    $(this).addClass("pick");
+vimg = $('<img>', {
+    'src':'/image/program/next_register.gif',
+    "class":"footer-img-next"})
+
+function page1(){
     $("#pg1").show();
     $("#pg2").hide();
     $("#pg3").hide();
@@ -12,24 +15,11 @@ $(window).on("load", function () {
     $("#guide2").hide();
     $("#guide3").hide();
     $("#guide4").hide();
-})
+    $(".before").attr("disabled", true);
+    $(".next").html("다음").append(vimg);
+}
 
-$("#pg-1").on("click", function() {
-    $(".side-box-title").removeClass("pick");
-    $(this).addClass("pick");
-    $("#pg1").show();
-    $("#pg2").hide();
-    $("#pg3").hide();
-    $("#pg4").hide();
-    $("#guide1").show();
-    $("#guide2").hide();
-    $("#guide3").hide();
-    $("#guide4").hide();
-});
-
-$("#pg-2").on("click", function() {
-    $(".side-box-title").removeClass("pick");
-    $(this).addClass("pick");
+function page2(){
     $("#pg1").hide();
     $("#pg2").show();
     $("#pg3").hide();
@@ -38,11 +28,11 @@ $("#pg-2").on("click", function() {
     $("#guide2").show();
     $("#guide3").hide();
     $("#guide4").hide();
-});
+    $(".before").attr("disabled", false);
+    $(".next").html("다음").append(vimg);
+}
 
-$("#pg-3").on("click", function() {
-    $(".side-box-title").removeClass("pick");
-    $(this).addClass("pick");
+function page3(){
     $("#pg1").hide();
     $("#pg2").hide();
     $("#pg3").show();
@@ -51,11 +41,11 @@ $("#pg-3").on("click", function() {
     $("#guide2").hide();
     $("#guide3").show();
     $("#guide4").hide();
-});
+    $(".before").attr("disabled", false);
+    $(".next").html("다음").append(vimg);
+}
 
-$("#pg-4").on("click", function() {
-    $(".side-box-title").removeClass("pick");
-    $(this).addClass("pick");
+function page4(){
     $("#pg1").hide();
     $("#pg2").hide();
     $("#pg3").hide();
@@ -64,6 +54,40 @@ $("#pg-4").on("click", function() {
     $("#guide2").hide();
     $("#guide3").hide();
     $("#guide4").show();
+    $(".before").attr("disabled", false);
+    $(".next").html("제출하기");
+}
+
+
+//로딩 시 첫 페이지 먼저 보여주기
+$(window).on("load", function () {
+    $(this).addClass("pick");
+    page1();
+})
+
+//왼쪽 탭 클릭하면 해당 부분 보여주기
+$("#pg-1").on("click", function() {
+    $(".side-box-title").removeClass("pick");
+    $(this).addClass("pick");
+    page1();
+});
+
+$("#pg-2").on("click", function() {
+    $(".side-box-title").removeClass("pick");
+    $(this).addClass("pick");
+    page2();
+});
+
+$("#pg-3").on("click", function() {
+    $(".side-box-title").removeClass("pick");
+    $(this).addClass("pick");
+    page3();
+});
+
+$("#pg-4").on("click", function() {
+    $(".side-box-title").removeClass("pick");
+    $(this).addClass("pick");
+    page4();
 });
 
 //예시 선택하기
@@ -184,3 +208,36 @@ closeModal.addEventListener("click", evt => {
     modal.style.display = "none"
 })
 
+/*다음 버튼*/
+$("button.next").on("click", function() {
+    if($("#pg-1").hasClass('pick')){
+        $("#pg-1").removeClass("pick");
+        $("#pg-2").addClass("pick");
+        page2();
+    }else if($("#pg-2").hasClass('pick')){
+        $("#pg-2").removeClass("pick");
+        $("#pg-3").addClass("pick");
+        page3();
+    }else if($("#pg-3").hasClass('pick')) {
+        $("#pg-3").removeClass("pick");
+        $("#pg-4").addClass("pick");
+        page4();
+    }
+});
+
+/*이전 버튼*/
+$("button.before").on("click", function() {
+     if($("#pg-2").hasClass('pick')){
+        $("#pg-1").addClass("pick");
+        $("#pg-2").removeClass("pick");
+        page1();
+    }else if($("#pg-3").hasClass('pick')) {
+        $("#pg-2").addClass("pick");
+        $("#pg-3").removeClass("pick");
+        page2();
+    }else if($("#pg-4").hasClass('pick')) {
+        $("#pg-3").addClass("pick");
+        $("#pg-4").removeClass("pick");
+        page3();
+    }
+});

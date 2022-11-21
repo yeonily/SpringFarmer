@@ -2,6 +2,12 @@
 * program/apply.html
 * */
 
+//헤더 대카 표시
+$(document).ready(function () {
+    $("ul.nav_ul li:nth-child(2)").children("a").addClass("selected-header");
+})
+
+
 //버튼 클릭 시 숫자 증가,감소
 function count(type)  {
     // 결과를 표시할 element

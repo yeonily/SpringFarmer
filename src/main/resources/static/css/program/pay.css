@@ -59,7 +59,6 @@ button {
 .c-grid-container{
     background-color: inherit;
     min-height: 100vh;
-    margin-top: 32px;
     position: relative;
     padding-right: 16px;
     padding-left: 16px;
@@ -659,6 +658,10 @@ hr.divider{
     word-wrap: break-word;
 }
 
+.selected-header{
+    color: #040505!important;
+    font-weight: 600!important;
+}
 
 @media only screen and (min-width: 768px){
     .c-row{
