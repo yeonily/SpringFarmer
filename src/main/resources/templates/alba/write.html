@@ -17,7 +17,7 @@
                 <div class="header-left">새 아르바이트</div>
                 <div class="header-btn">
                     <button type="button" class="saveBtn">저장하기</button>
-                    <button type="button" onclick='history.back()'>나가기</button>
+                    <button type="button" id="btn-modal">나가기</button>
                 </div>
             </div>
         </div>
@@ -206,7 +206,7 @@
             <div class="right-menu-outer">
                 <!--첫 번째(메인소개) 페이지 예시-->
                 <div class="example">예시<span>|</span><strong>메인소개 작성하기</strong>
-                    <img src="/image/alba/checkImg.png">
+                    <img class="iconImg" src="/image/alba/checkImg.png">
                     <div class="example-content" style="display: none">
                         <div>
                             <p>지원자의 시선에서!</p>
@@ -223,7 +223,7 @@
 
                 <!--두 번째(모집정보) 페이지 예시-->
                 <div class="example">예시<span>|</span><strong>모집정보 작성하기</strong>
-                    <img src="/image/alba/checkImg.png">
+                    <img class="iconImg" src="/image/alba/checkImg.png">
                     <div class="example-content" style="display: none">
                         <div>
                             <p>모집기간을 자세히!</p>
@@ -250,7 +250,7 @@
 
                 <!--세 번째(상세내용1) 페이지 예시-->
                 <div class="example">예시<span>|</span><strong>세부내용1 작성하기</strong>
-                    <img src="/image/alba/checkImg.png">
+                    <img class="iconImg" src="/image/alba/checkImg.png">
                     <div class="example-content" style="display: none">
                         <div>
                             <p>대표소개는 특색있게!</p>
@@ -272,7 +272,7 @@
 
                 <!--네 번째(상세내용2) 페이지 예시-->
                 <div class="example">예시<span>|</span><strong>세부내용2 작성하기</strong>
-                    <img src="/image/alba/checkImg.png">
+                    <img class="iconImg" src="/image/alba/checkImg.png">
                     <div class="example-content" style="display: none">
                         <div>
                             <p>경력 소개는 곧 명함!</p>
@@ -294,7 +294,7 @@
 
                 <!--다섯 번째(프로필) 페이지 예시-->
                 <div class="example">예시<span>|</span><strong>프로필 작성하기</strong>
-                    <img src="/image/alba/checkImg.png">
+                    <img class="iconImg" src="/image/alba/checkImg.png">
                     <div class="example-content" style="display: none">
                         <div>
                             <p>자신을 아이콘으로!</p>
@@ -323,6 +323,29 @@
             <button type="button" class="submitBtn" style="display: none">제출<img class="footer-img-next" src="/image/alba/next_register.gif"></button>
         </div>
     </div>
+
+    <!--모달-->
+    <div>
+        <aside id="c-overlay">
+            <div class="register-modal">
+                <div class="modal-wrapper">
+                    <div class="modal-title-wrapper">
+                        <div class="modal-title">정말 그만둘까요?</div>
+                    </div>
+                    <div class="modal-content-wrapper">
+                        <div class="modal-content">
+                            오늘, 마음 먹은 김에 프로그램을 만들고<br>농장주님을 기다리고 있는 사람들을 만나보세요!
+                            <div class="exit-modal-action-container">
+                                <button class="button-1"><div class="flex"/>나가기<div class="flex"/></button>
+                                <button class="button-2"><div class="flex"/>계속 작성하기<div class="flex"/></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/header/header.js"></script>

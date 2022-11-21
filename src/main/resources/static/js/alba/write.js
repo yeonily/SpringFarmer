@@ -81,26 +81,28 @@ $("button.next").on("click", function() {
         $("#left-menu ul li").not($("#left-menu ul li:nth-child(2)")).css({color: 'rgb(173, 179, 184)'});
         menu2();
         changeBtn();
+        $("div.example .iconImg").css({'transform':'rotate('+0+'deg)'});
 
     } else if($("#left-menu ul li:nth-child(2)").css("color") == "rgb(32, 35, 37)") {
         $("#left-menu ul li:nth-child(3)").css("color", "rgb(32, 35, 37)");
         $("#left-menu ul li").not($("#left-menu ul li:nth-child(3)")).css({color: 'rgb(173, 179, 184)'});
         menu3();
         changeBtn();
+        $("div.example .iconImg").css({'transform':'rotate('+0+'deg)'});
 
     } else if($("#left-menu ul li:nth-child(3)").css("color") == "rgb(32, 35, 37)") {
-
         $("#left-menu ul li:nth-child(4)").css("color", "rgb(32, 35, 37)");
         $("#left-menu ul li").not($("#left-menu ul li:nth-child(4)")).css({color: 'rgb(173, 179, 184)'});
         menu4();
         changeBtn();
+        $("div.example .iconImg").css({'transform':'rotate('+0+'deg)'});
 
     } else if($("#left-menu ul li:nth-child(4)").css("color") == "rgb(32, 35, 37)") {
-
         $("#left-menu ul li:nth-child(5)").css("color", "rgb(32, 35, 37)");
         $("#left-menu ul li").not($("#left-menu ul li:nth-child(5)")).css({color: 'rgb(173, 179, 184)'});
         menu5();
         changeBtn();
+        $("div.example .iconImg").css({'transform':'rotate('+0+'deg)'});
     }
 });
 
@@ -111,24 +113,28 @@ $("button.prev").on("click", function() {
         $("#left-menu ul li").not($("#left-menu ul li:nth-child(1)")).css({color: 'rgb(173, 179, 184)'});
         menu1();
         changeBtn();
+        $("div.example .iconImg").css({'transform':'rotate('+0+'deg)'});
 
     } else if($("#left-menu ul li:nth-child(3)").css("color") == "rgb(32, 35, 37)") {
         $("#left-menu ul li:nth-child(2)").css("color", "rgb(32, 35, 37)");
         $("#left-menu ul li").not($("#left-menu ul li:nth-child(2)")).css({color: 'rgb(173, 179, 184)'});
         menu2();
         changeBtn();
+        $("div.example .iconImg").css({'transform':'rotate('+0+'deg)'});
 
     } else if($("#left-menu ul li:nth-child(4)").css("color") == "rgb(32, 35, 37)") {
         $("#left-menu ul li:nth-child(3)").css("color", "rgb(32, 35, 37)");
         $("#left-menu ul li").not($("#left-menu ul li:nth-child(3)")).css({color: 'rgb(173, 179, 184)'});
         menu3();
         changeBtn();
+        $("div.example .iconImg").css({'transform':'rotate('+0+'deg)'});
 
     } else if($("#left-menu ul li:nth-child(5)").css("color") == "rgb(32, 35, 37)") {
         $("#left-menu ul li:nth-child(4)").css("color", "rgb(32, 35, 37)");
         $("#left-menu ul li").not($("#left-menu ul li:nth-child(4)")).css({color: 'rgb(173, 179, 184)'});
         menu4();
         changeBtn();
+        $("div.example .iconImg").css({'transform':'rotate('+0+'deg)'});
     }
 });
 
@@ -137,8 +143,17 @@ $("button.prev").on("click", function() {
                 /*만약 우측 메뉴 클릭을 했을 때*/
 /*-----------------------------------------------------------*/
 $("#right-menu").on("click", function() {
+    if($("div.example-content").css("display") == "none") {
+        $("div.example .iconImg").css({'transform':'rotate('+180+'deg)'});
+    } else {
+        $("div.example .iconImg").css({'transform':'rotate('+0+'deg)'});
+    }
     $("div.example div.example-content").toggle();
 });
+
+
+
+
 
 /*-----------------------------------------------------------*/
                         /*좌측 메뉴 선택*/
@@ -146,26 +161,31 @@ $("#right-menu").on("click", function() {
 /*첫 번째 메뉴(서브메뉴) 선택했을 때*/
 $("#left-menu ul li:nth-child(1)").on("click",function(){
     menu1();
+    $("div.example .iconImg").css({'transform':'rotate('+0+'deg)'});
 });
 
 /*두 번째 메뉴(서브메뉴) 선택했을 때*/
 $("#left-menu ul li:nth-child(2)").on("click",function(){
     menu2();
+    $("div.example .iconImg").css({'transform':'rotate('+0+'deg)'});
 });
 
 /*세 번째 메뉴(상세내용1) 선택했을 때*/
 $("#left-menu ul li:nth-child(3)").on("click",function(){
     menu3();
+    $("div.example .iconImg").css({'transform':'rotate('+0+'deg)'});
 });
 
 /*네 번째 메뉴(상세내용2) 선택했을 때*/
 $("#left-menu ul li:nth-child(4)").on("click",function(){
     menu4();
+    $("div.example .iconImg").css({'transform':'rotate('+0+'deg)'});
 });
 
 /*다섯 번째 메뉴(프로필) 선택했을 때*/
 $("#left-menu ul li:nth-child(5)").on("click",function(){
     menu5();
+    $("div.example .iconImg").css({'transform':'rotate('+0+'deg)'});
 });
 
 
@@ -258,13 +278,39 @@ $("button.submitBtn").on("click", function (){
         alert("입력하지 않은 값이 있습니다.");
         return;
     }
-
+    alert("글이 정상적으로 등록되었습니다.");
     location.href='/alba/list';
 });
 
 $("input").on("change", function() {
     $(this).css("border", "1px solid #e1e4e6");
 })
+
+
+
+/*-----------------------------------------------------------*/
+                        /*나가기 모달*/
+/*-----------------------------------------------------------*/
+const btnModal = document.getElementById("btn-modal");
+const modal = document.getElementById("c-overlay");
+const closeModal = modal.querySelector(".button-2");
+
+btnModal.addEventListener("click", ev => {
+    modal.style.display = "flex"
+})
+
+closeModal.addEventListener("click", evt => {
+    modal.style.display = "none"
+})
+
+$("button.button-1").on("click", function() {
+   location.href = '/alba/list';
+});
+
+
+
+
+
 
 /*-----------------------------------------------------------*/
                         /*지도 api*/
