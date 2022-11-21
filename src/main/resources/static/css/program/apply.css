@@ -33,6 +33,10 @@ button {
     cursor: pointer;
 }
 
+.fake-header{
+    height: 69px;
+    position: relative;
+}
 
 .main-grid{
     min-height: 100vh;

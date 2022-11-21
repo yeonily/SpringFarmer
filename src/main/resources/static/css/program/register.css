@@ -807,7 +807,7 @@ button {
     width: 20px;
 }
 
-.upload+.upload{
+.upload-margin{
     margin-left: 18px;
 }
 
