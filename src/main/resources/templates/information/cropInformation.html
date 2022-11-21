@@ -57,6 +57,7 @@
                                     <p class="faq-board-list-cont faq-board-list-question">
                                         <span class="text-primary">[직무부트캠프(현직자수업)]</span>
                                         직무부트캠프 환불은 어떻게 신청하나요?
+                                        <img class="rotate" src="/image/information/arrow.png" style="position: absolute; right: 40px; bottom: 20px;">
                                     </p>
                                     <p class="faq-board-list-cont faq-board-list-answer active1">
                                         <img src="/image/information/nobatfox.jpg" style="width: 100px">
@@ -72,6 +73,7 @@
                                     <p class="faq-board-list-cont faq-board-list-question">
                                         <span class="text-primary">[직무부트캠프(현직자수업)]</span>
                                         직무부트캠프 환불은 어떻게 신청하나요?
+                                        <img class="rotate" src="/image/information/arrow.png" style="position: absolute; right: 40px; bottom: 20px;">
                                     </p>
                                     <p class="faq-board-list-cont faq-board-list-answer active1 ">
                                         <img src="/image/information/nobatfox.jpg" style="width: 100px">
@@ -86,6 +88,7 @@
                                     <p class="faq-board-list-cont faq-board-list-question">
                                         <span class="text-primary">[직무부트캠프(현직자수업)]</span>
                                         직무부트캠프 환불은 어떻게 신청하나요?
+                                        <img class="rotate" src="/image/information/arrow.png" style="position: absolute; right: 40px; bottom: 20px;">
                                     </p>
                                     <p class="faq-board-list-cont faq-board-list-answer active1">
                                         <img src="/image/information/nobatfox.jpg" style="width: 100px">
@@ -100,6 +103,7 @@
                                     <p class="faq-board-list-cont faq-board-list-question">
                                         <span class="text-primary">[직무부트캠프(현직자수업)]</span>
                                         직무부트캠프 환불은 어떻게 신청하나요?
+                                        <img class="rotate" src="/image/information/arrow.png" style="position: absolute; right: 40px; bottom: 20px;">
                                     </p>
                                     <p class="faq-board-list-cont faq-board-list-answer active1">
                                         <img src="/image/information/nobatfox.jpg" style="width: 100px">
@@ -114,6 +118,7 @@
                                     <p class="faq-board-list-cont faq-board-list-question">
                                         <span class="text-primary">[직무부트캠프(현직자수업)]</span>
                                         직무부트캠프 환불은 어떻게 신청하나요?
+                                        <img class="rotate" src="/image/information/arrow.png" style="position: absolute; right: 40px; bottom: 20px;">
                                     </p>
                                     <p class="faq-board-list-cont faq-board-list-answer active1">
                                         <img src="/image/information/nobatfox.jpg" style="width: 100px">
@@ -128,6 +133,7 @@
                                     <p class="faq-board-list-cont faq-board-list-question">
                                         <span class="text-primary">[직무부트캠프(현직자수업)]</span>
                                         직무부트캠프 환불은 어떻게 신청하나요?
+                                        <img class="rotate" src="/image/information/arrow.png" style="position: absolute; right: 40px; bottom: 20px;">
                                     </p>
                                     <p class="faq-board-list-cont faq-board-list-answer active1">
                                         <img src="/image/information/nobatfox.jpg" style="width: 100px">
@@ -142,6 +148,7 @@
                                     <p class="faq-board-list-cont faq-board-list-question">
                                         <span class="text-primary">[직무부트캠프(현직자수업)]</span>
                                         직무부트캠프 환불은 어떻게 신청하나요?
+                                        <img class="rotate" src="/image/information/arrow.png" style="position: absolute; right: 40px; bottom: 20px;">
                                     </p>
                                     <p class="faq-board-list-cont faq-board-list-answer active1">
                                         <img src="/image/information/nobatfox.jpg" style="width: 100px">
@@ -156,6 +163,7 @@
                                     <p class="faq-board-list-cont faq-board-list-question">
                                         <span class="text-primary">[직무부트캠프(현직자수업)]</span>
                                         직무부트캠프 환불은 어떻게 신청하나요?
+                                        <img class="rotate" src="/image/information/arrow.png" style="position: absolute; right: 40px; bottom: 20px;">
                                     </p>
                                     <p class="faq-board-list-cont faq-board-list-answer active1">
                                         <img src="/image/information/nobatfox.jpg" style="width: 100px">
@@ -205,9 +213,13 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
+
     let count = 0;
+
     $('p.faq-board-list-question').on('click', function () {
+        $(this).find(".rotate").toggleClass("down");
         if (count == 0) {
+
             $(this).next().show();
             count++;
         } else if (count == 1) {
@@ -215,6 +227,7 @@
             count = 0;
         }
     })
+
 
 </script>
 <script src="/js/header/header.js"></script>
