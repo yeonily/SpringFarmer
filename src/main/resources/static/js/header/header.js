@@ -42,15 +42,6 @@ var btnList = [];
 btnList = $('div.menuList ul li button');
 
 
-console.log(btnList);
-
-$('div.menuList ul li button').on('click', function () {
-    for(let i = 0; i < btnList.length; i++) {
-        $(btnList[i]).attr("class", "off");
-    }
-    $(this).attr("class", "on");
-})
-
 
 /*알림 버튼 클릭 시*/
 $(".noti-button-container").on("click", function (){
@@ -67,4 +58,24 @@ $(".mask, .main_banner, .sub_banner").on("click", function (){
     $("div.swiper-wrapper").css("opacity", "1");
 });
 
-
+if($('.pg-detail-banner-chip').text() == '정책'){
+    for(let i = 0; i < btnList.length; i++) {
+        $(btnList[i]).attr("class", "off");
+    }
+    $(btnList[0]).attr("class","on");
+}else if ($('.pg-detail-banner-chip').text() == '정보'){
+    for(let i = 0; i < btnList.length; i++) {
+        $(btnList[i]).attr("class", "off");
+    }
+    $(btnList[1]).attr("class","on");
+}else if ($('.pg-detail-banner-chip').text() == 'ready') {
+    for (let i = 0; i < btnList.length; i++) {
+        $(btnList[i]).attr("class", "off");
+    }
+    $(btnList[2]).attr("class", "on");
+}else if ($('.pg-detail-banner-chip').text() == 'step') {
+    for (let i = 0; i < btnList.length; i++) {
+        $(btnList[i]).attr("class", "off");
+    }
+    $(btnList[3]).attr("class", "on");
+}
