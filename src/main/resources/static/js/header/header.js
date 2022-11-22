@@ -38,6 +38,20 @@ $("div.sub-menu li div").on("mouseout", function() {
 });
 
 
+var btnList = [];
+btnList = $('div.menuList ul li button');
+
+
+console.log(btnList);
+
+$('div.menuList ul li button').on('click', function () {
+    for(let i = 0; i < btnList.length; i++) {
+        $(btnList[i]).attr("class", "off");
+    }
+    $(this).attr("class", "on");
+})
+
+
 /*알림 버튼 클릭 시*/
 $(".noti-button-container").on("click", function (){
     $("div.mask").css("visibility", "visible");
@@ -52,4 +66,5 @@ $(".mask, .main_banner, .sub_banner").on("click", function (){
     $("div.swiper-wrapper").css("background", "inherit");
     $("div.swiper-wrapper").css("opacity", "1");
 });
+
 
