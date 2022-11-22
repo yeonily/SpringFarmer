@@ -16,7 +16,6 @@
             <div class="header-inner">
                 <div class="header-left">새 아르바이트</div>
                 <div class="header-btn">
-                    <button type="button" class="saveBtn">저장하기</button>
                     <button type="button" id="btn-modal">나가기</button>
                 </div>
             </div>
@@ -46,7 +45,7 @@
                     <div class="input-div">
                         <span>대표 이미지</span>
                         <p>게시글의 대표 이미지로 사용할 사진을 첨부해주세요.(259 x 136px)</p>
-                        <img style="width: 259px; height: 136px; border: 1px solid #e1e4e6" id="preview-image" src="/image/alba/file.png">
+                        <img style="width: 259px; height: 136px; border: 1px solid #e1e4e6" id="preview-image" src="/image/alba/no_image.png">
                         <label class="input-file-button" for="input-image">
                             업로드
                         </label>
@@ -320,11 +319,32 @@
         <div class="btn-group-inner">
             <button type="button" class="prev"><img class="footer-img-prev" src="/image/alba/prev_register.gif">이전</button>
             <button type="button" class="next">다음<img class="footer-img-next" src="/image/alba/next_register.gif"></button>
-            <button type="button" class="submitBtn" style="display: none">제출<img class="footer-img-next" src="/image/alba/next_register.gif"></button>
+            <button type="button" class="submitBtn" style="display: none; width: 82px">제출하기<img class="footer-img-next" src="/image/alba/next_register.gif"></button>
         </div>
     </div>
 
     <!--모달-->
+    <div class="alertModal">
+        <div id="modal" style="display: none;">
+            <div id="modal-overlay">
+                <div class="c-modal">
+                    <div class="m-wrap">
+                        <div class="m-title" style="text-align: center; color: red"></div>
+                        <form action="">
+                            <div class="m-c-wrap">
+                                <div class="m-c-title" style="text-align: center"></div>
+                            </div>
+                            <div class="applyBtnWrap">
+                                <button type="button" class="cancel">확인</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div>
         <aside id="c-overlay">
             <div class="register-modal">
