@@ -674,6 +674,15 @@ strong.s{
     font-weight: 600!important;
 }
 
+.register-img-wrapper{
+    text-align: center;
+}
+
+.register-img{
+    object-fit: scale-down;
+}
+
+
 @media only screen and (min-width: 768px){
     .d-application-row{
         margin-right: -12px;
