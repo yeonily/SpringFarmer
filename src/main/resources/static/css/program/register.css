@@ -1455,6 +1455,12 @@ button {
     font-family: Pretendard;
 }
 
+.selected-c-chip{
+    border: 1px solid #ffffff!important;
+    background-color: #47c88052!important;
+    color: #47c880!important;
+}
+
 .select-chip{
     pointer-events: auto;
     padding: 5px 12px!important;

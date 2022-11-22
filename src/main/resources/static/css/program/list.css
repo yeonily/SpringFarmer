@@ -319,6 +319,27 @@ button {
     font-weight: 600!important;
 }
 
+.selected-button{
+    border: 1px solid #ffffff;
+    background-color: #47c88052;
+    color: #47c880;
+    border-radius: 19px;
+    margin: 0 8px 8px 0;
+    padding: 4.5px 14px;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: .02em;
+    font-weight: 400;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 768px) {
     .p-application-row {
         margin-right: -12px;

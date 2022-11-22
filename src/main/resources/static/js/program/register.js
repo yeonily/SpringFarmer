@@ -17,6 +17,7 @@ function page1(){
     $("#guide4").hide();
     $(".before").attr("disabled", true);
     $(".next").html("다음").append(vimg);
+    $(".next").removeClass("submitButton");
 }
 
 function page2(){
@@ -30,6 +31,7 @@ function page2(){
     $("#guide4").hide();
     $(".before").attr("disabled", false);
     $(".next").html("다음").append(vimg);
+    $(".next").removeClass("submitButton");
 }
 
 function page3(){
@@ -43,6 +45,7 @@ function page3(){
     $("#guide4").hide();
     $(".before").attr("disabled", false);
     $(".next").html("다음").append(vimg);
+    $(".next").removeClass("submitButton");
 }
 
 function page4(){
@@ -52,8 +55,9 @@ function page4(){
     $("#pg4").show();
     $("#guide1").hide();
     $("#guide2").hide();
-    $("#guide3").hide();
-    $("#guide4").show();
+    $("#guide3").hide(function(){
+        $(".next").addClass("submitButton");
+    });
     $(".before").attr("disabled", false);
     $(".next").html("제출하기");
 }
@@ -241,3 +245,88 @@ $("button.before").on("click", function() {
         page3();
     }
 });
+
+//제출하기 빨간줄 뜨기
+$(".opening-footer").on("click", "button.submitButton", function () {
+    var inputList = new Array();
+    var textareaList = new Array();
+    let check = true;
+
+    $("input").each(function (index, item) {
+        inputList.push($(item));
+    });
+    $("textarea").each(function (index, item) {
+        textareaList.push($(item));
+    });
+
+    for (let i = 0; i < inputList.length; i++) {
+        if (inputList[i].val() == '') {
+            if(inputList[i].hasClass('c-text-field-input')){
+                inputList[i].css("border", "1px solid red");
+                check = false;
+            }else if(inputList[i].hasClass('ql-editor')){
+                inputList[i].parent().parent().css("border", "1px solid red");
+                check = false;
+            }else if(inputList[i].hasClass('c-text-field-input2')) {
+                inputList[i].css("border", "1px solid red");
+                check = false;
+            }
+        }
+    }
+
+    for (let i = 0; i < textareaList.length; i++) {
+        if (textareaList[i].val() == '') {
+            if(textareaList[i].hasClass('textarea-editor')){
+                textareaList[i].parent().parent().css("border", "1px solid red");
+                check = false;
+            }else if(textareaList[i].hasClass('ql-editor-text')){
+                textareaList[i].parent().parent().css("border", "1px solid red");
+                check = false;
+            }
+        }
+    }
+    if (!check) {
+        alert("입력하지 않은 값이 있습니다.");
+        return;
+    }
+
+    location.href = '/program/list';
+});
+
+//빨간줄 사라지기
+$('input[type=text]').on("keyup", function () {
+    if($(this).hasClass('c-text-field-input')){
+        $(this).css("border", "1px solid #e1e4e6");
+    }else if($(this).hasClass('ql-editor')){
+        $(this).parent().parent().css("border", "1px solid #e1e4e6");
+    }else if($(this).hasClass('c-text-field-input2')) {
+        $(this).css("border", "1px solid #e1e4e6");
+    }
+});
+
+$('input[type=date]').on("change", function () {
+        $(this).css("border", "1px solid #e1e4e6");
+});
+
+$('input[type=time]').on("change", function () {
+    $(this).css("border", "1px solid #e1e4e6");
+});
+
+$('textarea').on("keyup", function () {
+    if($(this).hasClass('textarea-editor')){
+        $(this).parent().parent().css("border", "1px solid #e1e4e6");
+    }else if($(this).hasClass('ql-editor-text')){
+        $(this).parent().parent().css("border", "1px solid #e1e4e6");
+    }
+});
+
+//버튼 클릭 시 css변경, 하나만 클릭하기
+$(".select-chip").on("click", function(){
+    if($(this).hasClass('selected-c-chip')){
+        $(this).removeClass('selected-c-chip');
+    }else{
+        $(this).addClass('selected-c-chip');
+        $(this).siblings().removeClass('selected-c-chip');
+    }
+
+})
