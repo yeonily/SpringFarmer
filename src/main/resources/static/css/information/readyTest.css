@@ -76,7 +76,7 @@
     /*background: rgb(0, 161, 71);*/
     background: #47c880;
     position: absolute;
-    top: 69px;
+    /*top: 69px;*/
     left: 0;
     width: 101%;
     height: 326px;
@@ -106,7 +106,7 @@
 }
 
 .pg-detail-banner {
-    margin-top: 0;
+    margin-top: -69px;
     height: 355px!important;
 }
 
