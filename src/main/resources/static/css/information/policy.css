@@ -229,7 +229,7 @@ div.footerMargin {
     /*background: rgb(0, 161, 71);*/
     background: #007042;
     position: absolute;
-    top: 0;
+    top: 46px;
     left: 0;
     width: 101%;
     height: 326px;
@@ -259,7 +259,7 @@ div.footerMargin {
 }
 
 .pg-detail-banner {
-    margin-top: 0;
+    margin-top: 46px;
 }
 
 .banner-title-container {
@@ -399,7 +399,7 @@ div.footerMargin {
 .rotate{
     -moz-transition: all 0.5s linear;
     -webkit-transition: all 0.5s linear;
-    transition: all 0.5s linear;
+    transition: all 0.2s linear;
 }
 
 .rotate.down{
@@ -505,11 +505,11 @@ div.companyInfo p {
 footer {
     background-color: #ffffff;
 }
+
+
 div.footer-bottom-wrap {
     margin-top: 65px;
 }
-
-
 
 
 /*페이징*/
@@ -563,4 +563,9 @@ div.footer-bottom-wrap {
 .page_nation a.active, .page_nation a:hover {
     border: 1px solid #38b57c;
     color:#38b57c;
+}
+
+.selected-header{
+    color: #040505!important;
+    font-weight: 600!important;
 }

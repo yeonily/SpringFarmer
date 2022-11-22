@@ -2,6 +2,13 @@
 /*div.wrap {
     margin-top: 114px;
 }*/
+button.on {
+    border-bottom: 3px solid #595f63 !important;
+}
+
+button.off{
+    color: #adb3b8!important;
+}
 
 /*기본 세팅*/
 body, button {
