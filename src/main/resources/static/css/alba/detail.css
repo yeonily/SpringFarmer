@@ -464,9 +464,9 @@ div.profile-content {
                     /*아르바이트 지도 위치*/
 /**************************************************************/
 div.alba-location {
-    width: 510px;
+    width: 1120px;
     height: 350px;
-    margin-left: 270px;
+    margin: 0 auto;
 }
 
 

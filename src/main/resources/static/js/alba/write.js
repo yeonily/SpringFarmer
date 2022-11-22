@@ -207,7 +207,7 @@ function readImage(input) {
         }
         // reader가 이미지 읽도록 하기
         reader.readAsDataURL(input.files[0])
-        $(".input-file-button").text("삭제");
+        $(".input-file-button").text("수정");
     }
 }
 // input file에 change 이벤트 부여
@@ -275,14 +275,28 @@ $("button.submitBtn").on("click", function (){
         }
     }
     if(!check) {
-        alert("입력하지 않은 값이 있습니다.");
+        $("div.m-title").text("입력하지 않은 값이 있습니다.");
+        $("div.m-c-title").text("빨간박스에 값을 모두 입력한 후 다시 시도해주세요!");
+        $("div#modal").show();
+        $("button.cancel").on("click", function(){
+            $("#modal").hide();
+        });
         return;
     }
-    alert("글이 정상적으로 등록되었습니다.");
-    location.href='/alba/list';
+
+    $("div.m-title").css("color", "#47c880");
+    $("div.m-title").text("글이 정상적으로 등록되었습니다.");
+    $("div.m-c-title").text("목록 페이지로 이동합니다.");
+    $("div#modal").show();
+    $("button.cancel").on("click", function(){
+        location.href='/alba/list';
+    });
 });
 
 $("input").on("change", function() {
+    $(this).css("border", "1px solid #e1e4e6");
+})
+$("textarea").on("change", function() {
     $(this).css("border", "1px solid #e1e4e6");
 })
 
@@ -306,9 +320,6 @@ closeModal.addEventListener("click", evt => {
 $("button.button-1").on("click", function() {
    location.href = '/alba/list';
 });
-
-
-
 
 
 
