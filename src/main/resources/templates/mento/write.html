@@ -32,11 +32,6 @@
                                             </div>-->
                                         </div>
                                         <div id="header_right">
-                                            <button id="header_right_button1">
-                                                <div class="right_button1_inner1"></div>
-                                                저장하기
-                                                <div class="right_button1_inner1"></div>
-                                            </button>
                                             <button id="header_right_button2">
                                                 <div class="right_button1_inner1"></div>
                                                 나가기
@@ -778,11 +773,18 @@
                         <div id="write_footer_inner2">
                             <div id="write_footer_inner3">
                                 <button id="footer_button_prev" onclick="prevButton()">
-                                    <div style="margin-right: 2px!important;"></div>이전<div></div>
+                                    <div style="display: flex;" disabled="disabled">
+                                        <img class="footer_prev_image" src="/image/program/prev_register.gif" disabled="disabled">
+                                    </div>
+                                    이전
+                                    <div style="display: flex;" disabled="disabled"></div>
                                 </button>
-                                <button id="footer_button_next" onclick="nextButton()">
-                                    <div style="margin-right: 2px!important;"></div>다음<div></div>
-                                </button>
+                                <form action="/mento/list">
+                                    <button id="footer_button_next" onclick="nextButton()">
+                                        다음
+                                        <img src="/image/program/next_register.gif" class="footer_next_image">
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     </div>

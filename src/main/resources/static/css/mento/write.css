@@ -626,8 +626,8 @@
     justify-content: flex-end;
 }
 #footer_button_prev{
-    background-color: #fcfcfc;
-    color: #eaecee;
+    background-color: #f3f4f5;
+    color: #767d82;
     height: 36px;
     padding: 0 12px;
     min-width: 49px;
@@ -665,6 +665,19 @@
     position: relative;
     cursor: pointer;
     overflow: hidden;
+}
+
+.footer_prev_image{
+    width: 8px;
+    height: 13px;
+    margin-right: 2px;
+}
+.footer_next_image{
+    padding-top: 2.5px;
+    width: 10px;
+    height: 14px;
+    margin-left: 3px;
+    padding-bottom: 3px;
 }
 
 #first_page{
