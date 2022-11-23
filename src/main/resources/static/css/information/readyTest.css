@@ -173,10 +173,8 @@
 
 
 /*preparation*/
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-    font: 17px/1.5 "ONE-Mobile-Regular";
     letter-spacing: -0.05em;
     border-radius: 0px;
     -webkit-appearance: none;
@@ -187,7 +185,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 
-* { font-family: 'Noto Sans KR', sans-serif; }
 body { margin: 0; }
 
 ul {
@@ -249,9 +246,7 @@ ul li button.test-start {
     background-color: #357e55;
 }
 /*=================================================================================================*/
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
 /* ↓ 영어 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
 
 /* 테스트 */
 div.checklist-wrap {
@@ -392,7 +387,7 @@ div.next-step button.next-arrow:before {
     position: absolute;
     display: block;
     height: 100%;
-    background: url('	https://www.returnfarm.com:444/css/wvtex/img/common/core_icons.png') no-repeat -800px -400px;
+    background: url('https://www.returnfarm.com:444/css/wvtex/img/common/core_icons.png') no-repeat -800px -400px;
     content: '';
     left: 21px;
     width: 44px;
