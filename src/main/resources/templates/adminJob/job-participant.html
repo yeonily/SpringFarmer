@@ -45,7 +45,8 @@
                         <span class="s-form">
                             <select name="searchSelect" class="val">
                                 <option value="jobName">아르바이트명</option>
-                                <option value="id">지원자</option>
+                                <option value="name">지원자</option>
+                                <option value="nickName">닉네임</option>
                                 <option value="address">위치</option>
                             </select>
                         </span>
@@ -72,7 +73,8 @@
                 <table>
                     <tr class="title">
                         <th class="num">번호</th>
-                        <th class="id">지원자</th>
+                        <th class="name">지원자</th>
+                        <th class="nickName">닉네임</th>
                         <th class="title">아르바이트명</th>
                         <th class="work-date">진행날짜</th>
                         <th class="address">위치</th>
@@ -82,24 +84,27 @@
                     <!-- ↓ 데이터 출력 -->
                     <tr class="title">
                         <td class="num">1</td>
-                        <td class="id">herd</td>
-                        <td class="title">딸기 알바</td>
+                        <td class="name">연태관</td>
+                        <td class="nickName">herd</td>
+                        <td class="title" onclick="location.href='/alba/detail'">딸기 알바</td>
                         <td class="work-date">2022-10-11</td>
                         <td class="address">서울</td>
                         <td class="date">2022-10-01</td>
                     </tr>
                     <tr class="title">
                         <td class="num">2</td>
-                        <td class="id">태관</td>
-                        <td class="title">바나나 재배 알바</td>
+                        <td class="name">연태관</td>
+                        <td class="nickName">xogwan</td>
+                        <td class="title" onclick="location.href='/alba/detail'">바나나 재배 알바</td>
                         <td class="work-date">2022-11-14</td>
                         <td class="address">강원도</td>
                         <td class="date">2022-11-01</td>
                     </tr>
                     <tr class="title">
                         <td class="num">3</td>
-                        <td class="id">xogwan</td>
-                        <td class="title">당근 심기 알바</td>
+                        <td class="name">연태관</td>
+                        <td class="nickName">xorhks</td>
+                        <td class="title" onclick="location.href='/alba/detail'">당근 심기 알바</td>
                         <td class="work-date">2022-12-11</td>
                         <td class="address">충청도</td>
                         <td class="date">2022-11-11</td>

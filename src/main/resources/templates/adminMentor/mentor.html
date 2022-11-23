@@ -45,7 +45,8 @@
                     <div class="search-form">
                         <span class="s-form">
                             <select name="searchSelect" class="val">
-                                <option value="id">멘토</option>
+                                <option value="name">멘토</option>
+                                <option value="nickName">닉네임</option>
                                 <option value="career">연차</option>
                                 <option value="region">지역</option>
                             </select>
@@ -73,7 +74,8 @@
                 <table>
                     <tr class="title">
                         <th class="num">번호</th>
-                        <th class="id">멘토</th>
+                        <th class="name">멘토</th>
+                        <th class="nickName">닉네임</th>
                         <th class="programCount">진행하는 프로그램 수</th>
                         <th class="menteeCount">멘티수</th>
                         <th class="career">연차</th>
@@ -83,7 +85,8 @@
                     <!-- ↓ 데이터 출력 -->
                     <tr class="title">
                         <td class="num">1</td>
-                        <td class="id">연태관</td>
+                        <td class="name">연태관</td>
+                        <td class="nickName">herd</td>
                         <td class="programCount">50개</td>
                         <td class="menteeCount" ><button id="main_fixed_button">3명</button></td>
                         <td class="career">1~3년</td>
@@ -91,16 +94,18 @@
                     </tr>
                     <tr class="title">
                         <td class="num">2</td>
-                        <td class="id">연태관</td>
-                        <td class="programCount">30개</td>
+                        <td class="name">연태관</td>
+                        <td class="nickName">xogwan</td>
+                        <td class="programCount">50개</td>
                         <td class="menteeCount"><button id="main_fixed_button">5명</button></td>
                         <td class="career">3~5년차</td>
                         <td class="region">경상도</td>
                     </tr>
                     <tr class="title">
                         <td class="num">3</td>
-                        <td class="id">연태관</td>
-                        <td class="programCount">20개</td>
+                        <td class="name">연태관</td>
+                        <td class="nickName">xorhks</td>
+                        <td class="programCount">50개</td>
                         <td class="menteeCount"><button id="main_fixed_button">10명</button></td>
                         <td class="career">5~7년차</td>
                         <td class="region">충청도</td>
@@ -163,9 +168,42 @@
                                                 <td class="phoneNumber">010-9999-9999</td>
                                             </tr>
                                             <tr>
-                                                <td class="name">김민혁</td>
-                                                <td class="nickName">kmh</td>
-                                                <td class="phoneNumber">010-9999-9999</td>
+                                                <td class="name">연태관</td>
+                                                <td class="nickName">herd</td>
+                                                <td class="phoneNumber">010-2402-0324</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="name">정호석</td>
+                                                <td class="nickName">jhs</td>
+                                                <td class="phoneNumber">010-2134-1234</td>
+                                            </tr><tr>
+                                            <td class="name">연태관</td>
+                                            <td class="nickName">herd</td>
+                                            <td class="phoneNumber">010-2402-0324</td>
+                                        </tr>
+                                            <tr>
+                                                <td class="name">정호석</td>
+                                                <td class="nickName">jhs</td>
+                                                <td class="phoneNumber">010-2134-1234</td>
+                                            </tr>
+                                            <tr>
+                                            <td class="name">연태관</td>
+                                            <td class="nickName">herd</td>
+                                            <td class="phoneNumber">010-2402-0324</td>
+                                        </tr>
+                                            <tr>
+                                                <td class="name">정호석</td>
+                                                <td class="nickName">jhs</td>
+                                                <td class="phoneNumber">010-2134-1234</td>
+                                            </tr><tr>
+                                            <td class="name">연태관</td>
+                                            <td class="nickName">herd</td>
+                                            <td class="phoneNumber">010-2402-0324</td>
+                                        </tr>
+                                            <tr>
+                                                <td class="name">정호석</td>
+                                                <td class="nickName">jhs</td>
+                                                <td class="phoneNumber">010-2134-1234</td>
                                             </tr>
                                             <tr>
                                                 <td class="name">김민혁</td>
@@ -191,6 +229,51 @@
                                                 <td class="name">김민혁</td>
                                                 <td class="nickName">kmh</td>
                                                 <td class="phoneNumber">010-9999-9999</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="name">김민혁</td>
+                                                <td class="nickName">kmh</td>
+                                                <td class="phoneNumber">010-9999-9999</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="name">연태관</td>
+                                                <td class="nickName">herd</td>
+                                                <td class="phoneNumber">010-2402-0324</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="name">정호석</td>
+                                                <td class="nickName">jhs</td>
+                                                <td class="phoneNumber">010-2134-1234</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="name">연태관</td>
+                                                <td class="nickName">herd</td>
+                                                <td class="phoneNumber">010-2402-0324</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="name">정호석</td>
+                                                <td class="nickName">jhs</td>
+                                                <td class="phoneNumber">010-2134-1234</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="name">연태관</td>
+                                                <td class="nickName">herd</td>
+                                                <td class="phoneNumber">010-2402-0324</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="name">정호석</td>
+                                                <td class="nickName">jhs</td>
+                                                <td class="phoneNumber">010-2134-1234</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="name">연태관</td>
+                                                <td class="nickName">herd</td>
+                                                <td class="phoneNumber">010-2402-0324</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="name">정호석</td>
+                                                <td class="nickName">jhs</td>
+                                                <td class="phoneNumber">010-2134-1234</td>
                                             </tr>
                                         </table>
                                     </div>
