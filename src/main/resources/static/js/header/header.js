@@ -47,7 +47,7 @@ btnList = $('div.menuList ul li button');
 $(".noti-button-container").on("click", function (){
     $("div.mask").css("visibility", "visible");
     $("div.alarm").css("visibility", "visible");
-    $("div.swiper-wrapper").css("opacity", ".3");
+    $("div.swiper-wrapper").css({opacity: ".3"});
 });
 
 /*다른 영역 클릭 시*/
@@ -57,6 +57,16 @@ $(".mask, .main_banner, .sub_banner").on("click", function (){
     $("div.swiper-wrapper").css("background", "inherit");
     $("div.swiper-wrapper").css("opacity", "1");
 });
+
+
+
+/*알림창 닫기(화살표) 클릭 시*/
+$(".mr-4.c-application.c-icon").on("click", function() {
+    $("div.mask").css("visibility", "hidden");
+    $("div.alarm").css("visibility", "hidden");
+    $("div.swiper-wrapper").css("background", "inherit");
+    $("div.swiper-wrapper").css("opacity", "1");
+})
 
 if($('.pg-detail-banner-chip').text() == '정책'){
     for(let i = 0; i < btnList.length; i++) {
@@ -79,3 +89,4 @@ if($('.pg-detail-banner-chip').text() == '정책'){
     }
     $(btnList[3]).attr("class", "on");
 }
+

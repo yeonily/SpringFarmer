@@ -2,15 +2,8 @@
 
 @charset "UTF-8";
 
-@font-face {
-    font-family: 'ONE-Mobile-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-    font: 17px/1.5 "ONE-Mobile-Regular";
     letter-spacing: -0.05em;
     border-radius: 0px;
     -webkit-appearance: none;
@@ -286,7 +279,6 @@ body { margin: 0; }
 
 a {
     text-decoration: none;
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .checklist-wrap {

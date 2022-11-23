@@ -277,7 +277,7 @@ button.search_img:hover {
 div.mask {
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100% !important;
     height: 100%;
     position: fixed;
     content: " ";
@@ -287,7 +287,6 @@ div.mask {
 }
 
 div.alarm {
-    width: 360px;
     height: 100%;
     position: fixed;
     right: 0;
@@ -314,12 +313,11 @@ div.alarm div.top-div span {
     width: 230px;
 }
 div.alarm div.top-div p {
-    margin-left: 15px;
     font-size: 18px;
     font-weight: bold;
+    margin: 0 0 0 15px;
 }
 div.alarm div.top-div button {
-    padding: -1px 8px;
     height: 24px;
     width: 56px;
     font-size: 10px;
@@ -397,9 +395,101 @@ div#sub_header div.menuList ul li button:hover {
         left: 220px!important;
     }
 
-    div.header{
-        border-bottom: none;
+    /*알림 아이콘*/
+    .mr-4.c-application.c-icon {
+        fill: rgb(60, 65, 68);
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        display: inline-block !important;
     }
-
-
+    div.alarm {
+        width: 100%;
+    }
+    div.alarm div.top-div {
+        width: 100%;
+        height: 57px;
+        background-color: #fdfeff;
+        line-height: 54px;
+        position: relative;
+    }
+    div.alarm div.top-div p {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0 0 0px 43px;
+    }
+    div.alarm div.top-div span {
+        content: "";
+        display: inline-block;
+        width: 63%;
+    }
 }
+
+
+
+/*------------------------------------------*/
+                /*모바일 창*/
+/*------------------------------------------*/
+@media only screen and (max-width: 768px) {
+    /*헤더*/
+    div.header_nav {
+        width: 100%;
+        height: 75%;
+        display: inline-flex;
+        align-items: center;
+    }
+    div.header_nav ul.nav_right_after {
+        display: inline-flex;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+    button.c-application {
+        cursor: pointer;
+        padding: 2px;
+        border: 0;
+        margin-top: 4px;
+        background-color: inherit;
+    }
+    div.search_form {
+        display: none;
+        flex-direction: row;
+        width: 190px;
+        height: 40px;
+    }
+    div.search_form input.search_keyword {
+        display: inline-block !important;
+        border-radius: 4px;
+        border: 0;
+        background: hsla(0,0%,98.8%,.6);
+        padding: 10px 0px 10px 14px;
+        font-size: 14px;
+        line-height: 20px;
+        width: 155px;
+    }
+    button.search_img {
+        position: relative;
+        left: 0 !important;
+        margin: 6px 0 0 0;
+    }
+    div.header_nav ul.nav_right_after li {
+        margin-left: 0;
+    }
+    div.noti-button-container {
+        margin-left: 7px;
+        margin-bottom: 5px;
+        margin-right: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

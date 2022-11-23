@@ -37,6 +37,7 @@ html, body {
     height: 0 !important;
 }
 
+
 /*메인 슬라이드 배너*/
 div.main_banner div.buttonTest {
     z-index: 10;
@@ -106,7 +107,10 @@ div.main_banner div.swiper-button-prev
     border: 1px solid inherit;
     color: black;
     background-color: #FFFFFF;
+    visibility: hidden;
 }
+
+
 div.main_banner div.swiper-button-next {
     right: -110px;
 }
@@ -157,6 +161,42 @@ div.sub_banner_inner h1 {
     height: 57px;
 }
 
+.mentor_info_caption {
+    display: flex!important;
+    align-items: center;
+    margin-top: 8px!important;
+}
+.mentor_star {
+    display: flex!important;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.mentor_star_inner1 {
+    fill: rgb(255, 215, 0);
+    cursor: auto;
+    background: transparent!important;
+    overflow: hidden;
+    margin-right: 2px!important;
+    box-sizing: border-box;
+    outline: none;
+    width: 12px;
+    height: 12px;
+}
+.mentor_star_span {
+    color: rgb(89, 95, 99);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
+.mentor_star_avg {
+    color: rgb(89, 95, 99);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 13px;
+    margin-left: 2px!important;
+}
+
+
 /*슬라이더 시작*/
 div.sub_banner_inner .mySwiper2 {
     width: 100%;
@@ -167,7 +207,6 @@ div.sub_banner_inner .mySwiper2 .swiper-slide {
     text-align: center;
     font-size: 18px;
     height: 416px;
-
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     -webkit-justify-content: center;
@@ -188,6 +227,13 @@ div.mySwiper2 div.swiper-slide .imgDiv {
     position: relative;
     background-size: cover;
     background-position: center;
+    /* hover 뒤 애니메이션 */
+    transform: scale(1.0); /* 이미지 확대 */
+    transition: transform 0.2s; /* 시간 설정 */
+}
+div.mySwiper2 div.swiper-slide .imgDiv:hover {
+    transform: scale(1.05);   /* 이미지 확대 */
+    transition: transform 0.2s;  /* 시간 설정 */
 }
 div.mySwiper2 div.swiper-slide .imgDiv div{
     top: 8px;
@@ -224,7 +270,7 @@ div.mySwiper2 div.swiper-slide .textDiv p, span {
     margin-bottom: 3px;
 }
 .textDiv span {
-    color: #ee7e41;
+    margin-top: 4px;
 }
 
 div.mySwiper2 div.swiper-slide .textDiv p.dateInfo {
@@ -263,7 +309,6 @@ div.sub_banner_inner div.swiper-button-prev
     color: black;
     font-weight: bold;
 }
-
 div.sub_banner_inner div.swiper-button-next {
     position: absolute;
     right: 80px;
@@ -274,6 +319,17 @@ div.sub_banner_inner div.swiper-button-prev {
     position: absolute;
     left: 80px;
     top: 60%;
+}
+
+.swiper-button.next2:hover,
+.swiper-button.prev2:hover,
+.swiper-button.next3:hover,
+.swiper-button.prev3:hover,
+.swiper-button.next4:hover,
+.swiper-button.prev4:hover,
+.swiper-button.next5:hover,
+.swiper-button.prev5:hover {
+    background-color: #f6f4f4;
 }
 
 
@@ -341,17 +397,24 @@ div.sub_banner_inner div.swiper-button {
     left: -40px;
 }
 
+
 .swiper-button.next2:after,
 .swiper-button.next3:after,
 .swiper-button.next4:after,
 .swiper-button.next5:after{
     content: 'next';
+    left: 13px;
+    position: absolute;
+    top: 8px;
 }
 .swiper-button.prev2:after,
 .swiper-button.prev3:after,
 .swiper-button.prev4:after,
 .swiper-button.prev5:after{
     content: 'prev';
+    position: absolute;
+    top: 8px;
+    left: 10px;
 }
 
 div#communitySlide_inner {
@@ -391,12 +454,15 @@ div#albaMenu-inner div.swiper-button.prev5{
     font-weight: bold;
     position: absolute;
     top: 50%;
+    border-radius: 50%;
 }
 .swiper-button.next3 {
     right: -45px;
 }
-.swiper-button.prev3 {
-    left: -30px;
+.swiper-button.prev3,
+.swiper-button.prev4,
+.swiper-button.prev5{
+    left: -44px;
 }
 
 /*커뮤니티 슬라이드 배너 게시글 내용*/
@@ -581,6 +647,14 @@ div.mySwiper5 div.swiper-slide .imgDiv{
     position: relative;
     background-size: cover;
     background-position: center;
+    /* hover 뒤 애니메이션 */
+    transform: scale(1.0); /* 이미지 확대 */
+    transition: transform 0.2s; /* 시간 설정 */
+}
+div.mySwiper4 div.swiper-slide .imgDiv:hover,
+div.mySwiper5 div.swiper-slide .imgDiv:hover{
+    transform: scale(1.05);   /* 이미지 확대 */
+    transition: transform 0.2s;  /* 시간 설정 */
 }
 div.mySwiper4 div.swiper-slide .imgDiv div,
 div.mySwiper5 div.swiper-slide .imgDiv div{
@@ -589,15 +663,15 @@ div.mySwiper5 div.swiper-slide .imgDiv div{
     width: 75px;
     height: 20px;
     border: 1px solid #eeeeee;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 12px;
     position: absolute;
     z-index: 1;
     margin-top: 0;
-    background-color: #eeeeee;
+    background-color: #f3f4f5;
     padding: 1px;
     vertical-align: middle;
-    color: black;
+    color: #595f63;
 }
 div.mySwiper4 div.swiper-slide .imgDiv div p,
 div.mySwiper5 div.swiper-slide .imgDiv div p{
@@ -657,7 +731,6 @@ div#programMenu-inner div.swiper-button.next4 {
     top: 50%;
 }
 div#programMenu-inner div.swiper-button.prev4 {
-    left: -25px;
     top: 50%;
 }
 
@@ -704,6 +777,5 @@ div#albaMenu-inner div.swiper-button.next5 {
     top: 50%;
 }
 div#albaMenu-inner div.swiper-button.prev5 {
-    left: -25px;
     top: 50%;
 }
