@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Slf4j
-@RequestMapping("/notice/*")
+@RequestMapping(value={"/notice", "/notice/*"})
 public class NoticeController {
 
     @GetMapping("")

@@ -75,6 +75,49 @@
 </div>
 <!-- 푸터 -->
 <div th:replace="/footer/footer.html :: footer" class="footer"/>
+
+<!-- 알람 모달창 -->
+<div class="overlay-l alam-wrap" style="display: none">
+    <div id="alam">
+        <p>정말 삭제하시겠어요?</p>
+        <p>한번 삭제된 프로그램은 복구할 수 없습니다.</p>
+        <div id="alam-btn-group">
+            <button class="a-ok">확인</button>
+            <button type="button" class="a-no">취소</button>
+        </div>
+    </div>
+</div>
+
+<!-- 신청자 목록 -->
+<div class="overlay-l apply-list-wrap" style="display: /*none*/">
+    <div id="apply-list">
+        <div class="modal-close">
+            <img src="/image/myPage/close.png">
+        </div>
+        <div id="a-l-wrap">
+            <div id="a-l-title">신청자 목록</div>
+            <!-- 신청자가 없을 때 -->
+<!--            <div id="apply-none">-->
+<!--                신청자가 아직 없습니다.-->
+<!--            </div>-->
+            <!------------------->
+
+            <!-- 신청자가 있을 때 -->
+            <ul id="a-contents-wrap">
+                <li class="a-c-list">
+                    <div class="a-name">박수현</div>
+                    <div class="a-date">2022.11.24</div>
+                    <div class="a-more">
+                        더보기
+                        <svg data-v-bd9f2bcc="" data-v-6e28c8f5="" width="16" height="16" viewBox="0 0 16 16" fill="black" xmlns="http://www.w3.org/2000/svg" class="my-page-aside-menu-toggle ml-4 c-application c-icon click-passive" data-v-1d2e44b5="" style="fill: rgb(118, 125, 130);"><path data-v-bd9f2bcc="" fill-rule="evenodd" clip-rule="evenodd" d="M7.64645 4.64645C7.84171 4.45118 8.15829 4.45118 8.35355 4.64645L12.8536 9.14645C13.0488 9.34171 13.0488 9.65829 12.8536 9.85355C12.6583 10.0488 12.3417 10.0488 12.1464 9.85355L8 5.70711L3.85355 9.85355C3.65829 10.0488 3.34171 10.0488 3.14645 9.85355C2.95118 9.65829 2.95118 9.34171 3.14645 9.14645L7.64645 4.64645Z"></path></svg>
+                    </div>
+                </li>
+            </ul>
+            <!---->
+        </div>
+    </div>
+</div>
+
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/myPage/myPage.js"></script>
@@ -82,5 +125,14 @@
 <script>
     $("div.menu-a").removeClass('menu-select');
     $("#program").addClass('menu-select');
+
+    // 농장주일 때 글 삭제 모달 알람
+    function removeCheck(){
+        $(".alam-wrap").show();
+    };
+
+    $(".a-no").on("click", function(){
+        $(".alam-wrap").hide();
+    });
 </script>
 </html>

@@ -90,5 +90,14 @@
 <script>
     $("div.menu-a").removeClass('menu-select');
     $("#community").addClass('menu-select');
+
+    // 글 삭제 모달 알람
+    function removeCheck(){
+        $(".overlay-l").show();
+    };
+
+    $(".a-no").on("click", function(){
+        $(".overlay-l").hide();
+    });
 </script>
 </html>

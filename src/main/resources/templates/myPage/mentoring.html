@@ -24,55 +24,20 @@
                 <div class="contents">
                     <div class="c-header">
                         <div class="c-title">
-                            <!--if(멘토)-->
-                            <div>멘티 관리</div>
-                            <!--if(멘티)-->
-<!--                            <div>멘토 목록</div>-->
+                            <!-- 멘티일 때-->
+<!--                            <div>멘티 목록</div>-->
+                            <!-- 멘토일 때 -->
+                            <div>멘토 관리</div>
                             <!----------->
                         </div>
 
-                        <!--멘토일 때-->
-                        <div>
-                            <div class="c-header-c">
-                                <div class="c-header-can">
-                                    <div class="menu-tab-btn">
-                                        <div class="menu-tab">
-                                            <button id="list" class="active main-tab">멘티 목록</button>
-                                        </div>
-                                        <div class="menu-tab">
-                                            <button id="apply" class="main-tab">멘티 신청</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <!-- 멘티일 때 -->
+<!--                        <div th:replace="/myPage/mentoringContent.html :: mentoringMentee"></div>-->
+                        <!----------->
 
-                            <div class="content">
-                                <div class="wrapper-s">
-                                    <div id="mentoring-wrap">
-                                        <!-- 멘토 신청 -->
-                                        <div class="m-l-wrap">
-                                            <div class="m-l">
-                                                <div class="name">박수현</div>
-                                                <button class="infoBtn">한 줄 소개</button>
-                                                <div class="m-b-group">
-                                                    <button class="refuse">거절</button>
-                                                    <button class="accept">수락</button>
-                                                </div>
-                                            </div>
-                                        </div>
-<!--                                        <div class="myInfo">이 편지는 영국에서 최초로 시작되어 일년에 한바퀴 돌면서 받는 사람에게 행운을 주었고 지금은 당신에게로 옮겨진 이 편지는 4일 안에 당신 곁을 떠나야 합니다. 이 편지를 포함해서 7통을 행운이 필요한 사람에게 보내 주셔야 합니다. </div>-->
-                                        <!------------->
-                                    </div>
-                                    <!---->
-<!--                                    <div id="m-a-wrap" class="section-nickname">-->
-<!--                                        멘티 목록-->
-<!--                                    </div>-->
-                                    <!---->
-                                </div>
-                            </div>
-
-                        </div>
-                        <!---------------->
+                        <!-- 멘토일 때 -->
+                        <div th:replace="/myPage/mentoringContent.html :: mentoringMentor"></div>
+                        <!----------->
                     </div>
                 </div>
 
@@ -82,9 +47,26 @@
 </div>
 <!-- 푸터 -->
 <div th:replace="/footer/footer.html :: footer" class="footer"/>
-<!-- 알람 모달창 -->
-<div class="overlay-l" style="display: none">
-    <div class="m-al">삭제되었습니다.</div>
+<!-- 농장주 - 멘티 삭제 모달창 -->
+<div id="farmer-delete" class="overlay-l" style="display: none">
+    <div class="alam">
+        <p>정말 삭제하시겠습니까?</p>
+        <div class="alam-btn-group">
+            <button class="a-ok">거절</button>
+            <button type="button" class="a-no">취소</button>
+        </div>
+    </div>
+</div>
+
+<!-- 농장주 - 신청 거절 모달창 -->
+<div id="farmer-refuse" class="overlay-l" style="display: none">
+    <div class="alam">
+        <p>정말 거절하시겠습니까?</p>
+        <div class="alam-btn-group">
+            <button class="a-ok">거절</button>
+            <button type="button" class="a-no">취소</button>
+        </div>
+    </div>
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
@@ -92,5 +74,32 @@
 <script>
     $("div.menu-a").removeClass('menu-select');
     $("#mentoring").addClass('menu-select');
+
+    // 멘티 삭제 확인 알람
+    function deleteCheck(){
+        $("#farmer-delete").show();
+    };
+    $(".a-no").on("click", function(){
+        $("#farmer-delete").hide();
+    });
+
+    // 멘티 신청 거절 확인 알람
+    function refuseCheck(){
+        $("#farmer-refuse").show();
+    };
+    $(".a-no").on("click", function(){
+        $("#farmer-refuse").hide();
+    });
+
+    function move(tab){
+        $(".myInfo").css('height', '0px');
+        $(".myInfo").css('padding', '0');
+        $('.infoBtn>svg').css("transform", "rotate(180deg)");
+
+        $(".menu-tab button").removeClass('active');
+        $("button." + tab).addClass('active');
+        $('.content-m-wrap').hide();
+        $("#" + tab).show();
+    };
 </script>
 </html>

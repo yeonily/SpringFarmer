@@ -50,7 +50,7 @@
                                                     <img src="https://cdn.comento.kr/images/pt/tmp/prefix_4gTSmjheRr.png" class="program-img">
                                                     <div class="applied-cancel">
                                                         <a href="#"><div class="a-c-btn" style="margin-bottom: 1px;">수정하기</div></a>
-                                                        <a href="#"><div class="a-c-btn">삭제하기</div></a>
+                                                        <a href="javascript:void(0);" onclick="javascript:removeCheck();"><div class="a-c-btn">삭제하기</div></a>
                                                     </div>
                                                     <img src="/image/myPage/option.png" class="l-menuBtn l-m-btn">
                                                 </div>
@@ -73,7 +73,7 @@
                                                     <img src="https://cdn.comento.kr/images/pt/tmp/prefix_4gTSmjheRr.png" class="program-img">
                                                     <div class="applied-cancel">
                                                         <a href="#"><div class="a-c-btn" style="margin-bottom: 1px;">수정하기</div></a>
-                                                        <a href="#"><div class="a-c-btn">삭제하기</div></a>
+                                                        <a href="javascript:void(0);" onclick="javascript:removeCheck();"><div class="a-c-btn">삭제하기</div></a>
                                                     </div>
                                                     <img src="/image/myPage/option.png" class="l-menuBtn l-m-btn">
                                                 </div>
@@ -103,6 +103,19 @@
 </div>
 <!-- 푸터 -->
 <div th:replace="/footer/footer.html :: footer" class="footer"/>
+<!-- 알람 모달창 -->
+<div class="overlay-l alam-wrap" style="display: none">
+    <div id="alam">
+        <p>정말 삭제하시겠어요?</p>
+        <p>한번 삭제된 공고 글은 복구할 수 없습니다.</p>
+        <div id="alam-btn-group">
+            <button class="a-ok">확인</button>
+            <button type="button" class="a-no">취소</button>
+        </div>
+    </div>
+</div>
+
+
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/myPage/myPage.js"></script>
@@ -110,5 +123,14 @@
 <script>
     $("div.menu-a").removeClass('menu-select');
     $("#alba").addClass('menu-select');
+
+    // 농장주일 때 글 삭제 모달 알람
+    function removeCheck(){
+        $(".alam-wrap").show();
+    };
+
+    $(".a-no").on("click", function(){
+        $(".alam-wrap").hide();
+    });
 </script>
 </html>

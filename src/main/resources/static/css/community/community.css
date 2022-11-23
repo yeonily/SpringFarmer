@@ -294,6 +294,8 @@ div.li-txt {
     color: #767D82;
 }
 
+a>div.li-txt:hover {color: #47c880;}
+
 div#write-wrap {
     position: fixed;
     width: 58px;
@@ -309,6 +311,11 @@ div#write-wrap {
     justify-content: center;
     cursor: pointer;
     transition: all .3s ease;
+}
+
+.selected-header {
+    color: #040505!important;
+    font-weight: 600!important;
 }
 
 @media only screen and (min-width: 768px){

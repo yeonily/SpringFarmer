@@ -59,4 +59,10 @@
 <div th:replace="/footer/footer.html :: footer" class="footer"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/community/link.js"></script>
+<script>
+    //서브헤더 소카 이름
+        $('div.menuList ul li:nth-child(1)').children().attr("class", "off");
+        $('div.menuList ul li:nth-child(2)').children().attr("class", "on");
+</script>
 </html>

@@ -410,6 +410,10 @@ div.commu-nickname>hr {
 
 p.re-content {min-height: 25px;}
 
+.selected-header {
+    color: #040505!important;
+    font-weight: 600!important;
+}
 
 @media only screen and (min-width: 768px) {
     div#main {padding-bottom: 120px;}
