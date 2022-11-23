@@ -58,7 +58,7 @@ $(".mask, .main_banner, .sub_banner").on("click", function (){
     $("div.swiper-wrapper").css("opacity", "1");
 });
 
-<<<<<<< HEAD
+
 
 /*알림창 닫기(화살표) 클릭 시*/
 $(".mr-4.c-application.c-icon").on("click", function() {
@@ -67,7 +67,7 @@ $(".mr-4.c-application.c-icon").on("click", function() {
     $("div.swiper-wrapper").css("background", "inherit");
     $("div.swiper-wrapper").css("opacity", "1");
 })
-=======
+
 if($('.pg-detail-banner-chip').text() == '정책'){
     for(let i = 0; i < btnList.length; i++) {
         $(btnList[i]).attr("class", "off");
@@ -89,4 +89,4 @@ if($('.pg-detail-banner-chip').text() == '정책'){
     }
     $(btnList[3]).attr("class", "on");
 }
->>>>>>> 23b5cb41f8b20593855bc7d43788037cc605cfe0
+

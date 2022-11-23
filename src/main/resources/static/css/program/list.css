@@ -418,7 +418,9 @@ button {
         margin-bottom: 0;
     }
 
-
+    .search_form {
+        display: inline-flex !important;
+    }
 }
 
 
