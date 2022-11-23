@@ -314,12 +314,11 @@ div.alarm div.top-div span {
     width: 230px;
 }
 div.alarm div.top-div p {
-    margin-left: 15px;
     font-size: 18px;
     font-weight: bold;
+    margin: 0 0 0 15px;
 }
 div.alarm div.top-div button {
-    padding: -1px 8px;
     height: 24px;
     width: 56px;
     font-size: 10px;
