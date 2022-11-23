@@ -106,6 +106,9 @@ td div.file {
     border: none;
     overflow: hidden;
     cursor: pointer;
+    display: flex;
+    margin-top: 1%;
+    float: right;
 }
 
 td div.file input {
@@ -168,4 +171,10 @@ textarea.summernote_ask{
 
 table.ask_all_reply{
     margin-top: 140px;
+}
+
+td img#preview-image{
+    height: 120px;
+    display: flex;
+    margin: 3% auto;
 }

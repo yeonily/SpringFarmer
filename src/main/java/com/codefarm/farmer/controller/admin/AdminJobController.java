@@ -10,4 +10,9 @@ public class AdminJobController {
 
     @GetMapping("/job")
     public String adminJob() {return "/adminJob/job";}
+
+    @GetMapping("/job-participant")
+    public String adminJobParticipant() {return "/adminJob/job-participant";}
 }
+
+
