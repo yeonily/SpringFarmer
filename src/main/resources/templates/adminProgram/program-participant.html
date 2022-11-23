@@ -45,7 +45,9 @@
                         <span class="s-form">
                             <select name="searchSelect" class="val">
                                 <option value="programName">프로그램명</option>
-                                <option value="id">지원자</option>
+                                <option value="name">지원자</option>
+                                <option value="nickName">닉네임</option>
+                                <option value="crop">농작물</option>
                                 <option value="address">위치</option>
                             </select>
                         </span>
@@ -72,19 +74,21 @@
             <table>
                 <tr class="title">
                     <th class="num">번호</th>
-                    <th class="id">지원자</th>
+                    <th class="name">지원자</th>
+                    <th class="nickName">닉네임</th>
                     <th class="title">프로그램명</th>
                     <th class="work-date">진행날짜</th>
                     <th class="work-time">진행시간</th>
-                    <th class="crop">작물</th>
+                    <th class="crop">농작물</th>
                     <th class="address">위치</th>
                     <th class="date">지원날짜</th>
                 </tr>
                 <!-- ↓ 데이터 출력 -->
                 <tr>
                     <td>1</td>
-                    <td>나랑농부할래</td>
-                    <td class="title" onclick="location.href='#'">잡초 뽑기</td>
+                    <td class="name">연태관</td>
+                    <td class="nickName">herd</td>
+                    <td class="title" onclick="location.href='/program/detail'">잡초 뽑기</td>
                     <td>2022-10-11</td>
                     <td>5h</td>
                     <td>잡초</td>
@@ -93,8 +97,9 @@
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>herd</td>
-                    <td class="title" onclick="location.href='#'">잡초 뽑기</td>
+                    <td class="name">연태관</td>
+                    <td class="nickName">xogwan</td>
+                    <td class="title" onclick="location.href='/program/detail'">잡초 뽑기</td>
                     <td>2022-11-11</td>
                     <td>4h</td>
                     <td>벼</td>
@@ -103,8 +108,9 @@
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>태관</td>
-                    <td class="title" onclick="location.href='#'">잡초 뽑기</td>
+                    <td class="name">연태관</td>
+                    <td class="nickName">xorhks</td>
+                    <td class="title" onclick="location.href='/program/detail'">잡초 뽑기</td>
                     <td>2022-12-11</td>
                     <td>7h</td>
                     <td>사과 재배</td>
