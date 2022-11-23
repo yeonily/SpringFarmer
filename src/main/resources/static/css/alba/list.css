@@ -157,7 +157,7 @@ div#list_th .title {
     width: 610px;
     text-align: center;
 }
-div#list_th .workHours {
+div#list_th .workDay {
     width: 120px;
     text-align: center;
 }
@@ -202,7 +202,7 @@ div.list_td div.title {
     padding: 12px 0;
     font-size: 15px;
 }
-div.list_td div.workHours {
+div.list_td div.workDay {
     width: 125px;
     line-height: 74px;
     vertical-align: middle;
