@@ -1,3 +1,6 @@
+/*
+* mento/write.html
+* */
 
     // $("#first_page").show();
     // $("#second_page").hide();
@@ -71,32 +74,37 @@
     /*제출하기 버튼 클릭 시 유효성 검사*/
     $(".submitBtn").on("click" , function () {
         var inputList = new Array();
-        /*var textareaList = new Array();*/
+        var textareaList = new Array();
         let check = true;
 
         $("input:not(.note-editor input , #attach)").each(function(index, item){
-            console.log(index);
             inputList.push($(item));
         });
 
-        /*$("textarea").each(function(index, item) {
+        $("textarea").each(function(index, item) {
             textareaList.push($(item));
-        });*/
+        });
 
-        console.log(inputList.length);
+        console.log(textareaList.length);
         for(let i = 0; i < inputList.length; i++) {
-            console.log(inputList[i].val());
             if(inputList[i].val() == '') {
                 inputList[i].css("border", "1px solid red");
                 check = false;
             }
         }
-
-        /*썸머노트 비어있을 때 빨간테두리 표시*/
-        if($(".note-editable").text() == ''){
-            $(".note-editable").css("border", "1px solid red");
-            check = false;
+        for(let i = 0; i < textareaList.length; i++) {
+            console.log(textareaList[i].val());
+            if(textareaList[i].val() == '') {
+                textareaList[i].css("border", "1px solid red");
+                check = false;
+            }
         }
+
+        /*/!*textarea 비어있을 때 표시*!/
+        if($(".textarea_content").text() == ''){
+            $(".textarea_content").css("border", "1px solid red");
+            check = false;
+        }*/
 
         if(!check) {
             alert("입력하지 않은 값이 있습니다.");
@@ -107,36 +115,9 @@
         location.href='/mento/list';
     })
 
-    /* 썸머노트 */
-    $(document).ready(function() {
-        $('#summernote').summernote({
-            // airMode: true,
-            height : 185,
-            callbacks: {
-                onChange: function(contents, $editable) {
-                    editorText = f_SkipTags_html(contents);
-                    editorText = editorText.replace(/\s/gi,""); //줄바꿈 제거
-                    editorText = editorText.replace(/&nbsp;/gi, ""); //공백제거
-                    $("#letter-length").text(editorText.length);
-                },
-                onImageUpload : function(files, editor){
-                    console.log(files);
-                }
-            }
-        });
 
-        function f_SkipTags_html(input, allowed) {
-            // 허용할 태그는 다음과 같이 소문자로 넘겨받습니다. (<a><b><c>)
-            allowed = (((allowed || "") + "").toLowerCase().match(/<[a-z][a-z0-9]*>/g) || []).join('');
-            var tags = /<\/?([a-z][a-z0-9]*)\b[^>]*>/gi,
-                commentsAndPhpTags = /<!--[\s\S]*?-->|<\?(?:php)?[\s\S]*?\?>/gi;
-            return input.replace(commentsAndPhpTags, '').replace(tags, function ($0, $1) {
-                return allowed.indexOf('<' + $1.toLowerCase() + '>') > -1 ? $0 : '';
-            });
-        }
-    });
 
-    /*파일 첨부*/
+    /*/!*파일 첨부*!/
     const file = document.querySelector($("#attach"));
     const thumbnail = document.querySelector($(".thumbnail"));
     file.addEventListener("change",function(e){
@@ -162,9 +143,9 @@
     });
 
 
-    /*-----------------------------------------------------------*/
-    /*첨부파일 이미지 미리보기*/
-    /*-----------------------------------------------------------*/
+    /!*-----------------------------------------------------------*!/
+    /!*첨부파일 이미지 미리보기*!/
+    /!*-----------------------------------------------------------*!/
     function readImage(input) {
         // 인풋 태그에 파일이 있는 경우
         if(input.files && input.files[0]) {
@@ -188,12 +169,26 @@
         readImage(e.target)
     })
 
-    /*버튼이 삭제일 때*/
+    /!*버튼이 삭제일 때*!/
     if($(".input-file-button").text() == "삭제") {
         $(".input-file-button").on("click", function() {
             $("#input-image").val('');
         });
-    }
+    }*/
 
 
+
+    /*나가기 모달창*/
+    $("#header_right_button2").on("click", function () {
+        console.log("들어옴");
+        $("#c-overlay").show();
+    })
+
+    $(".button-1").on("click",function () {
+        location.href = '/mento/list';
+    })
+
+    $(".button-2").on("click",function () {
+        $("#c-overlay").hide();
+    })
 

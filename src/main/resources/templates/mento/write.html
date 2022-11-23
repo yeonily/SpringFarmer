@@ -6,9 +6,6 @@
     <link rel="stylesheet" href="/css/common/font.css"/>
     <link rel="icon" href="/image/header/favicon.png"/>
     <link rel="shortcut icon" href="/image/header/favicon.png"/>
-    <link href="https://cdn.quilljs.com/1.2.6/quill.snow.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <title>멘토 홍보 글 작성</title>
 </head>
 <body>
@@ -92,7 +89,6 @@
                                             <div class="first_section4_main_title">과거 경력 소개</div>
                                             <div class="first_section4_sub_title">과거 어떤 일을 했는지 알려주세요</div>
                                         </div>
-                                        <span class="first_section4_example">예시보기</span>
                                     </div>
                                     <div>
                                         <div>
@@ -232,10 +228,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <form method="post">
-                                        <textarea id="summernote" name="editordata"></textarea>
-                                        <p id="letter-length" style="display: inline;"></p>/100
-                                    </form>
+                                    <!--상세페이지 내용 작성 textarea-->
+                                    <div class="textarea_content">
+                                            <textarea placeholder="멘토 홍보글 내용을 입력해주세요" autocomplete="off" class="textarea-editor" oninput="this.style.height = &quot;21px&quot;; this.style.height = this.scrollHeight + &quot;px&quot;"></textarea>
+                                    </div>
                                 </section>
 
                                 <!--이미지 첨부-->
@@ -328,6 +324,29 @@
                 </div>
                 <!--멘토 오른쪽 사이드 바 끝-->
 
+
+                <!--나가기 모달 창-->
+                <div>
+                    <aside id="c-overlay">
+                        <div class="register-modal">
+                            <div class="modal-wrapper">
+                                <div class="modal-title-wrapper">
+                                    <div class="modal-title">정말 그만둘까요?</div>
+                                </div>
+                                <div class="modal-content-wrapper">
+                                    <div class="modal-content">
+                                        도움이 필요한 사람들이 멘토님을 기다리고 있어요<br>다양한 사람들의 멘토가 되어주세요!
+                                        <div class="exit-modal-action-container">
+                                            <button class="button-1"><div class="flex"/>나가기<div class="flex"/></button>
+                                            <button class="button-2"><div class="flex"/>계속 작성하기<div class="flex"/></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+
                 <!--멘토 소개 페이지 푸터 시작-->
                 <div id="write_footer">
                     <div id="write_footer_inner1">
@@ -353,11 +372,10 @@
         </div>
     </div>
 </div>
+
+
 </body>
 </html>
 
-<script src="https://cdn.quilljs.com/1.2.6/quill.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 <script src="/js/mento/write.js"></script>
