@@ -139,6 +139,11 @@ div.n-c-bottom {
     margin-bottom: 80px!important;
 }
 
+.selected-header {
+    color: #040505!important;
+    font-weight: 600!important;
+}
+
 @media only screen and (min-width: 768px){
     div.notice-wrap {
         padding-right: 16px;

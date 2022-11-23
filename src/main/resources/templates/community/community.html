@@ -87,13 +87,15 @@
                             <ul style="width: 100%;">
                                 <li>
                                     <!-- 내가 작성한 글 -->
-                                    <div class="li-txt">내가 작성한 게시글</div>
-                                    <div class="li-txt">촐 0개</div>
+                                    <a th:href="@{/mypage/community}">
+                                        <div class="li-txt">내가 작성한 게시글</div>
+                                    </a>
+                                    <div class="li-txt">총 0개</div>
                                 </li>
                                 <li>
                                     <!-- 내가 작성한 댓글 -->
                                     <div class="li-txt">내가 남긴 댓글</div>
-                                    <div class="li-txt">촐 0개</div>
+                                    <div class="li-txt">총 0개</div>
                                 </li>
                             </ul>
                         </div>
@@ -112,6 +114,7 @@
 <div th:replace="/footer/footer.html :: footer" class="footer"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/community/link.js"></script>
 <script>
     $("#my-commu").on("click", function(){
         if($(this).next().css("max-height") == "0px"){

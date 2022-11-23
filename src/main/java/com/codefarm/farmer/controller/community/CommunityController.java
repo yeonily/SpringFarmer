@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Slf4j
-@RequestMapping("/community/*")
+@RequestMapping(value={"/community", "/community/*"})
 public class CommunityController {
 
     @GetMapping("")
-    public String noticePage(){
+    public String communityPage(){
         return "/community/community";
     }
 

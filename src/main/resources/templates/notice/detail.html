@@ -31,6 +31,13 @@
                     <strong>오래된 옷을 벗어던지고 현재와 미래의 너와농부싶어를 더 잘 표현할 수 있는 옷으로 갈아입는 것을 결정했습니다.</strong></p></p>
                 </div>
                 <div id="notice-date">2022.11.19 17:04</div>
+                <div id="files">
+                    <div class="file">
+                        <span class="f-img"><img src="/image/community/clip.png"></span>
+                        <span class="f-title">JPA_신난다.jpg</span>
+                        <span class="f-size">[1.63MB]</span>
+                    </div>
+                </div>
             </div>
             <div id="list-btn">
                 <button type="button" class="back-list">목록</button>
@@ -42,4 +49,10 @@
 <div th:replace="/footer/footer.html :: footer" class="footer"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/community/link.js"></script>
+<script>
+    //서브헤더 소카 이름
+    $('div.menuList ul li:nth-child(1)').children().attr("class", "off");
+    $('div.menuList ul li:nth-child(2)').children().attr("class", "on");
+</script>
 </html>

@@ -98,6 +98,45 @@ div#n-w-wrap {
     font-weight: 300;
 }
 
+#files {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+div.file {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    padding: 5px 10px 5px;
+    /*background: #ebebeb69;*/
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: rgb(32, 35, 37);
+    overflow: hidden;
+    cursor: pointer;
+}
+div.file:hover {background: #ebebeb69;}
+
+span.f-img>img {
+    height: 13px;
+    margin-top: 2px;
+    margin-right: 5px;
+}
+
+span.f-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+span.f-size {
+    margin-left: 4px;
+    font-size: 11px;
+    line-height: 15px;
+}
+
 div#list-btn {
     width: 100%;
     padding: 24px;
@@ -118,6 +157,11 @@ button.back-list {
     background-color: transparent;
     border: 1px solid #949ba0;
     color: #767d82;
+}
+
+.selected-header {
+    color: #040505!important;
+    font-weight: 600!important;
 }
 
 @media only screen and (min-width: 768px) {

@@ -144,29 +144,22 @@ hr.menu-category {
 
 /*더보기 > 슬라이드 메뉴*/
 div.slide-menu {
-    height: 88px;
+    height: 0px;
     position: absolute;
     width: 100%;
     overflow: hidden;
-    display: none;
+    transition: height .25s cubic-bezier(.4,0,.2,1);
 }
 
-div.more-btn {position: relative;}
-
-div.menu-a>span:after {
-    position: absolute;
-    top: 20px;
-    left: 54px;
-    width: 17px; /* 사이즈 */
-    height: 17px; /* 사이즈 */
-    font-size: 25px;
-    font-weight: 300;
-    color: #767D82;
-    transform: rotate(90deg); /* 각도 */
+div.more-btn {
+    position: relative;
+    justify-content: flex-start!important;
 }
 
-div.menu-a>span:after {content: "\203A";}
-div.menu-a>span.chaged:after {content: "\2039";}
+div.more-btn>svg {
+    margin-left: 4px!important;
+    transform: rotate(180deg);
+}
 
 div.slide-m {
     color: #767D82;
@@ -297,7 +290,7 @@ div.overlay-l {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.29);
+    background: rgba(0,0,0,.6);
     z-index: 9998;
 }
 

@@ -4,8 +4,13 @@
 
 // 더보기 메뉴 슬라이드
 $("div.more-btn").on("click", function(){
-    $('.slide-menu').slideToggle(200);
-    $('div.more-btn span').toggleClass('chaged')
+    if($('.slide-menu').css("height") == "0px"){
+        $('.slide-menu').css("height", "88px");
+        $('.more-btn>svg').css("transform", "rotate(0)");
+    } else {
+        $('.slide-menu').css("height", "0px");
+        $('.more-btn>svg').css("transform", "rotate(180deg)");
+    }
 })
 
 // setting.html, quit.html 탭 이동
@@ -16,7 +21,7 @@ function tabMove(tab){
     $('html, body').animate({scrollTop : (offset.top - $("div.header").height())}, 300);
 }
 
-// 닉네임 중복확인 버튼 클릭 후 저장 버튼 활성화
+// setting.html - 닉네임 중복확인 버튼 클릭 후 저장 버튼 활성화
 $(".nick-save").attr("disabled", true);
 
 $("input[name='nickname']").on("focus",function(){
@@ -24,13 +29,14 @@ $("input[name='nickname']").on("focus",function(){
 });
 
 
-// 휴대폰 번호일 때 자동 하이픈(-) 입력 - 미적용
+// setting.html - 휴대폰 번호일 때 자동 하이픈(-) 입력 - 미적용
 const autoHyphen = (target) => {
     target.value = target.value
         .replace(/[^0-9]/g, '')
         .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3").replace(/(\-{1,2})$/g, "");
 }
 
+// setting.html - 멘토 등록할 때 입력 폼
 function mentorForm(){
     $("#mentor-none").hide();
     $(".newMentorForm").show();
@@ -41,7 +47,7 @@ $("#mentorCancel").on("click", function(){
     $(".newMentorForm").hide();
 });
 
-// 탈퇴 모달창 이벤트
+// quit.html - 탈퇴 모달창 이벤트
 $("button.quit").on("click", function(){
     $("#modal").show();
 });
@@ -54,7 +60,7 @@ $("div.modal-close").on("click", function(){
 });
 
 
-// 탈퇴 이유 클릭시 이벤트
+// quit.html - 탈퇴 이유 클릭시 이벤트
 $("button.quitBtn").attr("disabled", true);
 
 $("input[name='reason']").on("change", function (){
@@ -75,22 +81,32 @@ $("input[name='reason']").on("change", function (){
 });
 
 
-/* 모달 알람 */
+// 저장 모달 알람
 function alam() {
     $(".overlay-l").show();
     $(".m-al").show();
     setTimeout(function() { $(".overlay-l").fadeOut();}, 500);
 }
 
+// mentoring.html - 한 줄 소개 보기
+$("button.infoBtn").on("click", function(){
+    let $info = $(this).parents('div.m-l').next();
+    let $moreSVG = $(this).children('svg');
 
-/* 모달 알람 */
-function removeCheck(){
-    $(".overlay-l").show();
-};
+    if($info.css("height") == '0px'){
+        $(".myInfo").css('height', '0px');
+        $(".myInfo").css('padding', '0');
+        $('.infoBtn>svg').css("transform", "rotate(180deg)");
 
-$(".a-no").on("click", function(){
-    $(".overlay-l").hide();
-});
+        $info.css('height', 'auto');
+        $info.css('padding', '7px 10px');
+        $moreSVG.css("transform", "rotate(0deg)");
+    } else {
+        $info.css('height', '0px');
+        $info.css('padding', '0');
+        $moreSVG.css("transform", "rotate(180deg)");
+    }
+})
 
 /*------------- 닉네임 수정 -------------*/
 function nickCheck (){ /* 중복 체크 */
