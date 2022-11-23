@@ -7,11 +7,14 @@
         scrollbar-width: none;
         -ms-overflow-style: none;
     }
+    #wrap {
+        margin-top: 52px !important;
+    }
 
     /*헤더*/
     div.header_nav {
-        width: 80%;
-        height: 100%;
+        width: 100%;
+        height: 75%;
         display: inline-flex;
         align-items: center;
     }
@@ -28,7 +31,7 @@
         background-color: inherit;
     }
     div.search_form {
-        display: inline-flex;
+        display: none;
         flex-direction: row;
         width: 190px;
         height: 40px;
@@ -41,6 +44,7 @@
         padding: 10px 0px 10px 14px;
         font-size: 14px;
         line-height: 20px;
+        width: 155px;
     }
     button.search_img {
         position: relative;
@@ -52,10 +56,25 @@
     }
     div.noti-button-container {
         margin-left: 7px;
+        margin-bottom: 5px;
+        margin-right: 15px;
     }
 
 
 
+    /*------------------------------------*/
+                /*로그인 전*/
+    /*------------------------------------*/
+    div.header_nav ul.nav_right {
+        float: right;
+        margin-right: 10px;
+    }
+    div.header_nav ul.nav_right li:nth-child(2) {
+        display: flex;
+    }
+    div.header_nav ul.nav_right li:not(ul.nav_right li:nth-child(2)) {
+        display: none;
+    }
 
 
     /*------------------------------------*/
@@ -78,8 +97,15 @@
         align-items: center;
         flex-direction: column;
     }
+    div.sub_banner {
+        padding-top: 60px;
+    }
+    div.sub_banner_inner h1 {
+        font-size: 22px;
+        height: 44px;
+    }
     div.main_banner .swiper-slide div {
-        width: 95%;
+        width: 90%;
         height: 120px;
         font-size: 32px;
         font-weight: bold;
@@ -92,7 +118,7 @@
         justify-content: space-evenly;
     }
     div.main_banner .swiper-slide img {
-        width: 95%;
+        width: 90%;
         height: 193px;
         background-size: cover;
         border-radius: 10px;
@@ -104,10 +130,13 @@
                     /*멘토배너*/
     /*------------------------------------*/
     div.sub_banner div.sub_banner_inner {
-        width: 95%;
+        width: 90%;
         height: 350px;
         margin: 0 auto;
         position: relative;
+    }
+    div.sub_banner_inner .mySwiper2 .swiper-slide {
+
     }
     div.mySwiper2 div.swiper-slide .imgDiv {
         width: 100%;
@@ -124,11 +153,11 @@
     /*------------------------------------*/
     div #middleImg {
         width: 100%;
-        margin: 80px 0;
+        margin: 10px 0 40px 0;
         height: auto;
     }
     div #middleImg img {
-        width: 100%;
+        width: 90%;
         content: url("https://cdn.comento.kr/images/edu/matching/saramin-banner-index-m.jpg");
     }
 
@@ -142,7 +171,7 @@
         margin: 80px 0;
     }
     div#communitySlide #communitySlide_inner {
-        width: 95%;
+        width: 90%;
         margin: 0 auto;
         position: relative;
     }
@@ -175,7 +204,7 @@
         width: 100%;
     }
     div#socaMenu div#socaMenu-inner, div#socaMenu2 div#socaMenu2-inner {
-        width: 95%;
+        width: 90%;
         margin: 0 auto;
     }
     div#socaMenu div#socaMenu-inner div.menuList {
@@ -210,7 +239,7 @@
         /*가장 인기 있는 프로그램 슬라이드 배너*/
     /*------------------------------------*/
     div#programMenu div#programMenu-inner, div#albaMenu div#albaMenu-inner {
-        width: 95%;
+        width: 90%;
         margin: 0 auto;
         height: 308px;
         position: relative;
@@ -238,28 +267,30 @@
         word-wrap: break-word;
         word-break: keep-all;
     }
+    div.mySwiper4 div.swiper-slide .imgDiv div{
+        width: 52px;
+    }
 
 
     /*------------------------------------*/
                 /*사람들이 즐겨찾는 메뉴*/
     /*------------------------------------*/
     div#socaMenu2 div#socaMenu2-inner div.menuList {
-        display: inline-flex;
-        grid-row-gap: 20px;
-        grid-column-gap: 24px;
-        width: 100%;
+        display: block;
     }
     div#socaMenu2-inner div.menuList div.menuList-menu {
         background-color: #F3F4F5;
-        width: 100%;
-        height: 107px;
+        width: 157px;
+        height: 97px;
         border-radius: 10px;
-        display: flex;
+        display: inline-flex;
         align-items: center;
         padding: 24px 0;
         flex-direction: column;
         justify-content: space-around;
         align-content: center;
+        margin-bottom: 16px;
+        margin-right: 16px;
     }
 
 
@@ -267,7 +298,7 @@
                     /*마감 알바*/
     /*------------------------------------*/
     div#albaMenu {
-        margin-bottom: 80px;
+        margin-bottom: 0;
         width: 100%;
     }
 
