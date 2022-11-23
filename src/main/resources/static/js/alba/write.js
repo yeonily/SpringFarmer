@@ -195,12 +195,22 @@ $("#left-menu ul li:nth-child(5)").on("click",function(){
                     /*첨부파일 이미지 미리보기*/
 /*-----------------------------------------------------------*/
 function readImage(input) {
+    var fileForm = /(.*?)\.(jpg|jpeg|png|gif|bmp|pdf)$/;
     // 인풋 태그에 파일이 있는 경우
     if(input.files && input.files[0]) {
         // 이미지 파일인지 검사 (생략)
         // FileReader 인스턴스 생성
         const reader = new FileReader()
         // 이미지가 로드가 된 경우
+
+        /*이미지 외의 파일 선택 시*/
+        if(!$(input).val().match(fileForm)) {
+            $("#preview-image").attr("src", "/image/alba/no_image.png");
+            $("#input-image").val('');
+            alert("이미지 파일만 업로드 가능합니다!");
+            return;
+        }
+
         reader.onload = e => {
             const previewImage = document.getElementById("preview-image")
             previewImage.src = e.target.result
@@ -215,13 +225,6 @@ const inputImage = document.getElementById("input-image")
 inputImage.addEventListener("change", e => {
     readImage(e.target)
 })
-
-/*버튼이 삭제일 때*/
-if($(".input-file-button").text() == "삭제") {
-    $(".input-file-button").on("click", function() {
-        $("#input-image").val('');
-    });
-}
 
 
 /*-----------------------------------------------------------*/
@@ -260,20 +263,31 @@ $("button.submitBtn").on("click", function (){
         textareaList.push($(item));
     });
 
+    console.log($("#input-image").val() == '');
+
+    /*이미지가 비어 있으면 빨간 상자*/
+    if($("#input-image").val() == '') {
+        $("#preview-image").css("border", "1px solid red");
+        check = false;
+    }
+
+    /*input 태그가 비어져 있으면 빨간 상자*/
     for(let i = 0; i < inputList.length; i++) {
         if(inputList[i].val() == '') {
-            console.log(inputList[i]);
             inputList[i].css("border", "1px solid red");
             check = false;
         }
     }
 
+    /*textarea 태그가 비어져 있으면 빨간 상자*/
     for(let i = 0; i < textareaList.length; i++) {
         if(textareaList[i].val() == '') {
             textareaList[i].css("border", "1px solid red");
             check = false;
         }
     }
+
+
     if(!check) {
         $("div.m-title").text("입력하지 않은 값이 있습니다.");
         $("div.m-c-title").text("빨간박스에 값을 모두 입력한 후 다시 시도해주세요!");
@@ -299,6 +313,9 @@ $("input").on("change", function() {
 $("textarea").on("change", function() {
     $(this).css("border", "1px solid #e1e4e6");
 })
+$("#input-image").on("change", function() {
+    $("#preview-image").css("border", "1px solid #e1e4e6");
+});
 
 
 
@@ -366,6 +383,14 @@ function mapSearch() {
 }
 
 
+/*글자 실시간 인식 및 인풋 배경 색 변경*/
+$("#locationInput").on("propertychange change paste input", function() {
+    if ($("#locationInput").val().length == 0) {
+        $("input.locationBtn").css("background", "#47c88052");
+    } else {
+        $("input.locationBtn").css("background", "#47c880");
+    }
+});
 
 
 

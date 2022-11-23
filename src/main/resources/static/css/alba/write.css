@@ -387,13 +387,10 @@ div#map {
     border: 1px solid #e1e4e6;
 }
 input.locationBtn {
-    background-color: #47c88052 !important;
+    background-color: #47c88052;
     color: #ffffff !important;
     width: 95px !important;
     border: 0 !important;
-}
-input.locationBtn:hover {
-    background-color: #357e55 !important;
 }
 
 
@@ -432,8 +429,9 @@ div.farmer-profile div.img-icon p {
     margin: 10px 0;
 }
 div.farmer-profile div.img-icon h1 {
-    font-size: 18px;
+    font-size: 15px;
     margin: 0;
+    font-weight: 400;
 }
 div.farmer-profile div.img-icon span img {
     width: 10px;
@@ -652,6 +650,10 @@ div.m-title {
     font-size: 22px;
     line-height: 28px;
     font-weight: 600;
+}
+div.m-title {
+    font-weight: 400;
+    font-size: 20px;
 }
 div.m-c-wrap {
     padding-left: 32px;
