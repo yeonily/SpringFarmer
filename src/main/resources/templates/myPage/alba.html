@@ -25,13 +25,22 @@
                     <div class="c-header">
                         <div class="c-title">
                             <div>내 아르바이트</div>
+                            <!-- 농장주일 때 -->
                             <button class="s-button l-writeBtn">
                                 <svg data-v-bd9f2bcc="" data-v-79e0399f="" width="16" height="16" viewBox="0 0 16 16" fill="black" xmlns="http://www.w3.org/2000/svg" class="c-application c-icon" data-v-ace7c8aa="" style="fill: rgb(255, 255, 255);"><path data-v-bd9f2bcc="" fill-rule="evenodd" clip-rule="evenodd" d="M8 2C8.27614 2 8.5 2.22386 8.5 2.5V13.5C8.5 13.7761 8.27614 14 8 14C7.72386 14 7.5 13.7761 7.5 13.5V2.5C7.5 2.22386 7.72386 2 8 2Z"></path><path data-v-bd9f2bcc="" fill-rule="evenodd" clip-rule="evenodd" d="M14 8C14 8.27614 13.7761 8.5 13.5 8.5L2.5 8.5C2.22386 8.5 2 8.27614 2 8C2 7.72386 2.22386 7.5 2.5 7.5L13.5 7.5C13.7761 7.5 14 7.72386 14 8Z"></path></svg>
                                 아르바이트 만들기
                             </button>
+                            <!---->
                         </div>
                         <div class="content">
-                            <!-- 아르바이트 내역 없을 경우 -->
+                            <!-- 농장주 - 아르바이트 내역 없을 경우 -->
+<!--                            <div id="content-wrap">-->
+<!--                                <div class="n-c-wrap">-->
+<!--                                    너와농부싶어와 함께하는 아르바이트를 확인해보세요!-->
+<!--                                    <button class="sendPage-btn" th:onclick="'location.href=\''+ @{/alba/list} + '\''">아르바이트 보러 가기</button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <!-- 농장주 - 아르바이트 내역 없을 경우 -->
 <!--                            <div id="content-wrap">-->
 <!--                                <div class="n-c-wrap" style="line-height: 25px;">-->
 <!--                                    아르바이트 목록이 없어요.<br>-->
@@ -41,7 +50,7 @@
                             <!------------------------>
                             <div id="c-w-wrap" class="f-column">
                                 <!-- 일반 유저 - 내가 신청한 프로그램 -->
-                                <!--                                        <div th:replace="/myPage/albaContent.html :: userAlbas"/>-->
+                                <div th:replace="/myPage/albaContent.html :: userAlbas"/>
                                 <!------------------->
 
                                 <!-- 농장주 - 내가 만든 프로그렘 -->
