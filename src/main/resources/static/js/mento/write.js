@@ -6,6 +6,44 @@
     // $("#second_page").hide();
 
 
+    /*
+    * 예시 클릭 시 바뀌는 부분
+    * */
+
+    //경력 소개 예시 눌렀을 때
+    $("#carrer_intro_example").on("click" , function () {
+        $("#carrer_intro").show();
+        $("#mento_result").hide();
+        $("#mento_intro_title").hide();
+        $("#mento_intro_content").hide();
+    })
+    //멘토 추천 이유 예시 눌렀을 때
+    $("#mento_result_example").on("click" , function () {
+        $("#carrer_intro").hide();
+        $("#mento_result").show();
+        $("#mento_intro_title").hide();
+        $("#mento_intro_content").hide();
+    })
+    //멘토 홍보글 제목 작성 예시 눌렀을 때
+    $("#mento_intro_title_example").on("click" , function () {
+        $("#carrer_intro").hide();
+        $("#mento_result").hide();
+        $("#mento_intro_title").show();
+        $("#mento_intro_content").hide();
+    })
+    //멘토 홍보글 내용 작성 예시 눌렀을 때
+    $("#mento_intro_content_example").on("click" , function () {
+        $("#carrer_intro").hide();
+        $("#mento_result").hide();
+        $("#mento_intro_title").hide();
+        $("#mento_intro_content").show();
+    })
+
+
+
+
+
+
     // 다음 버튼 누를시 이동, 버튼 색 변경
     function nextButton(){
         $("#first_page").hide();

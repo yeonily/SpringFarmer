@@ -21,7 +21,7 @@
                     <div id="main_banner_inner2">
                         <div id="main_banner_text">
                             <div id="main_banner_text_inner1">
-                                <!--<span id="main_banner_text_outline">VOD</span>-->
+                                <span id="main_banner_text_outline">멘토</span>
                                 <div id="main_banner_text_title">멘토가 알려주는 감자 농사 비법</div>
                                 <div id="main_banner_text_subTitle">현직 멘토가 농사하는 방법</div>
                             </div>
@@ -30,8 +30,7 @@
                         <div id="main_banner_image">
                             <div id="main_banner_image_inner1">
                                 <div id="main_banner_image_inner2">
-                                    <img src="https://cdn.comento.kr/images/edu/matching/saramin-banner-hero.png?s=1272x716"
-                                         alt="" style="width: 542px; height: 305px;">
+                                    <img src="/image/mento/mento7.jpg" alt="" style="width: 542px; height: 305px;">
                                 </div>
                             </div>
                         </div>
@@ -83,6 +82,16 @@
                                                     <button class="main_fixed_button" id="chatting_submit" onclick="location.href='/mento/chatting'">
                                                         <div style="display: flex!important;"></div>
                                                         1:1 채팅하기
+                                                        <div style="display: flex!important;"></div>
+                                                    </button>
+                                                    <button class="main_fixed_button" id="mento_update" onclick="location.href='/mento/write'">
+                                                        <div style="display: flex!important;"></div>
+                                                        홍보글 수정
+                                                        <div style="display: flex!important;"></div>
+                                                    </button>
+                                                    <button class="main_fixed_button" id="mento_delete">
+                                                        <div style="display: flex!important;"></div>
+                                                        홍보글 삭제
                                                         <div style="display: flex!important;"></div>
                                                     </button>
                                                 </div>
@@ -589,8 +598,8 @@
                 <div class="m-title">멘토 신청하기</div>
                 <form action="">
                     <div class="m-c-wrap">
-                        <div class="m-c-title">멘토님께 인사말 한마디 부탁드려요</div>
-                        <input type="text" placeholder="간단한 인사말 작성해주세요" class="modal_input">
+                        <div class="m-c-title">자신을 어필할 수있는 한줄평을 써주세요!</div>
+                        <input type="text" placeholder="멘토님께 소개할 한줄평 작성해주세요" class="modal_input">
                     </div>
                     <div class="applyBtnWrap">
                         <button type="button" class="applyBtn">멘토 신청</button>
@@ -613,7 +622,7 @@
                         <div class="m-c-title">1:1 채팅하기 버튼으로 멘토와 채팅해주세요.</div>
                     </div>
                     <div class="applyBtnWrap">
-                        <button type="button" class="listBtn" onclick="location.href='/mento/list'">완료</button>
+                        <button type="button" class="listBtn" onclick="location.href='/mento/chatting'">완료</button>
                     </div>
                 </form>
             </div>
@@ -625,5 +634,6 @@
 <div th:replace="/footer/footer.html :: footer" class="footer"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/header/header.js"></script>
 <script src="/js/mento/detail.js"></script>
 </html>

@@ -6,7 +6,10 @@
     text-decoration: none;
     font-family: Pretendard;
 }
-
+.selected-header {
+    color: #040505!important;
+    font-weight: 600!important;
+}
 #main_grid {
     padding-top: 0 !important;
     overflow-x: hidden;
