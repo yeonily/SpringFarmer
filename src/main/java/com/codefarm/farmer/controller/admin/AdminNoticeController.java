@@ -19,6 +19,4 @@ public class AdminNoticeController {
     @GetMapping("/notice-update")
     public String adminNoticeDetail() {return "/adminNotice/notice-update";
     }
-
-
 }

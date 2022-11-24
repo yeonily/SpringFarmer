@@ -41,7 +41,7 @@
         <div id="wrapContents">
         <!-- 메인화면 컨텐츠 -->
         <div id="write">
-            <form action="" name="noticeForm" method="post">
+            <form action="" name="noticeForm" method="">
                 <table>
                     <colgroup>
                         <col width="20%;">
@@ -76,6 +76,18 @@
                             </div>
                         </td>
                     </tr>
+                    <tr style="background: #ffffff; border:1px solid #e6e6e6;">
+                        <th>배너상태</th>
+                        <td>
+                            <div class="title" style="height: 33px">
+                                <input type="text" name="bannerContent" class="bannerContent" style="display: none;">
+                                <select name="searchStatus" style="height: 33px; width: 11%; text-align: center; border: white; ">
+                                    <option value="statusOk">사용</option>
+                                    <option value="statusNo">사용안함</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
                     <tr style="background: #ffffff;">
                         <th>첨부파일</th>
                         <td style="border: 1px solid #e6e6e6;">
@@ -92,7 +104,7 @@
                 </table>
                 <div class="btns-group">
                     <input type="button" onclick="location.href='/adminBanner/banner'" class="g-btn list" value="배너 목록">
-                    <input type="submit" onclick="saveCheck()" class="g-btn submit" value="등록">
+                    <input type="submit" onclick="saveBannerCheck()" class="g-btn submit" value="등록">
                 </div>
             </form>
         </div>
