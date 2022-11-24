@@ -9,6 +9,11 @@
     --swiper-theme-color: #47c880;
 }
 
+.selected-header {
+    color: #040505!important;
+    font-weight: 600!important;
+}
+
 #mentor_intro{
     max-width: 1140px;
     position: relative;
@@ -705,7 +710,7 @@
     margin-bottom: 56px!important;
 }
 #text_icon{
-    background-color: #EE7E41;
+    background-color: #47c880;
     margin-bottom: 24px;
     border-radius: 24px;
     width: 60px;

@@ -2,6 +2,13 @@
 * mento/detail.html
 * */
 
+
+
+/*헤더 멘토 표시*/
+$(document).ready(function () {
+    $("ul.nav_ul li:nth-child(1)").children("a").addClass("selected-header");
+})
+
 //sidebox fixed
 const content = document.querySelector('.main_intro');
 const sidebox = document.querySelector('.main_fixed');
