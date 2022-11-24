@@ -39,3 +39,10 @@ $("img.l-menuBtn").on("click", function() {
 });
 
 
+$(".applied-cancel>a").on("click", function(){
+    $("img.l-menuBtn").addClass("l-m-btn");
+    $("img.l-menuBtn").removeClass("select-c");
+    $(".applied-cancel").hide();
+});
+
+
