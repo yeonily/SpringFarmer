@@ -2,11 +2,13 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
     <title>아르바이트 목록</title>
     <link rel="stylesheet" href="/css/header/header.css"/>
     <link rel="stylesheet" href="/css/footer/footer.css"/>
     <link rel="stylesheet" href="/css/common/font.css"/>
     <link rel="stylesheet" href="/css/alba/list.css"/>
+    <link rel="stylesheet" href="/css/alba/listRes.css"/>
     <link rel="icon" href="/image/header/favicon.png" />
     <link rel="shortcut icon" href="/image/header/favicon.png" />
 </head>
@@ -27,7 +29,7 @@
             </div>
         </div>
 
-        <!--가장 인기 있는 아르바이트 목록(8개)-->
+        <!--가장 인기 있는 아르바이트 목록(PC : 8개, Mobile : 4개)-->
         <div id="alba_list">
             <h2>가장 인기 있는 아르바이트 정보</h2>
             <div class="alba_list_list">
@@ -132,7 +134,7 @@
                 <div class="list_td">
                     <div class="location"><p>서울 강서구</p></div>
                     <div class="title"><a href="#">농산물(양파)가공 현장사원 및 납품사원 모집 (<span>모집마감</span>)</a></div>
-                    <div class="workDay">날짜협의</div>
+                    <div class="workDay">협의 후 진행</div>
                     <div class="pay">
                         <p class="miniText">시급</p>
                         협의 후 진행
@@ -144,7 +146,7 @@
                 <button type="button" onclick="location.href = `/alba/write`">글쓰기</button>
             </div>
 
-            <!--페이징 처리-->
+            <!--페이징 처리(PC : 10페이지까지, Mobile : 5페이지까지)-->
             <div id="page">
                 <div class="page_nation">
                     <a class="arrow pprev" href="#"></a>

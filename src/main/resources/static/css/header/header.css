@@ -10,7 +10,10 @@ button.off{
     color: #adb3b8!important;
 }
 
-/*기본 세팅*/
+
+/*--------------------------------*/
+            /*기본 세팅*/
+/*--------------------------------*/
 body, button {
     margin: 0;
     vertical-align: baseline;
@@ -36,8 +39,9 @@ div.header_container div#fake {
     width: 100%;
 }
 
-
-/*헤더에서 큰 틀*/
+/*--------------------------------*/
+        /*헤더에서 큰 틀*/
+/*--------------------------------*/
 div.header {
     display: block;
     border-bottom: 1px solid #EAECEE;
@@ -65,7 +69,8 @@ div.header_item {
 
 
 /*--------------------------------*/
-/*헤더 좌측 로고~대카 부분*/
+    /*헤더 좌측 로고~대카 부분*/
+/*--------------------------------*/
 div.header_nav {
     width: 100%;
     height: 100%;
@@ -90,11 +95,18 @@ div.header_nav ul.nav_ul li{
     display: flex;
     align-items: center;
 }
+
+ul.nav_right_after li:nth-child(2) {
+    display: none !important;
+}
+
 div.header_nav ul.nav_ul li a {
     color: #595F63;
 }
 
+/*--------------------------------*/
 /*필요한 사람은 리스트 옆에 추가하면 미니 글자 나옴*/
+/*--------------------------------*/
 div.m_font {
     color:#6EA7EB;
     font-weight:600;
@@ -108,7 +120,8 @@ div.m_font {
 
 
 /*--------------------------------*/
-/*헤더 우측 메뉴(로그인 전)*/
+    /*헤더 우측 메뉴(로그인 전)*/
+/*--------------------------------*/
 div.header_nav aside {
     display: inline-flex;
     flex-grow: 1;
@@ -141,7 +154,8 @@ div.header_nav ul.nav_right li a:hover {
 
 
 /*--------------------------------*/
-/*헤더 우측 메뉴(로그인 후)*/
+        /*헤더 우측 메뉴(로그인 후)*/
+/*--------------------------------*/
 div.header_nav ul.nav_right_after {
     display: inline-flex;
     flex-direction: row-reverse;
@@ -169,7 +183,8 @@ div.header_nav ul.nav_right_after button.c-application {
 
 
 /*--------------------------------*/
-/*마이페이지 서브 메뉴*/
+        /*마이페이지 서브 메뉴*/
+/*--------------------------------*/
 div.header_nav ul.nav_right_after div.sub-menu {
     position: absolute;
     top: 45px;
@@ -229,7 +244,8 @@ div.sub-menu ul li span.exitImg {
 
 
 /*--------------------------------*/
-/*검색창(기능에 맞게 설정 필요)  */
+    /*검색창(기능에 맞게 설정 필요)  */
+/*--------------------------------*/
 div.search_form {
     display: inline-flex;
     flex-direction: row;
@@ -272,7 +288,8 @@ button.search_img:hover {
 
 
 /*--------------------------------*/
-/*알림창*/
+            /*알림창*/
+/*--------------------------------*/
 /*알림 버튼 클릭시 적용*/
 div.mask {
     top: 0;
@@ -327,9 +344,43 @@ div.alarm div.top-div button {
     border-radius: 5px;
 }
 
+/*알림창 리스트*/
+div.alarmDetail {
+    width: 320px;
+    height: 63px;
+    padding: 20px;
+    display: inline-flex;
+}
+div.alarmDetail img {
+    width: 45px;
+    height: 45px;
+    margin-right: 7px;
+}
+div.alarmDetail div.alarmContent span {
+    font-size: 14px;
+    color: rgb(32, 35, 37);
+    margin-top: 5px;
+}
+div.alarmDetail div.alarmContent p {
+    margin: 10px 0 0 0;
+    font-size: 12px;
+    color: rgb(173, 179, 184);
+}
 
+/*알림이 있는 경우 빨간원*/
+span.alarm-red {
+    width: 7px;
+    height: 7px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    right: 6px;
+    top: 8px;
+}
 
-/*서브헤더 영역*/
+/*--------------------------------*/
+            /*서브헤더 영역*/
+/*--------------------------------*/
 div#sub_header {
     border-top: 1px solid #eaecee;
     box-shadow: 0 3px 8px rgb(238 238 238);
@@ -364,6 +415,14 @@ div#sub_header div.menuList ul li button:hover {
     color: #040505;
 }
 
+
+
+
+
+
+/*--------------------------------*/
+            /*모바일 화면*/
+/*--------------------------------*/
 @media only screen and (max-width: 768px) {
     * {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -403,6 +462,11 @@ div#sub_header div.menuList ul li button:hover {
         left: 15px;
         display: inline-block !important;
     }
+    button.c-application {
+        position: relative;
+    }
+
+
     div.alarm {
         width: 100%;
     }
@@ -474,10 +538,15 @@ div#sub_header div.menuList ul li button:hover {
     div.header_nav ul.nav_right_after li {
         margin-left: 0;
     }
+
     div.noti-button-container {
         margin-left: 7px;
         margin-bottom: 5px;
         margin-right: 15px;
+    }
+    span.alarm-red {
+        right: 5px;
+        top: 4px;
     }
 }
 

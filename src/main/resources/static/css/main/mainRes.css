@@ -63,7 +63,7 @@
 
 
     /*------------------------------------*/
-                /*로그인 전*/
+                /*헤더 로그인 전*/
     /*------------------------------------*/
     div.header_nav ul.nav_right {
         float: right;
@@ -100,7 +100,13 @@
     div.sub_banner {
         padding-top: 60px;
     }
-    div.sub_banner_inner h1 {
+    div.sub_banner_inner h1,
+    div#communitySlide #communitySlide_inner h1,
+    div#socaMenu div#socaMenu-inner h1,
+    div#programMenu div#programMenu-inner h1,
+    div#socaMenu2 div#socaMenu2-inner h1,
+    div#albaMenu div#albaMenu-inner h1
+    {
         font-size: 22px;
         height: 44px;
     }
@@ -292,6 +298,10 @@
         margin-bottom: 16px;
         margin-right: 16px;
     }
+    div#socaMenu2-inner div.menuList div.menuList-menu img {
+        width: 60px;
+        height: 60px;
+    }
 
 
     /*------------------------------------*/
@@ -314,7 +324,21 @@
     div.swiper-button, div.sub_banner_inner div.swiper-button {
         display: none;
     }
+
+
+
+    /*------------------------------------*/
+                    /*푸터*/
+    /*------------------------------------*/
+    ul.bottom-nav li:nth-child(2) img {
+        content: url("/image/footer/nav3.gif");
+    }
+    ul.bottom-nav li:nth-child(2) div {
+        color: #767d82 !important;
+    }
 }
+
+
 
 
 

@@ -2,6 +2,15 @@ div#wrap {
     margin-top: 0px !important;
 }
 
+.header_nav .nav_ul li:nth-child(3) a {
+    color: #040505!important;
+    font-weight: 600!important;
+}
+
+.header_nav .nav_ul li:not(.header_nav nav_ul li:nth-child(2)) a {
+    color: #595F63;
+}
+
 
 /**************************************************************/
                         /*서브배너*/

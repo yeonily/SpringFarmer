@@ -419,7 +419,7 @@ button {
     }
 
     .search_form {
-        display: inline-flex !important;
+        display: none;
     }
 }
 
