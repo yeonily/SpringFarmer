@@ -343,6 +343,7 @@ div #middleImg {
 div #middleImg img {
     width: 1108px;
     height: auto;
+    border-radius: 10px;
 }
 
 
