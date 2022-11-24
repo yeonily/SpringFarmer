@@ -5,19 +5,19 @@
 </head>
 <body>
     <!-- 일반 유저 - 내가 신청한 프로그램 -->
+    <!-- ↓ 밑에 추가 - th:onclick="'location.href=\''+ @{해당 글로 가는 링크} + '\''" -->
     <div class="list-wrap" th:fragment="userPrograms">
         <div class="myProgram f-column select-l">
             <div class="list-img">
                 <img src="https://cdn.comento.kr/images/pt/tmp/prefix_4gTSmjheRr.png" class="program-img">
-                <div class="applied-cancel">
-                    <a href="#"><div class="a-c-btn">신청 취소</div></a>
-                </div>
-                <img src="/image/myPage/option.png" class="l-menuBtn l-m-btn">
             </div>
-            <div class="list-text">
-                <div class="l-text starting l-d-ing">수강예정</div>
-                <div class="l-m-c">∙</div>
-                <div class="l-text l-address">지역</div>
+            <div class="list-text-wrap">
+                <div class="list-text">
+                    <div class="l-text starting l-d-ing">수강예정</div>
+                    <div class="l-m-c">∙</div>
+                    <div class="l-text l-address">지역</div>
+                </div>
+                <div class="l-a-cancel l-text"><a href="#">신청 취소</a></div>
             </div>
             <div class="list-title">백엔드 개발자도 서버 · 인프라 관리를 할 수 있는 DevOps 실무 특강</div>
         </div>
@@ -26,6 +26,7 @@
     <!------------------->
 
     <!-- 농장주 - 내가 만든 프로그램 -->
+    <!-- ↓ 밑에 추가 - th:onclick="'location.href=\''+ @{해당 글로 가는 링크} + '\''" -->
     <div class="list-wrap" th:fragment="farmerPrograms">
         <div class="myProgram f-column select-l">
             <div class="list-img">
@@ -36,7 +37,7 @@
                 <div class="applied-cancel">
                     <a href=""><div class="a-c-btn" style="margin-bottom: 1px;">수정하기</div></a>
                     <a href="javascript:void(0);" onclick="javascript:removeCheck();"><div class="a-c-btn">삭제하기</div></a>
-                    <a href="javascript:void(0);"><div class="a-c-btn">신청자 목록</div></a>
+                    <a th:href="@{/mypage/program/apply}"><div class="a-c-btn">신청자 목록</div></a>
                 </div>
                 <img src="/image/myPage/option.png" class="l-menuBtn l-m-btn">
             </div>

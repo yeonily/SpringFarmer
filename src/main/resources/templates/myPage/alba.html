@@ -39,59 +39,14 @@
 <!--                                </div>-->
 <!--                            </div>-->
                             <!------------------------>
-                            <div id="c-w-wrap">
-                                <div id="ls-wrap" class="f-column">
-                                    <div class="f-wrap" style="">
+                            <div id="c-w-wrap" class="f-column">
+                                <!-- 일반 유저 - 내가 신청한 프로그램 -->
+                                <!--                                        <div th:replace="/myPage/albaContent.html :: userAlbas"/>-->
+                                <!------------------->
 
-                                        <!---->
-                                        <div class="list-wrap">
-                                            <div class="myProgram f-column select-l">
-                                                <div class="list-img">
-                                                    <img src="https://cdn.comento.kr/images/pt/tmp/prefix_4gTSmjheRr.png" class="program-img">
-                                                    <div class="applied-cancel">
-                                                        <a href="#"><div class="a-c-btn" style="margin-bottom: 1px;">수정하기</div></a>
-                                                        <a href="javascript:void(0);" onclick="javascript:removeCheck();"><div class="a-c-btn">삭제하기</div></a>
-                                                    </div>
-                                                    <img src="/image/myPage/option.png" class="l-menuBtn l-m-btn">
-                                                </div>
-                                                <div class="list-text">
-                                                    <div class="l-text l-ing">진행 예정</div>
-                                                    <div class="l-m-c">∙</div>
-                                                    <div class="l-text">경기도</div>
-                                                    <div class="l-m-c">∙</div>
-                                                    <div class="l-text l-price">10,000</div>
-                                                </div>
-                                                <div class="list-title">화단 가꾸기</div>
-                                            </div>
-                                            <div class="start-day">2022.11.17</div>
-                                        </div>
-                                        <!---->
-                                        <!---->
-                                        <div class="list-wrap">
-                                            <div class="myProgram f-column select-l">
-                                                <div class="list-img">
-                                                    <img src="https://cdn.comento.kr/images/pt/tmp/prefix_4gTSmjheRr.png" class="program-img">
-                                                    <div class="applied-cancel">
-                                                        <a href="#"><div class="a-c-btn" style="margin-bottom: 1px;">수정하기</div></a>
-                                                        <a href="javascript:void(0);" onclick="javascript:removeCheck();"><div class="a-c-btn">삭제하기</div></a>
-                                                    </div>
-                                                    <img src="/image/myPage/option.png" class="l-menuBtn l-m-btn">
-                                                </div>
-                                                <div class="list-text">
-                                                    <div class="l-text l-ing">진행 예정</div>
-                                                    <div class="l-m-c">∙</div>
-                                                    <div class="l-text">충청북도</div>
-                                                    <div class="l-m-c">∙</div>
-                                                    <div class="l-text l-price">200,000</div>
-                                                </div>
-                                                <div class="list-title">콩 수확 등 밭작물 관리</div>
-                                            </div>
-                                            <div class="start-day">2022.11.17 시작</div>
-                                        </div>
-                                        <!---->
-
-                                    </div>
-                                </div>
+                                <!-- 농장주 - 내가 만든 프로그렘 -->
+                                <div th:replace="/myPage/albaContent.html :: farmerAlbas"/>
+                                <!------------------->
                             </div>
                             <!------------------------>
                         </div>

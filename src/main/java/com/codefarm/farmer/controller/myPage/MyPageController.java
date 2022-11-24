@@ -1,4 +1,4 @@
-package com.codefarm.farmer.controller;
+package com.codefarm.farmer.controller.myPage;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -42,9 +42,19 @@ public class MyPageController {
         return "/myPage/program";
     }
 
+    @GetMapping("/program/apply")
+    public String programApplyPage(){
+        return "/myPage/programApply";
+    }
+
     @GetMapping("/alba")
     public String albaPage(){
         return "/myPage/alba";
+    }
+
+    @GetMapping("/alba/apply")
+    public String albaApplyPage(){
+        return "/myPage/albaApply";
     }
 
     @GetMapping("/inquire")

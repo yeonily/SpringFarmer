@@ -77,21 +77,45 @@ div.applied-cancel {
     padding-right: 23px;
     background: rgb(255 255 255 / 70%);
     border-radius: 2px;
+    border: 1px solid rgb(230 230 230 / 70%);
     font-size: 14px;
     font-weight: 600;
     display: none;
 }
 
-div.applied-cancel a {color: #2b2b2b;}
+/*div.a-c-color {background: rgb(230 230 230 / 70%);}*/
+
+div.applied-cancel a {color: #575757;}
 
 div.a-c-btn {
     padding: 3px 7px;
     border-radius: 2px;
 }
 
-div.a-c-btn:hover {
-    background: rgba(255, 255, 255, 0.68);
+div.a-c-btn:hover {background: rgba(255, 255, 255, 0.68);}
+
+div.a-c-btn2 {
+    padding: 3px 7px;
+    border-radius: 2px;
 }
+
+div.a-c-btn2:hover {background: rgba(213, 213, 213, 0.42);}
+
+div.list-text-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.l-a-cancel {margin-top: 12px!important;}
+
+div.l-a-cancel>a {
+    padding: 3px 5px;
+    border: 1px solid #47c880;
+    color: #47c880;
+    font-weight: 500;
+    border-radius: 4px;
+}
+div.l-a-cancel>a:hover {background-color: #ebfbef;}
 
 div.list-text {
     display: flex;
@@ -159,6 +183,17 @@ span.only-mentor {
     display: inline-flex;
     align-items: center;
     box-sizing: border-box;
+}
+
+.c-top-wrap img {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    padding: 2px 2px;
+    top: 4px;
+    right: 4px;
+    transform: rotate(90deg);
+    border-radius: 2px;
 }
 
 @media only screen and (min-width: 768px) {
