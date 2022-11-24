@@ -1,3 +1,23 @@
+/*-----------------------------------------------------------*/
+                    /*지원하기쪽 위치 고정*/
+/*-----------------------------------------------------------*/
+const content = document.querySelector('.content');
+const sidebox = document.querySelector('#main_fixed');
+const contentTop = content.getBoundingClientRect().top + window.scrollY;
+
+console.log("content : " + content);
+console.log("sidebox : " + sidebox);
+console.log("contentTop : " + contentTop);
+
+
+window.addEventListener('scroll', function(){
+    if(window.scrollY >= contentTop) {
+        sidebox.classList.add('side_fixed');
+    }else{
+        sidebox.classList.remove('side_fixed');
+    }
+
+});
 
 /*-----------------------------------------------------------*/
                         /*모집마감일 경우*/
@@ -42,6 +62,7 @@ $("button#remove_button").on("click", function() {
        alert("글 삭제가 취소되었습니다.");
    }
 });
+
 
 
 
