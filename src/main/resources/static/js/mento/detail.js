@@ -38,6 +38,11 @@ $(".star_check").on("click" , function () {
     }
 })
 
+//보낼 시 별 점수?
+$("#main_reply_button").on("click", function () {
+    console.log($("#star_count_check").children("svg.star_check").length);
+})
+
 /*-----------------------------------------------------------*/
 /*멘토 신청 버튼 클릭 시 모달*/
 /*-----------------------------------------------------------*/

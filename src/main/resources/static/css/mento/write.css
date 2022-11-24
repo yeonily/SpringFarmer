@@ -529,16 +529,29 @@
     max-height: calc(100vh - 174px);
 }
 #carrer_intro{
-    display: block;
+    display: none;
+    margin-top: 12px;
 }
 #mento_result{
     display: none;
+    margin-top: 12px;
 }
 #mento_intro_title{
     display: none;
+    margin-top: 12px;
 }
 #mento_intro_content{
     display: none;
+    margin-top: 12px;
+}
+.arrow_transform{
+    transform: rotate(180deg);
+}
+#first_arrow{
+    transform: rotate(180deg);
+}
+#second_arrow{
+    transform: rotate(180deg);
 }
 .aside_right_inner1{
     overflow: hidden;
