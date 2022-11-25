@@ -166,24 +166,52 @@
                                                 <div class="mentor-txt">
                                                     멘토 소개 글을 작성하면 멘토링 홍보 글을 작성하실 수 있습니다.
                                                 </div>
-                                                <button class="mentorBtn" onclick="mentorForm()">소개 글 작성하기</button>
+                                                <button class="mentorBtn" onclick="mentorFormShow()">소개 글 작성하기</button>
                                             </div>
                                         </div>
                                         <!---->
 
                                         <!-- 멘토가 아닐 경우 → 소개글 입력 폼 -->
-                                        <form action="" name="newMentorForm" class="newMentorForm" style="display: none;">
+<!--                                        <form action="" name="newMentorForm" class="newMentorForm" style="display: none;">-->
+<!--                                            <div class="s-form-input">-->
+<!--                                                <p class="form-title">주요 작물</p>-->
+<!--                                                <div class="flex f-column f-section">-->
+<!--                                                    <input type="text" name="newMainCrops" class="form-input" placeholder="주요 작물을 입력하세요.">-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="s-form-input f-m-top">-->
+<!--                                                <p class="form-title">연차</p>-->
+<!--                                                <div class="flex f-column f-section">-->
+<!--                                                    <select name="newYears" class="years-select">-->
+<!--                                                        <option value="0" selected>선택해주세요.</option>-->
+<!--                                                        <option value="1~3년차">1~3년차</option>-->
+<!--                                                        <option value="3~5년차">3~5년차</option>-->
+<!--                                                        <option value="5~7년차">5~7년차</option>-->
+<!--                                                        <option value="7~10년차">7~10년차</option>-->
+<!--                                                        <option value="10 년차 이상">10 년차 이상</option>-->
+<!--                                                    </select>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-save">-->
+<!--                                                <button type="button" class="s-button s-save saveHover" onclick="newMentorSave()">저장</button>-->
+<!--                                                <button type="button" class="s-button s-cancel cancelHover" id="mentorCancel">취소</button>-->
+<!--                                            </div>-->
+<!--                                        </form>-->
+                                        <!------------------>
+
+                                        <!-- 멘토 수정 폼 -->
+                                        <form action="" name="mentorForm">
                                             <div class="s-form-input">
                                                 <p class="form-title">주요 작물</p>
                                                 <div class="flex f-column f-section">
-                                                    <input type="text" name="newMainCrops" class="form-input" placeholder="주요 작물을 입력하세요.">
+                                                    <input type="text" name="mainCrops" class="form-input" placeholder="주요 작물을 입력하세요.">
                                                 </div>
                                             </div>
                                             <div class="s-form-input f-m-top">
                                                 <p class="form-title">연차</p>
                                                 <div class="flex f-column f-section">
-                                                    <select name="newYears" class="years-select">
-                                                        <option selected>선택해주세요.</option>
+                                                    <select name="years" class="years-select">
+                                                        <option value="0" selected>선택해주세요.</option>
                                                         <option value="1~3년차">1~3년차</option>
                                                         <option value="3~5년차">3~5년차</option>
                                                         <option value="5~7년차">5~7년차</option>
@@ -197,34 +225,6 @@
                                                 <button type="button" class="s-button s-cancel cancelHover" id="mentorCancel">취소</button>
                                             </div>
                                         </form>
-                                        <!------------------>
-
-                                        <!-- 멘토 수정 폼 -->
-<!--                                        <form action="" name="mentorForm">-->
-<!--                                            <div class="s-form-input">-->
-<!--                                                <p class="form-title">주요 작물</p>-->
-<!--                                                <div class="flex f-column f-section">-->
-<!--                                                    <input type="text" name="mainCrops" class="form-input" placeholder="주요 작물을 입력하세요.">-->
-<!--                                                </div>-->
-<!--                                            </div>-->
-<!--                                            <div class="s-form-input f-m-top">-->
-<!--                                                <p class="form-title">연차</p>-->
-<!--                                                <div class="flex f-column f-section">-->
-<!--                                                    <select name="years" class="years-select">-->
-<!--                                                        <option selected>선택해주세요.</option>-->
-<!--                                                        <option value="1~3년차">1~3년차</option>-->
-<!--                                                        <option value="3~5년차">3~5년차</option>-->
-<!--                                                        <option value="5~7년차">5~7년차</option>-->
-<!--                                                        <option value="7~10년차">7~10년차</option>-->
-<!--                                                        <option value="10 년차 이상">10 년차 이상</option>-->
-<!--                                                    </select>-->
-<!--                                                </div>-->
-<!--                                            </div>-->
-<!--                                            <div class="form-save">-->
-<!--                                                <button type="button" class="s-button s-save saveHover" onclick="mentorSave()">저장</button>-->
-<!--                                                <button type="button" class="s-button s-cancel cancelHover" id="mentorCancel">취소</button>-->
-<!--                                            </div>-->
-<!--                                        </form>-->
                                         <!------------------>
                                     </section>
                                 </div>

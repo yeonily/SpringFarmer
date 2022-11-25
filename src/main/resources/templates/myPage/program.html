@@ -94,7 +94,7 @@
 <!-- 푸터 -->
 <div th:replace="/footer/footer.html :: footer" class="footer"/>
 
-<!-- 알람 모달창 -->
+<!-- 농장주 : 글 삭제 확인 모달창 -->
 <div class="overlay-l alam-wrap" style="display: none">
     <div id="alam">
         <p>정말 삭제하시겠어요?</p>
@@ -122,5 +122,6 @@
     $(".a-no").on("click", function(){
         $(".alam-wrap").hide();
     });
+
 </script>
 </html>

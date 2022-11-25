@@ -45,4 +45,3 @@ $(".applied-cancel>a").on("click", function(){
     $(".applied-cancel").hide();
 });
 
-

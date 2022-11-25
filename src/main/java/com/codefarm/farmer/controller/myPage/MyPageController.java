@@ -47,6 +47,11 @@ public class MyPageController {
         return "/myPage/programApply";
     }
 
+    @GetMapping("/program/cancel")
+    public String programCancelPage(){
+        return "/myPage/applyCancel";
+    }
+
     @GetMapping("/alba")
     public String albaPage(){
         return "/myPage/alba";

@@ -2,6 +2,9 @@
 *   html/myPage/setting.html
 * */
 
+// 헤더 검색창 없애기
+$(".search_form").css("visibility", "hidden");
+
 // 더보기 메뉴 슬라이드
 $("div.more-btn").on("click", function(){
     if($('.slide-menu').css("height") == "0px"){
@@ -37,7 +40,7 @@ const autoHyphen = (target) => {
 }
 
 // setting.html - 멘토 등록할 때 입력 폼
-function mentorForm(){
+function mentorFormShow(){
     $("#mentor-none").hide();
     $(".newMentorForm").show();
 }
@@ -139,13 +142,32 @@ function myInfoSave() {
 
 
 /*------------- new 멘토 정보 입력 -------------*/
-function mentorSave (){ /* 중복 체크 */
-    if(!newMentorForm.phone.value) {
-        newMentorForm.phone.focus();
+function newMentorSave (){ /* 중복 체크 */
+    if(!newMentorForm.newMainCrops.value) {
+        newMentorForm.newMainCrops.focus();
+        return;
+    }
+    if(newMentorForm.newYears.value == "0") {
+        newMentorForm.newYears.focus();
         return;
     }
 
     newMentorForm.submit();
+}
+
+
+/*------------- 멘토 정보 수정 -------------*/
+function mentorSave (){ /* 중복 체크 */
+    if(!mentorForm.mainCrops.value) {
+        mentorForm.mainCrops.focus();
+        return;
+    }
+    if(mentorForm.years.value == "0") {
+        mentorForm.years.focus();
+        return;
+    }
+
+    mentorForm.submit();
 }
 
 
