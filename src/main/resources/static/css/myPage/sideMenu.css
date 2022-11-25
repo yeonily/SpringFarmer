@@ -294,8 +294,10 @@ div.overlay-l {
     z-index: 9998;
 }
 
+div.o-auto {background: rgba(0,0,0,25%);}
+
 div.m-al {
-    width: 150px;
+    width: 200px;
     height: 50px;
     margin: 0 auto;
     border-radius: 10px;
@@ -304,6 +306,7 @@ div.m-al {
     line-height: 50px;
     letter-spacing: 1px;
     color: #fff;
+    font-weight: 600;
     position: fixed;
     top: 30%;
     left: 0;

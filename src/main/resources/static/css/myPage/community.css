@@ -20,6 +20,7 @@ div.commu {
     flex-direction: column;
     padding: 0 7px;
     margin-bottom: 4px;
+    background: #fff;
     position: relative;
     border-bottom: 1px solid #eaecee;
 }
@@ -38,6 +39,31 @@ div.c-top-wrap {
     font-weight: 400;
     margin: 8px 0;
 }
+
+div.t-s-wrap  {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+}
+
+div.c-address {
+    color: rgb(148, 155, 160);
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+div.c-pay {color: rgb(238, 126, 65);}
+
+div.c-status {
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.c-wait {color: rgb(148, 155, 160);}
+.c-accept {color: #47c880;}
+.c-refuse {color: #ff4d4d;}
+.c-end {color: rgb(148, 155, 160);}
 
 a.c-delete {color: rgb(118, 125, 130);}
 

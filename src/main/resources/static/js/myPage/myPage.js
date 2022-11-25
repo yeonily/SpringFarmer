@@ -81,7 +81,7 @@ $("input[name='reason']").on("change", function (){
 });
 
 
-// 저장 모달 알람
+// 애니메이션 모달 알람
 function alam() {
     $(".overlay-l").show();
     $(".m-al").show();

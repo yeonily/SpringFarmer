@@ -188,6 +188,7 @@
     display: list-item;
     margin-top: 0;
     margin-bottom: 10px;
+    margin-right: 5px;
 }
 .chatting_text{
     color: #fff;
@@ -222,6 +223,11 @@
     right: 20px;
     top: 50%;
     margin-top: -12px;
+}
+.no_read_chat{
+    color: #8000808c;
+    font-weight: 700;
+    margin-left: 5px;
 }
 
 /**************************************************************/

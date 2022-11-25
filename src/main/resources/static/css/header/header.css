@@ -187,7 +187,7 @@ div.header_nav ul.nav_right_after button.c-application {
 /*--------------------------------*/
 div.header_nav ul.nav_right_after div.sub-menu {
     position: absolute;
-    top: 45px;
+    top: 40px;
     left: 985px;
     z-index: 10;
     display: block;
@@ -236,6 +236,9 @@ div.sub-menu ul li span.writeImg {
 }
 div.sub-menu ul li span.talkImg {
     background-image: url("/image/header/talk.png");
+}
+div.sub-menu ul li span.myPageImg {
+    background-image: url("/image/header/myPageIcon.png");
 }
 div.sub-menu ul li span.exitImg {
     background-image: url("/image/header/exit.png");
@@ -346,6 +349,13 @@ div.alarm div.top-div button {
 }
 
 /*알림창 리스트*/
+div.alarmList {
+    border-bottom: 1px solid rgb(238, 238, 238);
+    cursor: pointer;
+}
+div.alarmList:hover {
+    background-color: rgb(223, 223, 223);
+}
 div.alarmDetail {
     width: 320px;
     height: 63px;
@@ -516,7 +526,6 @@ div#sub_header div.menuList ul li button:hover {
         background-color: inherit;
     }
     div.search_form {
-        display: none;
         flex-direction: row;
         width: 190px;
         height: 40px;

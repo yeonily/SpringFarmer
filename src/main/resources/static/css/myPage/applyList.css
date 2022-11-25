@@ -112,3 +112,28 @@ img.back {
     transform: rotate(180deg);
     cursor: pointer;
 }
+
+.a-btn-group>button {
+    padding: 4px 10px;
+    border: 0;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+button.a-accept {
+    background: #47c880;
+    border: 1px solid #47c880;
+    color: #fff;
+}
+button.a-refuse {
+    background-color: #fff;
+    border: 1px solid #47c880;
+    color: #47c880;
+}
+
+button.a-accept:hover {
+    border: 1px solid #357e55;
+    background-color: #357e55;
+}
+button.a-refuse:hover {background-color: #ebfbef;}

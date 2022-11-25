@@ -18,7 +18,7 @@
                     /*서브배너*/
     /*------------------------------------*/
     div#sub_banner {
-        background-color: #d4e5f9;
+        background-color: #e0f5e9;
     }
     div.right-content img {
         content: url("https://cdn.comento.kr/images/edu-career/edu-path-list-banner-m.png");
@@ -163,12 +163,9 @@
     /*------------------------------------*/
             /*모바일 페이징(5페이지까지)*/
     /*------------------------------------*/
-    div.page_nation a:nth-child(n+8):nth-child(-n+12) {
+    div#paging li:nth-child(n+7):nth-child(-n+11) {
         display: none;
     }
-
-
-
 
 
 
@@ -179,6 +176,7 @@
     ul.bottom-nav li:nth-child(3) img {
         content: url("/image/footer/nav2_on.gif");
     }
+
     ul.bottom-nav li:nth-child(2) img {
         content: url("/image/footer/nav3.gif");
     }

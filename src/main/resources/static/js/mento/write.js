@@ -12,42 +12,102 @@
 
     //경력 소개 예시 눌렀을 때
     $("#carrer_intro_example").on("click" , function () {
+        $("#aside_first_page").show();
+        $("#aside_second_page").hide();
         $("#carrer_intro").show();
-        $("#mento_result").hide();
-        $("#mento_intro_title").hide();
-        $("#mento_intro_content").hide();
+        $("#first_page_arrow1").css("transform","rotate(0deg)");
+        $("#first_page_background1").css("background-color", "#47c88040");
+        setTimeout(fadeout, 200);
     })
     //멘토 추천 이유 예시 눌렀을 때
     $("#mento_result_example").on("click" , function () {
-        $("#carrer_intro").hide();
+        $("#aside_first_page").show();
+        $("#aside_second_page").hide();
         $("#mento_result").show();
-        $("#mento_intro_title").hide();
-        $("#mento_intro_content").hide();
+        $("#first_page_arrow2").css("transform","rotate(0deg)");
+        $("#first_page_background2").css("background-color", "#47c88040");
+        setTimeout(fadeout, 200);
     })
     //멘토 홍보글 제목 작성 예시 눌렀을 때
     $("#mento_intro_title_example").on("click" , function () {
-        $("#carrer_intro").hide();
-        $("#mento_result").hide();
+        $("#aside_first_page").hide();
+        $("#aside_second_page").show();
         $("#mento_intro_title").show();
-        $("#mento_intro_content").hide();
+        $("#second_page_arrow1").css("transform","rotate(0deg)");
+        $("#second_page_background1").css("background-color", "#47c88040");
+        setTimeout(fadeout, 200);
     })
     //멘토 홍보글 내용 작성 예시 눌렀을 때
     $("#mento_intro_content_example").on("click" , function () {
-        $("#carrer_intro").hide();
-        $("#mento_result").hide();
-        $("#mento_intro_title").hide();
+        $("#aside_first_page").hide();
+        $("#aside_second_page").show();
         $("#mento_intro_content").show();
+        $("#second_page_arrow2").css("transform","rotate(0deg)");
+        $("#second_page_background2").css("background-color", "#47c88040");
+        setTimeout(fadeout, 200);
     })
 
+    function fadeout(){
+        $(".aside_right_inner1").css("background-color", "#fff");
+    }
 
+    //경력 예시 화살표 눌렀을 때
+    $("#first_page_arrow1").on("click", function () {
+        if($("#carrer_intro").css("display")=="none"){
+            $("#first_page_arrow1").css("transform","rotate(0deg)");
+            $("#carrer_intro").show();
+        }
+        else{
+            $("#first_page_arrow1").css("transform","rotate(180deg)");
+            $("#carrer_intro").hide();
+        }
+    })
 
+    //멘토 추천 이유 화살표 눌렀을 때
+    $("#first_page_arrow2").on("click", function () {
+        if($("#mento_result").css("display")=="none"){
+            $("#first_page_arrow2").css("transform","rotate(0deg)");
+            $("#mento_result").show();
+        }
+        else{
+            $("#first_page_arrow2").css("transform","rotate(180deg)");
+            $("#mento_result").hide();
+        }
+    })
 
+    //멘토 홍보글 제목 예시 화살표 눌렀을 때
+    $("#second_page_arrow1").on("click", function () {
+        if($("#mento_intro_title").css("display")=="none"){
+            $("#second_page_arrow1").css("transform","rotate(0deg)");
+            $("#mento_intro_title").show();
+        }
+        else{
+            $("#second_page_arrow1").css("transform","rotate(180deg)");
+            $("#mento_intro_title").hide();
+        }
+    })
+
+    //멘토 홍보글 내용 예시 화살표 눌렀을 때
+    $("#second_page_arrow2").on("click", function () {
+        if($("#mento_intro_content").css("display")=="none"){
+            $("#second_page_arrow2").css("transform","rotate(0deg)");
+            $("#mento_intro_content").show();
+        }
+        else{
+            $("#second_page_arrow2").css("transform","rotate(180deg)");
+            $("#mento_intro_content").hide();
+        }
+    })
 
 
     // 다음 버튼 누를시 이동, 버튼 색 변경
     function nextButton(){
         $("#first_page").hide();
         $("#second_page").show();
+        $("#first_aside").hide();
+        $("#second_aside").hide();
+        $("#third_aside").show();
+        $("#last_aside").show();
         $("#footer_button_prev").css("cursor","pointer");
         $("#footer_button_prev").css("background-color","#f3f4f5");
         $("#footer_button_prev").css("color","#767d82");
@@ -64,6 +124,10 @@
     function prevButton(){
         $("#second_page").hide();
         $("#first_page").show();
+        $("#first_aside").show();
+        $("#second_aside").show();
+        $("#third_aside").hide();
+        $("#last_aside").hide();
         $("#footer_button_prev").css("cursor","not-allowed");
         $("#footer_button_prev").css("background-color","#f3f4f5");
         $("#footer_button_prev").css("color","#767d82");
@@ -81,6 +145,10 @@
     function listMainClick(){
         $("#first_page").show();
         $("#second_page").hide();
+        $("#first_aside").show();
+        $("#second_aside").show();
+        $("#third_aside").hide();
+        $("#last_aside").hide();
         $("#footer_button_prev").css("cursor","not-allowed");
         $("#footer_button_prev").css("background-color","#f3f4f5");
         $("#footer_button_prev").css("color","#767d82");
@@ -92,11 +160,19 @@
         $("#footer_button_next").append("<img src=\"/image/program/next_register.gif\" class=\"footer_next_image\">")
         $("#footer_button_next").show();
         $(".submitBtn").hide();
+        $("#aside_first_page").show();
+        $("#aside_second_page").hide();
+        $("#first_title").show();
+        $("#second_title").hide();
 }
 
     function listSubClick(){
         $("#first_page").hide();
         $("#second_page").show();
+        $("#first_aside").hide();
+        $("#second_aside").hide();
+        $("#third_aside").show();
+        $("#last_aside").show();
         $("#footer_button_prev").css("cursor","pointer");
         $("#footer_button_prev").css("background-color","#f3f4f5");
         $("#footer_button_prev").css("color","#767d82");
@@ -106,6 +182,10 @@
         $(".list_main").css("font-weight",400);
         $("#footer_button_next").hide();
         $(".submitBtn").show();
+        $("#aside_first_page").hide();
+        $("#aside_second_page").show();
+        $("#first_title").hide();
+        $("#second_title").show();
     }
 
 
@@ -137,12 +217,6 @@
                 check = false;
             }
         }
-
-        /*/!*textarea 비어있을 때 표시*!/
-        if($(".textarea_content").text() == ''){
-            $(".textarea_content").css("border", "1px solid red");
-            check = false;
-        }*/
 
         if(!check) {
             alert("입력하지 않은 값이 있습니다.");
