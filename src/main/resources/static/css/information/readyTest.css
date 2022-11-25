@@ -521,3 +521,8 @@ div.checklist-wrap div#checkStep5 { display: none;}
         padding: 5px 3px;
     }
 }
+
+.selected-header{
+    color: #040505!important;
+    font-weight: 600!important;
+}

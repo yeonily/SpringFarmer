@@ -303,7 +303,7 @@ div.checklist span.title {
     border-top: 2px solid #565656;
 }
 
-.checklist strong { color: #539411; }
+.checklist strong { color: #47c880;; }
 
 .checklist span.title-sub {
     font-size: 14px;
@@ -394,4 +394,9 @@ table.table-wrap tbody td.td-step {
 }
 @media screen and (max-width: 740px) {
     div.checklist { padding: 0 10px; }
+}
+
+.selected-header{
+    color: #040505!important;
+    font-weight: 600!important;
 }
