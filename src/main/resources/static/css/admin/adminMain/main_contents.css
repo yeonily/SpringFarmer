@@ -39,7 +39,6 @@ div.none {
 div.content-title div.title {
     display: inline;
     width: 80%;
-    font-family: 'Noto Sans KR', sans-serif;
     font-size: 13px;
     line-height: 45px;
 }
@@ -50,7 +49,6 @@ div.content-title div.title2 {
     width: 20%;
     padding-right: 20px;
 
-    font-family: 'Noto Sans KR', sans-serif;
     font-size: 10px;
     text-align: right;
     line-height: 40px;
@@ -90,7 +88,6 @@ div.c-content table {
 
     border-collapse: collapse;
 
-    font-family: 'Noto Sans KR', sans-serif;
     text-align: center;
     color: #7c7c7c;
     font-weight: 600;
