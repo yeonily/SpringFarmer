@@ -334,10 +334,26 @@
     /*------------------------------------*/
                     /*푸터*/
     /*------------------------------------*/
+    ul.bottom-nav li:nth-child(1) img {
+        content: url("/image/footer/homeIcon_on.png");
+    }
     ul.bottom-nav li:nth-child(2) img {
         content: url("/image/footer/nav3.gif");
     }
-    ul.bottom-nav li:nth-child(2) div {
+    ul.bottom-nav li:nth-child(3) img {
+        content: url("/image/footer/nav2.gif");
+    }
+    ul.bottom-nav li:nth-child(4) img {
+        content: url("/image/footer/nav4.gif");
+    }
+    ul.bottom-nav li:nth-child(5) img {
+        content: url("/image/footer/nav5.gif");
+    }
+
+    ul.bottom-nav li:nth-child(1) div {
+        color: #00a147 !important;
+    }
+    ul.bottom-nav li:not(ul.bottom-nav li:nth-child(1)) div {
         color: #767d82 !important;
     }
 }
