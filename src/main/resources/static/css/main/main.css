@@ -369,7 +369,7 @@ div#communitySlide #communitySlide_inner h1 {
 div.sub_banner_inner div.swiper-button {
     position: absolute;
     margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
-    z-index: 10;
+    z-index: 5;
     display: flex;
     align-items: center;
     justify-content: center;

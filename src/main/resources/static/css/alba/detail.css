@@ -481,6 +481,10 @@ div.alba-location {
     height: 350px;
     margin: 0 auto;
 }
+div.alba-location p {
+    width: 740px;
+    padding: 5px;
+}
 
 
 
