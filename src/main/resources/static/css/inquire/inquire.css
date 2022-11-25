@@ -100,6 +100,7 @@ body {
     font-size: 16px;
     line-height: 25px;
     background-color: #fff;
+    overflow-x: hidden;
 }
 
 button, select {
@@ -605,7 +606,7 @@ body ::selection {
     line-height: 38px;
     /*background-color: #47c880;*/
     background-color: rgb(90 171 202);
-    border: 1px solid #47c880;
+    border: none;
     border-radius: 3px;
     color: #fff;
     font-size: 16px;

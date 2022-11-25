@@ -179,17 +179,8 @@
     ul.bottom-nav li:nth-child(3) img {
         content: url("/image/footer/nav2_on.gif");
     }
-    ul.bottom-nav li:nth-child(1) img {
-        content: url("/image/footer/nav1.gif");
-    }
     ul.bottom-nav li:nth-child(2) img {
         content: url("/image/footer/nav3.gif");
-    }
-    ul.bottom-nav li:nth-child(4) img {
-        content: url("/image/footer/nav4.gif");
-    }
-    ul.bottom-nav li:nth-child(5) img {
-        content: url("/image/footer/nav4.gif");
     }
 
     ul.bottom-nav li:nth-child(3) div {

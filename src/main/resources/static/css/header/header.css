@@ -261,6 +261,7 @@ div.search_form input.search_keyword {
     font-size: 14px;
     line-height: 20px;
     width: 200px;
+    font-family: Pretendard;
 }
 div.search_form input.search_keyword::placeholder {
     color: #c9c9d0;
