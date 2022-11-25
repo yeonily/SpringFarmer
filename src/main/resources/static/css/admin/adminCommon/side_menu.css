@@ -6,6 +6,10 @@ body {
     background-color: #eee;
 }
 
+body, button{
+    font-family: "Pretendard" !important;
+}
+
 div img.ourLogo{
     width: 115px;
     margin-left: 17px;
@@ -35,7 +39,6 @@ nav {
 
 nav a {
     text-decoration: none;
-    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 600;
     word-break: keep-all;
     color: #ffffff
@@ -50,7 +53,6 @@ nav a.effect:hover {
 nav div#team-logo {
     /*margin-left: 10px;*/
     line-height: 59px;
-    font-family: 'Sunflower', sans-serif;
     font-size: 19px;
     background: white;
 }
@@ -58,7 +60,6 @@ nav div#team-logo {
 div.menu-title {
     margin: 35px 0 5px 11px;
     color: #888888;
-    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 600;
     font-size: 12px;
 }
@@ -202,7 +203,6 @@ header {
 header span {
     font-size: 12px;
     font-weight: 300;
-    font-family: 'Noto Sans KR', sans-serif;
     color: rgb(97, 97, 97);
 }
 
