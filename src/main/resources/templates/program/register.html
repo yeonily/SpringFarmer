@@ -38,8 +38,8 @@
                                         <div class="modal-title">정말 그만둘까요?</div>
                                     </div>
                                     <div class="modal-content-wrapper">
-                                        <div class="modal-content">
-                                            오늘, 마음 먹은 김에 프로그램을 만들고<br>농장주님을 기다리고 있는 사람들을 만나보세요!
+                                        <div class="modal-content1">
+                                            오늘, 마음 먹은 김에 프로그램을 만들고<br><div class="modal-content2">농장주님을 기다리고 있는 사람들을 만나보세요!</div>
                                             <div class="exit-modal-action-container">
                                                 <button class="button-1"><div class="flex"/>나가기<div class="flex"/></button>
                                                 <button class="button-2"><div class="flex"/>계속 작성하기<div class="flex"/></button>
@@ -176,12 +176,12 @@
                         <div class="opening-long-input">
                             <div class="c-text-field">
                                 <div class="field-input-wrapper">
-                                    <input type="text" placeholder="부담 없이 작성하세요!" name="text-field" autocomplete="off" class="c-text-field-input2">
+                                    <input type="text" id="r-content" placeholder="제목을 작성하세요!" name="text-field" autocomplete="off" class="c-text-field-input2">
                                 </div>
                             </div>
                             <div class="input-length">
                                 <div class="length-wrapper">
-                                    <div class="c-caption1">0</div>
+                                    <div class="c-caption1"><span id="count-txt">0</span></div>
                                 </div>
                                 <div>
                                     <div class="c-caption2">/76</div>
@@ -379,7 +379,7 @@
                     </div>
                     <div>
                         <div class="align-items-center">
-                            <input type="file" id="file-input" style="display: none;">
+                            <input type="file" id="file-input" style="display: none;" required accept="image/*" onchange="fileUpload()">
                             <label for="file-input"><img class="upload" src="/image/program/upload.gif"></label>
                             <!--<img class="upload upload-margin" src="/image/program/link_upload.gif">-->
                         </div>
@@ -387,11 +387,14 @@
                             <div class="c-callout-wrapper">
                                 <div class="align-center">
                                 <img class="upload" src="/image/program/mark.gif">
-                                <div class="c-callout-message">업로드되지 않는 경우, 압축하여 등록해주세요.
+                                <div class="c-callout-message">첫번째 업로드 이미지가 대표 이미지로 설정됩니다.
                                 </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="c-callout-information-2" style="display: none">
+                        <div id="file-content"></div><img id="deleteBtn" alt="첨부 삭제" src="/image/myPage/close.png" onclick="cancelFile()">
+                    </div>
                     </div>
                 </section>
             </div>
@@ -527,6 +530,46 @@
             </div>
             </div>
             </span>
+                    <!--모달-->
+                    <div>
+                        <aside id="c-overlay-2" style="display: none">
+                            <div class="register-modal">
+                                <div class="modal-wrapper">
+                                    <div class="modal-title-wrapper">
+                                        <div class="modal-title" style="color:red">입력하지 않은 값이 있습니다.</div>
+                                    </div>
+                                    <div class="modal-content-wrapper">
+                                        <div class="modal-content1">
+                                            빨간 박스에 내용을 모두 입력한 후<br><div class="modal-content2"> 다시 시도해주세요!</div>
+                                            <div class="exit-modal-action-container">
+                                                <button class="button-ok"><div class="flex"/>확인<div class="flex"/></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <!--모달-->
+                    <div>
+                        <aside id="c-overlay-3" style="display: none">
+                            <div class="register-modal">
+                                <div class="modal-wrapper">
+                                    <div class="modal-title-wrapper">
+                                        <div class="modal-title" style="color:#47c880">글이 정상적으로 등록되었습니다.</div>
+                                    </div>
+                                    <div class="modal-content-wrapper">
+                                        <div class="modal-content1">
+                                            목록 페이지로 이동합니다.
+                                            <div class="exit-modal-action-container">
+                                                <button class="button-ok okay"><div class="flex"/>확인<div class="flex"/></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
                 </div>
             </div>
         </div>
