@@ -27,7 +27,7 @@
                         <div class="c-title">
                             <div>내 프로그램</div>
                             <!-- 농장주 일 때-->
-                            <button class="s-button l-writeBtn">
+                            <button class="s-button l-writeBtn" th:onclick="'location.href=\''+ @{/program/register} + '\''">
                                 <svg data-v-bd9f2bcc="" data-v-79e0399f="" width="16" height="16" viewBox="0 0 16 16" fill="black" xmlns="http://www.w3.org/2000/svg" class="c-application c-icon" data-v-ace7c8aa="" style="fill: rgb(255, 255, 255);"><path data-v-bd9f2bcc="" fill-rule="evenodd" clip-rule="evenodd" d="M8 2C8.27614 2 8.5 2.22386 8.5 2.5V13.5C8.5 13.7761 8.27614 14 8 14C7.72386 14 7.5 13.7761 7.5 13.5V2.5C7.5 2.22386 7.72386 2 8 2Z"></path><path data-v-bd9f2bcc="" fill-rule="evenodd" clip-rule="evenodd" d="M14 8C14 8.27614 13.7761 8.5 13.5 8.5L2.5 8.5C2.22386 8.5 2 8.27614 2 8C2 7.72386 2.22386 7.5 2.5 7.5L13.5 7.5C13.7761 7.5 14 7.72386 14 8Z"></path></svg>
                                 프로그램 만들기
                             </button>
@@ -108,6 +108,7 @@
 
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/header/header.js"></script>
 <script src="/js/myPage/myPage.js"></script>
 <script src="/js/myPage/list.js"></script>
 <script>

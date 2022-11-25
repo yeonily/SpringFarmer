@@ -1,5 +1,5 @@
 /*
-* information/cropInformation.html
+* information/crops.html
 * */
 
 //서브헤더 보이기
@@ -24,6 +24,6 @@ $(document).ready(function () {
 var btnList = [];
 btnList = $('div.menuList ul li button');
 $(btnList[0]).attr("onclick", "location.href='/information/policy'");
-$(btnList[1]).attr("onclick", "location.href='/information/cropInformation'");
-$(btnList[2]).attr("onclick", "location.href='/information/readyTest'");
-$(btnList[3]).attr("onclick", "location.href='/information/stepTest'");
+$(btnList[1]).attr("onclick", "location.href='/information/crops'");
+$(btnList[2]).attr("onclick", "location.href='/information/ready'");
+$(btnList[3]).attr("onclick", "location.href='/information/step'");
