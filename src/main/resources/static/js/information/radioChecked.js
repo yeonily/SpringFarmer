@@ -2,6 +2,9 @@
 * information/readyTest.html
 * */
 
+// 헤더 검색창 없애기
+$(".search_form").css("visibility", "hidden");
+
 //서브헤더 보이기
 $(document).ready(function () {
     $("#sub_header").css("display", "block");
@@ -14,7 +17,7 @@ $(document).ready(function () {
 
 //서브헤더 소카 이름
 $(document).ready(function () {
-    $('div.menuList ul li:nth-child(1)').children().text("지원정책");
+    $('div.menuList ul li:nth-child(1)').children().text("청년정책");
     $('div.menuList ul li:nth-child(2)').children().text("농업정보");
     $('div.menuList ul li:nth-child(3)').children().text("준비도 테스트");
     $('div.menuList ul li:nth-child(4)').children().text("단계별 체크리스트");
@@ -24,9 +27,9 @@ var btnList = [];
 btnList = $('div.menuList ul li button');
 console.log(btnList);
 $(btnList[0]).attr("onclick", "location.href='/information/policy'");
-$(btnList[1]).attr("onclick", "location.href='/information/cropInformation'");
-$(btnList[2]).attr("onclick", "location.href='/information/readyTest'");
-$(btnList[3]).attr("onclick", "location.href='/information/stepTest'");
+$(btnList[1]).attr("onclick", "location.href='/information/crops'");
+$(btnList[2]).attr("onclick", "location.href='/information/ready'");
+$(btnList[3]).attr("onclick", "location.href='/information/step'");
 
 
 // 체크 리스트 개수

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/information/*")
 public class CropInformationController {
 
-    @GetMapping("/cropInformation")
+    @GetMapping("/crops")
     public void cropInformation(){
 
     }
