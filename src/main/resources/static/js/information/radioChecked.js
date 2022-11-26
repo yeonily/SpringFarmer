@@ -17,7 +17,7 @@ $(document).ready(function () {
     $('div.menuList ul li:nth-child(1)').children().text("지원정책");
     $('div.menuList ul li:nth-child(2)').children().text("농업정보");
     $('div.menuList ul li:nth-child(3)').children().text("준비도 테스트");
-    $('div.menuList ul li:nth-child(4)').children().text("단계별 테스트");
+    $('div.menuList ul li:nth-child(4)').children().text("단계별 체크리스트");
 })
 
 var btnList = [];
@@ -102,3 +102,6 @@ $(document).ready(function(){
 
     });
 });
+
+//검색 없애기
+$(".search_form").hide();

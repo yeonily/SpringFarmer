@@ -202,15 +202,26 @@ function fadeout(){
 //모달창
 const btnModal = document.getElementById("btn-modal");
 const modal = document.getElementById("c-overlay");
-const closeModal = modal.querySelector(".button-2");
+const closeModal = modal.querySelector(".button-1");
+const stayModal = modal.querySelector(".button-2");
+const modal2 = document.getElementById("c-overlay-2");
+const modal3 = document.getElementById("c-overlay-3");
+const okModal = document.querySelector(".button-ok");
+
 
 btnModal.addEventListener("click", ev => {
     modal.style.display = "flex"
 })
 
-closeModal.addEventListener("click", evt => {
+stayModal.addEventListener("click", evt => {
     modal.style.display = "none"
 })
+
+closeModal.addEventListener("click", evt => {
+    window.location='/mypage/program';
+})
+
+
 
 /*다음 버튼*/
 $("button.next").on("click", function() {
@@ -285,12 +296,21 @@ $(".opening-footer").on("click", "button.submitButton", function () {
             }
         }
     }
-    if (!check) {
-        alert("입력하지 않은 값이 있습니다.");
+    if(!check) {
+        modal2.style.display = "flex"
+
+        okModal.addEventListener("click", evt => {
+            modal2.style.display = "none"
+        })
         return;
     }
 
-    location.href = '/program/list';
+    modal3.style.display = "flex"
+
+    $("button.okay").on("click", function(){
+        location.href='/program/list';
+    });
+
 });
 
 //빨간줄 사라지기
@@ -330,3 +350,44 @@ $(".select-chip").on("click", function(){
     }
 
 })
+
+// 글자수 세는 이벤트
+$('#r-content').keyup(function () {
+    let $content = $(this).val();
+
+    $("#count-txt").html($content.length);
+
+    // 글자수 제한
+    if ($content.length > 76) {
+        // 200자 부터는 타이핑 되지 않도록
+        $(this).val($(this).val().substring(0, 76));
+        // 200자 넘으면 알림창 뜨도록
+        alert('글자수는 76자까지 입력 가능합니다.');
+    };
+});
+
+//첨부파일 파일명 보이기
+function fileUpload(){
+    var fileValue = $("#file-input").val().split("\\");
+    var fileName = fileValue[fileValue.length-1]; // 파일명
+        $("#file-content").html(fileName);
+        $(".c-callout-information-2").show();
+}
+
+//삭제 버튼
+$('input[type="file"]').on("change",function(){
+    if($("#file-content").html() == ""){
+        $("#deleteBtn").hide();
+    }else{
+        $("#deleteBtn").show();
+    }
+});
+
+//첨부파일 업로드 취소
+function cancelFile(){
+    $("input[type='file']").val("");
+    $("#file-content").html("");
+    console.log($("input[type='file']").val(""));
+    $("#deleteBtn").hide();
+    $(".c-callout-information-2").hide();
+}

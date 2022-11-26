@@ -1,6 +1,6 @@
 /*
 * program/list.html
-* program/applyOk.html
+* program/applyfin.html
 * */
 
 //헤더 대카 표시

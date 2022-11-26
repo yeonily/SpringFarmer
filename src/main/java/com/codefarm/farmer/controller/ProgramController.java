@@ -25,8 +25,8 @@ public class ProgramController {
 
     }
 
-    @GetMapping("/applyOk")
-    public void applyOk(){
+    @GetMapping("/applyfin")
+    public void applyfin(){
 
     }
 

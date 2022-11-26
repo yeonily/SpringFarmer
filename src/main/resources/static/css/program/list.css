@@ -421,6 +421,14 @@ button {
     .search_form {
         display: none;
     }
+
+    div.fake-header {
+        height: 53px !important;
+    }
+
+    div.header {
+        border-bottom: none!important;
+    }
 }
 
 
