@@ -241,17 +241,15 @@
                                         <div class="body-caption">프로그램 상세 페이지에서 노출될 수 있는 이미지가 있다면 첨부해주세요.</div>
                                     </div>
                                     <div style="margin-bottom: 32px;">
+
+                                        <!--파일 첨부 버튼 아이콘-->
                                         <div class="align-items-center">
                                             <label style="cursor: pointer">
                                                 <img style="width: 20px; height: 20px; border: 1px solid #e1e4e6" id="preview-image" src="/image/program/upload.gif">
-                                                <input type="file" class="input-div-input" id="attach" style="display: none;">
+                                                <input type="file" multiple class="input-div-input" onchange="addFile(this);" id="input_file" style="display: none;">
                                             </label>
-
-                                            <!-- <label for="attach">
-                                                 <img class="upload" src="/image/program/upload.gif">
-                                             </label>
-                                             <input type="file" id="attach" style="display: none;">-->
                                         </div>
+
                                         <div class="c-callout-information">
                                             <div class="c-callout-wrapper">
                                                 <div class="align-center">
@@ -260,6 +258,10 @@
                                                 </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <!--실제 들어갈 이미지-->
+                                        <div>
+                                            <div class="imgs_wrap"></div>
                                         </div>
                                     </div>
                                 </section>
@@ -462,3 +464,8 @@
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="/js/mento/write.js"></script>
+
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript" src="/js/comm.js"></script>
