@@ -38,10 +38,48 @@ $(".star_check").on("click" , function () {
     }
 })
 
-//보낼 시 별 점수?
-$("#main_reply_button").on("click", function () {
-    console.log($("#star_count_check").children("svg.star_check").length);
+
+/*
+* 별 개수 확인
+* */
+
+let counts = $(".star_count");
+let starScore = "";
+let starText = "";
+// console.log(counts);
+
+counts.each(function (i, item) {
+    starScore = $(item).children('.star_check').length;
+    switch (starScore) {
+            case 5 :
+                starText = "매우 추천해요!";
+            break
+            case 4 :
+                starText = "추천해요!";
+            break
+            case 3 :
+                starText = "보통이에요!";
+            break
+            case 2 :
+                starText = "비추천해요!";
+            break
+            case 1 :
+                starText = "매우 비추천해요!";
+            break
+    }
+    console.log(starText);
+    $(item).children('.main_reply_gray').text(starText);
 })
+
+// for(let i = 0 ; i< counts.length ; i++){
+//     console.log(counts[i]);
+// }
+
+//보낼 시 별 점수?
+// console.log($(".star_count").children(".star_check").length);
+/*$("#main_reply_button").on("click", function () {
+
+})*/
 
 /*-----------------------------------------------------------*/
 /*멘토 신청 버튼 클릭 시 모달*/

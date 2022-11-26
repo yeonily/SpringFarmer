@@ -652,7 +652,15 @@
     box-sizing: border-box;
 }
 
+.imgs_wrap{
+    display: none;
+}
 
+.imgs_wrap img{
+    display: inline-block;
+    width: 243px;
+    max-height: 243px;
+}
 
 
 

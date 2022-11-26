@@ -228,65 +228,84 @@
     })
 
 
+/*첨부파일 추가*/
+var fileNo = 0;
+var filesArr = new Array();
 
-    /*/!*파일 첨부*!/
-    const file = document.querySelector($("#attach"));
-    const thumbnail = document.querySelector($(".thumbnail"));
-    file.addEventListener("change",function(e){
-        // console.log(e.target.files[0]);
-        var reader = new FileReader();
+/* 첨부파일 추가 */
+function addFile(obj){
+    var maxFileCnt = 5;   // 첨부파일 최대 개수
+    var attFileCnt = document.querySelectorAll('.filebox').length;    // 기존 추가된 첨부파일 개수
+    var remainFileCnt = maxFileCnt - attFileCnt;    // 추가로 첨부가능한 개수
+    var curFileCnt = obj.files.length;  // 현재 선택된 첨부파일 개수
 
-        // readAsDataUrl은 byte단위로 읽어오고 다 읽었을 때 load로 reader에 저장
-        reader.readAsDataURL(e.target.files[0]);
-        reader.onload = function(e){
-            console.log(e.target.result);
-            let url = e.target.result;
-            // 이미지 파일인지 아닌지 검사하여 이미지 파일이 아닐 경우 원래 attach.png 이미지로 변경
-            if(!(url.includes("image"))){
-                thumbnail.style.backgroundImage = "url('"+url+"')";
-            }else{
-                thumbnail.style.backgroundImage = "url(img/attach.png)";
-            }
-
-            // console.log(url.indexOf("image"));
-
-
-        }
-    });
-
-
-    /!*-----------------------------------------------------------*!/
-    /!*첨부파일 이미지 미리보기*!/
-    /!*-----------------------------------------------------------*!/
-    function readImage(input) {
-        // 인풋 태그에 파일이 있는 경우
-        if(input.files && input.files[0]) {
-            // 이미지 파일인지 검사 (생략)
-            // FileReader 인스턴스 생성
-            const reader = new FileReader()
-            // 이미지가 로드가 된 경우
-            reader.onload = e => {
-                const previewImage = document.getElementById("preview-image")
-                previewImage.src = e.target.result
-            }
-            // reader가 이미지 읽도록 하기
-            reader.readAsDataURL(input.files[0])
-            $(".input-file-button").text("수정");
-        }
+    // 첨부파일 개수 확인
+    if (curFileCnt > remainFileCnt) {
+        alert("첨부파일은 최대 " + maxFileCnt + "개 까지 첨부 가능합니다.");
     }
 
-    // input file에 change 이벤트 부여
-    const inputImage = document.getElementById("input-image")
-    inputImage.addEventListener("change", e => {
-        readImage(e.target)
-    })
+    for (var i = 0; i < Math.min(curFileCnt, remainFileCnt); i++) {
 
-    /!*버튼이 삭제일 때*!/
-    if($(".input-file-button").text() == "삭제") {
-        $(".input-file-button").on("click", function() {
-            $("#input-image").val('');
-        });
-    }*/
+        const file = obj.files[i];
+        console.log(file);
+
+        // 첨부파일 검증
+        if (validation(file)) {
+            // 파일 배열에 담기
+            var reader = new FileReader();
+            reader.onload = function () {
+                filesArr.push(file);
+            };
+            reader.readAsDataURL(file)
+
+            // 목록 추가
+            let htmlData = '';
+            htmlData += '<div id="file' + fileNo + '" class="filebox">';
+            htmlData += '   <p class="name">' + file.name + '</p>';
+            htmlData += '   <a class="delete" onclick="deleteFile(' + fileNo + ');"><i class="far fa-minus-square"></i></a>';
+            htmlData += '</div>';
+            $('.file-list').append(htmlData);
+            fileNo++;
+        } else {
+            continue;
+        }
+    }
+    // 초기화
+    document.querySelector("input[type=file]").value = "";
+}
+
+/* 첨부파일 검증 */
+function validation(obj){
+    const fileTypes = ['application/pdf', 'image/gif', 'image/jpeg', 'image/png', 'image/bmp', 'image/tif', 'application/haansofthwp', 'application/x-hwp'];
+    if (obj.name.length > 100) {
+        alert("파일명이 100자 이상인 파일은 제외되었습니다.");
+        return false;
+    } else if (obj.size > (100 * 1024 * 1024)) {
+        alert("최대 파일 용량인 100MB를 초과한 파일은 제외되었습니다.");
+        return false;
+    } else if (obj.name.lastIndexOf('.') == -1) {
+        alert("확장자가 없는 파일은 제외되었습니다.");
+        return false;
+    } else if (!fileTypes.includes(obj.type)) {
+        alert("첨부가 불가능한 파일은 제외되었습니다.");
+        return false;
+    } else {
+        return true;
+    }
+}
+
+/* 첨부파일 삭제 */
+function deleteFile(num) {
+    document.querySelector("#file" + num).remove();
+    filesArr[num].is_delete = true;
+}
+
+
+
+
+
+
+
 
 
 
