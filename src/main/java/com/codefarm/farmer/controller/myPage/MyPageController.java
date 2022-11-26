@@ -19,7 +19,6 @@ public class MyPageController {
     public Model mainPage(@RequestParam(value = "nav", required = false)String nav, Model model){
         log.info(nav);
         return model.addAttribute(Optional.ofNullable("/myPage/setting").orElse("/myPage/setting" + ("?nav=" + nav)), nav);
-//        return Optional.ofNullable("/myPage/setting").orElse("/myPage/setting?nav" + nav);
     }
 
     @GetMapping("/setting/quit")

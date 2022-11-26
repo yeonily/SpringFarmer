@@ -188,7 +188,7 @@ div.header_nav ul.nav_right_after button.c-application {
 div.header_nav ul.nav_right_after div.sub-menu {
     position: absolute;
     top: 40px;
-    left: 1027px;
+    left: 985px;
     z-index: 10;
     display: block;
     border-radius: 5px;
@@ -208,7 +208,6 @@ div.header_nav ul.nav_right_after div.sub-menu:before {
 }
 div.sub-menu ul {
     margin-top: 5px;
-    line-height: 19px;
 }
 div.sub-menu ul li {
     padding: 5px 10px 5px 10px;
@@ -220,34 +219,29 @@ div.sub-menu ul li a{
     font-size: 12px;
     color: #595f63;
     display: inline-block;
-    margin-left: 23px;
+    margin-left: 20px;
 }
 hr {
     border: 0.1px solid rgb(244,244,244);
     margin: 0 auto;
     width: 100px;
 }
-div.sub-menu>ul>li>div {
-    display: flex;
-
-}
 div.sub-menu ul li span {
     background-size: cover;
     background-repeat: no-repeat;
     background-size: 16px 16px;
 }
-div.sub-menu ul li span.mypageLink {
-    background-image: url("/image/header/mypage.png");
+div.sub-menu ul li span.writeImg {
+    background-image: url("/image/header/write.png");
 }
-div.sub-menu ul li span.commuLink {
-    background-image: url("/image/header/commu.png");
+div.sub-menu ul li span.talkImg {
+    background-image: url("/image/header/talk.png");
 }
-div.sub-menu ul li span.chatLink {
-    background-image: url("/image/header/chat.png");
+div.sub-menu ul li span.myPageImg {
+    background-image: url("/image/header/myPageIcon.png");
 }
-div.sub-menu ul li span.logout {
-    background-image: url("/image/header/logout.png");
-    background-size: 14px 14px;
+div.sub-menu ul li span.exitImg {
+    background-image: url("/image/header/exit.png");
 }
 
 
@@ -565,22 +559,15 @@ div#sub_header div.menuList ul li button:hover {
     }
 }
 
-@media only screen and (min-width: 768px){
-    html ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-        border: 3px solid #fff;
-    }
-    html ::-webkit-scrollbar-thumb {
-        height: 50px;
-        width: 50px;
-        background: #eaecee;
-        border-radius: 8px;
-        -webkit-box-shadow: inset 0 0 4px rgb(0 0 0 / 10%);
-    }
-    html ::-webkit-scrollbar-track {
-        background: #f3f4f5;
-        border-radius: 10px;
-        -webkit-box-shadow: inset 0 0 4px rgb(0 0 0 / 20%);
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+

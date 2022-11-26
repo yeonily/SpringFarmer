@@ -39,7 +39,7 @@
                             <div id="c-w-wrap" class="f-column">
 
                                 <!---->
-                                <div class="commu c-link">
+                                <div class="commu c-link" th:onclick="'location.href=\''+ @{/community/detail} + '\''">
                                     <div class="c-top-wrap">
                                         <div class="c-date">
                                             2022.11.13 15:00
@@ -94,6 +94,7 @@
 
     // 글 삭제 모달 알람
     function removeCheck(){
+        event.stopImmediatePropagation();
         $(".overlay-l").show();
     };
 

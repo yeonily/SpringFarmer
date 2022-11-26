@@ -117,6 +117,7 @@
 
     // 농장주일 때 글 삭제 모달 알람
     function removeCheck(){
+        event.stopImmediatePropagation();
         $(".alam-wrap").show();
     };
 

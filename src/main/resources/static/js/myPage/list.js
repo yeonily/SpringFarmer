@@ -21,6 +21,7 @@ $(".myProgram").hover(function() {
 
 /* 클릭 시 삭제 버튼 */
 $("img.l-menuBtn").on("click", function() {
+    event.stopImmediatePropagation();
     if(!($(this).hasClass("select-c"))){
         $("img.l-menuBtn").addClass("l-m-btn");
         $(this).removeClass("l-m-btn");

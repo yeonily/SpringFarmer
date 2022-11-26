@@ -16,14 +16,6 @@ $("div.more-btn").on("click", function(){
     }
 })
 
-// setting.html, quit.html 탭 이동
-function tabMove(tab){
-    var offset = $("#" + tab).offset();
-    $(".menu-tab button").removeClass('active');
-    $("button." + tab).addClass('active');
-    $('html, body').animate({scrollTop : (offset.top - $("div.header").height())}, 300);
-}
-
 // setting.html - 닉네임 중복확인 버튼 클릭 후 저장 버튼 활성화
 $(".nick-save").attr("disabled", true);
 

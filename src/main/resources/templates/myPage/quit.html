@@ -28,17 +28,15 @@
                         <div class="c-header-c">
                             <div class="c-header-can">
                                 <div class="menu-tab-btn">
-                                    <div class="menu-tab">
-                                        <a th:href="@{/mypage/setting}">
-                                            <button class="main-tab">프로필</button>
-                                        </a>
+                                    <div class="menu-tab tabMove">
+                                        <button class="main-tab">프로필</button>
                                     </div>
-                                    <div class="menu-tab">
-                                            <button class="myInfo" onclick="tabMove('info')">정보 수정</button>
+                                    <div class="menu-tab tabMove">
+                                        <button class="myInfo">정보 수정</button>
                                     </div>
                                     <!--멘토인 경우-->
-                                    <div class="menu-tab">
-                                        <button class="mentorInfo" onclick="tabMove('mentor')">멘토 정보</button>
+                                    <div class="menu-tab tabMove">
+                                        <button class="mentorInfo">멘토 정보</button>
                                     </div>
                                     <!------>
                                     <div class="menu-tab">
@@ -121,22 +119,19 @@
 <script src="/js/header/header.js"></script>
 <script src="/js/myPage/myPage.js"></script>
 <script>
+    $(document).ready(function (){
+        $("div.tabMove>button").on("click", function(){
+             var nav = $(this).attr("class");
+             if (nav == "main-tab") {
+                 location.href='/mypage/setting';
+             } else {
+                 location.href='/mypage/setting?nav=' + nav;
+             }
+            // console.log();
+        });
+    });
+
     $("div.menu-a").removeClass('menu-select');
     $("#myInfoPage").addClass('menu-select');
-
-    function tabMove(tab) {
-        $.ajax({
-            url : '/mypage/setting',
-            data : {
-                nav: tab
-            },
-            success : function(data) {
-                console.log(tab);
-            },
-            error : function() {
-                alert("error");
-            }
-        });
-    }
 </script>
 </html>

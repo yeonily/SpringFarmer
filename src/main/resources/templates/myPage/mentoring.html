@@ -53,6 +53,16 @@
 <script src="/js/header/header.js"></script>
 <script src="/js/myPage/myPage.js"></script>
 <script>
+    /*멘티일 때 멘토 삭제*/
+    function mentorDelete(){
+        event.stopImmediatePropagation();
+    }
+
+    /*멘토일 때 멘티 삭제*/
+    function menteeDelete(){
+        event.stopImmediatePropagation();
+    }
+
     $("div.menu-a").removeClass('menu-select');
     $("#mentoring").addClass('menu-select');
 
