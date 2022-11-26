@@ -255,6 +255,7 @@ div.content {
     padding-right: 0;
     position: relative;
     width: 100%;
+    min-height: 330px;
     box-sizing: border-box;
 }
 

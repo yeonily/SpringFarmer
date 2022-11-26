@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/information/*")
 public class PolicyController {
 
-    @GetMapping("/stepTest") public void stepTest(){;}
+    @GetMapping("/step") public void stepTest(){;}
 
-    @GetMapping("/readyTest") public void readyTest(){;}
+    @GetMapping("/ready") public void readyTest(){;}
 
     @GetMapping("/policy")
     public void policy(){
