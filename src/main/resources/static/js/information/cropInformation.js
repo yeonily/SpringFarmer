@@ -1,5 +1,5 @@
 /*
-* information/cropInformation.html
+* information/crops.html
 * */
 
 //서브헤더 보이기

@@ -57,3 +57,9 @@ img {
     border-style: none;
     max-width: 100%;
 }
+
+@media only screen and (max-width: 768px) {
+    #faq .faq-board {
+        width: 100%;
+    }
+}

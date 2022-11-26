@@ -349,7 +349,7 @@ div.footerMargin {
     background: #fff;
     margin-bottom: 50px;
     overflow: hidden;
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 27px;
 }
@@ -432,8 +432,6 @@ div.footerMargin {
     background: #f4f5f7;
 }
 
-#faq .faq-board-list.active1 {
-}
 
 /*===================================================================*/
 .blinder {
@@ -568,4 +566,11 @@ div.footer-bottom-wrap {
 .selected-header{
     color: #040505!important;
     font-weight: 600!important;
+}
+
+
+@media only screen and (min-width: 768px) {
+    #faq .faq-board {
+        width: 60%;
+    }
 }

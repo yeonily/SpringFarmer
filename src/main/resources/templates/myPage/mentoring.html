@@ -47,49 +47,24 @@
 </div>
 <!-- 푸터 -->
 <div th:replace="/footer/footer.html :: footer" class="footer"/>
-<!-- 농장주 - 멘티 삭제 모달창 -->
-<div id="farmer-delete" class="overlay-l" style="display: none">
-    <div class="alam">
-        <p>정말 삭제하시겠습니까?</p>
-        <div class="alam-btn-group">
-            <button class="a-ok">삭제</button>
-            <button type="button" class="a-no">취소</button>
-        </div>
-    </div>
-</div>
 
-<!-- 농장주 - 신청 거절 모달창 -->
-<div id="farmer-refuse" class="overlay-l" style="display: none">
-    <div class="alam">
-        <p>정말 거절하시겠습니까?</p>
-        <div class="alam-btn-group">
-            <button class="a-ok">거절</button>
-            <button type="button" class="a-no">취소</button>
-        </div>
-    </div>
-</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="/js/header/header.js"></script>
 <script src="/js/myPage/myPage.js"></script>
 <script>
+    /*멘티일 때 멘토 삭제*/
+    function mentorDelete(){
+        event.stopImmediatePropagation();
+    }
+
+    /*멘토일 때 멘티 삭제*/
+    function menteeDelete(){
+        event.stopImmediatePropagation();
+    }
+
     $("div.menu-a").removeClass('menu-select');
     $("#mentoring").addClass('menu-select');
-
-    // 멘티 삭제 확인 알람
-    function deleteCheck(){
-        $("#farmer-delete").show();
-    };
-    $(".a-no").on("click", function(){
-        $("#farmer-delete").hide();
-    });
-
-    // 멘티 신청 거절 확인 알람
-    function refuseCheck(){
-        $("#farmer-refuse").show();
-    };
-    $(".a-no").on("click", function(){
-        $("#farmer-refuse").hide();
-    });
 
     function move(tab){
         $(".myInfo").css('height', '0px');

@@ -9,8 +9,7 @@
 <div class="alba-lists-wrap" th:fragment="userAlbas">
     <div class="alba-list">
         <!---->
-        <!-- ↓ 밑에 추가 - th:onclick="'location.href=\''+ @{해당 글로 가는 링크} + '\''" -->
-        <div class="commu c-link">
+        <div class="commu c-link" th:onclick="'location.href=\''+ @{/alba/detail} + '\''">
             <div class="c-top-wrap">
                 <div class="t-s-wrap">
                     <div class="c-address">2022.11.25 ・</div>
@@ -36,8 +35,7 @@
 <div class="alba-lists-wrap" th:fragment="farmerAlbas">
     <div class="alba-list">
         <!---->
-        <!-- ↓ 밑에 추가 - th:onclick="'location.href=\''+ @{해당 글로 가는 링크} + '\''" -->
-        <div class="commu c-link">
+        <div class="commu c-link" th:onclick="'location.href=\''+ @{/alba/detail} + '\''">
             <div class="c-top-wrap">
                 <div class="t-s-wrap">
                     <div class="c-address">2022.11.25 ・</div>

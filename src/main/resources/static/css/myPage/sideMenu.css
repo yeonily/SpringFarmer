@@ -282,6 +282,7 @@ div.n-c-wrap {
 input[type='text'] {outline: none;}
 input[type='text']:not([disabled]):hover {border: 1px solid #aaa8a8;}
 input[type='text']:focus {border: 1px solid #aaa8a8;}
+select:focus {border: 1px solid #aaa8a8;}
 
 /* 알람 애니매이션 모달 */
 div.overlay-l {

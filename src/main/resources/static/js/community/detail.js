@@ -2,6 +2,9 @@
 * /community/detail.html
 * */
 
+// 헤더 검색창 없애기
+$(".search_form").css("visibility", "hidden");
+
 // 댓글 입력할 시 div 눌러야 입력 폼 활성화
 $("#re-before").on("click", function (){
     $(this).hide();
