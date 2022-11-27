@@ -17,7 +17,6 @@ public class MyPageController {
     @GetMapping("/setting")
 //    tab : 마이페이지 메인 화면에서 탭 이동 때 사용
     public Model mainPage(@RequestParam(value = "nav", required = false)String nav, Model model){
-        log.info(nav);
         return model.addAttribute(Optional.ofNullable("/myPage/setting").orElse("/myPage/setting" + ("?nav=" + nav)), nav);
     }
 
@@ -27,18 +26,15 @@ public class MyPageController {
     }
 
     @GetMapping("/payment")
-    public String paymentPage(){
-        return "/myPage/payment";
+    public void paymentPage(){
     }
 
     @GetMapping("/community")
-    public String communityPage(){
-        return "/myPage/community";
+    public void communityPage(){
     }
 
     @GetMapping("/program")
-    public String programPage(){
-        return "/myPage/program";
+    public void programPage(){
     }
 
     @GetMapping("/program/apply")
@@ -52,8 +48,7 @@ public class MyPageController {
     }
 
     @GetMapping("/alba")
-    public String albaPage(){
-        return "/myPage/alba";
+    public void albaPage(){
     }
 
     @GetMapping("/alba/apply")
@@ -62,8 +57,7 @@ public class MyPageController {
     }
 
     @GetMapping("/inquire")
-    public String inquirePage(){
-        return "/myPage/inquire";
+    public void inquirePage(){
     }
 
     @GetMapping("/inquire/qustion")
@@ -72,7 +66,6 @@ public class MyPageController {
     }
 
     @GetMapping("/mentoring")
-    public String mentoringPage(){
-        return "/myPage/mentoring";
+    public void mentoringPage(){
     }
 }
