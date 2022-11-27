@@ -124,7 +124,7 @@ div.c-content table tbody td {
 div.c-content table tbody td.title {
     padding-left: 30px;
     text-align: left;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 div.c-content table tbody td.name {
@@ -134,10 +134,10 @@ div.c-content table tbody td.name {
 
 div.c-content table tbody td.email { text-align: left; }
 
-tbody td.title:hover {
-    color: #1b2f9e;
-    font-weight: 600;
-}
+/*tbody td.title:hover {*/
+/*    color: #1b2f9e;*/
+/*    font-weight: 600;*/
+/*}*/
 
 div.c-content table tbody td.date {
     color: #cacaca;
