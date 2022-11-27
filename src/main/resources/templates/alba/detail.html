@@ -214,7 +214,6 @@
             </div>
         </div>
     </div>
-
     <!--지원 완료-->
     <div id="modalSuccess" style="display: none;">
         <div id="modalSuccess-overlay">
@@ -233,6 +232,50 @@
             </div>
         </div>
     </div>
+
+
+    <!--지원 취소-->
+    <div id="cancelModal" style="display: none">
+        <div id="modalCancel-overlay">
+            <div class="c-modal">
+                <div class="m-wrap">
+                    <div class="m-title">아르바이트 지원 취소</div>
+                    <form action="">
+                        <div class="m-c-wrap">
+                            <div class="m-c-title">신청한 아르바이트를 신청하시겠습니까?</div>
+                        </div>
+                        <div class="applyBtnWrap">
+                            <button type="button" class="applyBtn">예</button>
+                            <button type="button" class="cancel">아니오</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--글 삭제-->
+    <div id="removeModal" style="display: none">
+        <div id="removeCancel-overlay">
+            <div class="c-modal">
+                <div class="m-wrap">
+                    <div class="m-title">아르바이트 글 삭제</div>
+                    <form action="">
+                        <div class="m-c-wrap">
+                            <div class="m-c-title">작성된 아르바이트 게시글을 삭제하시겠습니까?</div>
+                        </div>
+                        <div class="applyBtnWrap">
+                            <button type="button" class="applyBtn">예</button>
+                            <button type="button" class="cancel">아니오</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <footer th:replace="/footer/footer.html :: footer" class="footer"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>

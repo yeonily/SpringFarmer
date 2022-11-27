@@ -522,7 +522,9 @@ div.last-comment-inner p {
 /**************************************************************/
                         /*지원하기 모달창*/
 /**************************************************************/
-div#modal-overlay {
+div#modal-overlay,
+div#modalCancel-overlay,
+div#removeCancel-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -543,7 +545,10 @@ div.c-modal {
     transform: translate(-50%,-50%);
     box-sizing: border-box;
 }
-div.m-wrap {padding: 40px 0;}
+div.m-wrap {
+    padding: 40px 0;
+    width: 491px;
+}
 div.m-title {
     padding: 0 32px 20px;
     color: rgb(4, 5, 5);
@@ -630,6 +635,13 @@ button.listBtn:disabled {
     cursor: not-allowed!important;
 }
 button.listBtn:hover:not([disabled]) {background-color: #357e55;}
+
+
+
+/**************************************************************/
+                        /*지원 취소 모달창*/
+/**************************************************************/
+
 
 
 

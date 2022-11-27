@@ -39,12 +39,14 @@ if($("#main_fixed_category").text() == "모집마감" || $(".left-div span").tex
 $("button#main_fixed_button").on("click", function(){
     $("#modal").show();
 });
-$("button.cancel").on("click", function(){
+$("#modal .cancel").on("click", function(){
     $("#modal").hide();
 });
 
 /*메일전송 완료 버튼 클릭 시*/
-$("button.applyBtn").on("click", function(){
+$("#modal button.applyBtn").on("click", function(){
+    $("#modalSuccess .m-title").text("아르바이트에 지원해주셔서 감사합니다!");
+    $("#modalSuccess .m-c-title").text("빠른 시일 내에 지원결과를 알려드리도록 하겠습니다.");
     $("#modal").hide();
     $("#modalSuccess").show();
 });
@@ -52,17 +54,43 @@ $("button.applyBtn").on("click", function(){
 
 
 /*-----------------------------------------------------------*/
-                    /*삭제하기 버튼 클릭 시 모달*/
+                    /*지원취소 버튼 클릭 시 모달*/
 /*-----------------------------------------------------------*/
-$("button#remove_button").on("click", function() {
-   if(confirm("삭제하기를 선택하셨습니다. 확인(삭제) 또는 취소 버튼을 클릭해주세요.")) {
-       alert("글 삭제가 정상적으로 처리되었습니다.");
-       location.href = "/alba/list";
-   } else {
-       alert("글 삭제가 취소되었습니다.");
-   }
+$("button#cancel").on("click", function(){
+    $("#cancelModal").show();
+});
+$("#cancelModal .cancel").on("click", function(){
+    $("#cancelModal").hide();
 });
 
+/*예 버튼 클릭 시*/
+$("#cancelModal button.applyBtn").on("click", function(){
+    $("#cancelModal").hide();
+    $("#modalSuccess .m-title").css("text-align", "center");
+    $("#modalSuccess .m-title").text("아르바이트 지원을 정상적으로 취소하였습니다.");
+    $("#modalSuccess .m-c-title").text("기회가 되면 다시 지원해주세요.");
+    $("#modalSuccess").show();
+});
+
+
+/*-----------------------------------------------------------*/
+                    /*삭제하기 버튼 클릭 시 모달*/
+/*-----------------------------------------------------------*/
+$("button#remove_button").on("click", function(){
+    $("#removeModal").show();
+});
+$("#removeModal .cancel").on("click", function(){
+    $("#removeModal").hide();
+});
+
+/*예 버튼 클릭 시*/
+$("#removeModal button.applyBtn").on("click", function(){
+    $("#removeModal").hide();
+    $("#modalSuccess .m-title").css("text-align", "center");
+    $("#modalSuccess .m-title").text("게시글이 정상적으로 삭제되었습니다.");
+    $("#modalSuccess .m-c-title").text("이후 해당 서비스를 다시 이용해주세요.");
+    $("#modalSuccess").show();
+});
 
 
 

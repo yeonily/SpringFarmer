@@ -303,7 +303,7 @@ $("button.submitBtn").on("click", function (){
     $("div.m-c-title").text("목록 페이지로 이동합니다.");
     $("div#modal").show();
     $("button.cancel").on("click", function(){
-        location.href='/alba/list';
+        location.href='/alba/detail';
     });
 });
 
