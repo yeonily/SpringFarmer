@@ -16,12 +16,10 @@ public class CommunityController {
     }
 
     @GetMapping("/detail")
-    public String detailPage(){
-        return "/community/detail";
+    public void detailPage(){
     }
 
     @GetMapping("/register")
-    public String writePage(){
-        return "/community/register";
+    public void writePage(){
     }
 }

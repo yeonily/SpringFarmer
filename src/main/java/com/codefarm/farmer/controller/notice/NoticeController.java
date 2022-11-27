@@ -16,7 +16,6 @@ public class NoticeController {
     }
 
     @GetMapping("/detail")
-    public String detailPage(){
-        return "/notice/detail";
+    public void detailPage(){
     }
 }
