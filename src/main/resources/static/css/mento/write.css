@@ -656,16 +656,40 @@
     display: none;
 }
 
-.imgs_wrap img{
+/*.imgs_wrap ul li img{
     display: inline-block;
     width: 243px;
     max-height: 243px;
 }
 
+.imgs_wrap ul li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    width: 243px;
+    max-height: 243px;
+}
 
+.imgs_wrap ul li span{
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: -25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;;
+}*/
 
-
-
+.file-content{
+    display: inline-flex;
+}
+.deleteBtn{
+    display: inline-flex;
+    float: right;
+    display: none;
+    width: 15px;
+}
 
 
 

@@ -87,7 +87,7 @@
 
 <!--멘토 신청 모달-->
 <div id="modal" style="display: none">
-    <div id="modal-overlay">
+    <div class="modal-overlay">
         <div class="c-modal">
             <div class="m-wrap">
                 <div class="m-title">멘토 신청하기</div>
@@ -108,7 +108,7 @@
 
 <!--멘토 신청 완료 모달-->
 <div id="modalSuccess" style="display: none;">
-    <div id="modalSuccess-overlay">
+    <div class="modalSuccess-overlay">
         <div class="c-modal">
             <div class="m-wrap">
                 <div class="m-title">멘토 신청 완료되었습니다!</div>
@@ -117,7 +117,27 @@
                         <div class="m-c-title">1:1 채팅하기 버튼으로 멘토와 채팅해주세요.</div>
                     </div>
                     <div class="applyBtnWrap">
-                        <button type="button" class="listBtn" onclick="location.href='/mento/list'">완료</button>
+                        <button type="button" class="listBtn" id="completeBtn">완료</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--멘토 끊기 모달창-->
+<div id="quitmodal" style="display: none">
+    <div class="modal-overlay">
+        <div class="c-modal">
+            <div class="m-wrap">
+                <div class="m-title">멘토 끊기</div>
+                <form action="">
+                    <div class="m-c-wrap">
+                        <div class="m-c-title">정말 멘토관계를 끊으실건가요?</div>
+                    </div>
+                    <div class="quitBtnWrap">
+                        <button type="button" class="quitBtn">멘토 끊기</button>
+                        <button type="button" class="quitCancel">취소</button>
                     </div>
                 </form>
             </div>

@@ -228,22 +228,48 @@
     })
 
 
-/*첨부파일 추가*/
+/*function addFile(e){
+    var sel_files = [];
+    var files = e.target.files;
+    var filesArr = Array.prototype.slice.call(files);
+
+    filesArr.forEach(function (f) {
+        if(!f.type.match("image.*")){
+            alert("확장자는 이미지 확장자만 가능합니다.");
+            return
+        }
+        sel_files.push(f);
+
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            var img_html = "<img src=\"" + e.target.result + "\" />";
+            $(".imgs_wrap").append(img_html);
+        }
+        reader.readAsDataURL(f);
+    })
+}*/
+
+
+/*
+/!*첨부파일 추가*!/
 var fileNo = 0;
 var filesArr = new Array();
 
-/* 첨부파일 추가 */
 function addFile(obj){
     var maxFileCnt = 5;   // 첨부파일 최대 개수
     var attFileCnt = document.querySelectorAll('.filebox').length;    // 기존 추가된 첨부파일 개수
     var remainFileCnt = maxFileCnt - attFileCnt;    // 추가로 첨부가능한 개수
     var curFileCnt = obj.files.length;  // 현재 선택된 첨부파일 개수
 
+    console.log(remainFileCnt);
+    console.log(curFileCnt);
+
     // 첨부파일 개수 확인
     if (curFileCnt > remainFileCnt) {
         alert("첨부파일은 최대 " + maxFileCnt + "개 까지 첨부 가능합니다.");
     }
 
+    //math.min : 매개변수로 받은 값 중 가장 작은값 리턴
     for (var i = 0; i < Math.min(curFileCnt, remainFileCnt); i++) {
 
         const file = obj.files[i];
@@ -253,18 +279,21 @@ function addFile(obj){
         if (validation(file)) {
             // 파일 배열에 담기
             var reader = new FileReader();
-            reader.onload = function () {
+            reader.onload = function (e) {
                 filesArr.push(file);
+               console.log(e.target.result);
+                var img_html = "<img src\"" +   e.target.result + "\" />";
+                $(".imgs_wrap").append(img_html);
             };
             reader.readAsDataURL(file)
 
             // 목록 추가
-            let htmlData = '';
+            /!*let htmlData = '';
             htmlData += '<div id="file' + fileNo + '" class="filebox">';
             htmlData += '   <p class="name">' + file.name + '</p>';
             htmlData += '   <a class="delete" onclick="deleteFile(' + fileNo + ');"><i class="far fa-minus-square"></i></a>';
             htmlData += '</div>';
-            $('.file-list').append(htmlData);
+            $('.file-list').append(htmlData);*!/
             fileNo++;
         } else {
             continue;
@@ -274,7 +303,7 @@ function addFile(obj){
     document.querySelector("input[type=file]").value = "";
 }
 
-/* 첨부파일 검증 */
+/!* 첨부파일 검증 *!/
 function validation(obj){
     const fileTypes = ['application/pdf', 'image/gif', 'image/jpeg', 'image/png', 'image/bmp', 'image/tif', 'application/haansofthwp', 'application/x-hwp'];
     if (obj.name.length > 100) {
@@ -294,24 +323,16 @@ function validation(obj){
     }
 }
 
-/* 첨부파일 삭제 */
+/!* 첨부파일 삭제 *!/
 function deleteFile(num) {
     document.querySelector("#file" + num).remove();
     filesArr[num].is_delete = true;
 }
+*/
 
 
-
-
-
-
-
-
-
-
-    /*나가기 모달창*/
+/*나가기 모달창*/
     $("#header_right_button2").on("click", function () {
-        console.log("들어옴");
         $("#c-overlay").show();
     })
 

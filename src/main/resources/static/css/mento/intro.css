@@ -73,6 +73,9 @@
     color: #FFF;
     cursor: pointer;
 }
+#content_button:hover{
+    background-color: #357e55;
+}
 
 #main_wrap{
     max-width: 1140px;
@@ -308,6 +311,9 @@
     cursor: pointer;
     overflow: hidden;
 }
+#main_content0_button_button:hover{
+    background-color: #357e55;
+}
 
 #main_content1{
     flex: 0 0 100%;
@@ -378,6 +384,7 @@
     background-size: cover;
     width: 100%;
     padding: 80px 0;
+    height: 65%;
 }
 #content2_left_box_inner1{
     display: flex!important;
@@ -443,23 +450,7 @@
     line-height: 36px;
 
 }
-#content2_left_box_button{
-    color: #202325;
-    border-color: #202325;
-    background-color: transparent;
-    border: 1px solid #949ba0;
-    height: 36px;
-    padding: 0 12px;
-    min-width: 49px;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-    border-radius: 6px;
-    font-weight: 600;
-    margin: 0 auto!important;;
-    display: flex!important;
-    align-items: center;
-}
+
 #content2_right{
     flex: 0 0 50%;
     max-width: 50%;
