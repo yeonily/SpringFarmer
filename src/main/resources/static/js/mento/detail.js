@@ -2,8 +2,6 @@
 * mento/detail.html
 * */
 
-
-
 /*헤더 멘토 표시*/
 $(document).ready(function () {
     $("ul.nav_ul li:nth-child(1)").children("a").addClass("selected-header");
@@ -41,12 +39,11 @@ $(".star_check").on("click" , function () {
 
 /*
 * 별 개수 확인
-* */
+ */
 
 let counts = $(".star_count");
 let starScore = "";
 let starText = "";
-// console.log(counts);
 
 counts.each(function (i, item) {
     starScore = $(item).children('.star_check').length;
@@ -71,16 +68,6 @@ counts.each(function (i, item) {
     $(item).children('.main_reply_gray').text(starText);
 })
 
-// for(let i = 0 ; i< counts.length ; i++){
-//     console.log(counts[i]);
-// }
-
-//보낼 시 별 점수?
-// console.log($(".star_count").children(".star_check").length);
-/*$("#main_reply_button").on("click", function () {
-
-})*/
-
 /*-----------------------------------------------------------*/
 /*멘토 신청 버튼 클릭 시 모달*/
 /*-----------------------------------------------------------*/
@@ -103,3 +90,34 @@ $("button.applyBtn").on("click", function(){
     $("#modalSuccess").show();
 });
 
+
+
+/*글자 수 세는 이벤트*/
+$('#main_reply_textarea').keyup(function () {
+    let $content = $(this).val();
+
+    if($content.length == 0 ){
+        return;
+    }
+    else{
+        $("#main_reply_button").css("background-color","#47c880");
+
+        $("#main_reply_button").hover(function () {
+            console.log("들어옴");
+            $(this).css("background-color" ,"#357e55");
+        },function (){
+            console.log("들어옴2");
+            $(this).css("background-color","#47c880");
+        });
+    }
+
+    $("#main_reply_textarea_p_count").html($content.length);
+
+    // 글자수 제한
+    if ($content.length > 200) {
+        // 200자 부터는 타이핑 되지 않도록
+        $(this).val($(this).val().substring(0, 200));
+        // 200자 넘으면 알림창 뜨도록
+        alert('글자수는 200자까지 입력 가능합니다.');
+    };
+});

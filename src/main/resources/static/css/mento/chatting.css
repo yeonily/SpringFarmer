@@ -233,7 +233,7 @@
 /**************************************************************/
 /*지원하기 모달창*/
 /**************************************************************/
-div#modal-overlay {
+div.modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -321,7 +321,7 @@ button.cancel:hover{
 /**************************************************************/
 /*지원 완료 모달창*/
 /**************************************************************/
-div#modalSuccess-overlay {
+div.modalSuccess-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -330,7 +330,7 @@ div#modalSuccess-overlay {
     background: rgba(0,0,0,.6);
     z-index: 9998;
 }
-div#modalSuccess-overlay .m-c-title {
+div.modalSuccess-overlay .m-c-title {
     text-align: center;
 }
 button.listBtn {
@@ -352,3 +352,28 @@ button.listBtn:disabled {
     cursor: not-allowed!important;
 }
 button.listBtn:hover:not([disabled]) {background-color: #357e55;}
+
+/*
+    멘토 끊기 모달 창
+*/
+.quitBtnWrap{
+    padding: 20px 32px 0;
+}
+
+button.quitBtn , button.quitCancel{
+    width: 90px;
+    height: 40px;
+    padding: 0 14px;
+    min-width: 56px;
+    background-color: #47c880;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: .02em;
+    font-weight: 600;
+}
+button.quitCancel:hover{
+    background-color: #357e55;
+}

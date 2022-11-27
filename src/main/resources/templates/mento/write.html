@@ -243,10 +243,10 @@
                                     <div style="margin-bottom: 32px;">
 
                                         <!--파일 첨부 버튼 아이콘-->
-                                        <div class="align-items-center">
+                                        <div class="align-items-center field">
                                             <label style="cursor: pointer">
                                                 <img style="width: 20px; height: 20px; border: 1px solid #e1e4e6" id="preview-image" src="/image/program/upload.gif">
-                                                <input type="file" multiple class="input-div-input" onchange="addFile(this);" id="input_file" style="display: none;">
+                                                <input type="file" name="upload" multiple class="input-div-input" id="input_file" style="display: none;">
                                             </label>
                                         </div>
 
@@ -260,9 +260,7 @@
                                             </div>
                                         </div>
                                         <!--실제 들어갈 이미지-->
-                                        <div>
-                                            <div class="imgs_wrap"></div>
-                                        </div>
+                                        <div class="imgs_wrap" style="display: none"></div>
                                     </div>
                                 </section>
 
@@ -469,3 +467,135 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="/js/mustache.js"></script>
 <script type="text/javascript" src="/js/comm.js"></script>
+<script type="text/javascript">
+
+   /* let arrayFile = [];
+
+    $("input[type='file']").on("change", function(){
+        let formData = new FormData();
+        let $inputFile = $("input[name='upload']");
+        let files = $inputFile[0].files;
+
+        console.log(Array.from(files));
+
+        Array.from(files).forEach(file => arrayFile.push(file));
+        const dataTransfer = new DataTransfer();
+        arrayFile.forEach(file => dataTransfer.items.add(file));
+        $(this)[0].files = dataTransfer.files;
+
+        console.log($(this)[0].files);
+
+        $(files).each(function(i, file){
+            formData.append("upload", file);
+        });
+
+        let text = "";
+        console.log("들어옴1" + text);
+        $(files).each(function(i, file){
+            text += `<li data-file-size="` + file.fileSize + `" data-file-name="` + file.fileName + `" data-file-upload-path="` + file.fileUploadPath + `" data-file-uuid="` + file.fileUuid + `" data-file-image-check="` + file.fileImageCheck + `">`;
+            text += `<span>X</span>`;
+            if(!file.fileImageCheck){
+                text += `<img src="/static/image/mento1.jpg" width="100">`;
+            }else{
+                text += `<img src="/file/display?fileName=` + file.fileUploadPath + `/s_` + file.fileUuid + "_" + file.fileName + `">`;
+            }
+            text += `<p>` + file.fileName +`(` + parseInt(file.fileSize / 1024) + `KB)</p>`
+            text += `</li>`;
+        });
+
+        $(".imgs_wrap ul").append(text);
+        $(".imgs_wrap").show();
+
+        /!*$.ajax({
+            url: "/file/upload",
+            type: "post",
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: showUploadResult
+        });*!/
+    });
+
+    function showUploadResult(files){
+        let text = "";
+        $(files).each(function(i, file){
+            text += `<li data-file-size="` + file.fileSize + `" data-file-name="` + file.fileName + `" data-file-upload-path="` + file.fileUploadPath + `" data-file-uuid="` + file.fileUuid + `" data-file-image-check="` + file.fileImageCheck + `">`;
+            text += `<span>X</span>`;
+            if(!file.fileImageCheck){
+                text += `<img src="/images/attach.png" width="100">`;
+            }else{
+                text += `<img src="/file/display?fileName=` + file.fileUploadPath + `/s_` + file.fileUuid + "_" + file.fileName + `">`;
+            }
+            text += `<p>` + file.fileName +`(` + parseInt(file.fileSize / 1024) + `KB)</p>`
+            text += `</li>`;
+        });
+        $(".imgs_wrap ul").append(text);
+        $(".imgs_wrap").show();
+    }
+
+    $(".imgs_wrap ul").on("click", "span", function(){
+        const $li = $(this).closest("li");
+        let i = $(".imgs_wrap ul span").index($(this));
+        let uploadPath = $li.data("file-upload-path");
+        let fileName = $li.data("file-uuid") + "_" + $li.data("file-name");
+        $.ajax({
+            url: "/file/delete",
+            type: "post",
+            data: {uploadPath: uploadPath, fileName: fileName, fileImageCheck: $li.data("file-image-check")},
+            success: function(){
+                $li.remove();
+                arrayFile.splice(i, 1);
+                const dataTransfer = new DataTransfer();
+                arrayFile.forEach(file => dataTransfer.items.add(file));
+                $("input[name='upload']")[0].files = dataTransfer.files;
+            }
+        });
+    });*/
+
+
+    var sel_files = [];
+
+
+    $(document).ready(function() {
+
+        $("#input_file").on("change", handleImgsFilesSelect);
+    });
+
+    function handleImgsFilesSelect(e) {
+        var files = e.target.files;
+        var filesArr = Array.prototype.slice.call(files);
+        // $(".imgs_wrap").empty();
+
+        filesArr.forEach(function(f) {
+            if(!f.type.match("image.*")) {
+                alert("확장자는 이미지 확장자만 가능합니다.");
+                return;
+            }
+
+            console.log("filesArr: " + filesArr.length);
+            let fileNo = 0;
+            sel_files.push(f);
+            console.log("sel_files" + sel_files.length);
+
+            sel_files.forEach(function(e,index)
+            {
+                console.log(index);
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    var fileValue = $("#input_file").val().split("\\");
+                    var fileName = fileValue[fileValue.length - 1]; // 파일명
+                    var img_html = `<div class="file-content-` + fileNo + `"></div><img class='deleteBtn' alt=\"첨부 삭제\" src=\"/image/myPage/close.png\" onclick=\"cancelFile()\"><br>`;
+                    $(".imgs_wrap").append(img_html);
+                    $('.file-content-' + fileNo).text(fileName);
+                    $(".imgs_wrap").show();
+                    $(".deleteBtn").show();
+                    var img_html = "";
+                    fileNo++;
+                    reader.readAsDataURL(f);
+                }
+            });
+
+        });
+    }
+
+</script>
